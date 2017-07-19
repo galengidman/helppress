@@ -1683,6 +1683,12 @@
 		"oAP": "\/inc\/vendor\/gambitph\/titan-framework\/titan-framework.php",
 		"oF": 0
 		},
+	"\/templates\/content-article.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/content-article.php",
+		"oF": 0
+		},
 	"\/templates\/shortcodes\/knowledge-base.php": {
 		"ft": 8192,
 		"oA": 2,

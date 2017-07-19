@@ -1,6 +1,6 @@
 <?php echo do_shortcode( '[wpkb-search]' ); ?>
 
-<div class="wpkb__kb wpkb__kb--<?php echo wpkb_get_option( 'columns' ); ?>">
+<div class="wpkb__kb wpkb__kb--<?php echo esc_attr( wpkb_get_option( 'columns' ) ); ?>">
 	<?php $categories = wpkb_get_categories(); ?>
 	<?php foreach ( $categories as $category ) : ?>
 		<div class="wpkb__cat">
