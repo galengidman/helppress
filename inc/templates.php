@@ -120,18 +120,6 @@ function helppress_override_template( $template = '' ) {
 }
 add_action( 'template_include', 'helppress_override_template' );
 
-function helppress_get_theme_templates_path() {
-
-	return trailingslashit( get_template_directory() ) . 'helppress-templates';
-
-}
-
-function helppress_get_plugin_templates_path() {
-
-	return trailingslashit( HELPPRESS_PATH ) . 'templates';
-
-}
-
 function helppress_buffer_template_part( $slug, $name = null ) {
 
 	ob_start();
