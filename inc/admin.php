@@ -109,9 +109,9 @@ function helppress_admin_panel() {
 		'name'    => esc_html__( 'Columns', 'helppress' ),
 		'desc'    => esc_html__( 'The number of columns to display on the Knowledge Base page.', 'helppress' ),
 		'options' => array(
-			1 => HELPPRESS_URL . 'assets/img/columns-1.svg',
-			2 => HELPPRESS_URL . 'assets/img/columns-2.svg',
-			3 => HELPPRESS_URL . 'assets/img/columns-3.svg',
+			1 => esc_url( HELPPRESS_URL . '/assets/img/columns-1.svg' ),
+			2 => esc_url( HELPPRESS_URL . '/assets/img/columns-2.svg' ),
+			3 => esc_url( HELPPRESS_URL . '/assets/img/columns-3.svg' ),
 		),
 		'default' => helppress_get_option_default( 'columns' ),
 	) );
