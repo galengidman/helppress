@@ -5,17 +5,17 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function helppress_register_category() {
 
 	$labels = array(
-		'name' => esc_html__( 'Article Categories', 'helppress' ),
+		'name'          => esc_html__( 'Article Categories', 'helppress' ),
 		'singular_name' => esc_html__( 'Article Category', 'helppress' ),
 	);
 
 	$args = array(
-		'labels' => $labels,
-		'public' => true,
+		'labels'       => $labels,
+		'public'       => true,
 		'show_in_menu' => 'edit.php?post_type=helppress_article',
 		'hierarchical' => true,
-		'rewrite' => array(
-			'slug' => helppress_get_option( 'category_slug' ),
+		'rewrite'      => array(
+			'slug'       => helppress_get_option( 'category_slug' ),
 			'with_front' => false,
 		),
 	);
@@ -34,16 +34,16 @@ function helppress_register_tag() {
 	}
 
 	$labels = array(
-		'name' => esc_html__( 'Article Tags', 'helppress' ),
+		'name'          => esc_html__( 'Article Tags', 'helppress' ),
 		'singular_name' => esc_html__( 'Article Tag', 'helppress' ),
 	);
 
 	$args = array(
-		'labels' => $labels,
-		'public' => true,
+		'labels'       => $labels,
+		'public'       => true,
 		'show_in_menu' => 'edit.php?post_type=helppress_article',
-		'rewrite' => array(
-			'slug' => helppress_get_option( 'tag_slug' ),
+		'rewrite'      => array(
+			'slug'       => helppress_get_option( 'tag_slug' ),
 			'with_front' => false,
 		),
 	);

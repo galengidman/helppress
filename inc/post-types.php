@@ -5,18 +5,18 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function helppress_register_article() {
 
 	$labels = array(
-		'name' => esc_html__( 'Articles', 'helppress' ),
-		'singular_name' => esc_html__( 'Article', 'helppress' ),
-		'menu_name' => esc_html__( 'HelpPress', 'helppress' ),
-		'all_items' => esc_html__( 'All Articles', 'helppress' ),
+		'name'          => esc_html__( 'Articles',     'helppress' ),
+		'singular_name' => esc_html__( 'Article',      'helppress' ),
+		'menu_name'     => esc_html__( 'HelpPress',    'helppress' ),
+		'all_items'     => esc_html__( 'All Articles', 'helppress' ),
 	);
 
 	$args = array(
-		'labels' => $labels,
-		'public' => true,
+		'labels'        => $labels,
+		'public'        => true,
 		'menu_position' => 25,
-		'menu_icon' => 'dashicons-schedule',
-		'supports' => array(
+		'menu_icon'     => 'dashicons-schedule',
+		'supports'      => array(
 			'title',
 			'editor',
 			'author',
@@ -25,8 +25,8 @@ function helppress_register_article() {
 			'comments',
 			'revisions',
 		),
-		'rewrite' => array(
-			'slug' => helppress_get_option( 'article_slug' ),
+		'rewrite'       => array(
+			'slug'       => helppress_get_option( 'article_slug' ),
 			'with_front' => false,
 		),
 	);

@@ -9,7 +9,7 @@ function helppress_search_autocomplete_suggestions() {
 		'no_found_rows' => true,
 	) );
 
-	$suggestions = array('suggestions' => array());
+	$suggestions = array( 'suggestions' => array() );
 
 	foreach ( $articles->posts as $article_id ) {
 		$suggestions['suggestions'][] = array(
