@@ -1,23 +1,23 @@
 <?php
 
-function wpkb_shortcode_wpkb_search() {
+function helppress_shortcode_helppress_search() {
 
 	ob_start();
 
-	wpkb_get_template_part( 'shortcode', 'search-form' );
+	helppress_get_template_part( 'shortcode', 'search-form' );
 
 	return ob_get_clean();
 
 }
-add_shortcode( 'wpkb-search', 'wpkb_shortcode_wpkb_search' );
+add_shortcode( 'helppress-search', 'helppress_shortcode_helppress_search' );
 
-function wpkb_shortcode_wpkb() {
+function helppress_shortcode_helppress() {
 
 	ob_start();
 
-	wpkb_get_template_part( 'shortcode', 'knowledge-base' );
+	helppress_get_template_part( 'shortcode', 'knowledge-base' );
 
 	return ob_get_clean();
 
 }
-add_shortcode( 'wpkb', 'wpkb_shortcode_wpkb' );
+add_shortcode( 'helppress', 'helppress_shortcode_helppress' );

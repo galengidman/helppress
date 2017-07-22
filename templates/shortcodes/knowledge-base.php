@@ -1,23 +1,23 @@
-<?php echo do_shortcode( '[wpkb-search]' ); ?>
+<?php echo do_shortcode( '[helppress-search]' ); ?>
 
-<div class="wpkb__kb wpkb__kb--<?php echo esc_attr( wpkb_get_option( 'columns' ) ); ?>">
-	<?php $categories = wpkb_get_categories(); ?>
+<div class="helppress__kb helppress__kb--<?php echo esc_attr( helppress_get_option( 'columns' ) ); ?>">
+	<?php $categories = helppress_get_categories(); ?>
 	<?php foreach ( $categories as $category ) : ?>
-		<div class="wpkb__cat">
-			<h3 class="wpkb__cat-title"><?php echo $category->name; ?></h3>
+		<div class="helppress__cat">
+			<h3 class="helppress__cat-title"><?php echo $category->name; ?></h3>
 
 			<?php if ( $category->description ) : ?>
-				<p class="wpkb__cat-description"><?php echo $category->description; ?></p>
+				<p class="helppress__cat-description"><?php echo $category->description; ?></p>
 			<?php endif; ?>
 
-			<ul class="wpkb__articles">
-				<?php $articles = wpkb_get_articles( array( 'wpkb_article_category' => $category->slug ) ); ?>
+			<ul class="helppress__articles">
+				<?php $articles = helppress_get_articles( array( 'helppress_article_category' => $category->slug ) ); ?>
 				<?php foreach ( $articles->posts as $article ) : ?>
 					<li><a href="<?php echo esc_url( get_permalink( $article->ID ) ); ?>"><?php echo get_the_title( $article->ID ); ?></a></li>
 				<?php endforeach; ?>
 			</ul>
 
-			<p class="wpkb__more"><a href="<?php echo esc_url( get_term_link( $category ) ) ?>"><?php esc_html_e( 'View more', 'wpkb' ); ?> &rarr;</a></p>
+			<p class="helppress__more"><a href="<?php echo esc_url( get_term_link( $category ) ) ?>"><?php esc_html_e( 'View more', 'helppress' ); ?> &rarr;</a></p>
 		</div>
 	<?php endforeach; ?>
 </div>

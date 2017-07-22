@@ -130,16 +130,22 @@
 		"oAP": "\/inc\/admin.php",
 		"oF": 0
 		},
-	"\/inc\/api.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/api.php",
-		"oF": 0
-		},
 	"\/inc\/assets.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/assets.php",
+		"oF": 0
+		},
+	"\/inc\/classes\/class-helppress-template-loader.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/classes\/class-helppress-template-loader.php",
+		"oF": 0
+		},
+	"\/inc\/functions.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/functions.php",
 		"oF": 0
 		},
 	"\/inc\/options.php": {
@@ -269,6 +275,68 @@
 		"oA": 2,
 		"oAP": "\/inc\/vendor\/composer\/LICENSE",
 		"oF": 0
+		},
+	"\/inc\/vendor\/gamajo\/template-loader\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/vendor\/gamajo\/template-loader\/.gitignore",
+		"oF": 0
+		},
+	"\/inc\/vendor\/gamajo\/template-loader\/CHANGELOG.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/inc\/vendor\/gamajo\/template-loader\/CHANGELOG.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/inc\/vendor\/gamajo\/template-loader\/class-gamajo-template-loader.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/vendor\/gamajo\/template-loader\/class-gamajo-template-loader.php",
+		"oF": 0
+		},
+	"\/inc\/vendor\/gamajo\/template-loader\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/inc\/vendor\/gamajo\/template-loader\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/inc\/vendor\/gamajo\/template-loader\/LICENSE": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/vendor\/gamajo\/template-loader\/LICENSE",
+		"oF": 0
+		},
+	"\/inc\/vendor\/gamajo\/template-loader\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/inc\/vendor\/gamajo\/template-loader\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"\/inc\/vendor\/gambitph\/titan-framework\/.gitignore": {
 		"ft": 8192,
@@ -1689,6 +1757,12 @@
 		"oAP": "\/templates\/content-article.php",
 		"oF": 0
 		},
+	"\/templates\/content-category.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/content-category.php",
+		"oF": 0
+		},
 	"\/templates\/shortcodes\/knowledge-base.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1701,10 +1775,10 @@
 		"oAP": "\/templates\/shortcodes\/search-form.php",
 		"oF": 0
 		},
-	"\/wpkb.php": {
+	"\/helppress.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/wpkb.php",
+		"oAP": "\/helppress.php",
 		"oF": 0
 		}
 	},
@@ -1714,7 +1788,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 520060183,
-	"displayValue": "wpkb",
+	"displayValue": "helppress",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-jake"
 	},

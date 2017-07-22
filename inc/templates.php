@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-function wpkb_reset_post( $args = array() ) {
+function helppress_reset_post( $args = array() ) {
 
 	global $wp_query, $post;
 
@@ -98,14 +98,14 @@ function wpkb_reset_post( $args = array() ) {
 
 }
 
-function wpkb_override_template( $template = '' ) {
+function helppress_override_template( $template = '' ) {
 
-	if ( is_tax( 'wpkb_article_category' ) ) {
-		wpkb_reset_post( array(
+	if ( is_tax( 'helppress_article_category' ) ) {
+		helppress_reset_post( array(
 			'ID'             => 0,
 			'post_author'    => 0,
 			'post_date'      => 0,
-			'post_content'   => wpkb_buffer_template_part( 'content', 'category' ),
+			'post_content'   => helppress_buffer_template_part( 'content', 'category' ),
 			'post_type'      => '',
 			'post_title'     => single_term_title( '', false ),
 			'is_archive'     => false,
@@ -118,33 +118,33 @@ function wpkb_override_template( $template = '' ) {
 	return $template;
 
 }
-add_action( 'template_include', 'wpkb_override_template' );
+add_action( 'template_include', 'helppress_override_template' );
 
-function wpkb_get_theme_templates_path() {
+function helppress_get_theme_templates_path() {
 
-	return trailingslashit( get_template_directory() ) . 'wpkb-templates';
-
-}
-
-function wpkb_get_plugin_templates_path() {
-
-	return trailingslashit( WPKB_PATH ) . 'templates';
+	return trailingslashit( get_template_directory() ) . 'helppress-templates';
 
 }
 
-function wpkb_buffer_template_part( $slug, $name ) {
+function helppress_get_plugin_templates_path() {
+
+	return trailingslashit( HELPPRESS_PATH ) . 'templates';
+
+}
+
+function helppress_buffer_template_part( $slug, $name ) {
 
 	ob_start();
 
-	wpkb_get_template_part( $slug, $name );
+	helppress_get_template_part( $slug, $name );
 
 	return ob_get_clean();
 
 }
 
-function wpkb_get_template_part( $slug, $name = null ) {
+function helppress_get_template_part( $slug, $name = null ) {
 
-	$templates = new WPKB_Template_Loader;
+	$templates = new HelpPress_Template_Loader;
 
 	$templates->get_template_part( $slug, $name );
 

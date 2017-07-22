@@ -1,9 +1,9 @@
 <?php
 
-$articles = wpkb_get_articles( array(
+$articles = helppress_get_articles( array(
 	'tax_query' => array(
 		array(
-			'taxonomy' => 'wpkb_article_category',
+			'taxonomy' => 'helppress_article_category',
 			'field' => 'slug',
 			'terms' => get_queried_object()->slug,
 		),
