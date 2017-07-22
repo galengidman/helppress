@@ -132,7 +132,7 @@ function helppress_get_plugin_templates_path() {
 
 }
 
-function helppress_buffer_template_part( $slug, $name ) {
+function helppress_buffer_template_part( $slug, $name = null ) {
 
 	ob_start();
 
