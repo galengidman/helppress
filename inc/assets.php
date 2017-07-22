@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function helppress_assets_front() {
 
 	wp_enqueue_style( 'helppress-full', HELPPRESS_URL . '/assets/css/full.css' );

@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 class HelpPress_Template_Loader extends Gamajo_Template_Loader {
 
   protected $filter_prefix = 'helppress';

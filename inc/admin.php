@@ -1,7 +1,6 @@
 <?php
-/**
- * Admin
- */
+
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 function helppress_admin_panel() {
 

@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function helppress_activate() {
 
 	$knowledge_base_page = wp_insert_post( [

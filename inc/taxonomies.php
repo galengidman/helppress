@@ -1,11 +1,7 @@
 <?php
-/**
- * Taxonomies
- */
 
-/**
- * Register Article Category taxonomy.
- */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function helppress_register_category() {
 
 	$labels = array(
@@ -31,9 +27,6 @@ function helppress_register_category() {
 }
 add_action( 'after_setup_theme', 'helppress_register_category' );
 
-/**
- * Register Article Tag taxonomy.
- */
 function helppress_register_tag() {
 
 	if ( ! helppress_get_option( 'enable_tags' ) ) {

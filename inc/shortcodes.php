@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function helppress_shortcode_helppress_search() {
 
 	ob_start();

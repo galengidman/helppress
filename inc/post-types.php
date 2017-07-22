@@ -1,11 +1,7 @@
 <?php
-/**
- * Post Types
- */
 
-/**
- * Registers the article post type.
- */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function helppress_register_article() {
 
 	$labels = array(

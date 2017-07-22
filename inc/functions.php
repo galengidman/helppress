@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function helppress_get_categories( $args = array() ) {
 
 	$args = wp_parse_args( $args, array(

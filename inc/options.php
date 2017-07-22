@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 function helppress_get_option_defaults() {
 
 	$defaults = array(
