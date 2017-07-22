@@ -65,6 +65,15 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/js\/helppress.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/helppress-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/scss\/_base.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -118,10 +127,10 @@
 		"oAP": "\/composer.lock",
 		"oF": 0
 		},
-	"\/inc\/activate.php": {
+	"\/helppress.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/activate.php",
+		"oAP": "\/helppress.php",
 		"oF": 0
 		},
 	"\/inc\/admin.php": {
@@ -158,6 +167,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/post-types.php",
+		"oF": 0
+		},
+	"\/inc\/search.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/search.php",
 		"oF": 0
 		},
 	"\/inc\/shortcodes.php": {
@@ -1763,22 +1778,16 @@
 		"oAP": "\/templates\/content-category.php",
 		"oF": 0
 		},
-	"\/templates\/shortcodes\/knowledge-base.php": {
+	"\/templates\/knowledge-base.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/shortcodes\/knowledge-base.php",
+		"oAP": "\/templates\/knowledge-base.php",
 		"oF": 0
 		},
-	"\/templates\/shortcodes\/search-form.php": {
+	"\/templates\/search-form.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/shortcodes\/search-form.php",
-		"oF": 0
-		},
-	"\/helppress.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/helppress.php",
+		"oAP": "\/templates\/search-form.php",
 		"oF": 0
 		}
 	},

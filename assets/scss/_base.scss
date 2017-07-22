@@ -1,3 +1,19 @@
+// --------------------------------------------------------
+
+.helppress__search-form {
+	display: flex;
+}
+
+.helppress__search-label {
+	flex-grow: 1;
+}
+
+.helppress__search-input {
+	width: 95%;
+}
+
+// --------------------------------------------------------
+
 .helppress__kb--2,
 .helppress__kb--3 {
 	display: flex;
@@ -23,3 +39,5 @@
 .helppress__cat {
 	margin-top: 2em;
 }
+
+// --------------------------------------------------------

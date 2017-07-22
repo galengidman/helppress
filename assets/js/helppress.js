@@ -2,9 +2,9 @@
 
 	$(function() {
 
-		var $search = $('.helppress__search');
+		var $searchInput = $('.helppress__search-input');
 
-		$search.devbridgeAutocomplete({
+		$searchInput.devbridgeAutocomplete({
 			serviceUrl: hpLocalization.adminAjax,
 			params: {
 				action: 'helppress_autocomplete_suggestions',

@@ -1,3 +1,9 @@
+.helppress__search-form { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.helppress__search-label { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+
+.helppress__search-input { width: 95%; }
+
 .helppress__kb--2, .helppress__kb--3 { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 0; -ms-flex: 0 1 auto; flex: 0 1 auto; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 .helppress__kb--2 .helppress__cat, .helppress__kb--3 .helppress__cat { -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; -ms-flex-negative: 0; flex-shrink: 0; }
