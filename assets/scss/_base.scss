@@ -1,5 +1,15 @@
 // --------------------------------------------------------
 
+.helppress__container {
+	.genericons-neue {
+		position: relative;
+		top: -.1em;
+		vertical-align: middle;
+	}
+}
+
+// --------------------------------------------------------
+
 .helppress__search-form {
 	display: flex;
 	align-items: center;
@@ -30,10 +40,10 @@
 		&:hover {
 			color: blue;
 		}
-	}
 
-	.autocomplete-suggestion + .autocomplete-suggestion {
-		border-top: solid 1px rgba(black, .15);
+		+ .autocomplete-suggestion {
+			border-top: solid 1px rgba(black, .15);
+		}
 	}
 }
 
@@ -64,6 +74,23 @@
 
 .helppress__cat {
 	margin-top: 2em;
+}
+
+// --------------------------------------------------------
+
+.helppress__articles {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.helppress__article {
+	padding: .5em 0;
+	border-top: solid 1px rgba(black, .15);
+
+	.genericons-neue {
+		margin-right: .25em;
+	}
 }
 
 // --------------------------------------------------------

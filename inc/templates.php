@@ -120,6 +120,14 @@ function helppress_override_template( $template = '' ) {
 }
 add_action( 'template_include', 'helppress_override_template' );
 
+function helppress_get_template_part( $slug, $name = null ) {
+
+	$templates = new HelpPress_Template_Loader;
+
+	$templates->get_template_part( $slug, $name );
+
+}
+
 function helppress_buffer_template_part( $slug, $name = null ) {
 
 	ob_start();
@@ -130,10 +138,13 @@ function helppress_buffer_template_part( $slug, $name = null ) {
 
 }
 
-function helppress_get_template_part( $slug, $name = null ) {
+function helppress_remove_wpautop( $wp_query ) {
 
-	$templates = new HelpPress_Template_Loader;
+	if ( is_tax( 'helppress_article_category' ) && $wp_query->is_main_query() ) {
+		remove_filter( 'the_content', 'wpautop' );
+	}
 
-	$templates->get_template_part( $slug, $name );
+	return $wp_query;
 
 }
+add_action( 'pre_get_posts', 'helppress_remove_wpautop' );

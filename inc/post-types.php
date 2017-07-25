@@ -24,6 +24,7 @@ function helppress_register_article() {
 			'excerpt',
 			'comments',
 			'revisions',
+			'post-formats',
 		),
 		'rewrite'       => array(
 			'slug'       => helppress_get_option( 'article_slug' ),

@@ -1,19 +1,15 @@
-<?php
+<div class="helppress__container">
+	<?php if ( have_posts() ) : ?>
+		<ul class="helppress__articles">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php $article_id = get_the_id(); ?>
+				<?php $icon       = helppress_article_format_icon( $article_id ); ?>
+				<?php $title      = get_the_title( $article_id ); ?>
+				<?php $permalink  = esc_url( get_permalink( $article_id ) ); ?>
+				<li class="helppress__article"><a href="<?php echo $permalink; ?>"><?php echo $icon . $title ?></a></li>
+			<?php endwhile; ?>
+		</ul>
+	<?php endif; ?>
 
-$articles = helppress_get_articles( array(
-	'tax_query' => array(
-		array(
-			'taxonomy' => 'helppress_article_category',
-			'field' => 'slug',
-			'terms' => get_queried_object()->slug,
-		),
-	),
-) );
-
-?>
-
-<ul>
-	<?php if ( $articles->have_posts() ) : while ( $articles->have_posts() ) : $articles->the_post(); ?>
-		<li><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></li>
-	<?php endwhile; wp_reset_postdata(); endif; ?>
-</ul>
+	<?php helppress_get_template_part( 'search-form' ); ?>
+</div>
