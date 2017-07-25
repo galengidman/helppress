@@ -15,3 +15,5 @@
 
 	<input type="hidden" name="post_type" value="helppress_article">
 </form>
+
+<div class="helppress__search-suggestions" style="position: relative;"></div>

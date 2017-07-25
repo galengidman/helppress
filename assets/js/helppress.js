@@ -2,13 +2,16 @@
 
 	$(function() {
 
-		var $searchInput = $('.helppress__search-input');
+		var $hpSearchInput       = $('.helppress__search-input');
+		var $hpSearchSuggestions = $('.helppress__search-suggestions');
 
-		$searchInput.devbridgeAutocomplete({
+		$hpSearchInput.devbridgeAutocomplete({
 			serviceUrl: hpLocalization.adminAjax,
 			params: {
 				action: 'helppress_autocomplete_suggestions',
 			},
+			appendTo: $hpSearchSuggestions,
+			forceFixPosition: true,
 		});
 
 	});
