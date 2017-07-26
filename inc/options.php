@@ -5,18 +5,24 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function helppress_get_option_defaults() {
 
 	$defaults = array(
-		// 'knowledge_base_slug' => 'knowledge-base',
+
+		// Slugs
+		'knowledge_base_slug' => 'knowledge-base',
 		'category_slug'       => 'article-category',
 		'tag_slug'            => 'article-tag',
 		'article_slug'        => 'article',
-		'enable_tags'         => true,
+
+		// Display
 		'skin'                => 'full',
 		'columns'             => 2,
 		'color_accent'        => '#0099e5',
 		'color_success'       => '#34bf49',
 		'color_error'         => '#ff4c4c',
 		'disable_css'         => false,
+
+		// License
 		'license_key'         => '',
+
 	);
 
 	return apply_filters( 'helppress_option_defaults', $defaults );
@@ -32,7 +38,7 @@ function helppress_get_option_default( $key = null ) {
 		$value = $defaults[ $key ];
 	}
 
-	return apply_filters( "helppress_get_option_default_$key", $value );
+	return apply_filters( "helppress_get_option_default_{$key}", $value );
 
 }
 
@@ -47,6 +53,6 @@ function helppress_get_option( $key = null ) {
 		$value = helppress_get_option_default( $key );
 	}
 
-	return apply_filters( "helppress_get_option_$key", $value );
+	return apply_filters( "helppress_get_option_{$key}", $value );
 
 }
