@@ -10,6 +10,7 @@ include HELPPRESS_PATH . '/inc/vendor/gamajo/template-loader/class-gamajo-templa
 include HELPPRESS_PATH . '/inc/vendor/gambitph/titan-framework/titan-framework.php';
 
 include HELPPRESS_PATH . '/inc/classes/class-helppress-template-loader.php';
+include HELPPRESS_PATH . '/inc/classes/class-helppress-search-autocomplete.php';
 include HELPPRESS_PATH . '/inc/classes/class-helppress-menu-archive-link.php';
 
 include HELPPRESS_PATH . '/inc/admin.php';
@@ -19,4 +20,3 @@ include HELPPRESS_PATH . '/inc/options.php';
 include HELPPRESS_PATH . '/inc/post-types.php';
 include HELPPRESS_PATH . '/inc/taxonomies.php';
 include HELPPRESS_PATH . '/inc/templates.php';
-include HELPPRESS_PATH . '/inc/search.php';

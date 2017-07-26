@@ -85,4 +85,4 @@ class HelpPress_Menu_Archive_Link {
 
 }
 
-$helppress_menu_archive_link = new HelpPress_Menu_Archive_Link();
+new HelpPress_Menu_Archive_Link();
