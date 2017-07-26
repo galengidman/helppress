@@ -10,6 +10,16 @@ function helppress_article_format_icon( $post_id, $size = 16 ) {
 
 }
 
+function helppress_buffer_template_part( $slug, $name = null ) {
+
+	ob_start();
+
+	helppress_get_template_part( $slug, $name );
+
+	return ob_get_clean();
+
+}
+
 function helppress_genericon( $icon, $size = 16 ) {
 
 	$svg_url = esc_url( HELPPRESS_URL . '/assets/img/genericons-neue.svg' );
@@ -152,6 +162,14 @@ function helppress_get_reserved_terms() {
 	);
 
 	return apply_filters( 'helppress_get_reserved_terms', $terms );
+
+}
+
+function helppress_get_template_part( $slug, $name = null ) {
+
+	$templates = new HelpPress_Template_Loader;
+
+	$templates->get_template_part( $slug, $name );
 
 }
 

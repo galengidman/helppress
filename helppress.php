@@ -14,9 +14,9 @@ include HELPPRESS_PATH . '/inc/classes/class-helppress-search-autocomplete.php';
 include HELPPRESS_PATH . '/inc/classes/class-helppress-menu-archive-link.php';
 include HELPPRESS_PATH . '/inc/classes/class-helppress-post-types.php';
 include HELPPRESS_PATH . '/inc/classes/class-helppress-taxonomies.php';
+include HELPPRESS_PATH . '/inc/classes/class-helppress-templates.php';
 
 include HELPPRESS_PATH . '/inc/admin.php';
 include HELPPRESS_PATH . '/inc/assets.php';
 include HELPPRESS_PATH . '/inc/functions.php';
 include HELPPRESS_PATH . '/inc/options.php';
-include HELPPRESS_PATH . '/inc/templates.php';
