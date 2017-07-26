@@ -1,5 +1,5 @@
 <div class="breadcrumb">
-	KB > Cat > Article Title Here
+	<?php new HelpPress_Breadcrumb(); ?>
 </div>
 
 <?php the_content(); ?>

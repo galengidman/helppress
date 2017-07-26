@@ -15,7 +15,7 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 
 		public function template_include( $template = '' ) {
 
-			if ( is_post_type_archive( 'helppress_article' ) ) {
+			if ( is_post_type_archive( 'helppress_article' ) && ! is_search() ) {
 				$this->reset_post( array(
 					'ID'             => 0,
 					'post_author'    => 0,

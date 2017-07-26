@@ -1,4 +1,6 @@
 <div class="helppress__container">
+	<?php new HelpPress_Breadcrumb(); ?>
+
 	<?php if ( have_posts() ) : ?>
 		<ul class="helppress__articles">
 			<?php while ( have_posts() ) : the_post(); ?>
