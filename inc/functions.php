@@ -66,7 +66,7 @@ function helppress_get_post_format( $post_id ) {
 function helppress_get_reserved_terms() {
 
 	// https://codex.wordpress.org/Reserved_Terms
-	$reserved_terms = array(
+	$terms = array(
 		'attachment',
 		'attachment_id',
 		'author',
