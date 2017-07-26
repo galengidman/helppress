@@ -21,6 +21,8 @@ if ( ! class_exists( 'HelpPress' ) ) {
 				'HELPPRESS_URL'  => untrailingslashit( plugin_dir_url( __FILE__ ) ),
 			);
 
+			$constants = apply_filters( 'helppress_constants', $constants );
+
 			foreach ( $constants as $constant => $value ) {
 				if ( ! defined( $constant ) ) {
 					define( $constant, $value );
@@ -53,6 +55,8 @@ if ( ! class_exists( 'HelpPress' ) ) {
 				'/inc/options.php',
 
 			);
+
+			$includes = apply_filters( 'helppress_includes', $includes );
 
 			foreach ( $includes as $file ) {
 				include HELPPRESS_PATH . $file;
