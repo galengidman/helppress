@@ -8,11 +8,11 @@ if ( ! class_exists( 'HelpPress_Post_Types' ) ) {
 
 		public function __construct() {
 
-			add_action( 'after_setup_theme', array( $this, 'registerArticles' ) );
+			add_action( 'after_setup_theme', array( $this, 'register_articles' ) );
 
 		}
 
-		public function registerArticles() {
+		public function register_articles() {
 
 			$labels = array(
 				'name'          => esc_html__( 'Articles',     'helppress' ),

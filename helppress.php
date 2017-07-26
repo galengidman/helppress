@@ -9,12 +9,12 @@ if ( ! class_exists( 'HelpPress' ) ) {
 
 		public function __construct() {
 
-			add_action( 'plugins_loaded', array( $this, 'defineConstants' ) );
+			add_action( 'plugins_loaded', array( $this, 'define_constants' ) );
 			add_action( 'plugins_loaded', array( $this, 'includes' ) );
 
 		}
 
-		public function defineConstants() {
+		public function define_constants() {
 
 			$constants = array(
 				'HELPPRESS_PATH' => untrailingslashit( plugin_dir_path( __FILE__ ) ),

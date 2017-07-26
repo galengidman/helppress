@@ -8,12 +8,12 @@ if ( ! class_exists( 'HelpPress_Taxonomies' ) ) {
 
 		public function __construct() {
 
-			add_action( 'after_setup_theme', array( $this, 'registerCategories' ) );
-			add_action( 'after_setup_theme', array( $this, 'registerTags' ) );
+			add_action( 'after_setup_theme', array( $this, 'register_categories' ) );
+			add_action( 'after_setup_theme', array( $this, 'register_tags' ) );
 
 		}
 
-		public function registerCategories() {
+		public function register_categories() {
 
 			$labels = array(
 				'name'          => esc_html__( 'Article Categories', 'helppress' ),
@@ -37,7 +37,7 @@ if ( ! class_exists( 'HelpPress_Taxonomies' ) ) {
 
 		}
 
-		public function registerTags() {
+		public function register_tags() {
 
 			$labels = array(
 				'name'          => esc_html__( 'Article Tags', 'helppress' ),

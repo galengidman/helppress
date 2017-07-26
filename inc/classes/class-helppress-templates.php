@@ -8,15 +8,15 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 
 		public function __construct() {
 
-			add_action( 'template_include', array( $this, 'templateInclude' ) );
-			add_action( 'pre_get_posts',    array( $this, 'removeWPAutoP' ) );
+			add_action( 'template_include', array( $this, 'template_include' ) );
+			add_action( 'pre_get_posts',    array( $this, 'remove_wpautop' ) );
 
 		}
 
-		public function templateInclude( $template = '' ) {
+		public function template_include( $template = '' ) {
 
 			if ( is_post_type_archive( 'helppress_article' ) ) {
-				$this->resetPost( array(
+				$this->reset_post( array(
 					'ID'             => 0,
 					'post_author'    => 0,
 					'post_date'      => 0,
@@ -31,7 +31,7 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 			}
 
 			elseif ( is_tax( 'helppress_article_category' ) ) {
-				$this->resetPost( array(
+				$this->reset_post( array(
 					'ID'             => 0,
 					'post_author'    => 0,
 					'post_date'      => 0,
@@ -49,7 +49,7 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 
 		}
 
-		public function resetPost( $args = array() ) {
+		public function reset_post( $args = array() ) {
 
 			global $wp_query, $post;
 
@@ -145,7 +145,7 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 
 		}
 
-		public function removeWPAutoP( $wp_query ) {
+		public function remove_wpautop( $wp_query ) {
 
 			if (
 				(
