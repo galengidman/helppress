@@ -41,6 +41,6 @@ if ( ! class_exists( 'HelpPress_Search_Autocomplete' ) ) {
 
 	}
 
-	new HelpPress_Search_Autocomplete();
-
 }
+
+new HelpPress_Search_Autocomplete();

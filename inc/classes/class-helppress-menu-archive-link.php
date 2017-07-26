@@ -89,6 +89,6 @@ if ( ! class_exists( 'HelpPress_Menu_Archive_Link' ) ) {
 
 	}
 
-	new HelpPress_Menu_Archive_Link();
-
 }
+
+new HelpPress_Menu_Archive_Link();
