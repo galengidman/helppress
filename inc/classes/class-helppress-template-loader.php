@@ -2,12 +2,16 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class HelpPress_Template_Loader extends Gamajo_Template_Loader {
+if ( ! class_exists( 'HelpPress_Template_Loader' ) ) {
 
-  protected $filter_prefix = 'helppress';
+	class HelpPress_Template_Loader extends Gamajo_Template_Loader {
 
-  protected $theme_template_directory = 'helppress';
+		protected $filter_prefix = 'helppress';
 
-  protected $plugin_directory = HELPPRESS_PATH;
+		protected $theme_template_directory = 'helppress';
+
+		protected $plugin_directory = HELPPRESS_PATH;
+
+	}
 
 }
