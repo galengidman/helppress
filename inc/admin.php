@@ -40,7 +40,7 @@ function helppress_admin_panel() {
 		'name'               => esc_html__( 'Knowledge Base URL slug', 'helppress' ),
 		'desc'               => sprintf( __( 'The URL slug of the Knowledge Base page. <code>%s</code>', 'helppress' ), trailingslashit( home_url() ) . '<ins>' . helppress_get_option( 'knowledge_base_slug' ) . '</ins>/' ),
 		'default'            => helppress_get_option_default( 'knowledge_base_slug' ),
-		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_ensure_safe_slug' ),
+		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
 	) );
 
 	// Article URL slug
@@ -50,7 +50,7 @@ function helppress_admin_panel() {
 		'name'               => esc_html__( 'Article URL slug', 'helppress' ),
 		'desc'               => sprintf( __( 'The URL slug for single knowledge base articles. <code>%s</code>', 'helppress' ), trailingslashit( home_url() ) . '<ins>' . helppress_get_option( 'article_slug' ) . '</ins>/article-title/' ),
 		'default'            => helppress_get_option_default( 'article_slug' ),
-		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_ensure_safe_slug' ),
+		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
 	) );
 
 	// Category URL slug
@@ -60,7 +60,7 @@ function helppress_admin_panel() {
 		'name'               => esc_html__( 'Category URL slug', 'helppress' ),
 		'desc'               => sprintf( __( 'The URL slug for knowledge base categories. <code>%s</code>', 'helppress' ), trailingslashit( home_url() ) . '<ins>' . helppress_get_option( 'category_slug' ) . '</ins>/category-title/' ),
 		'default'            => helppress_get_option_default( 'category_slug' ),
-		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_ensure_safe_slug' ),
+		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
 	) );
 
 	// Tag URL slug
@@ -70,7 +70,7 @@ function helppress_admin_panel() {
 		'name'               => esc_html__( 'Tag URL slug', 'helppress' ),
 		'desc'               => sprintf( __( 'The URL slug for knowledge base tags. <code>%s</code>', 'helppress' ), trailingslashit( home_url() ) . '<ins>' . helppress_get_option( 'tag_slug' ) . '</ins>/tag-title/' ),
 		'default'            => helppress_get_option_default( 'tag_slug' ),
-		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_ensure_safe_slug' ),
+		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
 	) );
 
 	// ------------------------------------------------------------------------
@@ -154,98 +154,14 @@ function helppress_admin_panel() {
 add_action( 'tf_create_options', 'helppress_admin_panel' );
 add_action( 'tf_save_admin_helppress', 'flush_rewrite_rules' );
 
-function helppress_ensure_safe_slug( $slug ) {
+function helppress_admin_view_link() {
 
-	// https://codex.wordpress.org/Reserved_Terms
-	$reserved_terms = array(
-		'attachment',
-		'attachment_id',
-		'author',
-		'author_name',
-		'calendar',
-		'cat',
-		'category',
-		'category__and',
-		'category__in',
-		'category__not_in',
-		'category_name',
-		'comments_per_page',
-		'comments_popup',
-		'custom',
-		'customize_messenger_channel',
-		'customized',
-		'cpage',
-		'day',
-		'debug',
-		'embed',
-		'error',
-		'exact',
-		'feed',
-		'hour',
-		'link_category',
-		'm',
-		'minute',
-		'monthnum',
-		'more',
-		'name',
-		'nav_menu',
-		'nonce',
-		'nopaging',
-		'offset',
-		'order',
-		'orderby',
-		'p',
-		'page',
-		'page_id',
-		'paged',
-		'pagename',
-		'pb',
-		'perm',
-		'post',
-		'post__in',
-		'post__not_in',
-		'post_format',
-		'post_mime_type',
-		'post_status',
-		'post_tag',
-		'post_type',
-		'posts',
-		'posts_per_archive_page',
-		'posts_per_page',
-		'preview',
-		'robots',
-		's',
-		'search',
-		'second',
-		'sentence',
-		'showposts',
-		'static',
-		'subpost',
-		'subpost_id',
-		'tag',
-		'tag__and',
-		'tag__in',
-		'tag__not_in',
-		'tag_id',
-		'tag_slug__and',
-		'tag_slug__in',
-		'taxonomy',
-		'tb',
-		'term',
-		'terms',
-		'theme',
-		'title',
-		'type',
-		'w',
-		'withcomments',
-		'withoutcomments',
-		'year',
-	);
+    global $submenu;
 
-	if ( in_array( $slug, $reserved_terms ) ) {
-		$slug = 'kb-' . $slug;
-	}
+	$url   = helppress_get_knowledge_base_url();
+	$label = esc_html__( 'View Live &rarr;', 'helppress' );
 
-	return $slug;
+    $submenu['edit.php?post_type=helppress_article'][] = array( $label, 'manage_options', $url );
 
 }
+add_action( 'admin_menu', 'helppress_admin_view_link' );

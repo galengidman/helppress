@@ -15,7 +15,7 @@ function helppress_register_article() {
 		'labels'        => $labels,
 		'public'        => true,
 		'menu_position' => 25,
-		'menu_icon'     => 'dashicons-schedule',
+		'menu_icon'     => 'dashicons-sos',
 		'supports'      => array(
 			'title',
 			'editor',
@@ -26,8 +26,9 @@ function helppress_register_article() {
 			'revisions',
 			'post-formats',
 		),
+		'has_archive'   => true,
 		'rewrite'       => array(
-			'slug'       => helppress_get_option( 'article_slug' ),
+			'slug'       => helppress_get_option( 'knowledge_base_slug' ),
 			'with_front' => false,
 		),
 	);
