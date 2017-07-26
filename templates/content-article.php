@@ -1,5 +1,2 @@
-<div class="breadcrumb">
-	<?php new HelpPress_Breadcrumb(); ?>
-</div>
-
+<?php helppress_get_template_part( 'breadcrumb' ); ?>
 <?php the_content(); ?>

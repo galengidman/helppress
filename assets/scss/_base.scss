@@ -10,6 +10,22 @@
 
 // --------------------------------------------------------
 
+.helppress__breadcrumb {
+	list-style-type: none;
+	font-size: .85em;
+	margin-left: 0;
+
+	li {
+		display: inline-block;
+
+		&:not(:first-child)::before {
+			content: '›';
+		}
+	}
+}
+
+// --------------------------------------------------------
+
 .helppress__search-form {
 	display: flex;
 	align-items: center;

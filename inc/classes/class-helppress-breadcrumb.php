@@ -6,7 +6,7 @@ if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
 
 	class HelpPress_Breadcrumb {
 
-		public function __construct() {
+		public function get_trail() {
 
 			$trail = array();
 
@@ -53,7 +53,7 @@ if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
 				);
 			}
 
-			var_dump( $trail );
+			return $trail;
 
 		}
 

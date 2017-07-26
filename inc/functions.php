@@ -43,6 +43,13 @@ function helppress_get_articles( $args = array() ) {
 
 }
 
+function helppress_get_breadcrumb() {
+
+	$breadcrumb = new HelpPress_Breadcrumb();
+
+	return $breadcrumb->get_trail();
+}
+
 function helppress_get_categories( $args = array() ) {
 
 	$args = wp_parse_args( $args, array(

@@ -155,10 +155,46 @@
 		"oAP": "\/inc\/assets.php",
 		"oF": 0
 		},
+	"\/inc\/classes\/class-helppress-breadcrumb.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/classes\/class-helppress-breadcrumb.php",
+		"oF": 0
+		},
+	"\/inc\/classes\/class-helppress-menu-archive-link.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/classes\/class-helppress-menu-archive-link.php",
+		"oF": 0
+		},
+	"\/inc\/classes\/class-helppress-post-types.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/classes\/class-helppress-post-types.php",
+		"oF": 0
+		},
+	"\/inc\/classes\/class-helppress-search-autocomplete.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/classes\/class-helppress-search-autocomplete.php",
+		"oF": 0
+		},
+	"\/inc\/classes\/class-helppress-taxonomies.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/classes\/class-helppress-taxonomies.php",
+		"oF": 0
+		},
 	"\/inc\/classes\/class-helppress-template-loader.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/classes\/class-helppress-template-loader.php",
+		"oF": 0
+		},
+	"\/inc\/classes\/class-helppress-templates.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/classes\/class-helppress-templates.php",
 		"oF": 0
 		},
 	"\/inc\/functions.php": {
@@ -173,40 +209,16 @@
 		"oAP": "\/inc\/options.php",
 		"oF": 0
 		},
-	"\/inc\/post-types.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/post-types.php",
-		"oF": 0
-		},
-	"\/inc\/search.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/search.php",
-		"oF": 0
-		},
-	"\/inc\/shortcodes.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/shortcodes.php",
-		"oF": 0
-		},
-	"\/inc\/taxonomies.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/taxonomies.php",
-		"oF": 0
-		},
-	"\/inc\/templates.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/inc\/templates.php",
-		"oF": 0
-		},
 	"\/inc\/vendor": {
 		"ft": 65536,
 		"oA": 1,
 		"oAP": "\/build\/inc\/vendor",
+		"oF": 0
+		},
+	"\/templates\/breadcrumb.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/breadcrumb.php",
 		"oF": 0
 		},
 	"\/templates\/content-article.php": {

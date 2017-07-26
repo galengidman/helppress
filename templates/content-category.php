@@ -1,5 +1,5 @@
 <div class="helppress__container">
-	<?php new HelpPress_Breadcrumb(); ?>
+	<?php helppress_get_template_part( 'breadcrumb' ); ?>
 
 	<?php if ( have_posts() ) : ?>
 		<ul class="helppress__articles">
