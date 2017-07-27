@@ -21,6 +21,11 @@ if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
 			);
 
 			if ( is_singular( 'helppress_article' ) ) {
+				$article_categories = wp_get_post_terms( get_the_id(), 'helppress_article_category', array( 'fields' => 'ids' ) );
+				if ( $article_categories ) {
+					$trail = array_merge( $trail, $this->build_tax_tree( $article_categories[0] ) );
+				}
+
 				$trail[] = array(
 					'label' => get_the_title(),
 					'url'   => get_permalink(),
@@ -28,29 +33,43 @@ if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
 			}
 
 			if ( is_tax( array( 'helppress_article_category', 'helppress_article_tag' ) ) ) {
-				$qo        = get_queried_object();
-				$tree      = array( $qo->term_id );
-				$ancestors = get_ancestors( $qo->term_id, $qo->term_slug, 'taxonomy' );
-
-				if ( $ancestors ) {
-					$tree = array_merge( $ancestors, $tree );
-				}
-
-				foreach ( $tree as $term_id ) {
-					$term = get_term( $term_id );
-
-					$trail[] = array(
-						'label' => $term->name,
-						'url'   => get_term_link( $term ),
-					);
-				}
+				$trail = array_merge( $trail, $this->build_tax_tree( get_queried_object_id() ) );
 			}
 
 			elseif ( is_search() ) {
 				$trail[] = array(
-					'label' => sprintf( __( 'Results for <em>%s</em>', 'helppress' ), get_search_query() ),
-					'url'   => add_query_arg( 's', $_GET['S'], home_url() ),
+					'label' => get_search_query(),
+					'url'   => get_search_link(),
 				);
+			}
+
+			return $trail;
+
+		}
+
+		public function build_tax_tree( $term_id = null ) {
+
+			$trail = [];
+
+			if ( term_exists( $term_id ) ) {
+
+				$term      = get_term( $term_id );
+				$tree      = array( $term->term_id );
+				$ancestors = get_ancestors( $term->term_id, $term->term_slug, 'taxonomy' );
+
+				if ( $ancestors ) {
+					$tree = array_merge( $ancestors, $tree );
+
+					foreach ( $tree as $term_id ) {
+						$term = get_term( $term_id );
+
+						$trail[] = array(
+							'label' => $term->name,
+							'url'   => get_term_link( $term ),
+						);
+					}
+				}
+
 			}
 
 			return $trail;
@@ -60,15 +79,3 @@ if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
 	}
 
 }
-
-// Search results:
-// Home > KB > Results for 'term'
-//
-// Index
-// Home > KB
-//
-// Article
-// Home > KB > Cat[0] > Article
-//
-// Tax
-// Home > KB > Tax
