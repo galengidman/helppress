@@ -34,7 +34,7 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 
 			elseif ( is_tax( 'helppress_article_category' ) ) {
 				$this->reset_post( array(
-					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-archive' ),
+					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-category' ),
 					'post_title'     => single_term_title( '', false ),
 				) );
 
