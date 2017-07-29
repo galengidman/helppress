@@ -51,7 +51,6 @@ if ( ! class_exists( 'HelpPress' ) ) {
 
 				// Other
 				'/includes/admin.php',
-				'/includes/assets.php',
 				'/includes/functions.php',
 				'/includes/options.php',
 
