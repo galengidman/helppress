@@ -6,11 +6,9 @@ if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
 
 	class HelpPress_Breadcrumb {
 
-		protected $trail;
+		protected $trail = array();
 
 		public function __construct() {
-
-			$this->trail = array();
 
 			$this->build_trail();
 

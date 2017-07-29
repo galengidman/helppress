@@ -6,14 +6,17 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 
 	class HelpPress_Templates {
 
-		protected $compat_templates;
+		protected $compat_templates = array(
+			'helppress.php',
+			'page.php',
+			'single.php',
+			'index.php',
+		);
 
 		public function __construct() {
 
 			add_action( 'template_include', array( $this, 'template_include' ) );
 			add_action( 'pre_get_posts',    array( $this, 'remove_wpautop' ) );
-
-			$this->set_compat_templates();
 
 		}
 
@@ -176,17 +179,6 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 			}
 
 			return $wp_query;
-
-		}
-
-		protected function set_compat_templates() {
-
-			$this->compat_templates = array(
-				'helppress.php',
-				'page.php',
-				'single.php',
-				'index.php',
-			);
 
 		}
 
