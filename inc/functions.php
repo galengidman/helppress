@@ -180,6 +180,18 @@ function helppress_get_template_part( $slug, $name = null ) {
 
 }
 
+function helppress_is_knowledge_base_archive() {
+
+	return is_post_type_archive( 'helppress_article' ) && ! is_search();
+
+}
+
+function helppress_is_knowledge_base_search() {
+
+	return is_search() && get_query_var( 'post_type' ) === 'helppress_article';
+
+}
+
 function helppress_sanitize_slug( $slug ) {
 
 	$reserved_terms = helppress_get_reserved_terms();
