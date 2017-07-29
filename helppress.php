@@ -40,6 +40,7 @@ if ( ! class_exists( 'HelpPress' ) ) {
 				'/includes/vendor/gambitph/titan-framework/titan-framework.php',
 
 				// Classes
+				'/includes/class-helppress-assets.php',
 				'/includes/class-helppress-breadcrumb.php',
 				'/includes/class-helppress-menu-archive-link.php',
 				'/includes/class-helppress-post-types.php',
