@@ -38,7 +38,7 @@ function helppress_admin_panel() {
 		'type'               => 'text',
 		'id'                 => 'knowledge_base_slug',
 		'name'               => esc_html__( 'Knowledge Base URL slug', 'helppress' ),
-		'desc'               => sprintf( __( 'The URL slug of the Knowledge Base page. <code>%s</code>', 'helppress' ), trailingslashit( home_url() ) . '<ins>' . helppress_get_option( 'knowledge_base_slug' ) . '</ins>/' ),
+		'desc'               => sprintf( __( 'The URL slug of the Knowledge Base page. <code>%s</code>', 'helppress' ), home_url( '/' ) . '<ins>' . helppress_get_option( 'knowledge_base_slug' ) . '</ins>/' ),
 		'default'            => helppress_get_option_default( 'knowledge_base_slug' ),
 		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
 	) );
@@ -48,7 +48,7 @@ function helppress_admin_panel() {
 		'type'               => 'text',
 		'id'                 => 'article_slug',
 		'name'               => esc_html__( 'Article URL slug', 'helppress' ),
-		'desc'               => sprintf( __( 'The URL slug for single knowledge base articles. <code>%s</code>', 'helppress' ), trailingslashit( home_url() ) . '<ins>' . helppress_get_option( 'article_slug' ) . '</ins>/article-title/' ),
+		'desc'               => sprintf( __( 'The URL slug for single knowledge base articles. <code>%s</code>', 'helppress' ), home_url( '/' ) . '<ins>' . helppress_get_option( 'article_slug' ) . '</ins>/article-title/' ),
 		'default'            => helppress_get_option_default( 'article_slug' ),
 		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
 	) );
@@ -58,7 +58,7 @@ function helppress_admin_panel() {
 		'type'               => 'text',
 		'id'                 => 'category_slug',
 		'name'               => esc_html__( 'Category URL slug', 'helppress' ),
-		'desc'               => sprintf( __( 'The URL slug for knowledge base categories. <code>%s</code>', 'helppress' ), trailingslashit( home_url() ) . '<ins>' . helppress_get_option( 'category_slug' ) . '</ins>/category-title/' ),
+		'desc'               => sprintf( __( 'The URL slug for knowledge base categories. <code>%s</code>', 'helppress' ), home_url( '/' ) . '<ins>' . helppress_get_option( 'category_slug' ) . '</ins>/category-title/' ),
 		'default'            => helppress_get_option_default( 'category_slug' ),
 		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
 	) );
@@ -68,7 +68,7 @@ function helppress_admin_panel() {
 		'type'               => 'text',
 		'id'                 => 'tag_slug',
 		'name'               => esc_html__( 'Tag URL slug', 'helppress' ),
-		'desc'               => sprintf( __( 'The URL slug for knowledge base tags. <code>%s</code>', 'helppress' ), trailingslashit( home_url() ) . '<ins>' . helppress_get_option( 'tag_slug' ) . '</ins>/tag-title/' ),
+		'desc'               => sprintf( __( 'The URL slug for knowledge base tags. <code>%s</code>', 'helppress' ), home_url( '/' ) . '<ins>' . helppress_get_option( 'tag_slug' ) . '</ins>/tag-title/' ),
 		'default'            => helppress_get_option_default( 'tag_slug' ),
 		'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
 	) );
