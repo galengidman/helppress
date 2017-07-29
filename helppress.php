@@ -69,3 +69,18 @@ if ( ! class_exists( 'HelpPress' ) ) {
 }
 
 new HelpPress();
+
+function asdf( $content ) {
+
+	if ( is_singular( 'helppress_article' ) ) {
+		ob_start();
+		remove_filter( 'the_content', 'asdf' );
+		helppress_get_template_part( 'partials/helppress-content-article' );
+		add_filter( 'the_content', 'asdf' );
+		$content = ob_get_clean();
+	}
+
+	return $content;
+
+}
+add_filter( 'the_content', 'asdf' );
