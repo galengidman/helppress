@@ -36,23 +36,23 @@ if ( ! class_exists( 'HelpPress' ) ) {
 			$includes = array(
 
 				// Vendor
-				'/inc/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
-				'/inc/vendor/gambitph/titan-framework/titan-framework.php',
+				'/includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
+				'/includes/vendor/gambitph/titan-framework/titan-framework.php',
 
 				// Classes
-				'/inc/classes/class-helppress-breadcrumb.php',
-				'/inc/classes/class-helppress-menu-archive-link.php',
-				'/inc/classes/class-helppress-post-types.php',
-				'/inc/classes/class-helppress-search-autocomplete.php',
-				'/inc/classes/class-helppress-taxonomies.php',
-				'/inc/classes/class-helppress-template-loader.php',
-				'/inc/classes/class-helppress-templates.php',
+				'/includes/class-helppress-breadcrumb.php',
+				'/includes/class-helppress-menu-archive-link.php',
+				'/includes/class-helppress-post-types.php',
+				'/includes/class-helppress-search-autocomplete.php',
+				'/includes/class-helppress-taxonomies.php',
+				'/includes/class-helppress-template-loader.php',
+				'/includes/class-helppress-templates.php',
 
 				// Other
-				'/inc/admin.php',
-				'/inc/assets.php',
-				'/inc/functions.php',
-				'/inc/options.php',
+				'/includes/admin.php',
+				'/includes/assets.php',
+				'/includes/functions.php',
+				'/includes/options.php',
 
 			);
 

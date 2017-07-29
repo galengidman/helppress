@@ -1,0 +1,92 @@
+[
+    {
+        "name": "gambitph/titan-framework",
+        "version": "1.9.2",
+        "version_normalized": "1.9.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/gambitph/Titan-Framework.git",
+            "reference": "793bee37350acf4ff10ebf1068aa6d16cdc44da1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/gambitph/Titan-Framework/zipball/793bee37350acf4ff10ebf1068aa6d16cdc44da1",
+            "reference": "793bee37350acf4ff10ebf1068aa6d16cdc44da1",
+            "shasum": ""
+        },
+        "time": "2015-10-06T16:21:47+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "titan-framework.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPLv2+"
+        ],
+        "authors": [
+            {
+                "name": "Gambit Technologies",
+                "email": "info@gambit.ph",
+                "homepage": "http://www.titanframework.net/",
+                "role": "Developer"
+            }
+        ],
+        "description": "Titan Framework allows theme and plugin developers to create admin pages, options, meta boxes, and theme customizer options with just a few simple lines of code.",
+        "homepage": "https://github.com/gambitph/Titan-Framework",
+        "keywords": [
+            "Titan Framework",
+            "framework",
+            "options",
+            "titan",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "gamajo/template-loader",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/GaryJones/Gamajo-Template-Loader.git",
+            "reference": "05057216f60baebfc4939e1a2b9aae6e89d25c91"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/GaryJones/Gamajo-Template-Loader/zipball/05057216f60baebfc4939e1a2b9aae6e89d25c91",
+            "reference": "05057216f60baebfc4939e1a2b9aae6e89d25c91",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.4"
+        },
+        "time": "2017-03-24T17:28:34+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "class-gamajo-template-loader.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Gary Jones",
+                "email": "gamajo@gamajo.com",
+                "homepage": "http://gamajo.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "A class for your WordPress plugin, to allow loading template parts with fallback through the child theme > parent theme > plugin",
+        "homepage": "http://github.com/GaryJones/Gamajo-Template-Loader",
+        "keywords": [
+            "templates",
+            "wordpress"
+        ]
+    }
+]
