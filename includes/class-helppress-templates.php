@@ -25,25 +25,34 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 
 			elseif ( helppress_is_knowledge_base_archive() ) {
 				$this->reset_post( array(
-					'post_content'   => helppress_buffer_template_part( 'knowledge-base' ),
+					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-archive' ),
 					'post_title'     => esc_html__( 'Knowledge Base', 'helppress' ),
 				) );
 
-				$custom_template = $this->get_template( 'helppress-search.php' );
+				$custom_template = $this->get_template( 'helppress-archive.php' );
 			}
 
 			elseif ( is_tax( 'helppress_article_category' ) ) {
 				$this->reset_post( array(
-					'post_content'   => helppress_buffer_template_part( 'content', 'category' ),
+					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-archive' ),
 					'post_title'     => single_term_title( '', false ),
 				) );
 
 				$custom_template = $this->get_template( 'helppress-category.php' );
 			}
 
+			elseif ( is_tax( 'helppress_article_tag' ) ) {
+				$this->reset_post( array(
+					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-tag' ),
+					'post_title'     => single_term_title( '', false ),
+				) );
+
+				$custom_template = $this->get_template( 'helppress-tag.php' );
+			}
+
 			elseif ( helppress_is_knowledge_base_search() ) {
 				$this->reset_post( array(
-					'post_content'   => helppress_buffer_template_part( 'content', 'category' ),
+					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-search' ),
 					'post_title'     => get_search_query(),
 				) );
 

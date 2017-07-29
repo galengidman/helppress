@@ -1,5 +1,5 @@
 <div class="helppress__container">
-	<?php helppress_get_template_part( 'search-form' ); ?>
+	<?php helppress_get_template_part( 'partials/helppress-search-form' ); ?>
 
 	<div class="helppress__kb helppress__kb--<?php echo esc_attr( helppress_get_option( 'columns' ) ); ?>">
 		<?php foreach ( helppress_get_categories() as $category ) : ?>

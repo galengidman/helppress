@@ -1,6 +1,7 @@
 <form action="<?php echo home_url( '/' ); ?>" method="get" class="helppress__search-form" role="search">
 	<label class="helppress__search-label">
 		<span class="screen-reader-text"><?php esc_html_e( 'Search for:', 'helppress' ); ?></span>
+
 		<input
 			type="search"
 			name="s"

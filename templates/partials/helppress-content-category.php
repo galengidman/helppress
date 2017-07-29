@@ -1,5 +1,5 @@
 <div class="helppress__container">
-	<?php helppress_get_template_part( 'breadcrumb' ); ?>
+	<?php helppress_get_template_part( 'partials/helppress-breadcrumb' ); ?>
 
 	<?php if ( have_posts() ) : ?>
 		<ul class="helppress__articles">
@@ -13,5 +13,5 @@
 		</ul>
 	<?php endif; ?>
 
-	<?php helppress_get_template_part( 'search-form' ); ?>
+	<?php helppress_get_template_part( 'partials/helppress-search-form' ); ?>
 </div>
