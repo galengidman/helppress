@@ -1,0 +1,9 @@
+{
+	"config": {
+		"vendor-dir": "includes/vendor"
+	},
+	"require": {
+		"gambitph/Titan-Framework": "^1.9",
+		"gamajo/template-loader": "^1.3"
+	}
+}
