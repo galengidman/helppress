@@ -4,7 +4,7 @@
 	<div class="helppress__kb helppress__kb--<?php echo esc_attr( helppress_get_option( 'columns' ) ); ?>">
 		<?php foreach ( helppress_get_categories() as $category ) : ?>
 			<div class="helppress__cat">
-				<h3 class="helppress__cat-title"><?php echo $category->name; ?></h3>
+				<h2 class="helppress__cat-title"><?php echo $category->name; ?></h2>
 
 				<?php if ( $category->description ) : ?>
 					<p class="helppress__cat-description"><?php echo $category->description; ?></p>
