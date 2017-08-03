@@ -123,6 +123,15 @@
 		"oS": 2,
 		"uL": 1
 		},
+	"\/assets\/vendor\/jquery.autocomplete.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/vendor\/jquery.autocomplete-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/composer.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -143,106 +152,148 @@
 		"oAP": "\/helppress.php",
 		"oF": 0
 		},
-	"\/inc\/admin.php": {
+	"\/includes\/admin.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/admin.php",
+		"oAP": "\/includes\/admin.php",
 		"oF": 0
 		},
-	"\/inc\/assets.php": {
+	"\/includes\/class-helppress-assets.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/assets.php",
+		"oAP": "\/includes\/class-helppress-assets.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-breadcrumb.php": {
+	"\/includes\/class-helppress-breadcrumb.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-breadcrumb.php",
+		"oAP": "\/includes\/class-helppress-breadcrumb.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-menu-archive-link.php": {
+	"\/includes\/class-helppress-menu-archive-link.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-menu-archive-link.php",
+		"oAP": "\/includes\/class-helppress-menu-archive-link.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-post-types.php": {
+	"\/includes\/class-helppress-post-types.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-post-types.php",
+		"oAP": "\/includes\/class-helppress-post-types.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-search-autocomplete.php": {
+	"\/includes\/class-helppress-search-autocomplete.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-search-autocomplete.php",
+		"oAP": "\/includes\/class-helppress-search-autocomplete.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-taxonomies.php": {
+	"\/includes\/class-helppress-taxonomies.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-taxonomies.php",
+		"oAP": "\/includes\/class-helppress-taxonomies.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-template-loader.php": {
+	"\/includes\/class-helppress-template-loader.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-template-loader.php",
+		"oAP": "\/includes\/class-helppress-template-loader.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-templates.php": {
+	"\/includes\/class-helppress-templates.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-templates.php",
+		"oAP": "\/includes\/class-helppress-templates.php",
 		"oF": 0
 		},
-	"\/inc\/functions.php": {
+	"\/includes\/functions.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/functions.php",
+		"oAP": "\/includes\/functions.php",
 		"oF": 0
 		},
-	"\/inc\/options.php": {
+	"\/includes\/options.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/options.php",
+		"oAP": "\/includes\/options.php",
 		"oF": 0
 		},
-	"\/inc\/vendor": {
+	"\/includes\/vendor": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "\/build\/inc\/vendor",
+		"oAP": "\/build\/includes\/vendor",
 		"oF": 0
 		},
-	"\/templates\/breadcrumb.php": {
+	"\/templates\/helppress-archive.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/breadcrumb.php",
+		"oAP": "\/templates\/helppress-archive.php",
 		"oF": 0
 		},
-	"\/templates\/content-article.php": {
+	"\/templates\/helppress-article.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/content-article.php",
+		"oAP": "\/templates\/helppress-article.php",
 		"oF": 0
 		},
-	"\/templates\/content-category.php": {
+	"\/templates\/helppress-category.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/content-category.php",
+		"oAP": "\/templates\/helppress-category.php",
 		"oF": 0
 		},
-	"\/templates\/knowledge-base.php": {
+	"\/templates\/helppress-search.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/knowledge-base.php",
+		"oAP": "\/templates\/helppress-search.php",
 		"oF": 0
 		},
-	"\/templates\/search-form.php": {
+	"\/templates\/helppress-tag.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/search-form.php",
+		"oAP": "\/templates\/helppress-tag.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-breadcrumb.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-breadcrumb.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-archive.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-archive.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-article.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-article.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-category.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-category.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-search.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-search.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-tag.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-tag.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-search-form.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-search-form.php",
 		"oF": 0
 		}
 	},
@@ -2192,7 +2243,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/titan-framework, \/inc\/vendor",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/titan-framework, \/includes\/vendor",
 	"sourceFolderName": "source",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
