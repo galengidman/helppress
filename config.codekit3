@@ -123,6 +123,15 @@
 		"oS": 2,
 		"uL": 1
 		},
+	"\/assets\/vendor\/jquery.autocomplete.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/vendor\/jquery.autocomplete-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/composer.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -137,112 +146,1673 @@
 		"oAP": "\/composer.lock",
 		"oF": 0
 		},
-	"\/helppress.php": {
+	"\/includes\/admin.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/helppress.php",
+		"oAP": "\/includes\/admin.php",
 		"oF": 0
 		},
-	"\/inc\/admin.php": {
+	"\/includes\/class-helppress-assets.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/admin.php",
+		"oAP": "\/includes\/class-helppress-assets.php",
 		"oF": 0
 		},
-	"\/inc\/assets.php": {
+	"\/includes\/class-helppress-breadcrumb.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/assets.php",
+		"oAP": "\/includes\/class-helppress-breadcrumb.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-breadcrumb.php": {
+	"\/includes\/class-helppress-menu-archive-link.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-breadcrumb.php",
+		"oAP": "\/includes\/class-helppress-menu-archive-link.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-menu-archive-link.php": {
+	"\/includes\/class-helppress-post-types.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-menu-archive-link.php",
+		"oAP": "\/includes\/class-helppress-post-types.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-post-types.php": {
+	"\/includes\/class-helppress-search-autocomplete.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-post-types.php",
+		"oAP": "\/includes\/class-helppress-search-autocomplete.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-search-autocomplete.php": {
+	"\/includes\/class-helppress-taxonomies.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-search-autocomplete.php",
+		"oAP": "\/includes\/class-helppress-taxonomies.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-taxonomies.php": {
+	"\/includes\/class-helppress-template-loader.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-taxonomies.php",
+		"oAP": "\/includes\/class-helppress-template-loader.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-template-loader.php": {
+	"\/includes\/functions.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-template-loader.php",
+		"oAP": "\/includes\/functions.php",
 		"oF": 0
 		},
-	"\/inc\/classes\/class-helppress-templates.php": {
+	"\/includes\/options.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/classes\/class-helppress-templates.php",
+		"oAP": "\/includes\/options.php",
 		"oF": 0
 		},
-	"\/inc\/functions.php": {
+	"\/includes\/vendor\/autoload.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/functions.php",
+		"oAP": "\/includes\/vendor\/autoload.php",
 		"oF": 0
 		},
-	"\/inc\/options.php": {
+	"\/includes\/vendor\/composer\/autoload_classmap.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/inc\/options.php",
+		"oAP": "\/includes\/vendor\/composer\/autoload_classmap.php",
 		"oF": 0
 		},
-	"\/inc\/vendor": {
-		"ft": 65536,
+	"\/includes\/vendor\/composer\/autoload_files.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/composer\/autoload_files.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/composer\/autoload_namespaces.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/composer\/autoload_namespaces.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/composer\/autoload_psr4.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/composer\/autoload_psr4.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/composer\/autoload_real.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/composer\/autoload_real.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/composer\/autoload_static.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/composer\/autoload_static.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/composer\/ClassLoader.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/composer\/ClassLoader.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/composer\/installed.json": {
+		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/build\/inc\/vendor",
-		"oF": 0
+		"oAP": "\/includes\/vendor\/composer\/installed-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
-	"\/templates\/breadcrumb.php": {
+	"\/includes\/vendor\/composer\/LICENSE": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/breadcrumb.php",
+		"oAP": "\/includes\/vendor\/composer\/LICENSE",
 		"oF": 0
 		},
-	"\/templates\/content-article.php": {
+	"\/includes\/vendor\/gamajo\/template-loader\/.gitignore": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/content-article.php",
+		"oAP": "\/includes\/vendor\/gamajo\/template-loader\/.gitignore",
 		"oF": 0
 		},
-	"\/templates\/content-category.php": {
+	"\/includes\/vendor\/gamajo\/template-loader\/CHANGELOG.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gamajo\/template-loader\/CHANGELOG.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/includes\/vendor\/gamajo\/template-loader\/class-gamajo-template-loader.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/content-category.php",
+		"oAP": "\/includes\/vendor\/gamajo\/template-loader\/class-gamajo-template-loader.php",
 		"oF": 0
 		},
-	"\/templates\/knowledge-base.php": {
+	"\/includes\/vendor\/gamajo\/template-loader\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/includes\/vendor\/gamajo\/template-loader\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/includes\/vendor\/gamajo\/template-loader\/LICENSE": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/knowledge-base.php",
+		"oAP": "\/includes\/vendor\/gamajo\/template-loader\/LICENSE",
 		"oF": 0
 		},
-	"\/templates\/search-form.php": {
+	"\/includes\/vendor\/gamajo\/template-loader\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gamajo\/template-loader\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/.gitignore": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/search-form.php",
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/.gitignore",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/.jshintrc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/.jshintrc",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/.scrutinizer.yml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/.scrutinizer.yml",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/.tm_properties": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/.tm_properties",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/.travis.yml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/.travis.yml",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/bin\/install-wp-tests.sh": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/bin\/install-wp-tests.sh",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/bower.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/bower-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/css\/admin-styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/css\/admin-styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/css\/admin-theme-customizer-styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/css\/admin-theme-customizer-styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/css\/class-option-date.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/css\/class-option-date-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/css\/class-option-font.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/css\/class-option-font-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/gulpfile.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/gulpfile-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/inc\/edd-licensing\/EDD_SL_Plugin_Updater.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/inc\/edd-licensing\/EDD_SL_Plugin_Updater.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/inc\/edd-licensing\/theme-updater-class.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/inc\/edd-licensing\/theme-updater-class.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/inc\/scssphp\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/inc\/scssphp\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/inc\/scssphp\/LICENSE.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/inc\/scssphp\/LICENSE.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/inc\/scssphp\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/inc\/scssphp\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/inc\/scssphp\/scss.inc.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/inc\/scssphp\/scss.inc.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/ace.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/ace-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-css.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-css-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-html.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-html-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-javascript.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-javascript-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-json.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-json-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-less.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-less-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-lua.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-lua-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-markdown.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-markdown-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-mysql.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-mysql-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-php.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-php-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-plain_text.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-plain_text-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-python.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-python-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-ruby.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-ruby-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-sass.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-sass-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-scss.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-scss-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-sh.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-sh-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-text.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-text-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-xml.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-xml-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/css.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/css-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/html.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/html-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/javascript.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/javascript-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/json.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/json-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/less.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/less-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/lua.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/lua-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/markdown.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/markdown-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/mysql.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/mysql-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/php.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/php-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/plain_text.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/plain_text-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/python.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/python-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/ruby.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/ruby-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/sass.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/sass-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/scss.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/scss-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/sh.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/sh-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/text.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/text-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/xml.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/xml-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-ambiance.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-ambiance-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-chaos.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-chaos-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-chrome.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-chrome-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-clouds.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-clouds-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-clouds_midnight.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-clouds_midnight-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-cobalt.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-cobalt-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-crimson_editor.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-crimson_editor-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-dawn.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-dawn-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-dreamweaver.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-dreamweaver-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-eclipse.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-eclipse-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-github.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-github-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-idle_fingers.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-idle_fingers-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-iplastic.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-iplastic-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-katzenmilch.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-katzenmilch-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-kr_theme.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-kr_theme-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-kuroir.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-kuroir-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-merbivore.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-merbivore-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-merbivore_soft.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-merbivore_soft-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-mono_industrial.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-mono_industrial-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-monokai.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-monokai-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-pastel_on_dark.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-pastel_on_dark-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-solarized_dark.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-solarized_dark-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-solarized_light.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-solarized_light-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-sqlserver.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-sqlserver-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-terminal.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-terminal-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-textmate.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-textmate-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_blue.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_blue-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_bright.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_bright-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_eighties.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_eighties-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-twilight.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-twilight-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-vibrant_ink.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-vibrant_ink-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-xcode.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-xcode-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-css.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-css-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-html.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-html-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-javascript.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-javascript-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-json.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-json-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-lua.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-lua-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-php.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-php-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-xml.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-xml-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/admin-styling.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/admin-styling-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/admin-styling.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/admin-styling-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/jquery-ui-timepicker-addon.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/jquery-ui-timepicker-addon-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/serialize.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/serialize-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/wp-color-picker-alpha.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/wp-color-picker-alpha-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/jquery-ui-timepicker-addon.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/jquery-ui-timepicker-addon-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/admin-styling-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/admin-styling-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/jquery-ui-timepicker-addon-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/jquery-ui-timepicker-addon-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/serialize-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/serialize-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/wp-color-picker-alpha-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/wp-color-picker-alpha-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/serialize.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/serialize-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/js\/wp-color-picker-alpha.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/wp-color-picker-alpha-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-de_DE.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-de_DE.mo",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-de_DE.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-de_DE.po",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-en_US.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-en_US.mo",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-en_US.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-en_US.po",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-es_ES.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-es_ES.mo",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-es_ES.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-es_ES.po",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-fr_FR.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-fr_FR.mo",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-fr_FR.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-fr_FR.po",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-it_IT.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-it_IT.mo",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-it_IT.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-it_IT.po",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-pt_BR.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-pt_BR.mo",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-pt_BR.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-pt_BR.po",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-tr_TR.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-tr_TR.mo",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-tr_TR.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework-tr_TR.po",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework.pot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/languages\/titan-framework.pot",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-admin-notification.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-admin-notification.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-admin-page.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-admin-page.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-admin-tab.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-admin-tab.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-customizer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-customizer.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-meta-box.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-meta-box.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-ajax-button.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-ajax-button.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-checkbox.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-checkbox.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-code.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-code.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-color.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-color.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-custom.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-custom.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-date.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-date.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-edd-license.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-edd-license.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-editor.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-editor.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-enable.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-enable.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-font.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-font.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-gallery.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-gallery.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-heading.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-heading.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-iframe.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-iframe.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-multicheck-categories.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-multicheck-categories.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-multicheck-pages.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-multicheck-pages.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-multicheck-posts.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-multicheck-posts.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-multicheck.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-multicheck.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-note.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-note.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-number.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-number.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-radio-image.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-radio-image.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-radio-palette.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-radio-palette.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-radio.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-radio.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-save.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-save.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-select-categories.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-select-categories.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-select-pages.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-select-pages.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-select-posts.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-select-posts.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-select.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-select.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-separator.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-separator.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-sortable.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-sortable.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-text.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-text.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-textarea.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-textarea.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-upload.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option-upload.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-option.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-titan-css.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-titan-css.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-titan-framework.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-titan-framework.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-wp-customize-control.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/class-wp-customize-control.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/functions-googlefonts.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/functions-googlefonts.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/functions-utils.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/functions-utils.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/lib\/iframe-font-preview.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/lib\/iframe-font-preview.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/phpunit.xml.dist": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/phpunit.xml.dist",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/readme.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/readme.txt",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/ruleset.xml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/ruleset.xml",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/tests\/bootstrap.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/tests\/bootstrap.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/tests\/helpers\/shims.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/tests\/helpers\/shims.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-option-color.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-option-color.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-option-text.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-option-text.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-sample.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-sample.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-titan-framework-checker.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-titan-framework-checker.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-titan-framework.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/tests\/test-titan-framework.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/titan-framework-checker.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/titan-framework-checker.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/titan-framework-embedder.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/titan-framework-embedder.php",
+		"oF": 0
+		},
+	"\/includes\/vendor\/gambitph\/titan-framework\/titan-framework.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/titan-framework.php",
+		"oF": 0
+		},
+	"\/templates\/helppress-archive.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/helppress-archive.php",
+		"oF": 0
+		},
+	"\/templates\/helppress-article.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/helppress-article.php",
+		"oF": 0
+		},
+	"\/templates\/helppress-category.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/helppress-category.php",
+		"oF": 0
+		},
+	"\/templates\/helppress-search.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/helppress-search.php",
+		"oF": 0
+		},
+	"\/templates\/helppress-tag.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/helppress-tag.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-breadcrumb.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-breadcrumb.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-archive.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-archive.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-article.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-article.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-category.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-category.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-search.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-search.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-content-tag.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-content-tag.php",
+		"oF": 0
+		},
+	"\/templates\/partials\/helppress-search-form.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/helppress-search-form.php",
 		"oF": 0
 		}
 	},
