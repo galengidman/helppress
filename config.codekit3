@@ -146,6 +146,12 @@
 		"oAP": "\/composer.lock",
 		"oF": 0
 		},
+	"\/helppress.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/helppress.php",
+		"oF": 0
+		},
 	"\/includes\/admin.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -162,6 +168,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/class-helppress-breadcrumb.php",
+		"oF": 0
+		},
+	"\/includes\/class-helppress-custom-content.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/class-helppress-custom-content.php",
 		"oF": 0
 		},
 	"\/includes\/class-helppress-menu-archive-link.php": {
@@ -192,6 +204,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/class-helppress-template-loader.php",
+		"oF": 0
+		},
+	"\/includes\/class-helppress-templates.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/class-helppress-templates.php",
 		"oF": 0
 		},
 	"\/includes\/functions.php": {
@@ -1828,7 +1846,7 @@
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
@@ -3182,7 +3200,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http:\/\/wpkb.dev\/",
+	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
@@ -3762,7 +3780,7 @@
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules, \/titan-framework, \/inc\/vendor",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {

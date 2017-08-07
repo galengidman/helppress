@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .helppress__container .genericons-neue { position: relative; top: -.1em; vertical-align: middle; }
 
-.helppress__breadcrumb { list-style-type: none; font-size: .85em; margin-left: 0; }
+.helppress__breadcrumb { list-style-type: none; font-size: .85em; margin-left: 0; padding-left: 0; }
 
 .helppress__breadcrumb li { display: inline-block; }
 
