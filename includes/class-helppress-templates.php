@@ -15,18 +15,19 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 
 		public function __construct() {
 
-			add_action( 'template_include', array( $this, 'template_include' ) );
-			add_action( 'pre_get_posts',    array( $this, 'remove_wpautop' ) );
+			add_filter( 'template_include', array( $this, 'template_include' ) );
 
 		}
 
-		public function template_include( $template = '' ) {
+		public function template_include( $template ) {
 
 			if ( is_singular( 'helppress_article' ) ) {
 				$custom_template = $this->get_template( 'helppress-article.php' );
 			}
 
 			elseif ( helppress_is_knowledge_base_archive() ) {
+				remove_all_filters( 'the_content' );
+
 				$this->reset_post( array(
 					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-archive' ),
 					'post_title'     => esc_html__( 'Knowledge Base', 'helppress' ),
@@ -163,22 +164,6 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 			if ( ! $wp_query->is_404() ) {
 				status_header( 200 );
 			}
-
-		}
-
-		public function remove_wpautop( $wp_query ) {
-
-			if (
-				(
-					is_post_type_archive( 'helppress_article' )
-					|| is_tax( 'helppress_article_category' )
-				)
-				&& $wp_query->is_main_query()
-			) {
-				remove_filter( 'the_content', 'wpautop' );
-			}
-
-			return $wp_query;
 
 		}
 

@@ -42,6 +42,7 @@ if ( ! class_exists( 'HelpPress' ) ) {
 				// Classes
 				'/includes/class-helppress-assets.php',
 				'/includes/class-helppress-breadcrumb.php',
+				'/includes/class-helppress-custom-content.php',
 				'/includes/class-helppress-menu-archive-link.php',
 				'/includes/class-helppress-post-types.php',
 				'/includes/class-helppress-search-autocomplete.php',
@@ -69,18 +70,3 @@ if ( ! class_exists( 'HelpPress' ) ) {
 }
 
 new HelpPress();
-
-function asdf( $content ) {
-
-	if ( is_singular( 'helppress_article' ) ) {
-		ob_start();
-		remove_filter( 'the_content', 'asdf' );
-		helppress_get_template_part( 'partials/helppress-content-article' );
-		add_filter( 'the_content', 'asdf' );
-		$content = ob_get_clean();
-	}
-
-	return $content;
-
-}
-add_filter( 'the_content', 'asdf' );
