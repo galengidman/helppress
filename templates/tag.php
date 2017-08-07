@@ -2,7 +2,7 @@
 
 get_header( 'helppress' );
 
-helppress_get_template_part( 'partials/helppress-content-tag' );
+helppress_get_template_part( 'parts/content-tag' );
 
 get_sidebar( 'helppress' );
 

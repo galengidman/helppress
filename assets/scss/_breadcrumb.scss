@@ -1,0 +1,14 @@
+.helppress__breadcrumb {
+	list-style-type: none;
+	font-size: .85em;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.helppress__breadcrumb-crumb {
+	display: inline-block;
+
+	&:not(:first-child)::before {
+		content: '/';
+	}
+}

@@ -32,14 +32,9 @@ if ( ! class_exists( 'HelpPress_Assets' ) ) {
 			) );
 
 			wp_enqueue_style(
-				'helppress-full',
-				esc_url( HELPPRESS_URL . '/assets/css/full.css' )
+				'helppress',
+				esc_url( HELPPRESS_URL . '/assets/css/helppress.css' )
 			);
-
-			// wp_enqueue_style(
-			// 	'helppress-lite',
-			// 	esc_url( HELPPRESS_URL . '/assets/css/lite.css' )
-			// );
 
 		}
 

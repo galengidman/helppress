@@ -29,35 +29,41 @@ if ( ! class_exists( 'HelpPress_Templates' ) ) {
 				remove_all_filters( 'the_content' );
 
 				$this->reset_post( array(
-					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-archive' ),
-					'post_title'     => esc_html__( 'Knowledge Base', 'helppress' ),
+					'post_content' => helppress_buffer_template_part( 'parts/content-archive' ),
+					'post_title'   => esc_html__( 'Knowledge Base', 'helppress' ),
 				) );
 
 				$custom_template = $this->get_template( 'helppress-archive.php' );
 			}
 
 			elseif ( is_tax( 'helppress_article_category' ) ) {
+				remove_all_filters( 'the_content' );
+
 				$this->reset_post( array(
-					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-category' ),
-					'post_title'     => single_term_title( '', false ),
+					'post_content' => helppress_buffer_template_part( 'parts/content-category' ),
+					'post_title'   => single_term_title( '', false ),
 				) );
 
 				$custom_template = $this->get_template( 'helppress-category.php' );
 			}
 
 			elseif ( is_tax( 'helppress_article_tag' ) ) {
+				remove_all_filters( 'the_content' );
+
 				$this->reset_post( array(
-					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-tag' ),
-					'post_title'     => single_term_title( '', false ),
+					'post_content' => helppress_buffer_template_part( 'parts/content-tag' ),
+					'post_title'   => single_term_title( '', false ),
 				) );
 
 				$custom_template = $this->get_template( 'helppress-tag.php' );
 			}
 
 			elseif ( helppress_is_knowledge_base_search() ) {
+				remove_all_filters( 'the_content' );
+
 				$this->reset_post( array(
-					'post_content'   => helppress_buffer_template_part( 'partials/helppress-content-search' ),
-					'post_title'     => get_search_query(),
+					'post_content' => helppress_buffer_template_part( 'parts/content-search' ),
+					'post_title'   => get_search_query(),
 				) );
 
 				$custom_template = $this->get_template( 'helppress-search.php' );

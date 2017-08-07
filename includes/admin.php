@@ -81,16 +81,16 @@ function helppress_admin_panel() {
 		'name' => esc_html__( 'Display', 'helppress' ),
 	) );
 
-	$tab_display->createOption( array(
-		'type'    => 'radio',
-		'id'      => 'skin',
-		'name'    => esc_html__( 'Skin', 'helppress' ),
-		'options' => array(
-			'full' => __( '<strong>Full</strong>: A fully-designed and styled knowledge base.', 'helppress' ),
-			'lite' => __( '<strong>Lite</strong>: Just enough styling to make it work. Inherits most things from your theme.', 'helppress' ),
-		),
-		'default' => helppress_get_option_default( 'skin' ),
-	) );
+	// $tab_display->createOption( array(
+	// 	'type'    => 'radio',
+	// 	'id'      => 'skin',
+	// 	'name'    => esc_html__( 'Skin', 'helppress' ),
+	// 	'options' => array(
+	// 		'full' => __( '<strong>Full</strong>: A fully-designed and styled knowledge base.', 'helppress' ),
+	// 		'lite' => __( '<strong>Lite</strong>: Just enough styling to make it work. Inherits most things from your theme.', 'helppress' ),
+	// 	),
+	// 	'default' => helppress_get_option_default( 'skin' ),
+	// ) );
 
 	$tab_display->createOption( array(
 		'type'    => 'radio-image',

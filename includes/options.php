@@ -13,7 +13,7 @@ function helppress_get_option_defaults() {
 		'article_slug'        => 'article',
 
 		// Display
-		'skin'                => 'full',
+		// 'skin'                => 'full',
 		'columns'             => 2,
 		'color_accent'        => '#0099e5',
 		'color_success'       => '#34bf49',

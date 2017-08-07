@@ -24,7 +24,7 @@ function helppress_genericon( $icon, $size = 16 ) {
 
 	$svg_url = esc_url( HELPPRESS_URL . '/assets/img/genericons-neue.svg' );
 
-	return "<svg class='genericons-neue genericons-neue-{$icon}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-{$icon}'></use></svg>";
+	return "<svg class='helppress__icon helppress__icon--{$icon} helppress__icon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-{$icon}'></use></svg>";
 
 }
 
