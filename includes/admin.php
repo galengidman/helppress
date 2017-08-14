@@ -28,11 +28,6 @@ function helppress_admin_panel() {
 		'name' => esc_html__( 'General', 'helppress' ),
 	) );
 
-	// $tab_general->createOption( array(
-	// 	'name' => esc_html__( 'General', 'helppress' ),
-	// 	'type' => 'heading',
-	// ) );
-
 	// Knowledge Base URL slug
 	$tab_general->createOption( array(
 		'type'               => 'text',
@@ -81,17 +76,6 @@ function helppress_admin_panel() {
 		'name' => esc_html__( 'Display', 'helppress' ),
 	) );
 
-	// $tab_display->createOption( array(
-	// 	'type'    => 'radio',
-	// 	'id'      => 'skin',
-	// 	'name'    => esc_html__( 'Skin', 'helppress' ),
-	// 	'options' => array(
-	// 		'full' => __( '<strong>Full</strong>: A fully-designed and styled knowledge base.', 'helppress' ),
-	// 		'lite' => __( '<strong>Lite</strong>: Just enough styling to make it work. Inherits most things from your theme.', 'helppress' ),
-	// 	),
-	// 	'default' => helppress_get_option_default( 'skin' ),
-	// ) );
-
 	$tab_display->createOption( array(
 		'type'    => 'radio-image',
 		'id'      => 'columns',
@@ -106,48 +90,11 @@ function helppress_admin_panel() {
 	) );
 
 	$tab_display->createOption( array(
-		'type'    => 'color',
-		'id'      => 'color_accent',
-		'name'    => esc_html__( 'Accent color', 'helppress' ),
-		'default' => helppress_get_option_default( 'color_accent' ),
-	) );
-
-	$tab_display->createOption( array(
-		'type'    => 'color',
-		'id'      => 'color_success',
-		'name'    => esc_html__( 'Success color', 'helppress' ),
-		'default' => helppress_get_option_default( 'color_success' ),
-	) );
-
-	$tab_display->createOption( array(
-		'type'    => 'color',
-		'id'      => 'color_error',
-		'name'    => esc_html__( 'Error color', 'helppress' ),
-		'default' => helppress_get_option_default( 'color_error' ),
-	) );
-
-	$tab_display->createOption( array(
 		'type'    => 'checkbox',
 		'id'      => 'disable_css',
 		'name'    => esc_html__( 'Disable CSS', 'helppress' ),
 		'desc'    => esc_html__( 'You can disable the built-in CSS entirely if want to use your own.', 'helppress' ),
 		'default' => helppress_get_option_default( 'disable_css' ),
-	) );
-
-	// ------------------------------------------------------------------------
-	// TAB - LICENSE
-	// ------------------------------------------------------------------------
-
-	$tab_license = $admin_panel->createTab( array(
-		'name' => esc_html__( 'License', 'helppress' ),
-	) );
-
-	// License Key
-	$tab_license->createOption( array(
-		'type'    => 'edd-license',
-		'name'    => esc_html__( 'License key', 'helppress' ),
-		'id'      => 'license_key',
-		'default' => helppress_get_option_default( 'license_key' ),
 	) );
 
 }
