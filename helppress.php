@@ -1,11 +1,18 @@
 <?php
 /**
  * Plugin Name: HelpPress
+ * Plugin URI:  https://helppresswp.com/
+ * Description: A powerful and easy-to-use knowledge base plugin for WordPress. Compatible with 99% of themes, or override with custom templates to futher customize. Includes categories and tags to organize content and live search to help your users find relevant content quicker.
+ * Version:     1.0.0
+ * Author:      ThemeBright
+ * Author URI:  https://themebright.com/
+ * License:     GPL2+
+ * Domain Path: /languages/
  */
 
-if ( ! class_exists( 'HPKB' ) ) {
+if ( ! class_exists( 'HelpPress' ) ) {
 
-	class HPKB {
+	class HelpPress {
 
 		public function __construct() {
 
@@ -69,4 +76,4 @@ if ( ! class_exists( 'HPKB' ) ) {
 
 }
 
-new HPKB();
+new HelpPress();

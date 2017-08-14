@@ -1816,6 +1816,18 @@
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/titan-framework.php",
 		"oF": 0
 		},
+	"\/license.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/license.txt",
+		"oF": 0
+		},
+	"\/readme.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/readme.txt",
+		"oF": 0
+		},
 	"\/templates\/archive.php": {
 		"ft": 8192,
 		"oA": 2,

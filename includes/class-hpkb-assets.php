@@ -2,7 +2,6 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-
 if ( ! class_exists( 'HPKB_Assets' ) ) {
 
 	class HPKB_Assets {
