@@ -2,13 +2,13 @@
 
 	$(function() {
 
-		var $hpSearchInput       = $('.helppress__search-input');
-		var $hpSearchSuggestions = $('.helppress__search-suggestions');
+		var $hpSearchInput       = $('.hpkb__search-input');
+		var $hpSearchSuggestions = $('.hpkb__search-suggestions');
 
 		$hpSearchInput.devbridgeAutocomplete({
-			serviceUrl: hpLocalization.adminAjax,
+			serviceUrl: hpkb_l10n.admin_ajax,
 			params: {
-				action: 'helppress_autocomplete_suggestions',
+				action: 'hpkb_autocomplete_suggestions',
 			},
 			appendTo: $hpSearchSuggestions,
 			forceFixPosition: true,

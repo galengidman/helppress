@@ -213,58 +213,58 @@
 		"oAP": "\/includes\/admin.php",
 		"oF": 0
 		},
-	"\/includes\/class-helppress-assets.php": {
+	"\/includes\/class-hpkb-assets.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-helppress-assets.php",
+		"oAP": "\/includes\/class-hpkb-assets.php",
 		"oF": 0
 		},
-	"\/includes\/class-helppress-breadcrumb.php": {
+	"\/includes\/class-hpkb-breadcrumb.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-helppress-breadcrumb.php",
+		"oAP": "\/includes\/class-hpkb-breadcrumb.php",
 		"oF": 0
 		},
-	"\/includes\/class-helppress-custom-content.php": {
+	"\/includes\/class-hpkb-custom-content.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-helppress-custom-content.php",
+		"oAP": "\/includes\/class-hpkb-custom-content.php",
 		"oF": 0
 		},
-	"\/includes\/class-helppress-menu-archive-link.php": {
+	"\/includes\/class-hpkb-menu-archive-link.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-helppress-menu-archive-link.php",
+		"oAP": "\/includes\/class-hpkb-menu-archive-link.php",
 		"oF": 0
 		},
-	"\/includes\/class-helppress-post-types.php": {
+	"\/includes\/class-hpkb-post-types.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-helppress-post-types.php",
+		"oAP": "\/includes\/class-hpkb-post-types.php",
 		"oF": 0
 		},
-	"\/includes\/class-helppress-search-autocomplete.php": {
+	"\/includes\/class-hpkb-search-autocomplete.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-helppress-search-autocomplete.php",
+		"oAP": "\/includes\/class-hpkb-search-autocomplete.php",
 		"oF": 0
 		},
-	"\/includes\/class-helppress-taxonomies.php": {
+	"\/includes\/class-hpkb-taxonomies.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-helppress-taxonomies.php",
+		"oAP": "\/includes\/class-hpkb-taxonomies.php",
 		"oF": 0
 		},
-	"\/includes\/class-helppress-template-loader.php": {
+	"\/includes\/class-hpkb-template-loader.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-helppress-template-loader.php",
+		"oAP": "\/includes\/class-hpkb-template-loader.php",
 		"oF": 0
 		},
-	"\/includes\/class-helppress-templates.php": {
+	"\/includes\/class-hpkb-templates.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-helppress-templates.php",
+		"oAP": "\/includes\/class-hpkb-templates.php",
 		"oF": 0
 		},
 	"\/includes\/functions.php": {

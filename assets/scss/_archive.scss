@@ -1,25 +1,25 @@
-.helppress__archive--2,
-.helppress__archive--3 {
+.hpkb__archive--2,
+.hpkb__archive--3 {
 	display: flex;
 	flex: 0 1 auto;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 
-	.helppress__archive-cat {
+	.hpkb__archive-cat {
 		flex-grow: 0;
 		flex-shrink: 0;
 	}
 }
 
-.helppress__archive--2 .helppress__archive-cat {
+.hpkb__archive--2 .hpkb__archive-cat {
 	flex-basis: 47.5%;
 }
 
-.helppress__archive--3 .helppress__archive-cat {
+.hpkb__archive--3 .hpkb__archive-cat {
 	flex-basis: 30%;
 }
 
-.helppress__archive-cat {
+.hpkb__archive-cat {
 	margin-top: 2em;
 }

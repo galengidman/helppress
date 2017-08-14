@@ -2,9 +2,9 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-if ( ! class_exists( 'HelpPress_Custom_Content' ) ) {
+if ( ! class_exists( 'HPKB_Custom_Content' ) ) {
 
-	class HelpPress_Custom_Content {
+	class HPKB_Custom_Content {
 
 		public function __construct() {
 
@@ -15,11 +15,11 @@ if ( ! class_exists( 'HelpPress_Custom_Content' ) ) {
 
 		public function custom_content( $content ) {
 
-			if ( is_singular( 'helppress_article' ) ) {
+			if ( is_singular( 'hpkb_article' ) ) {
 				ob_start();
 				remove_filter( 'the_content', array( $this, 'custom_content' ) );
 				remove_filter( 'the_excerpt', array( $this, 'custom_content' ) );
-				helppress_get_template_part( 'parts/content-article' );
+				hpkb_get_template_part( 'parts/content-article' );
 				add_filter( 'the_content', array( $this, 'custom_content' ) );
 				add_filter( 'the_excerpt', array( $this, 'custom_content' ) );
 				$content = ob_get_clean();
@@ -33,4 +33,4 @@ if ( ! class_exists( 'HelpPress_Custom_Content' ) ) {
 
 }
 
-new HelpPress_Custom_Content();
+new HPKB_Custom_Content();

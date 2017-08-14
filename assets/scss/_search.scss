@@ -1,18 +1,18 @@
-.helppress__search-form {
+.hpkb__search-form {
 	display: flex;
 	align-items: center;
 }
 
-.helppress__search-label {
+.hpkb__search-label {
 	flex-grow: 1;
 	margin: 0;
 }
 
-.helppress__search-input {
+.hpkb__search-input {
 	width: 95% !important;
 }
 
-.helppress__search-suggestions {
+.hpkb__search-suggestions {
 	.autocomplete-suggestions {
 		padding: .5em;
 		background: white;

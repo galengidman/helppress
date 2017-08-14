@@ -3,9 +3,9 @@
  * Plugin Name: HelpPress
  */
 
-if ( ! class_exists( 'HelpPress' ) ) {
+if ( ! class_exists( 'HPKB' ) ) {
 
-	class HelpPress {
+	class HPKB {
 
 		public function __construct() {
 
@@ -17,11 +17,11 @@ if ( ! class_exists( 'HelpPress' ) ) {
 		public function define_constants() {
 
 			$constants = array(
-				'HELPPRESS_PATH' => untrailingslashit( plugin_dir_path( __FILE__ ) ),
-				'HELPPRESS_URL'  => untrailingslashit( plugin_dir_url( __FILE__ ) ),
+				'HPKB_PATH' => untrailingslashit( plugin_dir_path( __FILE__ ) ),
+				'HPKB_URL'  => untrailingslashit( plugin_dir_url( __FILE__ ) ),
 			);
 
-			$constants = apply_filters( 'helppress_constants', $constants );
+			$constants = apply_filters( 'hpkb_constants', $constants );
 
 			foreach ( $constants as $constant => $value ) {
 				if ( ! defined( $constant ) ) {
@@ -40,15 +40,15 @@ if ( ! class_exists( 'HelpPress' ) ) {
 				'/includes/vendor/gambitph/titan-framework/titan-framework.php',
 
 				// Classes
-				'/includes/class-helppress-assets.php',
-				'/includes/class-helppress-breadcrumb.php',
-				'/includes/class-helppress-custom-content.php',
-				'/includes/class-helppress-menu-archive-link.php',
-				'/includes/class-helppress-post-types.php',
-				'/includes/class-helppress-search-autocomplete.php',
-				'/includes/class-helppress-taxonomies.php',
-				'/includes/class-helppress-template-loader.php',
-				'/includes/class-helppress-templates.php',
+				'/includes/class-hpkb-assets.php',
+				'/includes/class-hpkb-breadcrumb.php',
+				'/includes/class-hpkb-custom-content.php',
+				'/includes/class-hpkb-menu-archive-link.php',
+				'/includes/class-hpkb-post-types.php',
+				'/includes/class-hpkb-search-autocomplete.php',
+				'/includes/class-hpkb-taxonomies.php',
+				'/includes/class-hpkb-template-loader.php',
+				'/includes/class-hpkb-templates.php',
 
 				// Other
 				'/includes/admin.php',
@@ -57,10 +57,10 @@ if ( ! class_exists( 'HelpPress' ) ) {
 
 			);
 
-			$includes = apply_filters( 'helppress_includes', $includes );
+			$includes = apply_filters( 'hpkb_includes', $includes );
 
 			foreach ( $includes as $file ) {
-				include HELPPRESS_PATH . $file;
+				include HPKB_PATH . $file;
 			}
 
 		}
@@ -69,4 +69,4 @@ if ( ! class_exists( 'HelpPress' ) ) {
 
 }
 
-new HelpPress();
+new HPKB();

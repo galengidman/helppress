@@ -2,9 +2,9 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
+if ( ! class_exists( 'HPKB_Breadcrumb' ) ) {
 
-	class HelpPress_Breadcrumb {
+	class HPKB_Breadcrumb {
 
 		protected $trail = array();
 
@@ -17,19 +17,19 @@ if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
 		public function build_trail() {
 
 			$this->add(
-				esc_html__( 'Home', 'helppress' ),
+				esc_html__( 'Home', 'hpkb' ),
 				home_url( '/' )
 			);
 
 			$this->add(
-				esc_html__( 'Knowledge Base', 'helppress' ),
-				helppress_get_knowledge_base_url()
+				esc_html__( 'Knowledge Base', 'hpkb' ),
+				hpkb_get_knowledge_base_url()
 			);
 
-			if ( is_singular( 'helppress_article' ) ) {
+			if ( is_singular( 'hpkb_article' ) ) {
 				$article_categories = wp_get_post_terms(
 					get_the_id(),
-					'helppress_article_category',
+					'hpkb_article_category',
 					array( 'fields' => 'ids' )
 				);
 
@@ -43,7 +43,7 @@ if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
 				);
 			}
 
-			if ( is_tax( array( 'helppress_article_category', 'helppress_article_tag' ) ) ) {
+			if ( is_tax( array( 'hpkb_article_category', 'hpkb_article_tag' ) ) ) {
 				$this->add_tax_tree( get_queried_object_id() );
 			}
 

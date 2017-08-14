@@ -2,85 +2,85 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-function helppress_article_format_icon( $post_id, $size = 16 ) {
+function hpkb_article_format_icon( $post_id, $size = 16 ) {
 
-	$format = helppress_get_post_format( $post_id );
+	$format = hpkb_get_post_format( $post_id );
 
-	return helppress_genericon( $format, $size );
+	return hpkb_genericon( $format, $size );
 
 }
 
-function helppress_buffer_template_part( $slug, $name = null ) {
+function hpkb_buffer_template_part( $slug, $name = null ) {
 
 	ob_start();
 
-	helppress_get_template_part( $slug, $name );
+	hpkb_get_template_part( $slug, $name );
 
 	return ob_get_clean();
 
 }
 
-function helppress_genericon( $icon, $size = 16 ) {
+function hpkb_genericon( $icon, $size = 16 ) {
 
-	$svg_url = esc_url( HELPPRESS_URL . '/assets/img/genericons-neue.svg' );
+	$svg_url = esc_url( HPKB_URL . '/assets/img/genericons-neue.svg' );
 
-	return "<svg class='helppress__icon helppress__icon--{$icon} helppress__icon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-{$icon}'></use></svg>";
+	return "<svg class='hpkb__icon hpkb__icon--{$icon} hpkb__icon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-{$icon}'></use></svg>";
 
 }
 
-function helppress_get_articles( $args = array() ) {
+function hpkb_get_articles( $args = array() ) {
 
 	$args = wp_parse_args( $args, array(
-		'post_type' => 'helppress_article',
+		'post_type' => 'hpkb_article',
 		'orderby'   => 'menu_order',
 	) );
 
-	$args = apply_filters( 'helppress_get_articles_args', $args );
+	$args = apply_filters( 'hpkb_get_articles_args', $args );
 
 	$articles = new WP_Query( $args );
 
-	return apply_filters( 'helppress_get_articles', $articles );
+	return apply_filters( 'hpkb_get_articles', $articles );
 
 }
 
-function helppress_get_breadcrumb() {
+function hpkb_get_breadcrumb() {
 
-	$breadcrumb = new HelpPress_Breadcrumb();
+	$breadcrumb = new HPKB_Breadcrumb();
 
 	return $breadcrumb->get_trail();
 }
 
-function helppress_get_categories( $args = array() ) {
+function hpkb_get_categories( $args = array() ) {
 
 	$args = wp_parse_args( $args, array(
-		'taxonomy' => 'helppress_article_category',
+		'taxonomy' => 'hpkb_article_category',
 		'orderby'  => 'menu_order',
 	) );
 
-	$args = apply_filters( 'helppress_get_categories_args', $args );
+	$args = apply_filters( 'hpkb_get_categories_args', $args );
 
 	$terms = get_terms( $args );
 
-	return apply_filters( 'helppress_get_categories', $terms );
+	return apply_filters( 'hpkb_get_categories', $terms );
 
 }
 
-function helppress_get_knowledge_base_url() {
+function hpkb_get_knowledge_base_url() {
 
-	return get_post_type_archive_link( 'helppress_article' );
+	return get_post_type_archive_link( 'hpkb_article' );
 
 }
 
-function helppress_get_post_format( $post_id ) {
+function hpkb_get_post_format( $post_id ) {
 
 	$format = get_post_format( $post_id );
 	$format = $format ? $format : 'standard';
 
-	return apply_filters( 'helppress_get_post_format', $format );
+	return apply_filters( 'hpkb_get_post_format', $format );
 
 }
 
-function helppress_get_reserved_terms() {
+function hpkb_get_reserved_terms() {
 
 	// https://codex.wordpress.org/Reserved_Terms
 	$terms = array(
@@ -168,38 +168,38 @@ function helppress_get_reserved_terms() {
 		'year',
 	);
 
-	return apply_filters( 'helppress_get_reserved_terms', $terms );
+	return apply_filters( 'hpkb_get_reserved_terms', $terms );
 
 }
 
-function helppress_get_template_part( $slug, $name = null ) {
+function hpkb_get_template_part( $slug, $name = null ) {
 
-	$templates = new HelpPress_Template_Loader;
+	$templates = new HPKB_Template_Loader;
 
 	$templates->get_template_part( $slug, $name );
 
 }
 
-function helppress_is_knowledge_base_archive() {
+function hpkb_is_knowledge_base_archive() {
 
-	return is_post_type_archive( 'helppress_article' ) && ! is_search();
-
-}
-
-function helppress_is_knowledge_base_search() {
-
-	return is_search() && get_query_var( 'post_type' ) === 'helppress_article';
+	return is_post_type_archive( 'hpkb_article' ) && ! is_search();
 
 }
 
-function helppress_sanitize_slug( $slug ) {
+function hpkb_is_knowledge_base_search() {
 
-	$reserved_terms = helppress_get_reserved_terms();
+	return is_search() && get_query_var( 'post_type' ) === 'hpkb_article';
+
+}
+
+function hpkb_sanitize_slug( $slug ) {
+
+	$reserved_terms = hpkb_get_reserved_terms();
 
 	if ( in_array( $slug, $reserved_terms ) ) {
 		$slug = 'kb-' . $slug;
 	}
 
-	return apply_filters( 'helppress_sanitize_slug', $slug );
+	return apply_filters( 'hpkb_sanitize_slug', $slug );
 
 }

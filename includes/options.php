@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-function helppress_get_option_defaults() {
+function hpkb_get_option_defaults() {
 
 	$defaults = array(
 
@@ -18,34 +18,34 @@ function helppress_get_option_defaults() {
 
 	);
 
-	return apply_filters( 'helppress_option_defaults', $defaults );
+	return apply_filters( 'hpkb_option_defaults', $defaults );
 
 }
 
-function helppress_get_option_default( $key = null ) {
+function hpkb_get_option_default( $key = null ) {
 
-	$defaults = helppress_get_option_defaults();
+	$defaults = hpkb_get_option_defaults();
 	$value    = false;
 
 	if ( array_key_exists( $key, $defaults ) ) {
 		$value = $defaults[ $key ];
 	}
 
-	return apply_filters( "helppress_get_option_default_{$key}", $value );
+	return apply_filters( "hpkb_get_option_default_{$key}", $value );
 
 }
 
-function helppress_get_option( $key = null ) {
+function hpkb_get_option( $key = null ) {
 
-	$options = maybe_unserialize( get_option( 'helppress_options' ) );
+	$options = maybe_unserialize( get_option( 'hpkb_options' ) );
 	$value   = false;
 
 	if ( $options && array_key_exists( $key, $options ) ) {
 		$value = $options[ $key ];
 	} else {
-		$value = helppress_get_option_default( $key );
+		$value = hpkb_get_option_default( $key );
 	}
 
-	return apply_filters( "helppress_get_option_{$key}", $value );
+	return apply_filters( "hpkb_get_option_{$key}", $value );
 
 }
