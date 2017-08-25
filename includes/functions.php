@@ -30,7 +30,7 @@ function hpkb_genericon( $icon, $size = 16 ) {
 
 	$svg_url = esc_url( HPKB_URL . '/assets/img/genericons-neue.svg' );
 
-	return "<svg class='hpkb-icon hpkb-icon--{$icon} hpkb-icon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-{$icon}'></use></svg>";
+	return "<svg class='hpkb-genericon hpkb-genericon--{$icon} hpkb-genericon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-genericon-{$icon}'></use></svg>";
 
 }
 

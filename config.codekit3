@@ -127,7 +127,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/scss\/_hpkb-icon.scss": {
+	"\/assets\/scss\/_hpkb-genericon.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -135,7 +135,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/scss\/_hpkb-icon.css",
+		"oAP": "\/assets\/scss\/_hpkb-genericon.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -202,10 +202,10 @@
 		"oAP": "\/includes\/admin.php",
 		"oF": 0
 		},
-	"\/includes\/class-hpkb-assets.php": {
+	"\/includes\/assets.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/includes\/class-hpkb-assets.php",
+		"oAP": "\/includes\/assets.php",
 		"oF": 0
 		},
 	"\/includes\/class-hpkb-breadcrumb.php": {
@@ -226,22 +226,10 @@
 		"oAP": "\/includes\/class-hpkb-menu-archive-link.php",
 		"oF": 0
 		},
-	"\/includes\/class-hpkb-post-types.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/class-hpkb-post-types.php",
-		"oF": 0
-		},
 	"\/includes\/class-hpkb-search-autocomplete.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/class-hpkb-search-autocomplete.php",
-		"oF": 0
-		},
-	"\/includes\/class-hpkb-taxonomies.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/class-hpkb-taxonomies.php",
 		"oF": 0
 		},
 	"\/includes\/class-hpkb-template-loader.php": {
@@ -266,6 +254,18 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/options.php",
+		"oF": 0
+		},
+	"\/includes\/post-types.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/post-types.php",
+		"oF": 0
+		},
+	"\/includes\/taxonomies.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/taxonomies.php",
 		"oF": 0
 		},
 	"\/includes\/vendor\/autoload.php": {
