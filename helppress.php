@@ -2,7 +2,7 @@
 /**
  * Plugin Name: HelpPress
  * Plugin URI:  https://helppresswp.com/
- * Description: A powerful and easy-to-use knowledge base plugin for WordPress. Compatible with 99% of themes, or override with custom templates to futher customize. Includes categories and tags to organize content and live search to help your users find relevant content quicker.
+ * Description: A powerful and easy-to-use knowledge base plugin for WordPress. Compatible with 99% of themes out-of-the-box, or override with custom templates to futher customize. Includes categories and tags to organize content and live search to help your users find relevant content quicker.
  * Version:     1.0.0
  * Author:      ThemeBright
  * Author URI:  https://themebright.com/
@@ -24,8 +24,12 @@ if ( ! class_exists( 'HelpPress' ) ) {
 		public function define_constants() {
 
 			$constants = array(
-				'HPKB_PATH' => untrailingslashit( plugin_dir_path( __FILE__ ) ),
-				'HPKB_URL'  => untrailingslashit( plugin_dir_url( __FILE__ ) ),
+
+				'HPKB_VERSION' => '1.0.0',
+
+				'HPKB_PATH'    => untrailingslashit( plugin_dir_path( __FILE__ ) ),
+				'HPKB_URL'     => untrailingslashit( plugin_dir_url( __FILE__ ) ),
+
 			);
 
 			$constants = apply_filters( 'hpkb_constants', $constants );
@@ -47,20 +51,20 @@ if ( ! class_exists( 'HelpPress' ) ) {
 				'/includes/vendor/gambitph/titan-framework/titan-framework.php',
 
 				// Classes
-				'/includes/class-hpkb-assets.php',
 				'/includes/class-hpkb-breadcrumb.php',
 				'/includes/class-hpkb-custom-content.php',
 				'/includes/class-hpkb-menu-archive-link.php',
-				'/includes/class-hpkb-post-types.php',
 				'/includes/class-hpkb-search-autocomplete.php',
-				'/includes/class-hpkb-taxonomies.php',
 				'/includes/class-hpkb-template-loader.php',
 				'/includes/class-hpkb-templates.php',
 
-				// Other
+				// General
 				'/includes/admin.php',
+				'/includes/assets.php',
 				'/includes/functions.php',
 				'/includes/options.php',
+				'/includes/post-types.php',
+				'/includes/taxonomies.php',
 
 			);
 
