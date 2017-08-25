@@ -1,5 +1,5 @@
 /**
-*  Ajax Autocomplete for jQuery, version 1.4.1
+*  Ajax Autocomplete for jQuery, version 1.4.2
 *  (c) 2017 Tomas Kirda
 *
 *  Ajax Autocomplete for jQuery is freely distributable under the terms of an MIT-style license.
@@ -252,7 +252,7 @@
 
             this.options = $.extend({}, options, suppliedOptions);
 
-            that.isLocal = $.isArray(options.lookup);
+            that.isLocal = Array.isArray(options.lookup);
 
             if (that.isLocal) {
                 options.lookup = that.verifySuggestionsFormat(options.lookup);
@@ -558,7 +558,7 @@
                 response = that.cachedResponse[cacheKey];
             }
 
-            if (response && $.isArray(response.suggestions)) {
+            if (response && Array.isArray(response.suggestions)) {
                 that.suggestions = response.suggestions;
                 that.suggest();
                 options.onSearchComplete.call(that.element, q, response.suggestions);
