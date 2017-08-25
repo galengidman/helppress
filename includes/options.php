@@ -33,7 +33,7 @@ function hpkb_get_option_default( $key = null ) {
 		$value = $defaults[ $key ];
 	}
 
-	return apply_filters( "hpkb_get_option_default_{$key}", $value );
+	return apply_filters( 'hpkb_get_option_default', $value, $key );
 
 }
 
@@ -48,6 +48,6 @@ function hpkb_get_option( $key = null ) {
 		$value = hpkb_get_option_default( $key );
 	}
 
-	return apply_filters( "hpkb_get_option_{$key}", $value );
+	return apply_filters( 'hpkb_get_option', $value, $key );
 
 }
