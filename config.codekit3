@@ -7,7 +7,7 @@
 		"uuidString": "6129BEDE-7FA9-4AA3-BF6B-75DFAFBEE72A"
 		}
 	],
-"creatorBuild": "25849",
+"creatorBuild": "25900",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -67,6 +67,7 @@
 		},
 	"\/assets\/js\/helppress.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/assets\/js\/helppress-min.js",
@@ -74,7 +75,7 @@
 		"sC": 0,
 		"tS": 0
 		},
-	"\/assets\/scss\/_archive.scss": {
+	"\/assets\/scss\/_hpkb-archive.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -82,12 +83,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/scss\/_archive.css",
+		"oAP": "\/assets\/scss\/_hpkb-archive.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/scss\/_article-list.scss": {
+	"\/assets\/scss\/_hpkb-article-item.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -95,12 +96,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/scss\/_article-list.css",
+		"oAP": "\/assets\/scss\/_hpkb-article-item.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/scss\/_breadcrumb.scss": {
+	"\/assets\/scss\/_hpkb-article-list.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -108,12 +109,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/scss\/_breadcrumb.css",
+		"oAP": "\/assets\/scss\/_hpkb-article-list.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/scss\/_container.scss": {
+	"\/assets\/scss\/_hpkb-breadcrumb.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -121,12 +122,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/scss\/_container.css",
+		"oAP": "\/assets\/scss\/_hpkb-breadcrumb.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/scss\/_icon.scss": {
+	"\/assets\/scss\/_hpkb-icon.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -134,12 +135,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/scss\/_icon.css",
+		"oAP": "\/assets\/scss\/_hpkb-icon.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/scss\/_more.scss": {
+	"\/assets\/scss\/_hpkb-search.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -147,20 +148,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/scss\/_more.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/assets\/scss\/_search.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/_search.css",
+		"oAP": "\/assets\/scss\/_hpkb-search.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -180,6 +168,7 @@
 		},
 	"\/assets\/vendor\/jquery.autocomplete.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/vendor\/jquery.autocomplete-min.js",
@@ -497,6 +486,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/gulpfile.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/gulpfile-min.js",
@@ -568,6 +558,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/ace.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/ace-min.js",
@@ -577,6 +568,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-css.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-css-min.js",
@@ -586,6 +578,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-html.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-html-min.js",
@@ -595,6 +588,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-javascript.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-javascript-min.js",
@@ -604,6 +598,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-json.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-json-min.js",
@@ -613,6 +608,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-less.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-less-min.js",
@@ -622,6 +618,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-lua.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-lua-min.js",
@@ -631,6 +628,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-markdown.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-markdown-min.js",
@@ -640,6 +638,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-mysql.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-mysql-min.js",
@@ -649,6 +648,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-php.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-php-min.js",
@@ -658,6 +658,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-plain_text.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-plain_text-min.js",
@@ -667,6 +668,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-python.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-python-min.js",
@@ -676,6 +678,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-ruby.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-ruby-min.js",
@@ -685,6 +688,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-sass.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-sass-min.js",
@@ -694,6 +698,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-scss.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-scss-min.js",
@@ -703,6 +708,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-sh.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-sh-min.js",
@@ -712,6 +718,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-text.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-text-min.js",
@@ -721,6 +728,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-xml.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/mode-xml-min.js",
@@ -730,6 +738,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/css.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/css-min.js",
@@ -739,6 +748,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/html.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/html-min.js",
@@ -748,6 +758,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/javascript.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/javascript-min.js",
@@ -757,6 +768,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/json.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/json-min.js",
@@ -766,6 +778,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/less.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/less-min.js",
@@ -775,6 +788,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/lua.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/lua-min.js",
@@ -784,6 +798,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/markdown.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/markdown-min.js",
@@ -793,6 +808,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/mysql.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/mysql-min.js",
@@ -802,6 +818,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/php.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/php-min.js",
@@ -811,6 +828,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/plain_text.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/plain_text-min.js",
@@ -820,6 +838,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/python.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/python-min.js",
@@ -829,6 +848,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/ruby.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/ruby-min.js",
@@ -838,6 +858,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/sass.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/sass-min.js",
@@ -847,6 +868,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/scss.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/scss-min.js",
@@ -856,6 +878,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/sh.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/sh-min.js",
@@ -865,6 +888,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/text.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/text-min.js",
@@ -874,6 +898,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/xml.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/snippets\/xml-min.js",
@@ -883,6 +908,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-ambiance.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-ambiance-min.js",
@@ -892,6 +918,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-chaos.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-chaos-min.js",
@@ -901,6 +928,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-chrome.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-chrome-min.js",
@@ -910,6 +938,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-clouds.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-clouds-min.js",
@@ -919,6 +948,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-clouds_midnight.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-clouds_midnight-min.js",
@@ -928,6 +958,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-cobalt.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-cobalt-min.js",
@@ -937,6 +968,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-crimson_editor.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-crimson_editor-min.js",
@@ -946,6 +978,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-dawn.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-dawn-min.js",
@@ -955,6 +988,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-dreamweaver.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-dreamweaver-min.js",
@@ -964,6 +998,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-eclipse.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-eclipse-min.js",
@@ -973,6 +1008,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-github.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-github-min.js",
@@ -982,6 +1018,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-idle_fingers.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-idle_fingers-min.js",
@@ -991,6 +1028,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-iplastic.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-iplastic-min.js",
@@ -1000,6 +1038,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-katzenmilch.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-katzenmilch-min.js",
@@ -1009,6 +1048,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-kr_theme.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-kr_theme-min.js",
@@ -1018,6 +1058,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-kuroir.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-kuroir-min.js",
@@ -1027,6 +1068,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-merbivore.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-merbivore-min.js",
@@ -1036,6 +1078,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-merbivore_soft.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-merbivore_soft-min.js",
@@ -1045,6 +1088,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-mono_industrial.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-mono_industrial-min.js",
@@ -1054,6 +1098,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-monokai.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-monokai-min.js",
@@ -1063,6 +1108,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-pastel_on_dark.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-pastel_on_dark-min.js",
@@ -1072,6 +1118,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-solarized_dark.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-solarized_dark-min.js",
@@ -1081,6 +1128,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-solarized_light.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-solarized_light-min.js",
@@ -1090,6 +1138,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-sqlserver.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-sqlserver-min.js",
@@ -1099,6 +1148,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-terminal.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-terminal-min.js",
@@ -1108,6 +1158,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-textmate.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-textmate-min.js",
@@ -1117,6 +1168,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow-min.js",
@@ -1126,6 +1178,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night-min.js",
@@ -1135,6 +1188,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_blue.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_blue-min.js",
@@ -1144,6 +1198,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_bright.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_bright-min.js",
@@ -1153,6 +1208,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_eighties.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-tomorrow_night_eighties-min.js",
@@ -1162,6 +1218,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-twilight.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-twilight-min.js",
@@ -1171,6 +1228,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-vibrant_ink.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-vibrant_ink-min.js",
@@ -1180,6 +1238,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-xcode.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/theme-xcode-min.js",
@@ -1189,6 +1248,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-css.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-css-min.js",
@@ -1198,6 +1258,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-html.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-html-min.js",
@@ -1207,6 +1268,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-javascript.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-javascript-min.js",
@@ -1216,6 +1278,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-json.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-json-min.js",
@@ -1225,6 +1288,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-lua.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-lua-min.js",
@@ -1234,6 +1298,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-php.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-php-min.js",
@@ -1243,6 +1308,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-xml.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/ace-min-noconflict\/worker-xml-min.js",
@@ -1252,6 +1318,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/admin-styling.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/admin-styling-min.js",
@@ -1261,6 +1328,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/admin-styling.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/admin-styling-min.js",
@@ -1270,6 +1338,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/jquery-ui-timepicker-addon.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/jquery-ui-timepicker-addon-min.js",
@@ -1279,6 +1348,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/serialize.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/serialize-min.js",
@@ -1288,6 +1358,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/wp-color-picker-alpha.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/dev\/wp-color-picker-alpha-min.js",
@@ -1297,6 +1368,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/jquery-ui-timepicker-addon.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/jquery-ui-timepicker-addon-min.js",
@@ -1306,6 +1378,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/admin-styling-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/admin-styling-min-min.js",
@@ -1315,6 +1388,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/jquery-ui-timepicker-addon-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/jquery-ui-timepicker-addon-min-min.js",
@@ -1324,6 +1398,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/serialize-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/serialize-min-min.js",
@@ -1333,6 +1408,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/wp-color-picker-alpha-min.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/min\/wp-color-picker-alpha-min-min.js",
@@ -1342,6 +1418,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/serialize.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/serialize-min.js",
@@ -1351,6 +1428,7 @@
 		},
 	"\/includes\/vendor\/gambitph\/titan-framework\/js\/wp-color-picker-alpha.js": {
 		"ft": 64,
+		"ma": 0,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/includes\/vendor\/gambitph\/titan-framework\/js\/wp-color-picker-alpha-min.js",
@@ -1828,82 +1906,94 @@
 		"oAP": "\/readme.txt",
 		"oF": 0
 		},
-	"\/templates\/archive.php": {
+	"\/templates\/hpkb-archive.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/archive.php",
+		"oAP": "\/templates\/hpkb-archive.php",
 		"oF": 0
 		},
-	"\/templates\/article.php": {
+	"\/templates\/hpkb-article.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/article.php",
+		"oAP": "\/templates\/hpkb-article.php",
 		"oF": 0
 		},
-	"\/templates\/category.php": {
+	"\/templates\/hpkb-category.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/category.php",
+		"oAP": "\/templates\/hpkb-category.php",
 		"oF": 0
 		},
-	"\/templates\/parts\/article-list.php": {
+	"\/templates\/hpkb-search.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/parts\/article-list.php",
+		"oAP": "\/templates\/hpkb-search.php",
 		"oF": 0
 		},
-	"\/templates\/parts\/breadcrumb.php": {
+	"\/templates\/hpkb-tag.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/parts\/breadcrumb.php",
+		"oAP": "\/templates\/hpkb-tag.php",
 		"oF": 0
 		},
-	"\/templates\/parts\/content-archive.php": {
+	"\/templates\/parts\/hpkb-article-item.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/parts\/content-archive.php",
+		"oAP": "\/templates\/parts\/hpkb-article-item.php",
 		"oF": 0
 		},
-	"\/templates\/parts\/content-article.php": {
+	"\/templates\/parts\/hpkb-article-list-item.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/parts\/content-article.php",
+		"oAP": "\/templates\/parts\/hpkb-article-list-item.php",
 		"oF": 0
 		},
-	"\/templates\/parts\/content-category.php": {
+	"\/templates\/parts\/hpkb-breadcrumb.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/parts\/content-category.php",
+		"oAP": "\/templates\/parts\/hpkb-breadcrumb.php",
 		"oF": 0
 		},
-	"\/templates\/parts\/content-search.php": {
+	"\/templates\/parts\/hpkb-content-archive.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/parts\/content-search.php",
+		"oAP": "\/templates\/parts\/hpkb-content-archive.php",
 		"oF": 0
 		},
-	"\/templates\/parts\/content-tag.php": {
+	"\/templates\/parts\/hpkb-content-article.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/parts\/content-tag.php",
+		"oAP": "\/templates\/parts\/hpkb-content-article.php",
 		"oF": 0
 		},
-	"\/templates\/parts\/search-form.php": {
+	"\/templates\/parts\/hpkb-content-category.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/parts\/search-form.php",
+		"oAP": "\/templates\/parts\/hpkb-content-category.php",
 		"oF": 0
 		},
-	"\/templates\/search.php": {
+	"\/templates\/parts\/hpkb-content-search.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/search.php",
+		"oAP": "\/templates\/parts\/hpkb-content-search.php",
 		"oF": 0
 		},
-	"\/templates\/tag.php": {
+	"\/templates\/parts\/hpkb-content-tag.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/tag.php",
+		"oAP": "\/templates\/parts\/hpkb-content-tag.php",
+		"oF": 0
+		},
+	"\/templates\/parts\/hpkb-page-links.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/parts\/hpkb-page-links.php",
+		"oF": 0
+		},
+	"\/templates\/parts\/hpkb-searchform.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/parts\/hpkb-searchform.php",
 		"oF": 0
 		}
 	},
@@ -2319,6 +2409,10 @@
 			"active": 0,
 			"optionString": "{'setWithoutGet': true, 'getWithoutSet': false}"
 			},
+		"array-bracket-newline": {
+			"active": 0,
+			"optionString": "{'multiline': true, 'minItems': null}"
+			},
 		"array-bracket-spacing": {
 			"active": 0,
 			"optionString": "'never', {'singleValue': false, 'objectsInArrays': false, 'arraysInArrays': false}"
@@ -2326,6 +2420,10 @@
 		"array-callback-return": {
 			"active": 0,
 			"optionString": ""
+			},
+		"array-element-newline": {
+			"active": 0,
+			"optionString": "'always'"
 			},
 		"arrow-body-style": {
 			"active": 0,
@@ -2423,6 +2521,10 @@
 			"active": 0,
 			"optionString": "'always', {'null': 'always'}"
 			},
+		"for-direction": {
+			"active": 0,
+			"optionString": ""
+			},
 		"func-call-spacing": {
 			"active": 0,
 			"optionString": "'never'"
@@ -2442,6 +2544,10 @@
 		"generator-star-spacing": {
 			"active": 0,
 			"optionString": "{'before': true, 'after': false}"
+			},
+		"getter-return": {
+			"active": 0,
+			"optionString": "{'allowImplicit': false}"
 			},
 		"global-require": {
 			"active": 0,
@@ -2570,6 +2676,10 @@
 		"no-bitwise": {
 			"active": 0,
 			"optionString": "{'allow': ['~'], 'int32Hint': true}"
+			},
+		"no-buffer-constructor": {
+			"active": 0,
+			"optionString": ""
 			},
 		"no-caller": {
 			"active": 0,
@@ -3115,6 +3225,10 @@
 			"active": 0,
 			"optionString": "{'blocks': 'always', 'switches': 'always', 'classes': 'always'}"
 			},
+		"padding-line-between-statements": {
+			"active": 0,
+			"optionString": "{blankLine: 'always', prev:'*', next:'return'}"
+			},
 		"prefer-arrow-callback": {
 			"active": 0,
 			"optionString": ""
@@ -3183,6 +3297,10 @@
 			"active": 0,
 			"optionString": "{'before': false, 'after': true}"
 			},
+		"semi-style": {
+			"active": 0,
+			"optionString": "'last'"
+			},
 		"sort-imports": {
 			"active": 0,
 			"optionString": "{'ignoreCase': false, 'ignoreMemberSort': true, 'memberSyntaxSortOrder': ['none', 'all', 'multiple', 'single']}"
@@ -3222,6 +3340,10 @@
 		"strict": {
 			"active": 0,
 			"optionString": "'safe'"
+			},
+		"switch-colon-spacing": {
+			"active": 0,
+			"optionString": "{'after': true, 'before': false}"
 			},
 		"symbol-description": {
 			"active": 0,
@@ -3855,6 +3977,7 @@
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
+	"susyVersion": 3,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {

@@ -1,18 +1,18 @@
-.hpkb__search-form {
+.hpkb-search {
 	display: flex;
 	align-items: center;
 }
 
-.hpkb__search-label {
+.hpkb-search__label {
 	flex-grow: 1;
 	margin: 0;
 }
 
-.hpkb__search-input {
+.hpkb-search__input {
 	width: 95% !important;
 }
 
-.hpkb__search-suggestions {
+.hpkb-search__suggestions {
 	.autocomplete-suggestions {
 		padding: .5em;
 		background: white;

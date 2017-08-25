@@ -1,11 +1,11 @@
-.hpkb__breadcrumb {
+.hpkb-breadcrumb {
 	list-style-type: none;
 	font-size: .85em;
 	margin-left: 0;
 	padding-left: 0;
 }
 
-.hpkb__breadcrumb-crumb {
+.hpkb-breadcrumb__crumb {
 	display: inline-block;
 
 	&:not(:first-child)::before {

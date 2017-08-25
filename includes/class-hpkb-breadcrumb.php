@@ -29,7 +29,7 @@ if ( ! class_exists( 'HPKB_Breadcrumb' ) ) {
 			if ( is_singular( 'hpkb_article' ) ) {
 				$article_categories = wp_get_post_terms(
 					get_the_id(),
-					'hpkb_article_category',
+					'hpkb_category',
 					array( 'fields' => 'ids' )
 				);
 
@@ -43,7 +43,7 @@ if ( ! class_exists( 'HPKB_Breadcrumb' ) ) {
 				);
 			}
 
-			if ( is_tax( array( 'hpkb_article_category', 'hpkb_article_tag' ) ) ) {
+			if ( is_tax( array( 'hpkb_category', 'hpkb_tag' ) ) ) {
 				$this->add_tax_tree( get_queried_object_id() );
 			}
 

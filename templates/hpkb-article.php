@@ -2,7 +2,7 @@
 
 get_header( 'helppress' );
 
-hpkb_get_template_part( 'parts/content-search' );
+hpkb_get_template_part( 'parts/hpkb-content', 'article' );
 
 get_sidebar( 'helppress' );
 

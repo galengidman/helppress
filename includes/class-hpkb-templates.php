@@ -22,51 +22,51 @@ if ( ! class_exists( 'HPKB_Templates' ) ) {
 		public function template_include( $template ) {
 
 			if ( is_singular( 'hpkb_article' ) ) {
-				$custom_template = $this->get_template( 'article.php' );
+				$custom_template = $this->get_template( 'hpkb-article.php' );
 			}
 
 			elseif ( hpkb_is_knowledge_base_archive() ) {
 				remove_all_filters( 'the_content' );
 
 				$this->reset_post( array(
-					'post_content' => hpkb_buffer_template_part( 'parts/content-archive' ),
+					'post_content' => hpkb_buffer_template_part( 'parts/hpkb-content', 'archive' ),
 					'post_title'   => esc_html__( 'Knowledge Base', 'hpkb' ),
 				) );
 
-				$custom_template = $this->get_template( 'archive.php' );
+				$custom_template = $this->get_template( 'hpkb-archive.php' );
 			}
 
-			elseif ( is_tax( 'hpkb_article_category' ) ) {
+			elseif ( is_tax( 'hpkb_category' ) ) {
 				remove_all_filters( 'the_content' );
 
 				$this->reset_post( array(
-					'post_content' => hpkb_buffer_template_part( 'parts/content-category' ),
+					'post_content' => hpkb_buffer_template_part( 'parts/hpkb-content', 'category' ),
 					'post_title'   => single_term_title( '', false ),
 				) );
 
-				$custom_template = $this->get_template( 'category.php' );
+				$custom_template = $this->get_template( 'hpkb-category.php' );
 			}
 
-			elseif ( is_tax( 'hpkb_article_tag' ) ) {
+			elseif ( is_tax( 'hpkb_tag' ) ) {
 				remove_all_filters( 'the_content' );
 
 				$this->reset_post( array(
-					'post_content' => hpkb_buffer_template_part( 'parts/content-tag' ),
+					'post_content' => hpkb_buffer_template_part( 'parts/hpkb-content', 'tag' ),
 					'post_title'   => single_term_title( '', false ),
 				) );
 
-				$custom_template = $this->get_template( 'tag.php' );
+				$custom_template = $this->get_template( 'hpkb-tag.php' );
 			}
 
 			elseif ( hpkb_is_knowledge_base_search() ) {
 				remove_all_filters( 'the_content' );
 
 				$this->reset_post( array(
-					'post_content' => hpkb_buffer_template_part( 'parts/content-search' ),
+					'post_content' => hpkb_buffer_template_part( 'parts/hpkb-content', 'search' ),
 					'post_title'   => get_search_query(),
 				) );
 
-				$custom_template = $this->get_template( 'search.php' );
+				$custom_template = $this->get_template( 'hpkb-search.php' );
 			}
 
 			if ( isset( $custom_template ) ) {

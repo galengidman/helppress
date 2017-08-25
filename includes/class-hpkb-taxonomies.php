@@ -33,7 +33,7 @@ if ( ! class_exists( 'HPKB_Taxonomies' ) ) {
 
 			$args = apply_filters( 'hpkb_register_category_args', $args );
 
-			register_taxonomy( 'hpkb_article_category', 'hpkb_article', $args );
+			register_taxonomy( 'hpkb_category', 'hpkb_article', $args );
 
 		}
 
@@ -56,7 +56,7 @@ if ( ! class_exists( 'HPKB_Taxonomies' ) ) {
 
 			$args = apply_filters( 'hpkb_register_tag_args', $args );
 
-			register_taxonomy( 'hpkb_article_tag', 'hpkb_article', $args );
+			register_taxonomy( 'hpkb_tag', 'hpkb_article', $args );
 
 		}
 

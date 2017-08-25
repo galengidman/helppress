@@ -2,7 +2,11 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-function hpkb_article_format_icon( $post_id, $size = 16 ) {
+function hpkb_article_format_genericon( $post_id = null, $size = 16 ) {
+
+	if ( ! $post_id ) {
+		$post_id = get_the_id();
+	}
 
 	$format = hpkb_get_post_format( $post_id );
 
@@ -24,7 +28,7 @@ function hpkb_genericon( $icon, $size = 16 ) {
 
 	$svg_url = esc_url( HPKB_URL . '/assets/img/genericons-neue.svg' );
 
-	return "<svg class='hpkb__icon hpkb__icon--{$icon} hpkb__icon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-{$icon}'></use></svg>";
+	return "<svg class='hpkb-icon hpkb-icon--{$icon} hpkb-icon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-{$icon}'></use></svg>";
 
 }
 
@@ -53,7 +57,7 @@ function hpkb_get_breadcrumb() {
 function hpkb_get_categories( $args = array() ) {
 
 	$args = wp_parse_args( $args, array(
-		'taxonomy' => 'hpkb_article_category',
+		'taxonomy' => 'hpkb_category',
 		'orderby'  => 'menu_order',
 	) );
 
