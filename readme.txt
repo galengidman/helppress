@@ -22,7 +22,7 @@ HelpPress is a powerful and easy-to-use WordPress knowledge base plugin. No comp
 - *Lightweight*: Coded with performance as a priority so it won't slow down your site.
 
 ### Live Demo
-[*Click here to view a live demo →*](#)
+*[Click here to view a live demo →](#)*
 
 ## Screenshots
 
