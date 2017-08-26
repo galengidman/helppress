@@ -194,7 +194,7 @@ function hpkb_is_knowledge_base_archive() {
 
 function hpkb_is_knowledge_base_search() {
 
-	return is_search() && get_query_var( 'post_type' ) === 'hpkb_article';
+	return is_search() && get_query_var( 'hpkb-search' );
 
 }
 

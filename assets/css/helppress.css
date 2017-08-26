@@ -130,8 +130,8 @@
   cursor: pointer;
 }
 
-.hpkb-search__suggestions .autocomplete-suggestion:hover {
-  background: rgba(0, 0, 0, 0.075);
+.hpkb-search__suggestions .autocomplete-suggestion:not(:hover) {
+  opacity: .75;
 }
 
 .hpkb-search__suggestions .autocomplete-suggestion + .autocomplete-suggestion {

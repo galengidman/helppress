@@ -18,6 +18,7 @@ class HPKB_Templates {
 	public function __construct() {
 
 		add_filter( 'template_include', array( $this, 'template_include' ) );
+		add_filter( 'query_vars', array( $this, 'add_search_query_var' ) );
 
 	}
 
@@ -192,6 +193,15 @@ class HPKB_Templates {
 		return $templates;
 
 	}
+
+	function add_search_query_var( $vars ) {
+
+		$vars[] = 'hpkb-search';
+
+		return $vars;
+
+	}
+
 
 }
 
