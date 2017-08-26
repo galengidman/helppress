@@ -55,11 +55,11 @@ if ( ! class_exists( 'HelpPress' ) ) {
 				'/includes/class-hpkb-custom-content.php',
 				'/includes/class-hpkb-menu-archive-link.php',
 				'/includes/class-hpkb-search-autocomplete.php',
+				'/includes/class-hpkb-settings.php',
 				'/includes/class-hpkb-template-loader.php',
 				'/includes/class-hpkb-templates.php',
 
 				// General
-				'/includes/admin.php',
 				'/includes/assets.php',
 				'/includes/functions.php',
 				'/includes/options.php',
