@@ -34,17 +34,6 @@ class HPKB_Settings {
 						'default'            => hpkb_get_option_default( 'knowledge_base_slug' ),
 						'sanitize_callbacks' => array( 'sanitize_title', 'hpkb_sanitize_slug' ),
 					),
-					'article_slug' => array(
-						'type'               => 'text',
-						'id'                 => 'article_slug',
-						'name'               => esc_html__( 'Article URL slug', 'hpkb' ),
-						'desc'               => sprintf(
-							__( 'The URL slug for single knowledge base articles. <code>%s</code>', 'hpkb' ),
-							home_url( '/' ) . '<ins>' . hpkb_get_option( 'article_slug' ) . '</ins>/article-title/'
-						),
-						'default'            => hpkb_get_option_default( 'article_slug' ),
-						'sanitize_callbacks' => array( 'sanitize_title', 'hpkb_sanitize_slug' ),
-					),
 					'category_slug' => array(
 						'type'               => 'text',
 						'id'                 => 'category_slug',

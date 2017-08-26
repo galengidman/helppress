@@ -9,10 +9,9 @@ function hpkb_get_option_defaults() {
 	$defaults = array(
 
 		// Slugs
-		'knowledge_base_slug' => 'knowledge-base',
-		'category_slug'       => 'article-category',
-		'tag_slug'            => 'article-tag',
-		'article_slug'        => 'article',
+		'knowledge_base_slug' => 'kb',
+		'category_slug'       => 'kb-category',
+		'tag_slug'            => 'kb-tag',
 
 		// Display
 		'columns'             => 2,

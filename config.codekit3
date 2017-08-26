@@ -196,12 +196,6 @@
 		"oAP": "\/helppress.php",
 		"oF": 0
 		},
-	"\/includes\/admin.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/admin.php",
-		"oF": 0
-		},
 	"\/includes\/assets.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -230,6 +224,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/class-hpkb-search-autocomplete.php",
+		"oF": 0
+		},
+	"\/includes\/class-hpkb-settings.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/class-hpkb-settings.php",
 		"oF": 0
 		},
 	"\/includes\/class-hpkb-template-loader.php": {
