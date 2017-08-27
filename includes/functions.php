@@ -37,8 +37,10 @@ function hpkb_genericon( $icon, $size = 16 ) {
 function hpkb_get_articles( $args = array() ) {
 
 	$args = wp_parse_args( $args, array(
-		'post_type' => 'hpkb_article',
-		'orderby'   => 'menu_order',
+		'post_type'      => 'hpkb_article',
+		'orderby'        => hpkb_get_option( 'orderby' ),
+		'order'          => hpkb_get_option( 'order' ),
+		'posts_per_page' => hpkb_get_option( 'posts_per_page' ),
 	) );
 
 	$args = apply_filters( 'hpkb_get_articles_args', $args );

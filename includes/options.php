@@ -8,6 +8,11 @@ function hpkb_get_option_defaults() {
 
 	$defaults = array(
 
+		// General
+		'orderby'             => 'date',
+		'order'               => 'ASC',
+		'posts_per_page'      => 5,
+
 		// Slugs
 		'knowledge_base_slug' => 'kb',
 		'category_slug'       => 'kb-category',

@@ -23,6 +23,48 @@ class HPKB_Settings {
 			'general' => array(
 				'name'    => esc_html__( 'General', 'hpkb' ),
 				'options' => array(
+					'queries' => array(
+						'name' => esc_html__( 'Queries', 'hpkb' ),
+						'type' => 'heading',
+					),
+					'orderby' => array(
+						'type'    => 'select',
+						'id'      => 'orderby',
+						'name'    => esc_html__( 'Sort by', 'hpkb' ),
+						'desc'    => esc_html__( '', 'hpkb' ),
+						'options' => array(
+							'title'         => esc_html__( 'Title', 'hpkb' ),
+							'date'          => esc_html__( 'Date', 'hpkb' ),
+							'modified'      => esc_html__( 'Modified', 'hpkb' ),
+							'rand'          => esc_html__( 'Random', 'hpkb' ),
+							'comment_count' => esc_html__( 'Comment count', 'hpkb' ),
+						),
+						'default' => hpkb_get_option_default( 'orderby' ),
+					),
+					'order' => array(
+						'type'    => 'select',
+						'id'      => 'order',
+						'name'    => esc_html__( 'Sort order', 'hpkb' ),
+						'desc'    => esc_html__( '', 'hpkb' ),
+						'options' => array(
+							'ASC'  => esc_html__( 'Ascending', 'hpkb' ),
+							'DESC' => esc_html__( 'Decending', 'hpkb' ),
+						),
+						'default' => hpkb_get_option_default( 'order' ),
+					),
+					'posts_per_page' => array(
+						'type'    => 'number',
+						'id'      => 'posts_per_page',
+						'name'    => esc_html__( 'Articles per page', 'hpkb' ),
+						'desc'    => esc_html__( '', 'hpkb' ),
+						'default' => hpkb_get_option_default( 'posts_per_page' ),
+						'min'     => 1,
+						'max'     => 25,
+					),
+					'slugs' => array(
+						'name' => esc_html__( 'Slugs', 'hpkb' ),
+						'type' => 'heading',
+					),
 					'knowledge_base_slug' => array(
 						'type'               => 'text',
 						'id'                 => 'knowledge_base_slug',
@@ -61,6 +103,10 @@ class HPKB_Settings {
 			'display' => array(
 				'name'    => esc_html__( 'Display', 'hpkb' ),
 				'options' => array(
+					'layout' => array(
+						'name' => esc_html__( 'Layout', 'hpkb' ),
+						'type' => 'heading',
+					),
 					'columns' => array(
 						'type'    => 'radio-image',
 						'id'      => 'columns',
@@ -72,6 +118,18 @@ class HPKB_Settings {
 							3 => esc_url( HPKB_URL . '/assets/img/columns-3.svg' ),
 						),
 						'default' => hpkb_get_option_default( 'columns' ),
+					),
+					'css' => array(
+						'name' => esc_html__( 'CSS', 'hpkb' ),
+						'type' => 'heading',
+					),
+					'custom_css' => array(
+						'type' => 'note',
+						'name' => 'Custom CSS',
+						'desc' => sprintf(
+							__( 'We recommend adding custom CSS using the &ldquo;Additional CSS&rdquo; feature in the <a href="%s">WordPress Customizer</a>.', 'hpkb' ),
+							esc_url( admin_url( 'customize.php' ) )
+						),
 					),
 					'disable_css' => array(
 						'type'    => 'checkbox',
