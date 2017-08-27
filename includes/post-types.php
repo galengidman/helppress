@@ -17,7 +17,7 @@ function hpkb_register_articles() {
 		'labels'        => $labels,
 		'public'        => true,
 		'menu_position' => 25,
-		'menu_icon'     => 'dashicons-sos',
+		'menu_icon'     => 'data:image/svg+xml;base64,' . base64_encode( file_get_contents( HPKB_PATH . '/assets/img/menu-icon.svg' ) ),
 		'supports'      => array(
 			'title',
 			'editor',
