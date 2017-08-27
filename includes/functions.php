@@ -188,15 +188,43 @@ function hpkb_get_template_part( $slug, $name = null ) {
 
 }
 
-function hpkb_is_knowledge_base_archive() {
+function hpkb_is_kb_article() {
+
+	return is_singular( 'hpkb_article' );
+
+}
+
+function hpkb_is_kb_archive() {
 
 	return is_post_type_archive( 'hpkb_article' ) && ! is_search();
 
 }
 
-function hpkb_is_knowledge_base_search() {
+function hpkb_is_kb_category() {
+
+	return is_tax( 'hpkb_category' );
+
+}
+
+function hpkb_is_kb_tag() {
+
+	return is_tax( 'hpkb_tag' );
+
+}
+
+function hpkb_is_kb_search() {
 
 	return is_search() && get_query_var( 'hpkb-search' );
+
+}
+
+function hpkb_is_kb_page() {
+
+	return hpkb_is_kb_article()
+		|| hpkb_is_kb_archive()
+		|| hpkb_is_kb_category()
+		|| hpkb_is_kb_tag()
+		|| hpkb_is_kb_search();
 
 }
 

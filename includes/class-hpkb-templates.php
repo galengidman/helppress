@@ -18,17 +18,17 @@ class HPKB_Templates {
 	public function __construct() {
 
 		add_filter( 'template_include', array( $this, 'template_include' ) );
-		add_filter( 'query_vars', array( $this, 'add_search_query_var' ) );
+		add_filter( 'query_vars',       array( $this, 'add_search_query_var' ) );
 
 	}
 
 	public function template_include( $template ) {
 
-		if ( is_singular( 'hpkb_article' ) ) {
+		if ( hpkb_is_kb_article() ) {
 			$custom_template = $this->get_template( 'hpkb-article.php' );
 		}
 
-		elseif ( hpkb_is_knowledge_base_archive() ) {
+		elseif ( hpkb_is_kb_archive() ) {
 			remove_all_filters( 'the_content' );
 
 			$this->reset_post( array(
@@ -39,7 +39,7 @@ class HPKB_Templates {
 			$custom_template = $this->get_template( 'hpkb-archive.php' );
 		}
 
-		elseif ( is_tax( 'hpkb_category' ) ) {
+		elseif ( hpkb_is_kb_category() ) {
 			remove_all_filters( 'the_content' );
 
 			$this->reset_post( array(
@@ -50,7 +50,7 @@ class HPKB_Templates {
 			$custom_template = $this->get_template( 'hpkb-category.php' );
 		}
 
-		elseif ( is_tax( 'hpkb_tag' ) ) {
+		elseif ( hpkb_is_kb_tag() ) {
 			remove_all_filters( 'the_content' );
 
 			$this->reset_post( array(
@@ -61,7 +61,7 @@ class HPKB_Templates {
 			$custom_template = $this->get_template( 'hpkb-tag.php' );
 		}
 
-		elseif ( hpkb_is_knowledge_base_search() ) {
+		elseif ( hpkb_is_kb_search() ) {
 			remove_all_filters( 'the_content' );
 
 			$this->reset_post( array(
@@ -201,7 +201,6 @@ class HPKB_Templates {
 		return $vars;
 
 	}
-
 
 }
 
