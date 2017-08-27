@@ -12,71 +12,72 @@
 
 if ( ! class_exists( 'HelpPress' ) ) {
 
-	class HelpPress {
+class HelpPress {
 
-		public function __construct() {
+	public function __construct() {
 
-			add_action( 'plugins_loaded', array( $this, 'define_constants' ) );
-			add_action( 'plugins_loaded', array( $this, 'includes' ) );
+		add_action( 'plugins_loaded', array( $this, 'define_constants' ) );
+		add_action( 'plugins_loaded', array( $this, 'includes' ) );
 
-		}
+	}
 
-		public function define_constants() {
+	public function define_constants() {
 
-			$constants = array(
+		$constants = array(
 
-				'HPKB_VERSION' => '1.0.0',
+			'HPKB_VERSION' => '1.0.0',
 
-				'HPKB_PATH'    => untrailingslashit( plugin_dir_path( __FILE__ ) ),
-				'HPKB_URL'     => untrailingslashit( plugin_dir_url( __FILE__ ) ),
+			'HPKB_PATH'    => untrailingslashit( plugin_dir_path( __FILE__ ) ),
+			'HPKB_URL'     => untrailingslashit( plugin_dir_url( __FILE__ ) ),
 
-			);
+		);
 
-			$constants = apply_filters( 'hpkb_constants', $constants );
+		$constants = apply_filters( 'hpkb_constants', $constants );
 
-			foreach ( $constants as $constant => $value ) {
-				if ( ! defined( $constant ) ) {
-					define( $constant, $value );
-				}
+		foreach ( $constants as $constant => $value ) {
+			if ( ! defined( $constant ) ) {
+				define( $constant, $value );
 			}
-
-		}
-
-		public function includes() {
-
-			$includes = array(
-
-				// Vendor
-				'/includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
-				'/includes/vendor/gambitph/titan-framework/titan-framework.php',
-
-				// Classes
-				'/includes/class-hpkb-breadcrumb.php',
-				'/includes/class-hpkb-custom-content.php',
-				'/includes/class-hpkb-menu-archive-link.php',
-				'/includes/class-hpkb-search-autocomplete.php',
-				'/includes/class-hpkb-settings.php',
-				'/includes/class-hpkb-template-loader.php',
-				'/includes/class-hpkb-templates.php',
-
-				// General
-				'/includes/assets.php',
-				'/includes/functions.php',
-				'/includes/options.php',
-				'/includes/post-types.php',
-				'/includes/taxonomies.php',
-
-			);
-
-			$includes = apply_filters( 'hpkb_includes', $includes );
-
-			foreach ( $includes as $file ) {
-				include HPKB_PATH . $file;
-			}
-
 		}
 
 	}
+
+	public function includes() {
+
+		$includes = array(
+
+			// Vendor
+			'/includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
+			'/includes/vendor/gambitph/titan-framework/titan-framework.php',
+
+			// Classes
+			'/includes/class-hpkb-breadcrumb.php',
+			'/includes/class-hpkb-custom-content.php',
+			'/includes/class-hpkb-menu-archive-link.php',
+			'/includes/class-hpkb-search-autocomplete.php',
+			'/includes/class-hpkb-settings.php',
+			'/includes/class-hpkb-template-loader.php',
+			'/includes/class-hpkb-templates.php',
+
+			// General
+			'/includes/assets.php',
+			'/includes/functions.php',
+			'/includes/options.php',
+			'/includes/post-types.php',
+			'/includes/queries.php',
+			'/includes/taxonomies.php',
+
+		);
+
+		$includes = apply_filters( 'hpkb_includes', $includes );
+
+		foreach ( $includes as $file ) {
+			include HPKB_PATH . $file;
+		}
+
+	}
+
+}
 
 }
 
