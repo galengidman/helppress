@@ -61,11 +61,11 @@ class HelpPress {
 
 			// General
 			'/includes/assets.php',
-			'/includes/functions.php',
 			'/includes/options.php',
 			'/includes/post-types.php',
 			'/includes/queries.php',
 			'/includes/taxonomies.php',
+			'/includes/template-tags.php',
 
 		);
 
