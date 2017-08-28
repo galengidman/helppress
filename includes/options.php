@@ -8,7 +8,10 @@ function hpkb_get_option_defaults() {
 
 	$defaults = array(
 
-		// General
+		// Text
+		'title'               => esc_html__( 'Knowledge Base', 'hpkb' ),
+
+		// Queries
 		'orderby'             => 'date',
 		'order'               => 'ASC',
 		'posts_per_page'      => 5,

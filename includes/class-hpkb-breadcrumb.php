@@ -24,7 +24,7 @@ class HPKB_Breadcrumb {
 		);
 
 		$this->add(
-			esc_html__( 'Knowledge Base', 'hpkb' ),
+			hpkb_get_kb_title(),
 			hpkb_get_kb_url()
 		);
 

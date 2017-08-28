@@ -33,7 +33,7 @@ class HPKB_Templates {
 
 			$this->reset_post( array(
 				'post_content' => hpkb_buffer_template_part( 'parts/hpkb-content', 'archive' ),
-				'post_title'   => esc_html__( 'Knowledge Base', 'hpkb' ),
+				'post_title'   => hpkb_get_kb_title(),
 			) );
 
 			$custom_template = $this->get_template( 'hpkb-archive.php' );

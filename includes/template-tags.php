@@ -34,6 +34,12 @@ function hpkb_genericon( $icon, $size = 16 ) {
 
 }
 
+function hpkb_get_kb_title() {
+
+	return hpkb_get_option( 'title' );
+
+}
+
 function hpkb_get_articles( $args = array() ) {
 
 	$args = wp_parse_args( $args, array(

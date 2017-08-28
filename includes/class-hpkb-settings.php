@@ -23,6 +23,17 @@ class HPKB_Settings {
 			'general' => array(
 				'name'    => esc_html__( 'General', 'hpkb' ),
 				'options' => array(
+					'labels' => array(
+						'name' => esc_html__( 'Labels', 'hpkb' ),
+						'type' => 'heading',
+					),
+					'title' => array(
+						'type'    => 'text',
+						'id'      => 'title',
+						'name'    => esc_html__( 'Knowledge Base title', 'hpkb' ),
+						'desc'    => esc_html__( 'You could rename the knowledge base to something else, such as &ldquo;Documentation&rdquo; or &ldquo;Learning Center.&rdquo;', 'hpkb' ),
+						'default' => hpkb_get_option_default( 'title' ),
+					),
 					'queries' => array(
 						'name' => esc_html__( 'Queries', 'hpkb' ),
 						'type' => 'heading',
