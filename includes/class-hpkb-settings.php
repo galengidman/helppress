@@ -172,7 +172,7 @@ class HPKB_Settings {
 
 		global $submenu;
 
-		$url   = hpkb_get_knowledge_base_url();
+		$url   = hpkb_get_kb_url();
 		$label = esc_html__( 'View KB &rarr;', 'hpkb' );
 
 		$submenu['edit.php?post_type=hpkb_article'][] = array( $label, 'manage_options', $url );

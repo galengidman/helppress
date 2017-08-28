@@ -25,7 +25,7 @@ class HPKB_Breadcrumb {
 
 		$this->add(
 			esc_html__( 'Knowledge Base', 'hpkb' ),
-			hpkb_get_knowledge_base_url()
+			hpkb_get_kb_url()
 		);
 
 		if ( is_singular( 'hpkb_article' ) ) {

@@ -73,7 +73,7 @@ function hpkb_get_categories( $args = array() ) {
 
 }
 
-function hpkb_get_knowledge_base_url() {
+function hpkb_get_kb_url() {
 
 	return get_post_type_archive_link( 'hpkb_article' );
 

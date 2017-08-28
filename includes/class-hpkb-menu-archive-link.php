@@ -61,7 +61,7 @@ class HPKB_Menu_Archive_Link {
 							type="hidden"
 							class="menu-item-url"
 							name="menu-item[-1][menu-item-url]"
-							value="<?php echo esc_url( hpkb_get_knowledge_base_url() ); ?>">
+							value="<?php echo esc_url( hpkb_get_kb_url() ); ?>">
 
 						<input
 							type="hidden"
