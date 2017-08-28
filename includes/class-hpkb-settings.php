@@ -19,7 +19,7 @@ class HPKB_Settings {
 
 	public function register_settings() {
 
-		$settings = apply_filters( 'hpkb_settings', array(
+		$settings = array(
 			'general' => array(
 				'name'    => esc_html__( 'General', 'hpkb' ),
 				'options' => array(
@@ -140,7 +140,9 @@ class HPKB_Settings {
 					),
 				),
 			),
-		) );
+		);
+
+		$settings = apply_filters( 'hpkb_settings', $settings );
 
 		$titan = TitanFramework::getInstance( 'hpkb' );
 
