@@ -25,6 +25,11 @@ function hpkb_get_option_defaults() {
 		'columns'             => 2,
 		'disable_css'         => false,
 
+		// Breadcrumb
+		'breadcrumb'          => true,
+		'breadcrumb_home'     => true,
+		'breadcrumb_sep'      => '/',
+
 	);
 
 	return apply_filters( 'hpkb_option_defaults', $defaults );

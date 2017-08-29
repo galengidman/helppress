@@ -87,7 +87,7 @@
 }
 
 .hpkb-breadcrumb__crumb:not(:first-child)::before {
-  content: '/';
+  content: attr(data-sep);
 }
 
 .hpkb-genericon {

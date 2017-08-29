@@ -18,10 +18,12 @@ class HPKB_Breadcrumb {
 
 	public function build_trail() {
 
-		$this->add(
-			esc_html__( 'Home', 'hpkb' ),
-			home_url( '/' )
-		);
+		if ( hpkb_get_option( 'breadcrumb_home' ) ) {
+			$this->add(
+				esc_html__( 'Home', 'hpkb' ),
+				home_url( '/' )
+			);
+		}
 
 		$this->add(
 			hpkb_get_kb_title(),

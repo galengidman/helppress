@@ -9,6 +9,6 @@
 	display: inline-block;
 
 	&:not(:first-child)::before {
-		content: '/';
+		content: attr(data-sep);
 	}
 }

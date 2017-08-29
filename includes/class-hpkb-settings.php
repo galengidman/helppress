@@ -151,6 +151,36 @@ class HPKB_Settings {
 					),
 				),
 			),
+			'breadcrumb' => array(
+				'name'    => esc_html__( 'Breadcrumb', 'hpkb' ),
+				'options' => array(
+					'settings' => array(
+						'name' => esc_html__( 'Settings', 'hpkb' ),
+						'type' => 'heading',
+					),
+					'breadcrumb' => array(
+						'type'    => 'enable',
+						'id'      => 'breadcrumb',
+						'name'    => esc_html__( 'Breadcrumb', 'hpkb' ),
+						'desc'    => esc_html__( 'Turn the breadcrumb on or off globally.', 'hpkb' ),
+						'default' => hpkb_get_option_default( 'breadcrumb_on_archive' ),
+					),
+					'breadcrumb_home' => array(
+						'type'    => 'enable',
+						'id'      => 'breadcrumb_home',
+						'name'    => esc_html__( 'Home link', 'hpkb' ),
+						'desc'    => esc_html__( 'Start the breadcrumb with a link to the home page.', 'hpkb' ),
+						'default' => hpkb_get_option_default( 'breadcrumb_home' ),
+					),
+					'breadcrumb_sep' => array(
+						'type'    => 'text',
+						'id'      => 'breadcrumb_sep',
+						'name'    => esc_html__( 'Separator', 'hpkb' ),
+						'desc'    => esc_html__( 'Text to use to separate breadcrumb links.', 'hpkb' ),
+						'default' => hpkb_get_option_default( 'breadcrumb_sep' ),
+					),
+				),
+			),
 		);
 
 		$settings = apply_filters( 'hpkb_settings', $settings );
