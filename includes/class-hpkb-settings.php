@@ -20,25 +20,25 @@ class HPKB_Settings {
 	public function register_settings() {
 
 		$settings = array(
-			'general' => array(
+			10 => array(
 				'name'    => esc_html__( 'General', 'hpkb' ),
 				'options' => array(
-					'labels' => array(
+					array(
 						'name' => esc_html__( 'Labels', 'hpkb' ),
 						'type' => 'heading',
 					),
-					'title' => array(
+					array(
 						'type'    => 'text',
 						'id'      => 'title',
 						'name'    => esc_html__( 'Knowledge Base title', 'hpkb' ),
 						'desc'    => esc_html__( 'You could rename the knowledge base to something else, such as &ldquo;Documentation&rdquo; or &ldquo;Learning Center.&rdquo;', 'hpkb' ),
 						'default' => hpkb_get_option_default( 'title' ),
 					),
-					'queries' => array(
+					array(
 						'name' => esc_html__( 'Queries', 'hpkb' ),
 						'type' => 'heading',
 					),
-					'orderby' => array(
+					array(
 						'type'    => 'select',
 						'id'      => 'orderby',
 						'name'    => esc_html__( 'Sort by', 'hpkb' ),
@@ -52,7 +52,7 @@ class HPKB_Settings {
 						),
 						'default' => hpkb_get_option_default( 'orderby' ),
 					),
-					'order' => array(
+					array(
 						'type'    => 'select',
 						'id'      => 'order',
 						'name'    => esc_html__( 'Sort order', 'hpkb' ),
@@ -63,7 +63,7 @@ class HPKB_Settings {
 						),
 						'default' => hpkb_get_option_default( 'order' ),
 					),
-					'posts_per_page' => array(
+					array(
 						'type'    => 'number',
 						'id'      => 'posts_per_page',
 						'name'    => esc_html__( 'Articles per page', 'hpkb' ),
@@ -72,11 +72,11 @@ class HPKB_Settings {
 						'min'     => 1,
 						'max'     => 25,
 					),
-					'slugs' => array(
+					array(
 						'name' => esc_html__( 'Slugs', 'hpkb' ),
 						'type' => 'heading',
 					),
-					'knowledge_base_slug' => array(
+					array(
 						'type'               => 'text',
 						'id'                 => 'knowledge_base_slug',
 						'name'               => esc_html__( 'Knowledge Base URL slug', 'hpkb' ),
@@ -87,7 +87,7 @@ class HPKB_Settings {
 						'default'            => hpkb_get_option_default( 'knowledge_base_slug' ),
 						'sanitize_callbacks' => array( 'sanitize_title', 'hpkb_sanitize_slug' ),
 					),
-					'category_slug' => array(
+					array(
 						'type'               => 'text',
 						'id'                 => 'category_slug',
 						'name'               => esc_html__( 'Category URL slug', 'hpkb' ),
@@ -98,7 +98,7 @@ class HPKB_Settings {
 						'default'            => hpkb_get_option_default( 'category_slug' ),
 						'sanitize_callbacks' => array( 'sanitize_title', 'hpkb_sanitize_slug' ),
 					),
-					'tag_slug' => array(
+					array(
 						'type'               => 'text',
 						'id'                 => 'tag_slug',
 						'name'               => esc_html__( 'Tag URL slug', 'hpkb' ),
@@ -111,14 +111,14 @@ class HPKB_Settings {
 					),
 				),
 			),
-			'display' => array(
+			20 => array(
 				'name'    => esc_html__( 'Display', 'hpkb' ),
 				'options' => array(
-					'layout' => array(
+					array(
 						'name' => esc_html__( 'Layout', 'hpkb' ),
 						'type' => 'heading',
 					),
-					'columns' => array(
+					array(
 						'type'    => 'radio-image',
 						'id'      => 'columns',
 						'name'    => esc_html__( 'Columns', 'hpkb' ),
@@ -130,11 +130,11 @@ class HPKB_Settings {
 						),
 						'default' => hpkb_get_option_default( 'columns' ),
 					),
-					'css' => array(
+					array(
 						'name' => esc_html__( 'CSS', 'hpkb' ),
 						'type' => 'heading',
 					),
-					'custom_css' => array(
+					array(
 						'type' => 'note',
 						'name' => 'Custom CSS',
 						'desc' => sprintf(
@@ -142,7 +142,7 @@ class HPKB_Settings {
 							esc_url( admin_url( 'customize.php' ) )
 						),
 					),
-					'disable_css' => array(
+					array(
 						'type'    => 'checkbox',
 						'id'      => 'disable_css',
 						'name'    => esc_html__( 'Disable CSS', 'hpkb' ),
@@ -151,28 +151,28 @@ class HPKB_Settings {
 					),
 				),
 			),
-			'breadcrumb' => array(
+			30 => array(
 				'name'    => esc_html__( 'Breadcrumb', 'hpkb' ),
 				'options' => array(
-					'settings' => array(
+					array(
 						'name' => esc_html__( 'Settings', 'hpkb' ),
 						'type' => 'heading',
 					),
-					'breadcrumb' => array(
+					array(
 						'type'    => 'enable',
 						'id'      => 'breadcrumb',
 						'name'    => esc_html__( 'Breadcrumb', 'hpkb' ),
 						'desc'    => esc_html__( 'Turn the breadcrumb on or off globally.', 'hpkb' ),
 						'default' => hpkb_get_option_default( 'breadcrumb_on_archive' ),
 					),
-					'breadcrumb_home' => array(
+					array(
 						'type'    => 'enable',
 						'id'      => 'breadcrumb_home',
 						'name'    => esc_html__( 'Home link', 'hpkb' ),
 						'desc'    => esc_html__( 'Start the breadcrumb with a link to the home page.', 'hpkb' ),
 						'default' => hpkb_get_option_default( 'breadcrumb_home' ),
 					),
-					'breadcrumb_sep' => array(
+					array(
 						'type'    => 'text',
 						'id'      => 'breadcrumb_sep',
 						'name'    => esc_html__( 'Separator', 'hpkb' ),
@@ -184,6 +184,8 @@ class HPKB_Settings {
 		);
 
 		$settings = apply_filters( 'hpkb_settings', $settings );
+
+		ksort( $settings );
 
 		$titan = TitanFramework::getInstance( 'hpkb' );
 
