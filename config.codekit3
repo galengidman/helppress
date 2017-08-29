@@ -15,6 +15,60 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
+	"\/.wordpress-org\/banner-1544x500.png": {
+		"ft": 32768,
+		"iS": 16074,
+		"oA": 0,
+		"oAP": "\/.wordpress-org\/banner-1544x500.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/.wordpress-org\/banner-772x250.png": {
+		"ft": 32768,
+		"iS": 7424,
+		"oA": 0,
+		"oAP": "\/.wordpress-org\/banner-772x250.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/.wordpress-org\/icon-128x128.png": {
+		"ft": 32768,
+		"iS": 2602,
+		"oA": 0,
+		"oAP": "\/.wordpress-org\/icon-128x128.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/.wordpress-org\/icon-256x256.png": {
+		"ft": 32768,
+		"iS": 4612,
+		"oA": 0,
+		"oAP": "\/.wordpress-org\/icon-256x256.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/.wordpress-org\/icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/.wordpress-org\/icon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/css\/helppress.css": {
 		"aP": 1,
 		"bl": 0,
@@ -60,6 +114,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/assets\/img\/genericons-neue.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/img\/menu-icon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/img\/menu-icon.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -244,12 +308,6 @@
 		"oAP": "\/includes\/class-hpkb-templates.php",
 		"oF": 0
 		},
-	"\/includes\/functions.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/functions.php",
-		"oF": 0
-		},
 	"\/includes\/options.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -262,10 +320,22 @@
 		"oAP": "\/includes\/post-types.php",
 		"oF": 0
 		},
+	"\/includes\/queries.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/queries.php",
+		"oF": 0
+		},
 	"\/includes\/taxonomies.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/taxonomies.php",
+		"oF": 0
+		},
+	"\/includes\/template-tags.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/template-tags.php",
 		"oF": 0
 		},
 	"\/includes\/vendor\/autoload.php": {
