@@ -9,26 +9,33 @@ function hpkb_get_option_defaults() {
 	$defaults = array(
 
 		// Text
-		'title'               => esc_html__( 'Knowledge Base', 'hpkb' ),
+		'title'                     => esc_html__( 'Knowledge Base', 'hpkb' ),
 
 		// Queries
-		'orderby'             => 'date',
-		'order'               => 'ASC',
-		'posts_per_page'      => 5,
+		'orderby'                   => 'date',
+		'order'                     => 'ASC',
+		'posts_per_page'            => 5,
 
 		// Slugs
-		'knowledge_base_slug' => 'kb',
-		'category_slug'       => 'kb-category',
-		'tag_slug'            => 'kb-tag',
+		'knowledge_base_slug'       => 'kb',
+		'category_slug'             => 'kb-category',
+		'tag_slug'                  => 'kb-tag',
 
 		// Display
-		'columns'             => 2,
-		'disable_css'         => false,
+		'columns'                   => 2,
+		'disable_css'               => false,
 
 		// Breadcrumb
-		'breadcrumb'          => true,
-		'breadcrumb_home'     => true,
-		'breadcrumb_sep'      => '/',
+		'breadcrumb'                => true,
+		'breadcrumb_home'           => true,
+		'breadcrumb_sep'            => '/',
+
+		// Search
+		'search'                    => true,
+		'search_placeholder'        => esc_attr__( 'Search the knowledge base …', 'hpkb' ),
+		'search_autofocus'          => false,
+		'search_suggestions'        => true,
+		'search_suggestions_number' => 5,
 
 	);
 

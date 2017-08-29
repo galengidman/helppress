@@ -2,7 +2,7 @@
 
 	$(function() {
 
-		var $hpSearchInput       = $('.hpkb-search__input');
+		var $hpSearchInput       = $('.hpkb-search__input--suggest');
 		var $hpSearchSuggestions = $('.hpkb-search__suggestions');
 
 		$hpSearchInput.devbridgeAutocomplete({

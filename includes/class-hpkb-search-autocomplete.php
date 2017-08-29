@@ -20,10 +20,11 @@ class HPKB_Search_Autocomplete {
 	public function suggestions() {
 
 		$articles = new WP_Query( array(
-			's'             => $_REQUEST['query'],
-			'post_type'     => 'hpkb_article',
-			'fields'        => 'ids',
-			'no_found_rows' => true,
+			's'              => $_REQUEST['query'],
+			'post_type'      => 'hpkb_article',
+			'fields'         => 'ids',
+			'no_found_rows'  => true,
+			'posts_per_page' => hpkb_get_option( 'search_suggestions_number' ),
 		) );
 
 		$suggestions = array( 'suggestions' => array() );
