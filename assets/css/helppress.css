@@ -41,14 +41,13 @@
 }
 
 .hpkb-article-item {
-  padding: 1em 0;
+  padding: 2em 0;
   border-top: solid 1px rgba(0, 0, 0, 0.15);
 }
 
 .hpkb-article-item__title {
-  font-size: inherit;
-  margin-bottom: 0;
-  padding-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .hpkb-article-item__excerpt {
@@ -77,7 +76,7 @@
 
 .hpkb-breadcrumb {
   list-style-type: none;
-  font-size: .85em;
+  font-size: .9em;
   margin-left: 0;
   padding-left: 0;
 }
@@ -93,6 +92,8 @@
 .hpkb-genericon {
   position: relative;
   top: -.1em;
+  width: 1em;
+  height: 1em;
   vertical-align: middle;
 }
 
@@ -126,7 +127,7 @@
 
 .hpkb-search__suggestions .autocomplete-suggestion {
   padding: .5em;
-  font-size: .85em;
+  font-size: .9em;
   cursor: pointer;
 }
 
