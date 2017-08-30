@@ -37,7 +37,7 @@ class HPKB_Breadcrumb {
 				array( 'fields' => 'ids' )
 			);
 
-			if ( $article_categories[0] ) {
+			if ( isset( $article_categories[0] ) ) {
 				$this->add_tax_tree( $article_categories[0] );
 			}
 
