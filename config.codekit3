@@ -69,16 +69,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/assets\/css\/helppress.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/assets\/css\/helppress-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/assets\/img\/columns-1.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -148,32 +138,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/assets\/scss\/_hpkb-archive.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/assets\/scss\/_hpkb-article-item.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/_hpkb-article-item.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/assets\/scss\/_hpkb-article-list.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/assets\/scss\/_hpkb-article-list.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -2058,6 +2022,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/parts\/hpkb-page-links.php",
+		"oF": 0
+		},
+	"\/templates\/parts\/hpkb-post-navigation.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/parts\/hpkb-post-navigation.php",
 		"oF": 0
 		},
 	"\/templates\/parts\/hpkb-searchform.php": {

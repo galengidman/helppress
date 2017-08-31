@@ -34,3 +34,5 @@
 		</div>
 	<?php endforeach; ?>
 </div>
+
+<?php hpkb_get_template_part( 'parts/hpkb-post-navigation', 'archive' );
