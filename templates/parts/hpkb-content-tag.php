@@ -8,5 +8,5 @@
 	</ul>
 <?php endif; ?>
 
-<?php hpkb_get_template_part( 'parts/hpkb-post-navigation', 'tag' );
+<?php hpkb_get_template_part( 'parts/hpkb-post-navigation', 'tag' ); ?>
 <?php hpkb_get_template_part( 'parts/hpkb-searchform', 'tag' );
