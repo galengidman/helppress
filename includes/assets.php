@@ -24,12 +24,14 @@ function hpkb_assets() {
 		'admin_ajax' => esc_url( admin_url( 'admin-ajax.php' ) ),
 	) );
 
-	wp_enqueue_style(
-		'hpkb',
-		esc_url( HPKB_URL . '/assets/css/helppress.css' ),
-		array(),
-		HPKB_VERSION
-	);
+	if ( ! hpkb_get_option( 'disable_css' ) ) {
+		wp_enqueue_style(
+			'hpkb',
+			esc_url( HPKB_URL . '/assets/css/helppress.css' ),
+			array(),
+			HPKB_VERSION
+		);
+	}
 
 }
 add_action( 'wp_enqueue_scripts', 'hpkb_assets' );
