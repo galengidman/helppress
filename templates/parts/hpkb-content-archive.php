@@ -13,8 +13,7 @@
 
 			<?php $articles = hpkb_get_articles( array(
 				'hpkb_category' => $category->slug,
-				'fields'                => 'ids',
-				'posts_per_page'        => 5,
+				'fields'        => 'ids',
 			) ); ?>
 
 			<?php if ( $articles->have_posts() ) : ?>
