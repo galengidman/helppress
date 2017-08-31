@@ -62,6 +62,7 @@ function hpkb_get_breadcrumb() {
 	$breadcrumb = new HPKB_Breadcrumb();
 
 	return $breadcrumb->get_trail();
+
 }
 
 function hpkb_get_categories( $args = array() ) {

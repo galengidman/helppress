@@ -41,20 +41,18 @@ function hpkb_includes() {
 
 		// Classes
 		'/includes/class-hpkb-breadcrumb.php',
-		'/includes/class-hpkb-custom-content.php',
 		'/includes/class-hpkb-menu-archive-link.php',
 		'/includes/class-hpkb-search-autocomplete.php',
 		'/includes/class-hpkb-settings.php',
 		'/includes/class-hpkb-template-loader.php',
-		'/includes/class-hpkb-templates.php',
 
 		// General
 		'/includes/assets.php',
 		'/includes/options.php',
 		'/includes/post-types.php',
-		'/includes/queries.php',
 		'/includes/taxonomies.php',
 		'/includes/template-tags.php',
+		'/includes/theme-compat.php',
 
 	);
 

@@ -69,6 +69,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/css\/helppress.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/css\/helppress-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/assets\/img\/columns-1.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -138,6 +148,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/assets\/scss\/_hpkb-archive.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/scss\/_hpkb-article-item.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/_hpkb-article-item.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/scss\/_hpkb-article-list.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/_hpkb-article-list.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -236,12 +272,6 @@
 		"oAP": "\/includes\/class-hpkb-breadcrumb.php",
 		"oF": 0
 		},
-	"\/includes\/class-hpkb-custom-content.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/class-hpkb-custom-content.php",
-		"oF": 0
-		},
 	"\/includes\/class-hpkb-menu-archive-link.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -266,12 +296,6 @@
 		"oAP": "\/includes\/class-hpkb-template-loader.php",
 		"oF": 0
 		},
-	"\/includes\/class-hpkb-templates.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/class-hpkb-templates.php",
-		"oF": 0
-		},
 	"\/includes\/options.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -284,12 +308,6 @@
 		"oAP": "\/includes\/post-types.php",
 		"oF": 0
 		},
-	"\/includes\/queries.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/includes\/queries.php",
-		"oF": 0
-		},
 	"\/includes\/taxonomies.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -300,6 +318,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/template-tags.php",
+		"oF": 0
+		},
+	"\/includes\/theme-compat.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/theme-compat.php",
 		"oF": 0
 		},
 	"\/includes\/vendor\/autoload.php": {
