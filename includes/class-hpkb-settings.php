@@ -30,7 +30,7 @@ class HPKB_Settings {
 					array(
 						'type'    => 'text',
 						'id'      => 'title',
-						'name'    => esc_html__( 'Knowledge Base title', 'hpkb' ),
+						'name'    => esc_html__( 'Knowledge base title', 'hpkb' ),
 						'desc'    => esc_html__( 'You could rename the knowledge base to something else, such as &ldquo;Documentation&rdquo; or &ldquo;Learning Center.&rdquo;', 'hpkb' ),
 						'default' => hpkb_get_option_default( 'title' ),
 					),
@@ -79,9 +79,9 @@ class HPKB_Settings {
 					array(
 						'type'               => 'text',
 						'id'                 => 'knowledge_base_slug',
-						'name'               => esc_html__( 'Knowledge Base URL slug', 'hpkb' ),
+						'name'               => esc_html__( 'Knowledge base URL slug', 'hpkb' ),
 						'desc'               => sprintf(
-							__( 'The URL slug of the Knowledge Base page. <code>%s</code>', 'hpkb' ),
+							__( 'The URL slug of the knowledge base page. <code>%s</code>', 'hpkb' ),
 							home_url( '/' ) . '<ins>' . hpkb_get_option( 'knowledge_base_slug' ) . '</ins>/'
 						),
 						'default'            => hpkb_get_option_default( 'knowledge_base_slug' ),
@@ -122,7 +122,7 @@ class HPKB_Settings {
 						'type'    => 'radio-image',
 						'id'      => 'columns',
 						'name'    => esc_html__( 'Columns', 'hpkb' ),
-						'desc'    => esc_html__( 'The number of columns to display on the Knowledge Base.', 'hpkb' ),
+						'desc'    => esc_html__( 'The number of columns to display on the knowledge base.', 'hpkb' ),
 						'options' => array(
 							1 => esc_url( HPKB_URL . '/assets/img/columns-1.svg' ),
 							2 => esc_url( HPKB_URL . '/assets/img/columns-2.svg' ),
