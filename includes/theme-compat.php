@@ -6,7 +6,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function hpkb_content( $content ) {
 
-	if ( hpkb_is_kb_article() ) {
+	global $post;
+
+	if ( is_admin() ) {
+		return $content;
+	}
+
+	if ( is_feed() ) {
+		return $content;
+	}
+
+	if ( defined( 'JSON_REQUEST' ) && JSON_REQUEST ) {
+		return $content;
+	}
+
+	if ( hpkb_is_kb_article() && $post->post_type === 'hpkb_article' ) {
 		ob_start();
 		remove_filter( 'the_content', 'hpkb_content' );
 		remove_filter( 'the_excerpt', 'hpkb_content' );
