@@ -2,7 +2,7 @@
 	<header class="hpkb-article-item__header">
 		<h4 class="hpkb-article-item__title">
 			<a href="<?php echo esc_url( get_permalink() ); ?>">
-				<?php echo hpkb_article_format_genericon(); ?>
+				<?php echo hpkb_genericon( hpkb_get_post_format() ); ?>
 				<span><?php the_title(); ?></span>
 			</a>
 		</h4>

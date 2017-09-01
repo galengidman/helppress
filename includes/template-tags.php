@@ -4,39 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function hpkb_article_format_genericon( $post_id = null, $size = 16 ) {
-
-	if ( ! $post_id ) {
-		$post_id = get_the_id();
-	}
-
-	$format = hpkb_get_post_format( $post_id );
-
-	return hpkb_genericon( $format, $size );
-
-}
-
-function hpkb_buffer_template_part( $slug, $name = null ) {
-
-	ob_start();
-
-	hpkb_get_template_part( $slug, $name );
-
-	return ob_get_clean();
-
-}
-
 function hpkb_genericon( $icon, $size = 16 ) {
 
 	$svg_url = esc_url( HPKB_URL . '/assets/img/genericons-neue.svg' );
 
 	return "<svg class='hpkb-genericon hpkb-genericon--{$icon} hpkb-genericon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-genericon-{$icon}'></use></svg>";
-
-}
-
-function hpkb_get_kb_title() {
-
-	return hpkb_get_option( 'title' );
 
 }
 
@@ -95,106 +67,6 @@ function hpkb_get_post_format( $post_id ) {
 
 }
 
-function hpkb_get_reserved_terms() {
-
-	// https://codex.wordpress.org/Reserved_Terms
-	$terms = array(
-		'attachment',
-		'attachment_id',
-		'author',
-		'author_name',
-		'calendar',
-		'cat',
-		'category',
-		'category__and',
-		'category__in',
-		'category__not_in',
-		'category_name',
-		'comments_per_page',
-		'comments_popup',
-		'custom',
-		'customize_messenger_channel',
-		'customized',
-		'cpage',
-		'day',
-		'debug',
-		'embed',
-		'error',
-		'exact',
-		'feed',
-		'hour',
-		'link_category',
-		'm',
-		'minute',
-		'monthnum',
-		'more',
-		'name',
-		'nav_menu',
-		'nonce',
-		'nopaging',
-		'offset',
-		'order',
-		'orderby',
-		'p',
-		'page',
-		'page_id',
-		'paged',
-		'pagename',
-		'pb',
-		'perm',
-		'post',
-		'post__in',
-		'post__not_in',
-		'post_format',
-		'post_mime_type',
-		'post_status',
-		'post_tag',
-		'post_type',
-		'posts',
-		'posts_per_archive_page',
-		'posts_per_page',
-		'preview',
-		'robots',
-		's',
-		'search',
-		'second',
-		'sentence',
-		'showposts',
-		'static',
-		'subpost',
-		'subpost_id',
-		'tag',
-		'tag__and',
-		'tag__in',
-		'tag__not_in',
-		'tag_id',
-		'tag_slug__and',
-		'tag_slug__in',
-		'taxonomy',
-		'tb',
-		'term',
-		'terms',
-		'theme',
-		'title',
-		'type',
-		'w',
-		'withcomments',
-		'withoutcomments',
-		'year',
-	);
-
-	return apply_filters( 'hpkb_get_reserved_terms', $terms );
-
-}
-
-function hpkb_get_template_part( $slug, $name = null ) {
-
-	$templates = new HPKB_Template_Loader;
-
-	$templates->get_template_part( $slug, $name );
-
-}
-
 function hpkb_is_kb_article() {
 
 	return is_singular( 'hpkb_article' );
@@ -232,17 +104,5 @@ function hpkb_is_kb_page() {
 		|| hpkb_is_kb_category()
 		|| hpkb_is_kb_tag()
 		|| hpkb_is_kb_search();
-
-}
-
-function hpkb_sanitize_slug( $slug ) {
-
-	$reserved_terms = hpkb_get_reserved_terms();
-
-	if ( in_array( $slug, $reserved_terms ) ) {
-		$slug = 'kb-' . $slug;
-	}
-
-	return apply_filters( 'hpkb_sanitize_slug', $slug );
 
 }

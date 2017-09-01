@@ -48,6 +48,7 @@ function hpkb_includes() {
 
 		// General
 		'/includes/assets.php',
+		'/includes/formatting.php',
 		'/includes/options.php',
 		'/includes/post-types.php',
 		'/includes/taxonomies.php',

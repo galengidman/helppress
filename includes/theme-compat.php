@@ -47,6 +47,7 @@ function hpkb_document_title( $title_parts ) {
 	}
 
 	return $title_parts;
+
 }
 add_filter( 'document_title_parts', 'hpkb_document_title' );
 
@@ -234,6 +235,24 @@ function hpkb_get_template( $preferred = null ) {
 	array_unshift( $templates, $preferred );
 
 	return $templates;
+
+}
+
+function hpkb_get_template_part( $slug, $name = null ) {
+
+	$templates = new HPKB_Template_Loader;
+
+	$templates->get_template_part( $slug, $name );
+
+}
+
+function hpkb_buffer_template_part( $slug, $name = null ) {
+
+	ob_start();
+
+	hpkb_get_template_part( $slug, $name );
+
+	return ob_get_clean();
 
 }
 

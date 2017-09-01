@@ -26,7 +26,7 @@ class HPKB_Breadcrumb {
 		}
 
 		$this->add(
-			hpkb_get_kb_title(),
+			hpkb_get_option( 'title' ),
 			hpkb_get_kb_url()
 		);
 
