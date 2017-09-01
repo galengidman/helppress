@@ -58,7 +58,11 @@ function hpkb_get_kb_url() {
 
 }
 
-function hpkb_get_post_format( $post_id ) {
+function hpkb_get_post_format( $post_id = null ) {
+
+	if ( ! $post_id ) {
+		$post_id = get_the_id();
+	}
 
 	$format = get_post_format( $post_id );
 	$format = $format ? $format : 'standard';
