@@ -5,8 +5,18 @@
 }
 
 .hpkb-article-list__item {
-	padding: .5em 0;
-	border-top: solid 1px rgba(black, .15);
+	&::before {
+		content: '';
+		display: block;
+		height: 1px;
+		margin: .5em 0;
+		background: currentColor;
+		opacity: .15;
+	}
+
+	&:first-child::before {
+		margin-top: 0;
+	}
 
 	.hpkb-icon {
 		margin-right: .25em;

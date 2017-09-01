@@ -9,10 +9,12 @@
 }
 
 .hpkb-search__input {
-	width: 95% !important;
+	width: 98% !important;
 }
 
 .hpkb-search__suggestions {
+	color: #333;
+
 	.autocomplete-suggestions {
 		padding: .5em;
 		background: white;

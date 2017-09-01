@@ -204,6 +204,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/scss\/_hpkb-post-nav.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/scss\/_hpkb-post-nav.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/scss\/_hpkb-search.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -294,6 +307,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/includes\/class-hpkb-template-loader.php",
+		"oF": 0
+		},
+	"\/includes\/formatting.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/includes\/formatting.php",
 		"oF": 0
 		},
 	"\/includes\/options.php": {
@@ -428,10 +447,10 @@
 		"oAP": "\/templates\/parts\/hpkb-page-links.php",
 		"oF": 0
 		},
-	"\/templates\/parts\/hpkb-post-navigation.php": {
+	"\/templates\/parts\/hpkb-post-nav.php": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/parts\/hpkb-post-navigation.php",
+		"oAP": "\/templates\/parts\/hpkb-post-nav.php",
 		"oF": 0
 		},
 	"\/templates\/parts\/hpkb-searchform.php": {
