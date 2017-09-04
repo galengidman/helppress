@@ -1,18 +1,18 @@
-.hpkb-search {
+.helppress-search {
 	display: flex;
 	align-items: center;
 }
 
-.hpkb-search__label {
+.helppress-search__label {
 	flex-grow: 1;
 	margin: 0;
 }
 
-.hpkb-search__input {
+.helppress-search__input {
 	width: 98% !important;
 }
 
-.hpkb-search__suggestions {
+.helppress-search__suggestions {
 	color: #333;
 
 	.autocomplete-suggestions {

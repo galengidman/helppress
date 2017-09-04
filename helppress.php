@@ -7,18 +7,19 @@
  * Author:      ThemeBright
  * Author URI:  https://themebright.com/
  * License:     GPL2+
+ * Text Domain: helppress
  * Domain Path: /languages/
  */
 
-function hpkb_constants() {
+function helppress_constants() {
 
 	$constants = array(
-		'HPKB_VERSION' => '1.0.0',
-		'HPKB_PATH'    => untrailingslashit( plugin_dir_path( __FILE__ ) ),
-		'HPKB_URL'     => untrailingslashit( plugin_dir_url( __FILE__ ) ),
+		'HELPPRESS_VERSION' => '1.0.0',
+		'HELPPRESS_PATH'    => untrailingslashit( plugin_dir_path( __FILE__ ) ),
+		'HELPPRESS_URL'     => untrailingslashit( plugin_dir_url( __FILE__ ) ),
 	);
 
-	$constants = apply_filters( 'hpkb_constants', $constants );
+	$constants = apply_filters( 'helppress_constants', $constants );
 
 	foreach ( $constants as $constant => $value ) {
 		if ( ! defined( $constant ) ) {
@@ -27,9 +28,9 @@ function hpkb_constants() {
 	}
 
 }
-add_action( 'plugins_loaded', 'hpkb_constants' );
+add_action( 'plugins_loaded', 'helppress_constants' );
 
-function hpkb_includes() {
+function helppress_includes() {
 
 	$includes = array(
 
@@ -38,11 +39,11 @@ function hpkb_includes() {
 		'/includes/vendor/gambitph/titan-framework/titan-framework.php',
 
 		// Classes
-		'/includes/class-hpkb-breadcrumb.php',
-		'/includes/class-hpkb-menu-archive-link.php',
-		'/includes/class-hpkb-search-autocomplete.php',
-		'/includes/class-hpkb-settings.php',
-		'/includes/class-hpkb-template-loader.php',
+		'/includes/class-helppress-breadcrumb.php',
+		'/includes/class-helppress-menu-archive-link.php',
+		'/includes/class-helppress-search-autocomplete.php',
+		'/includes/class-helppress-settings.php',
+		'/includes/class-helppress-template-loader.php',
 
 		// General
 		'/includes/assets.php',
@@ -55,18 +56,18 @@ function hpkb_includes() {
 
 	);
 
-	$includes = apply_filters( 'hpkb_includes', $includes );
+	$includes = apply_filters( 'helppress_includes', $includes );
 
 	foreach ( $includes as $file ) {
-		include HPKB_PATH . $file;
+		include HELPPRESS_PATH . $file;
 	}
 
 }
-add_action( 'plugins_loaded', 'hpkb_includes' );
+add_action( 'plugins_loaded', 'helppress_includes' );
 
-function hpkb_load_textdomain() {
+function helppress_load_textdomain() {
 
-	load_plugin_textdomain( 'helppress', false, HPKB_PATH . '/languages/' );
+	load_plugin_textdomain( 'helppress', false, HELPPRESS_PATH . '/languages/' );
 
 }
-add_action( 'plugins_loaded', 'hpkb_load_textdomain' );
+add_action( 'plugins_loaded', 'helppress_load_textdomain' );

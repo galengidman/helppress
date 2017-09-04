@@ -4,11 +4,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'HPKB_Search_Autocomplete' ) ) {
+if ( ! class_exists( 'HelpPress_Search_Autocomplete' ) ) {
 
-class HPKB_Search_Autocomplete {
+class HelpPress_Search_Autocomplete {
 
-	protected $action_name = 'hpkb_autocomplete_suggestions';
+	protected $action_name = 'helppress_autocomplete_suggestions';
 
 	public function __construct() {
 
@@ -21,10 +21,10 @@ class HPKB_Search_Autocomplete {
 
 		$articles = new WP_Query( array(
 			's'              => $_REQUEST['query'],
-			'post_type'      => 'hpkb_article',
+			'post_type'      => 'helppress_article',
 			'fields'         => 'ids',
 			'no_found_rows'  => true,
-			'posts_per_page' => hpkb_get_option( 'search_suggestions_number' ),
+			'posts_per_page' => helppress_get_option( 'search_suggestions_number' ),
 		) );
 
 		$suggestions = array( 'suggestions' => array() );
@@ -46,4 +46,4 @@ class HPKB_Search_Autocomplete {
 
 }
 
-new HPKB_Search_Autocomplete();
+new HelpPress_Search_Autocomplete();

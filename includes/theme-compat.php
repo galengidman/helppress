@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function hpkb_content( $content ) {
+function helppress_content( $content ) {
 
 	global $post;
 
@@ -20,92 +20,92 @@ function hpkb_content( $content ) {
 		return $content;
 	}
 
-	if ( hpkb_is_kb_article() && $post->post_type === 'hpkb_article' ) {
+	if ( helppress_is_kb_article() && $post->post_type === 'helppress_article' ) {
 		ob_start();
-		remove_filter( 'the_content', 'hpkb_content' );
-		remove_filter( 'the_excerpt', 'hpkb_content' );
-		hpkb_get_template_part( 'parts/hpkb-content-article' );
-		add_filter( 'the_content', 'hpkb_content' );
-		add_filter( 'the_excerpt', 'hpkb_content' );
+		remove_filter( 'the_content', 'helppress_content' );
+		remove_filter( 'the_excerpt', 'helppress_content' );
+		helppress_get_template_part( 'parts/helppress-content-article' );
+		add_filter( 'the_content', 'helppress_content' );
+		add_filter( 'the_excerpt', 'helppress_content' );
 		$content = ob_get_clean();
 	}
 
 	return $content;
 
 }
-add_filter( 'the_content', 'hpkb_content' );
-add_filter( 'the_excerpt', 'hpkb_content' );
+add_filter( 'the_content', 'helppress_content' );
+add_filter( 'the_excerpt', 'helppress_content' );
 
-function hpkb_document_title( $title_parts ) {
+function helppress_document_title( $title_parts ) {
 
-	if ( hpkb_is_kb_archive() ) {
-		$title_parts['title'] = hpkb_get_option( 'title' );
+	if ( helppress_is_kb_archive() ) {
+		$title_parts['title'] = helppress_get_option( 'title' );
 	}
 
-	elseif ( hpkb_is_kb_category() || hpkb_is_kb_tag() ) {
+	elseif ( helppress_is_kb_category() || helppress_is_kb_tag() ) {
 		$title_parts['title'] = single_term_title( '', false );
 	}
 
 	return $title_parts;
 
 }
-add_filter( 'document_title_parts', 'hpkb_document_title' );
+add_filter( 'document_title_parts', 'helppress_document_title' );
 
-function hpkb_template_include( $template ) {
+function helppress_template_include( $template ) {
 
-	if ( hpkb_is_kb_article() ) {
-		$custom_template = hpkb_get_template( 'hpkb-article.php' );
+	if ( helppress_is_kb_article() ) {
+		$custom_template = helppress_get_template( 'helppress-article.php' );
 	}
 
-	elseif ( hpkb_is_kb_archive() ) {
+	elseif ( helppress_is_kb_archive() ) {
 		remove_all_filters( 'the_content' );
 
-		hpkb_reset_post( array(
-			'post_title'   => hpkb_get_option( 'title' ),
-			'post_content' => hpkb_buffer_template_part( 'parts/hpkb-content-archive' ),
+		helppress_reset_post( array(
+			'post_title'   => helppress_get_option( 'title' ),
+			'post_content' => helppress_buffer_template_part( 'parts/helppress-content-archive' ),
 		) );
 
-		$custom_template = hpkb_get_template( 'hpkb-archive.php' );
+		$custom_template = helppress_get_template( 'helppress-archive.php' );
 	}
 
-	elseif ( hpkb_is_kb_category() ) {
+	elseif ( helppress_is_kb_category() ) {
 		remove_all_filters( 'the_content' );
 
-		hpkb_reset_post( array(
+		helppress_reset_post( array(
 			'post_title'   => single_term_title( '', false ),
-			'post_content' => hpkb_buffer_template_part( 'parts/hpkb-content-category' ),
+			'post_content' => helppress_buffer_template_part( 'parts/helppress-content-category' ),
 			'is_archive'   => true,
 			'is_tax'       => true,
 		) );
 
-		$custom_template = hpkb_get_template( 'hpkb-category.php' );
+		$custom_template = helppress_get_template( 'helppress-category.php' );
 	}
 
-	elseif ( hpkb_is_kb_tag() ) {
+	elseif ( helppress_is_kb_tag() ) {
 		remove_all_filters( 'the_content' );
 
-		hpkb_reset_post( array(
+		helppress_reset_post( array(
 			'post_title'   => single_term_title( '', false ),
-			'post_content' => hpkb_buffer_template_part( 'parts/hpkb-content-tag' ),
+			'post_content' => helppress_buffer_template_part( 'parts/helppress-content-tag' ),
 			'is_archive'   => true,
 			'is_tax'       => true,
 		) );
 
-		$custom_template = hpkb_get_template( 'hpkb-tag.php' );
+		$custom_template = helppress_get_template( 'helppress-tag.php' );
 	}
 
-	elseif ( hpkb_is_kb_search() ) {
+	elseif ( helppress_is_kb_search() ) {
 		remove_all_filters( 'the_content' );
 
-		hpkb_reset_post( array(
+		helppress_reset_post( array(
 			'post_title'   => sprintf(
 				esc_html__( 'Search results: &ldquo;%s&rdquo;' ),
 				get_search_query()
 			),
-			'post_content' => hpkb_buffer_template_part( 'parts/hpkb-content-search' ),
+			'post_content' => helppress_buffer_template_part( 'parts/helppress-content-search' ),
 		) );
 
-		$custom_template = hpkb_get_template( 'hpkb-search.php' );
+		$custom_template = helppress_get_template( 'helppress-search.php' );
 	}
 
 	if ( isset( $custom_template ) ) {
@@ -115,9 +115,9 @@ function hpkb_template_include( $template ) {
 	return $template;
 
 }
-add_action( 'template_include', 'hpkb_template_include' );
+add_action( 'template_include', 'helppress_template_include' );
 
-function hpkb_get_compat_templates() {
+function helppress_get_compat_templates() {
 
 	$templates = array(
 		'helppress.php',
@@ -126,11 +126,11 @@ function hpkb_get_compat_templates() {
 		'index.php',
 	);
 
-	return apply_filters( 'hpkb_get_compat_templates', $templates );
+	return apply_filters( 'helppress_get_compat_templates', $templates );
 
 }
 
-function hpkb_reset_post( $args = array() ) {
+function helppress_reset_post( $args = array() ) {
 
 	global $wp_query, $post;
 
@@ -226,10 +226,10 @@ function hpkb_reset_post( $args = array() ) {
 
 }
 
-function hpkb_get_template( $preferred = null ) {
+function helppress_get_template( $preferred = null ) {
 
 	$preferred = 'helppress/' . $preferred;
-	$compat_templates = hpkb_get_compat_templates();
+	$compat_templates = helppress_get_compat_templates();
 
 	$templates = $compat_templates;
 	array_unshift( $templates, $preferred );
@@ -238,25 +238,25 @@ function hpkb_get_template( $preferred = null ) {
 
 }
 
-function hpkb_get_template_part( $slug, $name = null ) {
+function helppress_get_template_part( $slug, $name = null ) {
 
-	$templates = new HPKB_Template_Loader;
+	$templates = new HelpPress_Template_Loader;
 
 	$templates->get_template_part( $slug, $name );
 
 }
 
-function hpkb_buffer_template_part( $slug, $name = null ) {
+function helppress_buffer_template_part( $slug, $name = null ) {
 
 	ob_start();
 
-	hpkb_get_template_part( $slug, $name );
+	helppress_get_template_part( $slug, $name );
 
 	return ob_get_clean();
 
 }
 
-function hpkb_pre_get_posts( $query ) {
+function helppress_pre_get_posts( $query ) {
 
 	if ( is_admin() ) {
 		return $query;
@@ -265,26 +265,26 @@ function hpkb_pre_get_posts( $query ) {
 	if (
 		$query->is_main_query()
 		&& (
-			hpkb_is_kb_archive()
-			|| hpkb_is_kb_category()
-			|| hpkb_is_kb_tag()
-			|| hpkb_is_kb_search()
+			helppress_is_kb_archive()
+			|| helppress_is_kb_category()
+			|| helppress_is_kb_tag()
+			|| helppress_is_kb_search()
 		) ) {
-		$query->set( 'orderby',        hpkb_get_option( 'orderby' ) );
-		$query->set( 'order',          hpkb_get_option( 'order' ) );
-		$query->set( 'posts_per_page', hpkb_get_option( 'posts_per_page' ) );
+		$query->set( 'orderby',        helppress_get_option( 'orderby' ) );
+		$query->set( 'order',          helppress_get_option( 'order' ) );
+		$query->set( 'posts_per_page', helppress_get_option( 'posts_per_page' ) );
 	}
 
 	return $query;
 
 }
-add_filter( 'pre_get_posts', 'hpkb_pre_get_posts' );
+add_filter( 'pre_get_posts', 'helppress_pre_get_posts' );
 
-function hpkb_query_vars( $vars = [] ) {
+function helppress_query_vars( $vars = [] ) {
 
-	$vars[] = 'hpkb-search';
+	$vars[] = 'helppress-search';
 
 	return $vars;
 
 }
-add_action( 'query_vars', 'hpkb_query_vars' );
+add_action( 'query_vars', 'helppress_query_vars' );

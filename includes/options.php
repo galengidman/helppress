@@ -4,12 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function hpkb_get_option_defaults() {
+function helppress_get_option_defaults() {
 
 	$defaults = array(
 
 		// Text
-		'title'                     => esc_html__( 'Knowledge Base', 'hpkb' ),
+		'title'                     => esc_html__( 'Knowledge Base', 'helppress' ),
 
 		// Queries
 		'orderby'                   => 'date',
@@ -32,41 +32,41 @@ function hpkb_get_option_defaults() {
 
 		// Search
 		'search'                    => true,
-		'search_placeholder'        => esc_attr__( 'Search the knowledge base …', 'hpkb' ),
+		'search_placeholder'        => esc_attr__( 'Search the knowledge base …', 'helppress' ),
 		'search_autofocus'          => false,
 		'search_suggestions'        => true,
 		'search_suggestions_number' => 5,
 
 	);
 
-	return apply_filters( 'hpkb_option_defaults', $defaults );
+	return apply_filters( 'helppress_option_defaults', $defaults );
 
 }
 
-function hpkb_get_option_default( $key = null ) {
+function helppress_get_option_default( $key = null ) {
 
-	$defaults = hpkb_get_option_defaults();
+	$defaults = helppress_get_option_defaults();
 	$value    = false;
 
 	if ( array_key_exists( $key, $defaults ) ) {
 		$value = $defaults[ $key ];
 	}
 
-	return apply_filters( 'hpkb_get_option_default', $value, $key );
+	return apply_filters( 'helppress_get_option_default', $value, $key );
 
 }
 
-function hpkb_get_option( $key = null ) {
+function helppress_get_option( $key = null ) {
 
-	$options = maybe_unserialize( get_option( 'hpkb_options' ) );
+	$options = maybe_unserialize( get_option( 'helppress_options' ) );
 	$value   = false;
 
 	if ( $options && array_key_exists( $key, $options ) ) {
 		$value = $options[ $key ];
 	} else {
-		$value = hpkb_get_option_default( $key );
+		$value = helppress_get_option_default( $key );
 	}
 
-	return apply_filters( 'hpkb_get_option', $value, $key );
+	return apply_filters( 'helppress_get_option', $value, $key );
 
 }

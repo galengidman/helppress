@@ -1,10 +1,10 @@
-.hpkb-article-list {
+.helppress-article-list {
 	margin-left: 0;
 	padding-left: 0;
 	list-style-type: none;
 }
 
-.hpkb-article-list__item {
+.helppress-article-list__item {
 	&::before {
 		content: '';
 		display: block;
@@ -18,7 +18,7 @@
 		margin-top: 0;
 	}
 
-	.hpkb-icon {
+	.helppress-icon {
 		margin-right: .25em;
 	}
 }

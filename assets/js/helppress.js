@@ -2,15 +2,15 @@
 
 	$(function() {
 
-		var $hpSearchInput       = $('.hpkb-search__input--suggest');
-		var $hpSearchSuggestions = $('.hpkb-search__suggestions');
+		var $searchInput       = $('.helppress-search__input--suggest');
+		var $searchSuggestions = $('.helppress-search__suggestions');
 
-		$hpSearchInput.devbridgeAutocomplete({
-			serviceUrl:       hpkb_l10n.admin_ajax,
+		$searchInput.devbridgeAutocomplete({
+			serviceUrl:       helppress_l10n.admin_ajax,
 			params:           {
-				action: 'hpkb_autocomplete_suggestions',
+				action: 'helppress_autocomplete_suggestions',
 			},
-			appendTo:         $hpSearchSuggestions,
+			appendTo:         $searchSuggestions,
 			forceFixPosition: true,
 		});
 

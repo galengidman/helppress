@@ -34,27 +34,27 @@ gulp.task('default', ['dev']);
 gulp.task('translate', function() {
 	return gulp.src('**/*.php')
 		.pipe(wpPot({
-			domain: 'hpkb',
 			package: 'HelpPress',
+			domain:  'helppress',
 		}))
-		.pipe(gulp.dest(`languages/${pkg.name}.pot`));
+		.pipe(gulp.dest(`languages/helppress.pot`));
 });
 
 gulp.task('copy', ['translate'], function() {
 	return gulp.src('**')
-		.pipe(gulp.dest(pkg.name));
+		.pipe(gulp.dest('helppress'));
 });
 
 gulp.task('zip', ['copy'], function() {
-	shell.task(`zip -r ${pkg.name}-${pkg.version}.zip ${pkg.name}`);
+	shell.task(`zip -r helppress-${pkg.version}.zip helppress`);
 });
 
 gulp.task('export', ['zip'], function() {
-	shell.task(`mv ${pkg.name}-${pkg.version}.zip ~/Desktop/`);
+	shell.task(`mv helppress-${pkg.version}.zip ~/Desktop/`);
 });
 
 gulp.task('clean', ['export'], function() {
-	return del(pkg.name);
+	return del('helppress');
 });
 
 gulp.task('release', ['translate', 'copy', 'zip', 'export', 'clean']);

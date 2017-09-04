@@ -1,18 +1,18 @@
 <?php
 
-function hpkb_sanitize_slug( $slug ) {
+function helppress_sanitize_slug( $slug ) {
 
-	$reserved_terms = hpkb_get_reserved_terms();
+	$reserved_terms = helppress_get_reserved_terms();
 
 	if ( in_array( $slug, $reserved_terms ) ) {
 		$slug = 'kb-' . $slug;
 	}
 
-	return apply_filters( 'hpkb_sanitize_slug', $slug );
+	return apply_filters( 'helppress_sanitize_slug', $slug );
 
 }
 
-function hpkb_get_reserved_terms() {
+function helppress_get_reserved_terms() {
 
 	// https://codex.wordpress.org/Reserved_Terms
 	$terms = array(
@@ -100,6 +100,6 @@ function hpkb_get_reserved_terms() {
 		'year',
 	);
 
-	return apply_filters( 'hpkb_get_reserved_terms', $terms );
+	return apply_filters( 'helppress_get_reserved_terms', $terms );
 
 }

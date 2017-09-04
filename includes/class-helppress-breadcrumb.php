@@ -4,9 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'HPKB_Breadcrumb' ) ) {
+if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
 
-class HPKB_Breadcrumb {
+class HelpPress_Breadcrumb {
 
 	protected $trail = array();
 
@@ -18,22 +18,22 @@ class HPKB_Breadcrumb {
 
 	public function build_trail() {
 
-		if ( hpkb_get_option( 'breadcrumb_home' ) ) {
+		if ( helppress_get_option( 'breadcrumb_home' ) ) {
 			$this->add(
-				esc_html__( 'Home', 'hpkb' ),
+				esc_html__( 'Home', 'helppress' ),
 				home_url( '/' )
 			);
 		}
 
 		$this->add(
-			hpkb_get_option( 'title' ),
-			hpkb_get_kb_url()
+			helppress_get_option( 'title' ),
+			helppress_get_kb_url()
 		);
 
-		if ( is_singular( 'hpkb_article' ) ) {
+		if ( is_singular( 'helppress_article' ) ) {
 			$article_categories = wp_get_post_terms(
 				get_the_id(),
-				'hpkb_category',
+				'helppress_category',
 				array( 'fields' => 'ids' )
 			);
 
@@ -47,7 +47,7 @@ class HPKB_Breadcrumb {
 			);
 		}
 
-		if ( is_tax( array( 'hpkb_category', 'hpkb_tag' ) ) ) {
+		if ( is_tax( array( 'helppress_category', 'helppress_tag' ) ) ) {
 			$this->add_tax_tree( get_queried_object_id() );
 		}
 

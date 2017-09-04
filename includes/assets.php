@@ -4,34 +4,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function hpkb_assets() {
+function helppress_assets() {
 
 	wp_enqueue_script(
 		'jquery-devbridge-autocomplete',
-		esc_url( HPKB_URL . '/assets/vendor/jquery.autocomplete.js' ),
+		esc_url( HELPPRESS_URL . '/assets/vendor/jquery.autocomplete.js' ),
 		array( 'jquery' ),
-		HPKB_VERSION
+		HELPPRESS_VERSION
 	);
 
 	wp_enqueue_script(
-		'hpkb',
-		esc_url( HPKB_URL . '/assets/js/helppress.js' ),
+		'helppress',
+		esc_url( HELPPRESS_URL . '/assets/js/helppress.js' ),
 		array( 'jquery', 'jquery-devbridge-autocomplete' ),
-		HPKB_VERSION
+		HELPPRESS_VERSION
 	);
 
-	wp_localize_script( 'hpkb', 'hpkb_l10n', array(
+	wp_localize_script( 'helppress', 'helppress_l10n', array(
 		'admin_ajax' => esc_url( admin_url( 'admin-ajax.php' ) ),
 	) );
 
-	if ( ! hpkb_get_option( 'disable_css' ) ) {
+	if ( ! helppress_get_option( 'disable_css' ) ) {
 		wp_enqueue_style(
-			'hpkb',
-			esc_url( HPKB_URL . '/assets/css/helppress.css' ),
+			'helppress',
+			esc_url( HELPPRESS_URL . '/assets/css/helppress.css' ),
 			array(),
-			HPKB_VERSION
+			HELPPRESS_VERSION
 		);
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'hpkb_assets' );
+add_action( 'wp_enqueue_scripts', 'helppress_assets' );

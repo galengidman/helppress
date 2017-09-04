@@ -4,9 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'HPKB_Menu_Archive_Link' ) ) {
+if ( ! class_exists( 'HelpPress_Menu_Archive_Link' ) ) {
 
-class HPKB_Menu_Archive_Link {
+class HelpPress_Menu_Archive_Link {
 
 	public function __construct() {
 
@@ -17,8 +17,8 @@ class HPKB_Menu_Archive_Link {
 	public function add_meta_box() {
 
 		add_meta_box(
-			'add-hpkb-archive-link',
-			esc_html__( 'HelpPress', 'hpkb' ),
+			'add-helppress-archive-link',
+			esc_html__( 'HelpPress', 'helppress' ),
 			array( $this, 'display_meta_box' ),
 			'nav-menus',
 			'side',
@@ -31,9 +31,9 @@ class HPKB_Menu_Archive_Link {
 
 		?>
 
-		<div id="hpkb-archive-link" class="taxonomydiv">
-			<div id="tabs-panel-hpkb-archive-link" class="tabs-panel tabs-panel-active">
-				<ul id="hpkb-archive-link-checklist" class="categorychecklist form-no-clear">
+		<div id="helppress-archive-link" class="taxonomydiv">
+			<div id="tabs-panel-helppress-archive-link" class="tabs-panel tabs-panel-active">
+				<ul id="helppress-archive-link-checklist" class="categorychecklist form-no-clear">
 					<li>
 						<label class="menu-item-title">
 							<input
@@ -42,7 +42,7 @@ class HPKB_Menu_Archive_Link {
 								name="menu-item[-1][menu-item-object-id]"
 								value="-1"><?php
 
-							esc_html_e( 'Knowledge Base', 'hpkb' ); ?>
+							esc_html_e( 'Knowledge Base', 'helppress' ); ?>
 						</label>
 
 						<input
@@ -55,13 +55,13 @@ class HPKB_Menu_Archive_Link {
 							type="hidden"
 							class="menu-item-title"
 							name="menu-item[-1][menu-item-title]"
-							value="<?php esc_attr_e( 'Knowledge Base', 'hpkb' ); ?>">
+							value="<?php esc_attr_e( 'Knowledge Base', 'helppress' ); ?>">
 
 						<input
 							type="hidden"
 							class="menu-item-url"
 							name="menu-item[-1][menu-item-url]"
-							value="<?php echo esc_url( hpkb_get_kb_url() ); ?>">
+							value="<?php echo esc_url( helppress_get_kb_url() ); ?>">
 
 						<input
 							type="hidden"
@@ -76,9 +76,9 @@ class HPKB_Menu_Archive_Link {
 					<input
 						type="submit"
 						class="button-secondary submit-add-to-menu right"
-						value="<?php esc_attr_e( 'Add to Menu', 'hpkb' ); ?>"
+						value="<?php esc_attr_e( 'Add to Menu', 'helppress' ); ?>"
 						name="add-taxonomy-menu-item"
-						id="submit-hpkb-archive-link">
+						id="submit-helppress-archive-link">
 
 					<span class="spinner"></span>
 				</span>
@@ -93,4 +93,4 @@ class HPKB_Menu_Archive_Link {
 
 }
 
-new HPKB_Menu_Archive_Link();
+new HelpPress_Menu_Archive_Link();

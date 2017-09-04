@@ -1,3 +1,3 @@
-<nav class="hpkb-post-nav">
+<nav class="helppress-post-nav">
 	<?php posts_nav_link(); ?>
 </nav>
