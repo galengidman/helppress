@@ -13,12 +13,9 @@
 function hpkb_constants() {
 
 	$constants = array(
-
 		'HPKB_VERSION' => '1.0.0',
-
 		'HPKB_PATH'    => untrailingslashit( plugin_dir_path( __FILE__ ) ),
 		'HPKB_URL'     => untrailingslashit( plugin_dir_url( __FILE__ ) ),
-
 	);
 
 	$constants = apply_filters( 'hpkb_constants', $constants );
@@ -28,6 +25,7 @@ function hpkb_constants() {
 			define( $constant, $value );
 		}
 	}
+
 }
 add_action( 'plugins_loaded', 'hpkb_constants' );
 
@@ -65,3 +63,10 @@ function hpkb_includes() {
 
 }
 add_action( 'plugins_loaded', 'hpkb_includes' );
+
+function hpkb_load_textdomain() {
+
+	load_plugin_textdomain( 'helppress', false, HPKB_PATH . '/languages/' );
+
+}
+add_action( 'plugins_loaded', 'hpkb_load_textdomain' );
