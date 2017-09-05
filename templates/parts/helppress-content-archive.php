@@ -24,7 +24,7 @@
 					</h2>
 
 					<?php if ( $category->description ) : ?>
-						<p class="helppress-archive__cat-description"><?php echo $category->description; ?></p>
+						<p class="helppress-archive__cat-description"><?php echo wptexturize( $category->description ); ?></p>
 					<?php endif; ?>
 
 					<?php $articles = helppress_get_articles( array(
