@@ -27,7 +27,7 @@ function helppress_get_option_defaults() {
 
 		// Breadcrumb
 		'breadcrumb'                => true,
-		'breadcrumb_home'           => true,
+		'breadcrumb_home'           => false,
 		'breadcrumb_sep'            => '/',
 
 		// Search
