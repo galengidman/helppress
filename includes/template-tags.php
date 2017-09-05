@@ -15,7 +15,7 @@ function helppress_genericon( $icon, $size = 16 ) {
 function helppress_get_articles( $args = array() ) {
 
 	$args = wp_parse_args( $args, array(
-		'post_type'      => 'helppress_article',
+		'post_type'      => 'hp_article',
 		'orderby'        => helppress_get_option( 'orderby' ),
 		'order'          => helppress_get_option( 'order' ),
 		'posts_per_page' => helppress_get_option( 'posts_per_page' ),
@@ -40,7 +40,7 @@ function helppress_get_breadcrumb() {
 function helppress_get_categories( $args = array() ) {
 
 	$args = wp_parse_args( $args, array(
-		'taxonomy' => 'helppress_category',
+		'taxonomy' => 'hp_category',
 		'orderby'  => 'menu_order',
 	) );
 
@@ -54,7 +54,7 @@ function helppress_get_categories( $args = array() ) {
 
 function helppress_get_kb_url() {
 
-	return get_post_type_archive_link( 'helppress_article' );
+	return get_post_type_archive_link( 'hp_article' );
 
 }
 
@@ -73,25 +73,25 @@ function helppress_get_post_format( $post_id = null ) {
 
 function helppress_is_kb_article() {
 
-	return is_singular( 'helppress_article' );
+	return is_singular( 'hp_article' );
 
 }
 
 function helppress_is_kb_archive() {
 
-	return is_post_type_archive( 'helppress_article' ) && ! is_search();
+	return is_post_type_archive( 'hp_article' ) && ! is_search();
 
 }
 
 function helppress_is_kb_category() {
 
-	return is_tax( 'helppress_category' );
+	return is_tax( 'hp_category' );
 
 }
 
 function helppress_is_kb_tag() {
 
-	return is_tax( 'helppress_tag' );
+	return is_tax( 'hp_tag' );
 
 }
 

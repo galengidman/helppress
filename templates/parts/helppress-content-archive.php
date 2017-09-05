@@ -12,8 +12,8 @@
 			<?php endif; ?>
 
 			<?php $articles = helppress_get_articles( array(
-				'helppress_category' => $category->slug,
-				'fields'        => 'ids',
+				'hp_category' => $category->slug,
+				'fields'      => 'ids',
 			) ); ?>
 
 			<?php if ( $articles->have_posts() ) : ?>

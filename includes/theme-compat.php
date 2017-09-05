@@ -20,7 +20,7 @@ function helppress_content( $content ) {
 		return $content;
 	}
 
-	if ( helppress_is_kb_article() && $post->post_type === 'helppress_article' ) {
+	if ( helppress_is_kb_article() && $post->post_type === 'hp_article' ) {
 		ob_start();
 		remove_filter( 'the_content', 'helppress_content' );
 		remove_filter( 'the_excerpt', 'helppress_content' );

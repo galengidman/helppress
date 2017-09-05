@@ -37,7 +37,7 @@ function helppress_register_articles() {
 
 	$args = apply_filters( 'helppress_register_articles_args', $args );
 
-	register_post_type( 'helppress_article', $args );
+	register_post_type( 'hp_article', $args );
 
 }
 add_action( 'after_setup_theme', 'helppress_register_articles' );

@@ -242,7 +242,7 @@ class HelpPress_Settings {
 		$admin_panel = $titan->createAdminPanel( array(
 			'id'     => 'helppress',
 			'name'   => esc_html__( 'Settings', 'helppress' ),
-			'parent' => 'edit.php?post_type=helppress_article',
+			'parent' => 'edit.php?post_type=hp_article',
 		) );
 
 		$admin_panel->createOption( array(
@@ -270,7 +270,7 @@ class HelpPress_Settings {
 		$url   = helppress_get_kb_url();
 		$label = esc_html__( 'View KB &rarr;', 'helppress' );
 
-		$submenu['edit.php?post_type=helppress_article'][] = array( $label, 'manage_options', $url );
+		$submenu['edit.php?post_type=hp_article'][] = array( $label, 'manage_options', $url );
 
 	}
 

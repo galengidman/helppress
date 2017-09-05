@@ -30,10 +30,10 @@ class HelpPress_Breadcrumb {
 			helppress_get_kb_url()
 		);
 
-		if ( is_singular( 'helppress_article' ) ) {
+		if ( is_singular( 'hp_article' ) ) {
 			$article_categories = wp_get_post_terms(
 				get_the_id(),
-				'helppress_category',
+				'hp_category',
 				array( 'fields' => 'ids' )
 			);
 
@@ -47,7 +47,7 @@ class HelpPress_Breadcrumb {
 			);
 		}
 
-		if ( is_tax( array( 'helppress_category', 'helppress_tag' ) ) ) {
+		if ( is_tax( array( 'hp_category', 'hp_tag' ) ) ) {
 			$this->add_tax_tree( get_queried_object_id() );
 		}
 

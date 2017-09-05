@@ -21,7 +21,7 @@ class HelpPress_Search_Autocomplete {
 
 		$articles = new WP_Query( array(
 			's'              => $_REQUEST['query'],
-			'post_type'      => 'helppress_article',
+			'post_type'      => 'hp_article',
 			'fields'         => 'ids',
 			'no_found_rows'  => true,
 			'posts_per_page' => helppress_get_option( 'search_suggestions_number' ),
