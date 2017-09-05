@@ -57,6 +57,8 @@
 						<?php helppress_get_template_part( 'parts/helppress-article-list-item', 'archive' ); ?>
 					<?php endwhile; wp_reset_postdata(); ?>
 				</ul>
+
+				<?php helppress_get_template_part( 'parts/helppress-post-nav', 'archive' ); ?>
 			<?php else : ?>
 				<p><?php esc_html_e( 'Nothing to see here… yet.', 'helppress' ); ?></p>
 			<?php endif; ?>
