@@ -1,5 +1,5 @@
-.helppress-archive--2,
-.helppress-archive--3 {
+.helppress-archive--2-col,
+.helppress-archive--3-col {
 	display: flex;
 	flex: 0 1 auto;
 	flex-direction: row;
@@ -12,11 +12,11 @@
 	}
 }
 
-.helppress-archive--2 .helppress-archive__cat {
+.helppress-archive--2-col .helppress-archive__cat {
 	flex-basis: 47.5%;
 }
 
-.helppress-archive--3 .helppress-archive__cat {
+.helppress-archive--3-col .helppress-archive__cat {
 	flex-basis: 30%;
 }
 

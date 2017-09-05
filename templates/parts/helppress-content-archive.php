@@ -1,6 +1,6 @@
 <?php helppress_get_template_part( 'parts/helppress-searchform', 'archive' ); ?>
 
-<div class="helppress-archive helppress-archive--<?php echo esc_attr( helppress_get_option( 'columns' ) ); ?>">
+<div class="helppress-archive helppress-archive--<?php echo esc_attr( helppress_get_option( 'columns' ) ); ?>-col">
 	<?php foreach ( helppress_get_categories() as $category ) : ?>
 		<div class="helppress-archive__cat">
 			<h2 class="helppress-archive__cat-title">

@@ -1,4 +1,4 @@
-.helppress-archive--2, .helppress-archive--3 {
+.helppress-archive--2-col, .helppress-archive--3-col {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16,8 +16,8 @@
     justify-content: space-between;
 }
 
-.helppress-archive--2 .helppress-archive__cat,
-.helppress-archive--3 .helppress-archive__cat {
+.helppress-archive--2-col .helppress-archive__cat,
+.helppress-archive--3-col .helppress-archive__cat {
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
@@ -25,12 +25,12 @@
     flex-shrink: 0;
 }
 
-.helppress-archive--2 .helppress-archive__cat {
+.helppress-archive--2-col .helppress-archive__cat {
     -ms-flex-preferred-size: 47.5%;
     flex-basis: 47.5%;
 }
 
-.helppress-archive--3 .helppress-archive__cat {
+.helppress-archive--3-col .helppress-archive__cat {
     -ms-flex-preferred-size: 30%;
     flex-basis: 30%;
 }
