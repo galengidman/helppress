@@ -71,3 +71,17 @@ function helppress_load_textdomain() {
 
 }
 add_action( 'plugins_loaded', 'helppress_load_textdomain' );
+
+function helppress_activate() {
+
+	flush_rewrite_rules();
+
+}
+register_activation_hook( __FILE__, 'helppress_activate' );
+
+function helppress_deactivate() {
+
+	flush_rewrite_rules();
+
+}
+register_deactivation_hook( __FILE__, 'helppress_deactivate' );
