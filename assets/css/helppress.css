@@ -35,10 +35,6 @@
     flex-basis: 30%;
 }
 
-.helppress-archive__cat {
-    margin-top: 2em;
-}
-
 .helppress-article-item::before {
     content: '';
     display: block;
@@ -90,6 +86,10 @@
     content: attr(data-sep);
 }
 
+.helppress-content > * + * {
+    margin-top: 2em;
+}
+
 .helppress-genericon {
     position: relative;
     top: -.1em;
@@ -104,7 +104,7 @@
     text-align: center;
 }
 
-.helppress-search {
+.helppress-search__form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
