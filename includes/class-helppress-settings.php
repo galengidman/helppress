@@ -30,7 +30,7 @@ class HelpPress_Settings {
 					array(
 						'type'    => 'text',
 						'id'      => 'title',
-						'name'    => esc_html__( 'Knowledge base title', 'helppress' ),
+						'name'    => esc_html__( 'Knowledge Base Title', 'helppress' ),
 						'desc'    => esc_html__( 'You could rename the knowledge base to something else, such as &ldquo;Documentation&rdquo; or &ldquo;Learning Center.&rdquo;', 'helppress' ),
 						'default' => helppress_get_option_default( 'title' ),
 					),
@@ -41,7 +41,7 @@ class HelpPress_Settings {
 					array(
 						'type'    => 'select',
 						'id'      => 'orderby',
-						'name'    => esc_html__( 'Sort by', 'helppress' ),
+						'name'    => esc_html__( 'Sort By', 'helppress' ),
 						'desc'    => esc_html__( '', 'helppress' ),
 						'options' => array(
 							'title'         => esc_html__( 'Title', 'helppress' ),
@@ -55,7 +55,7 @@ class HelpPress_Settings {
 					array(
 						'type'    => 'select',
 						'id'      => 'order',
-						'name'    => esc_html__( 'Sort order', 'helppress' ),
+						'name'    => esc_html__( 'Sort Order', 'helppress' ),
 						'desc'    => esc_html__( '', 'helppress' ),
 						'options' => array(
 							'ASC'  => esc_html__( 'Ascending', 'helppress' ),
@@ -66,7 +66,7 @@ class HelpPress_Settings {
 					array(
 						'type'    => 'number',
 						'id'      => 'posts_per_page',
-						'name'    => esc_html__( 'Articles per page', 'helppress' ),
+						'name'    => esc_html__( 'Articles Per Page', 'helppress' ),
 						'desc'    => esc_html__( '', 'helppress' ),
 						'default' => helppress_get_option_default( 'posts_per_page' ),
 						'min'     => 1,
@@ -79,7 +79,7 @@ class HelpPress_Settings {
 					array(
 						'type'               => 'text',
 						'id'                 => 'knowledge_base_slug',
-						'name'               => esc_html__( 'Knowledge base URL slug', 'helppress' ),
+						'name'               => esc_html__( 'Knowledge Base URL Slug', 'helppress' ),
 						'desc'               => sprintf(
 							__( 'The URL slug of the knowledge base page. <code>%s</code>', 'helppress' ),
 							home_url( '/' ) . '<ins>' . helppress_get_option( 'knowledge_base_slug' ) . '</ins>/'
@@ -90,7 +90,7 @@ class HelpPress_Settings {
 					array(
 						'type'               => 'text',
 						'id'                 => 'category_slug',
-						'name'               => esc_html__( 'Category URL slug', 'helppress' ),
+						'name'               => esc_html__( 'Category URL Slug', 'helppress' ),
 						'desc'               => sprintf(
 							__( 'The URL slug for knowledge base categories. <code>%s</code>', 'helppress' ),
 							home_url( '/' ) . '<ins>' . helppress_get_option( 'category_slug' ) . '</ins>/category-title/'
@@ -101,7 +101,7 @@ class HelpPress_Settings {
 					array(
 						'type'               => 'text',
 						'id'                 => 'tag_slug',
-						'name'               => esc_html__( 'Tag URL slug', 'helppress' ),
+						'name'               => esc_html__( 'Tag URL Slug', 'helppress' ),
 						'desc'               => sprintf(
 							__( 'The URL slug for knowledge base tags. <code>%s</code>', 'helppress' ),
 							home_url( '/' ) . '<ins>' . helppress_get_option( 'tag_slug' ) . '</ins>/tag-title/'
@@ -138,7 +138,7 @@ class HelpPress_Settings {
 						'type' => 'note',
 						'name' => 'Custom CSS',
 						'desc' => sprintf(
-							__( 'We recommend adding custom CSS using the &ldquo;Additional CSS&rdquo; feature in the <a href="%s">WordPress Customizer</a>.', 'helppress' ),
+							__( 'Add custom CSS using the &ldquo;Additional CSS&rdquo; feature in the <a href="%s">WordPress Customizer</a>.', 'helppress' ),
 							esc_url( admin_url( 'customize.php' ) )
 						),
 					),
@@ -168,7 +168,7 @@ class HelpPress_Settings {
 					array(
 						'type'    => 'enable',
 						'id'      => 'breadcrumb_home',
-						'name'    => esc_html__( 'Home link', 'helppress' ),
+						'name'    => esc_html__( 'Home Link', 'helppress' ),
 						'desc'    => esc_html__( 'Start the breadcrumb with a link to the home page.', 'helppress' ),
 						'default' => helppress_get_option_default( 'breadcrumb_home' ),
 					),
@@ -192,21 +192,21 @@ class HelpPress_Settings {
 						'type'    => 'enable',
 						'id'      => 'search',
 						'name'    => esc_html__( 'Search', 'helppress' ),
-						'desc'    => esc_html__( 'Turn the search form on or off globally.', 'helppress' ),
+						'desc'    => esc_html__( 'Turn search on or off globally.', 'helppress' ),
 						'default' => helppress_get_option_default( 'search' ),
 					),
 					array(
 						'type'    => 'text',
 						'id'      => 'search_placeholder',
-						'name'    => esc_html__( 'Placeholder text', 'helppress' ),
+						'name'    => esc_html__( 'Placeholder Text', 'helppress' ),
 						'desc'    => esc_html__( 'Help text to show in the search box.', 'helppress' ),
 						'default' => helppress_get_option_default( 'search_placeholder' ),
 					),
 					array(
 						'type'    => 'enable',
 						'id'      => 'search_autofocus',
-						'name'    => esc_html__( 'Autofocus search', 'helppress' ),
-						'desc'    => esc_html__( 'Focus the cursor in the search box on page load.', 'helppress' ),
+						'name'    => esc_html__( 'Autofocus Search', 'helppress' ),
+						'desc'    => esc_html__( 'Focus the cursor in the search box when the page loads.', 'helppress' ),
 						'default' => helppress_get_option_default( 'search_autofocus' ),
 					),
 					array(
@@ -216,14 +216,14 @@ class HelpPress_Settings {
 					array(
 						'type'    => 'enable',
 						'id'      => 'search_suggestions',
-						'name'    => esc_html__( 'Live suggestions', 'helppress' ),
-						'desc'    => esc_html__( 'Live suggest KB articles as users enter search terms.', 'helppress' ),
+						'name'    => esc_html__( 'Live Suggestions', 'helppress' ),
+						'desc'    => esc_html__( 'Suggest relevant articles to users as they enter search terms.', 'helppress' ),
 						'default' => helppress_get_option_default( 'search_suggestions' ),
 					),
 					array(
 						'type'    => 'number',
 						'id'      => 'search_suggestions_number',
-						'name'    => esc_html__( 'Number of suggestions', 'helppress' ),
+						'name'    => esc_html__( 'Number of Suggestions', 'helppress' ),
 						'desc'    => esc_html__( '', 'helppress' ),
 						'default' => helppress_get_option_default( 'search_suggestions_number' ),
 						'min'     => 1,
