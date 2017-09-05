@@ -41,17 +41,24 @@ gulp.task('translate', function() {
 });
 
 gulp.task('copy', ['translate'], function() {
-	return gulp.src('**')
+	return gulp.src([
+			'**',
+			'!composer.json',
+			'!composer.lock',
+			'!gulpfile.js',
+			'!includes/vendor/autoload.php',
+			'!includes/vendor/composer/',
+			'!includes/vendor/composer/**',
+			'!node_modules/',
+			'!node_modules/**',
+			'!package.json',
+		])
 		.pipe(gulp.dest('helppress'));
 });
 
-gulp.task('zip', ['copy'], function() {
-	shell.task(`zip -r helppress-${pkg.version}.zip helppress`);
-});
+gulp.task('zip', ['copy'], shell.task(`zip -r helppress-${pkg.version}.zip helppress`));
 
-gulp.task('export', ['zip'], function() {
-	shell.task(`mv helppress-${pkg.version}.zip ~/Desktop/`);
-});
+gulp.task('export', ['zip'], shell.task(`mv helppress-${pkg.version}.zip ~/Desktop/`));
 
 gulp.task('clean', ['export'], function() {
 	return del('helppress');
