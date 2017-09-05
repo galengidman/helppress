@@ -262,17 +262,23 @@ function helppress_pre_get_posts( $query ) {
 		return $query;
 	}
 
+	if ( ! $query->is_main_query() ) {
+		return $query;
+	}
+
 	if (
-		$query->is_main_query()
-		&& (
-			helppress_is_kb_archive()
-			|| helppress_is_kb_category()
-			|| helppress_is_kb_tag()
-			|| helppress_is_kb_search()
-		) ) {
+		helppress_is_kb_archive()
+		|| helppress_is_kb_category()
+		|| helppress_is_kb_tag()
+		|| helppress_is_kb_search()
+		) {
 		$query->set( 'orderby',        helppress_get_option( 'orderby' ) );
 		$query->set( 'order',          helppress_get_option( 'order' ) );
 		$query->set( 'posts_per_page', helppress_get_option( 'posts_per_page' ) );
+	}
+
+	if ( helppress_is_kb_search() ) {
+		$query->set( 'post_type', 'hp_article' );
 	}
 
 	return $query;
@@ -282,7 +288,7 @@ add_filter( 'pre_get_posts', 'helppress_pre_get_posts' );
 
 function helppress_query_vars( $vars = [] ) {
 
-	$vars[] = 'helppress-search';
+	$vars[] = 'hps';
 
 	return $vars;
 

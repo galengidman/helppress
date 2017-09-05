@@ -97,7 +97,7 @@ function helppress_is_kb_tag() {
 
 function helppress_is_kb_search() {
 
-	return is_search() && get_query_var( 'helppress-search' );
+	return is_search() && get_query_var( 'hps' );
 
 }
 
