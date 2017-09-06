@@ -1,8 +1,8 @@
 # HelpPress Knowledge Base
-Contributors: themebright, galengidman
+Contributors: helppresswp, themebright, galengidman
 Stable tag: 1.0.0
 Requires at least: 4.4
-Tested up to: 4.8.1
+Tested up to: 4.9
 
 A knowledge base compatible with almost any theme.
 
