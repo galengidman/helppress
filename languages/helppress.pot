@@ -17,7 +17,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: includes/class-helppress-menu-archive-link.php:21, includes/post-types.php:12
+#: includes/class-helppress-menu-archive-link.php:21, includes/post-types.php:25
 msgid "HelpPress"
 msgstr ""
 
@@ -240,8 +240,56 @@ msgstr ""
 msgid "Article"
 msgstr ""
 
+#: includes/post-types.php:12
+msgid "Add New"
+msgstr ""
+
 #: includes/post-types.php:13
+msgid "Add New Article"
+msgstr ""
+
+#: includes/post-types.php:14
+msgid "Edit Article"
+msgstr ""
+
+#: includes/post-types.php:15
+msgid "New Article"
+msgstr ""
+
+#: includes/post-types.php:16
+msgid "View Article"
+msgstr ""
+
+#: includes/post-types.php:17
+msgid "View Articles"
+msgstr ""
+
+#: includes/post-types.php:18
+msgid "Search Articles"
+msgstr ""
+
+#: includes/post-types.php:19
+msgid "No articles found"
+msgstr ""
+
+#: includes/post-types.php:20
+msgid "No articles found in Trash"
+msgstr ""
+
+#: includes/post-types.php:21
+msgid "Parent Article:"
+msgstr ""
+
+#: includes/post-types.php:22
 msgid "All Articles"
+msgstr ""
+
+#: includes/post-types.php:23
+msgid "Insert into article"
+msgstr ""
+
+#: includes/post-types.php:24
+msgid "Uploaded to this article"
 msgstr ""
 
 #: includes/taxonomies.php:10
