@@ -27,7 +27,7 @@ function helppress_register_categories() {
 	register_taxonomy( 'hp_category', 'hp_article', $args );
 
 }
-add_action( 'after_setup_theme', 'helppress_register_categories' );
+add_action( 'init', 'helppress_register_categories' );
 
 function helppress_register_tags() {
 
@@ -51,4 +51,4 @@ function helppress_register_tags() {
 	register_taxonomy( 'hp_tag', 'hp_article', $args );
 
 }
-add_action( 'after_setup_theme', 'helppress_register_tags' );
+add_action( 'init', 'helppress_register_tags' );

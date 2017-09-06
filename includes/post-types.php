@@ -40,7 +40,7 @@ function helppress_register_articles() {
 	register_post_type( 'hp_article', $args );
 
 }
-add_action( 'after_setup_theme', 'helppress_register_articles' );
+add_action( 'init', 'helppress_register_articles' );
 
 function helppress_article_post_formats() {
 
