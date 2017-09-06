@@ -282,8 +282,8 @@ class HelpPress_Settings {
 			return;
 		}
 
-		$current_screen = get_current_screen();
-		if ( $current_screen->base !== 'hp_article_page_helppress' ) {
+		$screen = get_current_screen();
+		if ( $screen->base !== 'hp_article_page_helppress' ) {
 			return;
 		}
 
