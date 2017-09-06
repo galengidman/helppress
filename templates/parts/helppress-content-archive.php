@@ -19,18 +19,19 @@
 		<?php if ( $categories ) : ?>
 			<?php foreach ( $categories as $category ) : ?>
 				<div class="helppress-archive__cat">
+					<?php $articles = helppress_get_articles( array(
+						'hp_category' => $category->slug,
+						'fields'      => 'ids',
+					) ); ?>
+
 					<h2 class="helppress-archive__cat-title">
 						<span><?php echo $category->name; ?></span>
+						<small class="helppress-archive__cat-count"><?php printf( __( '<span>%d</span> Articles', 'helppress' ), $category->count ); ?></small>
 					</h2>
 
 					<?php if ( $category->description ) : ?>
 						<p class="helppress-archive__cat-description"><?php echo wptexturize( $category->description ); ?></p>
 					<?php endif; ?>
-
-					<?php $articles = helppress_get_articles( array(
-						'hp_category' => $category->slug,
-						'fields'      => 'ids',
-					) ); ?>
 
 					<?php if ( $articles->have_posts() ) : ?>
 						<ul class="helppress-article-list">

@@ -5,6 +5,10 @@
 }
 
 .helppress-article-list__item {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+
 	&::before {
 		content: '';
 		display: block;
