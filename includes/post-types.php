@@ -7,10 +7,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 function helppress_register_articles() {
 
 	$labels = array(
-		'name'          => esc_html__( 'Articles',     'helppress' ),
-		'singular_name' => esc_html__( 'Article',      'helppress' ),
-		'menu_name'     => esc_html__( 'HelpPress',    'helppress' ),
-		'all_items'     => esc_html__( 'All Articles', 'helppress' ),
+		'name'                  => esc_html__( 'Articles',                   'helppress' ),
+		'singular_name'         => esc_html__( 'Article',                    'helppress' ),
+		'add_new'               => esc_html__( 'Add New',                    'helppress' ),
+		'add_new_item'          => esc_html__( 'Add New Article',            'helppress' ),
+		'edit_item'             => esc_html__( 'Edit Article',               'helppress' ),
+		'new_item'              => esc_html__( 'New Article',                'helppress' ),
+		'view_item'             => esc_html__( 'View Article',               'helppress' ),
+		'view_items'            => esc_html__( 'View Articles',              'helppress' ),
+		'search_items'          => esc_html__( 'Search Articles',            'helppress' ),
+		'not_found'             => esc_html__( 'No articles found',          'helppress' ),
+		'not_found_in_trash'    => esc_html__( 'No articles found in Trash', 'helppress' ),
+		'parent_item_colon'     => esc_html__( 'Parent Article:',            'helppress' ),
+		'all_items'             => esc_html__( 'All Articles',               'helppress' ),
+		'insert_into_item'      => esc_html__( 'Insert into article',        'helppress' ),
+		'uploaded_to_this_item' => esc_html__( 'Uploaded to this article',   'helppress' ),
+		'menu_name'             => esc_html__( 'HelpPress',                  'helppress' ),
 	);
 
 	$args = array(
