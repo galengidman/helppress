@@ -15,6 +15,8 @@ class HelpPress_Settings {
 
 		add_action( 'admin_menu', array( $this, 'view_live_link' ) );
 
+		add_action( 'admin_notices', array( $this, 'permalink_structure_notice' ) );
+
 	}
 
 	public function register_settings() {
@@ -271,6 +273,30 @@ class HelpPress_Settings {
 		$label = esc_html__( 'View KB &rarr;', 'helppress' );
 
 		$submenu['edit.php?post_type=hp_article'][] = array( $label, 'manage_options', $url );
+
+	}
+
+	public function permalink_structure_notice() {
+
+		if ( get_option( 'permalink_structure' ) !== '' ) {
+			return;
+		}
+
+		$current_screen = get_current_screen();
+		if ( $current_screen->base !== 'hp_article_page_helppress' ) {
+			return;
+		}
+
+		?>
+
+		<div class="notice notice-warning">
+			<p><?php printf(
+				__( 'HelpPress slugs are not compatible with Plain permalinks. You can fix this on the <a href="%s">Permalinks Settings</a> page.', 'helppress' ),
+				esc_url( admin_url( 'options-permalink.php' ) )
+			); ?></p>
+		</div>
+
+		<?php
 
 	}
 
