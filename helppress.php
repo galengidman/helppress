@@ -1,7 +1,6 @@
 <?php
 /**
  * Plugin Name: HelpPress
- * Plugin URI:  https://helppresswp.com/
  * Description: A powerful and easy-to-use knowledge base plugin for WordPress. Compatible with 99% of themes out-of-the-box, or override with custom templates to futher customize. Includes categories and tags to organize content and live search to help your users find relevant content quicker.
  * Version:     1.0.0
  * Author:      helppresswp
