@@ -17,6 +17,30 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: includes/class-helppress-demo-content.php:12
+msgid "Getting Started"
+msgstr ""
+
+#: includes/class-helppress-demo-content.php:13
+msgid "Tutorials"
+msgstr ""
+
+#: includes/class-helppress-demo-content.php:14
+msgid "FAQs"
+msgstr ""
+
+#: includes/class-helppress-demo-content.php:15
+msgid "Help Files"
+msgstr ""
+
+#: includes/class-helppress-demo-content.php:16
+msgid "Developers"
+msgstr ""
+
+#: includes/class-helppress-demo-content.php:17
+msgid "Integrations"
+msgstr ""
+
 #: includes/class-helppress-menu-archive-link.php:21, includes/post-types.php:25
 msgid "HelpPress"
 msgstr ""
