@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'HelpPress_Template_Loader' ) ) {
+if ( ! class_exists( 'HelpPress_Template_Loader' ) ) :
 
 class HelpPress_Template_Loader extends Gamajo_Template_Loader {
 
@@ -16,4 +16,4 @@ class HelpPress_Template_Loader extends Gamajo_Template_Loader {
 
 }
 
-}
+endif;

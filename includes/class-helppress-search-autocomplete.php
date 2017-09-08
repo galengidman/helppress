@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'HelpPress_Search_Autocomplete' ) ) {
+if ( ! class_exists( 'HelpPress_Search_Autocomplete' ) ) :
 
 class HelpPress_Search_Autocomplete {
 
@@ -44,6 +44,6 @@ class HelpPress_Search_Autocomplete {
 
 }
 
-}
+endif;
 
 new HelpPress_Search_Autocomplete();

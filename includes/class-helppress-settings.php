@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'HelpPress_Settings' ) ) {
+if ( ! class_exists( 'HelpPress_Settings' ) ) :
 
 class HelpPress_Settings {
 
@@ -302,6 +302,6 @@ class HelpPress_Settings {
 
 }
 
-}
+endif;
 
 new HelpPress_Settings();

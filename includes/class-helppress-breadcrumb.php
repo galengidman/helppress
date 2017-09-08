@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) {
+if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) :
 
 class HelpPress_Breadcrumb {
 
@@ -99,4 +99,4 @@ class HelpPress_Breadcrumb {
 
 }
 
-}
+endif;

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'HelpPress_Menu_Archive_Link' ) ) {
+if ( ! class_exists( 'HelpPress_Menu_Archive_Link' ) ) :
 
 class HelpPress_Menu_Archive_Link {
 
@@ -91,6 +91,6 @@ class HelpPress_Menu_Archive_Link {
 
 }
 
-}
+endif;
 
 new HelpPress_Menu_Archive_Link();
