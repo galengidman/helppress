@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! function_exists( 'helppress_genericon' ) ) :
 function helppress_genericon( $icon, $size = 16 ) {
 
 	$svg_url = esc_url( HELPPRESS_URL . '/assets/img/genericons-neue.svg' );
@@ -11,6 +12,7 @@ function helppress_genericon( $icon, $size = 16 ) {
 	return "<svg class='helppress-genericon helppress-genericon--{$icon} helppress-genericon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-genericon-{$icon}'></use></svg>";
 
 }
+endif;
 
 function helppress_get_articles( $args = array() ) {
 
