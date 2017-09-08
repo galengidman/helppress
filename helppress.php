@@ -50,7 +50,7 @@ function helppress_includes() {
 		// Classes
 		'/includes/class-helppress-breadcrumb.php',
 		'/includes/class-helppress-menu-archive-link.php',
-		'/includes/class-helppress-search-autocomplete.php',
+		'/includes/class-helppress-search-suggestions.php',
 		'/includes/class-helppress-settings.php',
 		'/includes/class-helppress-template-loader.php',
 
