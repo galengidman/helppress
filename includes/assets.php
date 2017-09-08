@@ -1,9 +1,20 @@
 <?php
+/**
+ * Assets
+ *
+ * @package HelpPress
+ * @since 1.0.0
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Enqueues and registers scripts and styles for the front-end of the site.
+ *
+ * @since 1.0.0
+ */
 function helppress_assets() {
 
 	wp_enqueue_script(

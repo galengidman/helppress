@@ -1,9 +1,22 @@
 <?php
+/**
+ * Options
+ *
+ * @package HelpPress
+ * @since 1.0.0
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Returns default values for plugin options.
+ *
+ * @since 1.0.0
+ *
+ * @return array Option defaults.
+ */
 function helppress_get_option_defaults() {
 
 	$defaults = array(
@@ -43,6 +56,14 @@ function helppress_get_option_defaults() {
 
 }
 
+/**
+ * Returns the default value for a given option key.
+ *
+ * @since 1.0.0
+ *
+ * @param string $key Option key to return default value for.
+ * @return mixed Default option value.
+ */
 function helppress_get_option_default( $key = null ) {
 
 	$defaults = helppress_get_option_defaults();
@@ -56,6 +77,14 @@ function helppress_get_option_default( $key = null ) {
 
 }
 
+/**
+ * Returns the value for a value for a given option key.
+ *
+ * @since 1.0.0
+ *
+ * @param string $key Option key to return value for.
+ * @return mixed Option value if it exists; default value if not.
+ */
 function helppress_get_option( $key = null ) {
 
 	$options = maybe_unserialize( get_option( 'helppress_options' ) );

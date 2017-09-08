@@ -1,9 +1,20 @@
 <?php
+/**
+ * Taxonomies
+ *
+ * @package HelpPress
+ * @since 1.0.0
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Registers `hp_category` taxonomy.
+ *
+ * @since 1.0.0
+ */
 function helppress_register_categories() {
 
 	$labels = array(
@@ -29,6 +40,11 @@ function helppress_register_categories() {
 }
 add_action( 'init', 'helppress_register_categories' );
 
+/**
+ * Registers `hp_tag` taxonomy.
+ *
+ * @since 1.0.0
+ */
 function helppress_register_tags() {
 
 	$labels = array(
