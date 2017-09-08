@@ -1,4 +1,10 @@
 <?php
+/**
+ * Settings
+ *
+ * @package HelpPress
+ * @since 1.0.0
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -6,8 +12,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'HelpPress_Settings' ) ) :
 
+/**
+ * Admin settings class.
+ */
 class HelpPress_Settings {
 
+	/**
+	 * Constructor.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 */
 	public function __construct() {
 
 		add_action( 'tf_create_options', array( $this, 'register_settings' ) );
@@ -19,6 +34,12 @@ class HelpPress_Settings {
 
 	}
 
+	/**
+	 * Registers settings via the Titan Framework.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 */
 	public function register_settings() {
 
 		$settings = array(
@@ -265,6 +286,12 @@ class HelpPress_Settings {
 
 	}
 
+	/**
+	 * Adds "View KB →" link to the HelpPress admin menu ite.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 */
 	public function view_live_link() {
 
 		global $submenu;
@@ -276,6 +303,12 @@ class HelpPress_Settings {
 
 	}
 
+	/**
+	 * Displays a warning stating slug settings won't work if a user is using plain permalinks.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 */
 	public function permalink_structure_notice() {
 
 		if ( get_option( 'permalink_structure' ) !== '' ) {

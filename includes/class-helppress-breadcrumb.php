@@ -1,4 +1,10 @@
 <?php
+/**
+ * Breadcrumb
+ *
+ * @package WordPress
+ * @since 1.0.0
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -6,16 +12,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'HelpPress_Breadcrumb' ) ) :
 
+/**
+ * HelpPress breadcrumb class.
+ *
+ * @since 1.0.0
+ */
 class HelpPress_Breadcrumb {
 
+	/**
+	 * Breadcrumb trail.
+	 *
+	 * @since 1.0.0
+	 * @var array
+	 */
 	protected $trail = array();
 
+	/**
+	 * Constructor.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 */
 	public function __construct() {
 
 		$this->build_trail();
 
 	}
 
+	/**
+	 * Builds the breadcrumb trail.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 */
 	public function build_trail() {
 
 		if ( helppress_get_option( 'breadcrumb_home' ) ) {
@@ -60,18 +89,43 @@ class HelpPress_Breadcrumb {
 
 	}
 
+	/**
+	 * Returns the breadcrumb trail.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 *
+	 * @return array Breadcrumb trail.
+	 */
 	public function get_trail() {
 
 		return $this->trail;
 
 	}
 
+	/**
+	 * Adds crumb to the trail.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 *
+	 * @param string $label Crumb label.
+	 * @param string $url Crumb URL.
+	 */
 	protected function add( $label, $url ) {
 
 		$this->trail[] = array( 'label' => $label, 'url' => $url );
 
 	}
 
+	/**
+	 * Adds taxonomy and its acestors to the breadcrumb trail.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 *
+	 * @param integer $term_id Term ID to add.
+	 */
 	protected function add_tax_tree( $term_id ) {
 
 		if ( term_exists( $term_id ) ) {

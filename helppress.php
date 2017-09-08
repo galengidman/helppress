@@ -10,6 +10,11 @@
  * Domain Path: /languages/
  */
 
+/**
+ * Registers plugin constants.
+ *
+ * @since 1.0.0
+ */
 function helppress_constants() {
 
 	$constants = array(
@@ -29,6 +34,11 @@ function helppress_constants() {
 }
 add_action( 'plugins_loaded', 'helppress_constants' );
 
+/**
+ * Includes plugin files.
+ *
+ * @since 1.0.0
+ */
 function helppress_includes() {
 
 	$includes = array(
@@ -64,6 +74,11 @@ function helppress_includes() {
 }
 add_action( 'plugins_loaded', 'helppress_includes' );
 
+/**
+ * Loads plugin textdomain.
+ *
+ * @since 1.0.0
+ */
 function helppress_load_textdomain() {
 
 	load_plugin_textdomain( 'helppress', false, HELPPRESS_PATH . '/languages/' );
