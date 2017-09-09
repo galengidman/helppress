@@ -17,6 +17,14 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: includes/class-helppress-demo-content.php:32
+msgid "Demo content already installed."
+msgstr ""
+
+#: includes/class-helppress-demo-content.php:83
+msgid "Demo content successfully installed."
+msgstr ""
+
 #: includes/class-helppress-menu-archive-link.php:44, includes/post-types.php:36
 msgid "HelpPress"
 msgstr ""
