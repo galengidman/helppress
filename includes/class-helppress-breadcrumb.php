@@ -22,6 +22,7 @@ class HelpPress_Breadcrumb {
 	/**
 	 * Breadcrumb trail.
 	 *
+	 * @access protected
 	 * @since 1.0.0
 	 * @var array
 	 */

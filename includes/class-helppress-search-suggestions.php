@@ -22,6 +22,7 @@ class HelpPress_Search_Suggestions {
 	 *
 	 * @access protected
 	 * @since 1.0.0
+	 * @var string
 	 */
 	protected $action_name = 'helppress_search_suggestions';
 

@@ -132,7 +132,7 @@ function helppress_get_post_format( $post_id = null ) {
  *
  * @since 1.0.0
  *
- * @return bool
+ * @return boolean
  */
 function helppress_is_kb_article() {
 
@@ -145,7 +145,7 @@ function helppress_is_kb_article() {
  *
  * @since 1.0.0
  *
- * @return bool
+ * @return boolean
  */
 function helppress_is_kb_archive() {
 
@@ -158,7 +158,7 @@ function helppress_is_kb_archive() {
  *
  * @since 1.0.0
  *
- * @return bool
+ * @return boolean
  */
 function helppress_is_kb_category() {
 
@@ -171,7 +171,7 @@ function helppress_is_kb_category() {
  *
  * @since 1.0.0
  *
- * @return bool
+ * @return boolean
  */
 function helppress_is_kb_tag() {
 
@@ -184,7 +184,7 @@ function helppress_is_kb_tag() {
  *
  * @since 1.0.0
  *
- * @return bool
+ * @return boolean
  */
 function helppress_is_kb_search() {
 
@@ -197,7 +197,7 @@ function helppress_is_kb_search() {
  *
  * @since 1.0.0
  *
- * @return bool
+ * @return boolean
  */
 function helppress_is_kb_page() {
 
