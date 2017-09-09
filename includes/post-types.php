@@ -67,6 +67,13 @@ function helppress_register_articles() {
 }
 add_action( 'init', 'helppress_register_articles' );
 
+/**
+ * Returns allowed `hp_article` post types.
+ *
+ * @since 1.1.0
+ *
+ * @return array Allowed post types.
+ */
 function helppress_get_article_post_formats() {
 
 	$post_formats = array(
