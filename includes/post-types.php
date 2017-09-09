@@ -67,6 +67,20 @@ function helppress_register_articles() {
 }
 add_action( 'init', 'helppress_register_articles' );
 
+function helppress_get_article_post_formats() {
+
+	$post_formats = array(
+		'gallery',
+		'link',
+		'image',
+		'video',
+		'audio',
+	);
+
+	return apply_filters( 'helppress_article_post_formats', $post_formats );
+
+}
+
 /**
  * Adjusts the allowed post formats for articles.
  *
@@ -77,9 +91,7 @@ function helppress_article_post_formats() {
 	$screen = get_current_screen();
 
 	if ( $screen->post_type === 'hp_article' ) {
-		$post_formats = array( 'gallery', 'link', 'image', 'video', 'audio' );
-		$post_formats = apply_filters( 'helppress_article_post_formats', $post_formats );
-		add_theme_support( 'post-formats', $post_formats );
+		add_theme_support( 'post-formats', helppress_get_article_post_formats() );
 	}
 
 }
