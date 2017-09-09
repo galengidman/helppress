@@ -13,322 +13,306 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: includes/class-helppress-breadcrumb.php:23
+#: includes/class-helppress-breadcrumb.php:52
 msgid "Home"
 msgstr ""
 
-#: includes/class-helppress-demo-content.php:12
-msgid "Getting Started"
+#: includes/class-helppress-demo-content.php:32
+msgid "Demo content already installed."
 msgstr ""
 
-#: includes/class-helppress-demo-content.php:13
-msgid "Tutorials"
+#: includes/class-helppress-demo-content.php:83
+msgid "Demo content successfully installed."
 msgstr ""
 
-#: includes/class-helppress-demo-content.php:14
-msgid "FAQs"
-msgstr ""
-
-#: includes/class-helppress-demo-content.php:15
-msgid "Help Files"
-msgstr ""
-
-#: includes/class-helppress-demo-content.php:16
-msgid "Developers"
-msgstr ""
-
-#: includes/class-helppress-demo-content.php:17
-msgid "Integrations"
-msgstr ""
-
-#: includes/class-helppress-menu-archive-link.php:21, includes/post-types.php:25
+#: includes/class-helppress-menu-archive-link.php:44, includes/post-types.php:36
 msgid "HelpPress"
 msgstr ""
 
-#: includes/class-helppress-menu-archive-link.php:45, includes/class-helppress-menu-archive-link.php:58, includes/options.php:12
+#: includes/class-helppress-menu-archive-link.php:74, includes/class-helppress-menu-archive-link.php:87, includes/options.php:25
 msgid "Knowledge Base"
 msgstr ""
 
-#: includes/class-helppress-menu-archive-link.php:79
+#: includes/class-helppress-menu-archive-link.php:108
 msgid "Add to Menu"
 msgstr ""
 
-#: includes/class-helppress-settings.php:26
+#: includes/class-helppress-settings.php:47
 msgid "General"
 msgstr ""
 
-#: includes/class-helppress-settings.php:29
+#: includes/class-helppress-settings.php:50
 msgid "Labels"
 msgstr ""
 
-#: includes/class-helppress-settings.php:35
+#: includes/class-helppress-settings.php:56
 msgid "Knowledge Base Title"
 msgstr ""
 
-#: includes/class-helppress-settings.php:36
+#: includes/class-helppress-settings.php:57
 msgid "You could rename the knowledge base to something else, such as &ldquo;Documentation&rdquo; or &ldquo;Learning Center.&rdquo;"
 msgstr ""
 
-#: includes/class-helppress-settings.php:40
+#: includes/class-helppress-settings.php:61
 msgid "Queries"
 msgstr ""
 
-#: includes/class-helppress-settings.php:46
+#: includes/class-helppress-settings.php:67
 msgid "Sort By"
 msgstr ""
 
-#: includes/class-helppress-settings.php:47, includes/class-helppress-settings.php:61, includes/class-helppress-settings.php:72, includes/class-helppress-settings.php:229
+#: includes/class-helppress-settings.php:68, includes/class-helppress-settings.php:82, includes/class-helppress-settings.php:93, includes/class-helppress-settings.php:250
 msgstr ""
 
-#: includes/class-helppress-settings.php:49
+#: includes/class-helppress-settings.php:70
 msgid "Title"
 msgstr ""
 
-#: includes/class-helppress-settings.php:50
+#: includes/class-helppress-settings.php:71
 msgid "Date"
 msgstr ""
 
-#: includes/class-helppress-settings.php:51
+#: includes/class-helppress-settings.php:72
 msgid "Modified"
 msgstr ""
 
-#: includes/class-helppress-settings.php:52
+#: includes/class-helppress-settings.php:73
 msgid "Random"
 msgstr ""
 
-#: includes/class-helppress-settings.php:53
+#: includes/class-helppress-settings.php:74
 msgid "Comment count"
 msgstr ""
 
-#: includes/class-helppress-settings.php:60
+#: includes/class-helppress-settings.php:81
 msgid "Sort Order"
 msgstr ""
 
-#: includes/class-helppress-settings.php:63
+#: includes/class-helppress-settings.php:84
 msgid "Ascending"
 msgstr ""
 
-#: includes/class-helppress-settings.php:64
+#: includes/class-helppress-settings.php:85
 msgid "Decending"
 msgstr ""
 
-#: includes/class-helppress-settings.php:71
+#: includes/class-helppress-settings.php:92
 msgid "Articles Per Page"
 msgstr ""
 
-#: includes/class-helppress-settings.php:78
+#: includes/class-helppress-settings.php:99
 msgid "Slugs"
 msgstr ""
 
-#: includes/class-helppress-settings.php:84
+#: includes/class-helppress-settings.php:105
 msgid "Knowledge Base URL Slug"
 msgstr ""
 
-#: includes/class-helppress-settings.php:86
+#: includes/class-helppress-settings.php:107
 msgid "The URL slug of the knowledge base page. <code>%s</code>"
 msgstr ""
 
-#: includes/class-helppress-settings.php:95
+#: includes/class-helppress-settings.php:116
 msgid "Category URL Slug"
 msgstr ""
 
-#: includes/class-helppress-settings.php:97
+#: includes/class-helppress-settings.php:118
 msgid "The URL slug for knowledge base categories. <code>%s</code>"
 msgstr ""
 
-#: includes/class-helppress-settings.php:106
+#: includes/class-helppress-settings.php:127
 msgid "Tag URL Slug"
 msgstr ""
 
-#: includes/class-helppress-settings.php:108
+#: includes/class-helppress-settings.php:129
 msgid "The URL slug for knowledge base tags. <code>%s</code>"
 msgstr ""
 
-#: includes/class-helppress-settings.php:117
+#: includes/class-helppress-settings.php:138
 msgid "Display"
 msgstr ""
 
-#: includes/class-helppress-settings.php:120
+#: includes/class-helppress-settings.php:141
 msgid "Layout"
 msgstr ""
 
-#: includes/class-helppress-settings.php:126
+#: includes/class-helppress-settings.php:147
 msgid "Columns"
 msgstr ""
 
-#: includes/class-helppress-settings.php:127
+#: includes/class-helppress-settings.php:148
 msgid "The number of columns to display on the knowledge base."
 msgstr ""
 
-#: includes/class-helppress-settings.php:136
+#: includes/class-helppress-settings.php:157
 msgid "CSS"
 msgstr ""
 
-#: includes/class-helppress-settings.php:143
+#: includes/class-helppress-settings.php:164
 msgid "Add custom CSS using the &ldquo;Additional CSS&rdquo; feature in the <a href=\"%s\">WordPress Customizer</a>."
 msgstr ""
 
-#: includes/class-helppress-settings.php:150
+#: includes/class-helppress-settings.php:171
 msgid "Disable CSS"
 msgstr ""
 
-#: includes/class-helppress-settings.php:151
+#: includes/class-helppress-settings.php:172
 msgid "You can disable the built-in CSS entirely if want to use your own."
 msgstr ""
 
-#: includes/class-helppress-settings.php:157, includes/class-helppress-settings.php:166
+#: includes/class-helppress-settings.php:178, includes/class-helppress-settings.php:187
 msgid "Breadcrumb"
 msgstr ""
 
-#: includes/class-helppress-settings.php:160, includes/class-helppress-settings.php:190, includes/class-helppress-settings.php:246
+#: includes/class-helppress-settings.php:181, includes/class-helppress-settings.php:211, includes/class-helppress-settings.php:267
 msgid "Settings"
 msgstr ""
 
-#: includes/class-helppress-settings.php:167
+#: includes/class-helppress-settings.php:188
 msgid "Turn the breadcrumb on or off globally."
 msgstr ""
 
-#: includes/class-helppress-settings.php:173
+#: includes/class-helppress-settings.php:194
 msgid "Home Link"
 msgstr ""
 
-#: includes/class-helppress-settings.php:174
+#: includes/class-helppress-settings.php:195
 msgid "Start the breadcrumb with a link to the home page."
 msgstr ""
 
-#: includes/class-helppress-settings.php:180
+#: includes/class-helppress-settings.php:201
 msgid "Separator"
 msgstr ""
 
-#: includes/class-helppress-settings.php:181
+#: includes/class-helppress-settings.php:202
 msgid "Text to use to separate breadcrumb links."
 msgstr ""
 
-#: includes/class-helppress-settings.php:187, includes/class-helppress-settings.php:196, templates/parts/helppress-searchform.php:29
+#: includes/class-helppress-settings.php:208, includes/class-helppress-settings.php:217, templates/parts/helppress-searchform.php:29
 msgid "Search"
 msgstr ""
 
-#: includes/class-helppress-settings.php:197
+#: includes/class-helppress-settings.php:218
 msgid "Turn search on or off globally."
 msgstr ""
 
-#: includes/class-helppress-settings.php:203
+#: includes/class-helppress-settings.php:224
 msgid "Placeholder Text"
 msgstr ""
 
-#: includes/class-helppress-settings.php:204
+#: includes/class-helppress-settings.php:225
 msgid "Help text to show in the search box."
 msgstr ""
 
-#: includes/class-helppress-settings.php:210
+#: includes/class-helppress-settings.php:231
 msgid "Autofocus Search"
 msgstr ""
 
-#: includes/class-helppress-settings.php:211
+#: includes/class-helppress-settings.php:232
 msgid "Focus the cursor in the search box when the page loads."
 msgstr ""
 
-#: includes/class-helppress-settings.php:215
+#: includes/class-helppress-settings.php:236
 msgid "Suggestions"
 msgstr ""
 
-#: includes/class-helppress-settings.php:221
+#: includes/class-helppress-settings.php:242
 msgid "Live Suggestions"
 msgstr ""
 
-#: includes/class-helppress-settings.php:222
+#: includes/class-helppress-settings.php:243
 msgid "Suggest relevant articles to users as they enter search terms."
 msgstr ""
 
-#: includes/class-helppress-settings.php:228
+#: includes/class-helppress-settings.php:249
 msgid "Number of Suggestions"
 msgstr ""
 
-#: includes/class-helppress-settings.php:273
+#: includes/class-helppress-settings.php:300
 msgid "View KB &rarr;"
 msgstr ""
 
-#: includes/class-helppress-settings.php:294
+#: includes/class-helppress-settings.php:327
 msgid "HelpPress slugs are not compatible with Plain permalinks. You can fix this on the <a href=\"%s\">Permalinks Settings</a> page."
 msgstr ""
 
-#: includes/options.php:35
+#: includes/options.php:48
 msgid "Search the knowledge base …"
 msgstr ""
 
-#: includes/post-types.php:10
+#: includes/post-types.php:21
 msgid "Articles"
 msgstr ""
 
-#: includes/post-types.php:11
+#: includes/post-types.php:22
 msgid "Article"
 msgstr ""
 
-#: includes/post-types.php:12
+#: includes/post-types.php:23
 msgid "Add New"
 msgstr ""
 
-#: includes/post-types.php:13
+#: includes/post-types.php:24
 msgid "Add New Article"
 msgstr ""
 
-#: includes/post-types.php:14
+#: includes/post-types.php:25
 msgid "Edit Article"
 msgstr ""
 
-#: includes/post-types.php:15
+#: includes/post-types.php:26
 msgid "New Article"
 msgstr ""
 
-#: includes/post-types.php:16
+#: includes/post-types.php:27
 msgid "View Article"
 msgstr ""
 
-#: includes/post-types.php:17
+#: includes/post-types.php:28
 msgid "View Articles"
 msgstr ""
 
-#: includes/post-types.php:18
+#: includes/post-types.php:29
 msgid "Search Articles"
 msgstr ""
 
-#: includes/post-types.php:19
+#: includes/post-types.php:30
 msgid "No articles found"
 msgstr ""
 
-#: includes/post-types.php:20
+#: includes/post-types.php:31
 msgid "No articles found in Trash"
 msgstr ""
 
-#: includes/post-types.php:21
+#: includes/post-types.php:32
 msgid "Parent Article:"
 msgstr ""
 
-#: includes/post-types.php:22
+#: includes/post-types.php:33
 msgid "All Articles"
 msgstr ""
 
-#: includes/post-types.php:23
+#: includes/post-types.php:34
 msgid "Insert into article"
 msgstr ""
 
-#: includes/post-types.php:24
+#: includes/post-types.php:35
 msgid "Uploaded to this article"
 msgstr ""
 
-#: includes/taxonomies.php:10
+#: includes/taxonomies.php:21
 msgid "Article Categories"
 msgstr ""
 
-#: includes/taxonomies.php:11
+#: includes/taxonomies.php:22
 msgid "Article Category"
 msgstr ""
 
-#: includes/taxonomies.php:35
+#: includes/taxonomies.php:52
 msgid "Article Tags"
 msgstr ""
 
-#: includes/taxonomies.php:36
+#: includes/taxonomies.php:53
 msgid "Article Tag"
 msgstr ""
 

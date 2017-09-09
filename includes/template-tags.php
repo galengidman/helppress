@@ -44,6 +44,7 @@ function helppress_get_articles( $args = array() ) {
 		'orderby'        => helppress_get_option( 'orderby' ),
 		'order'          => helppress_get_option( 'order' ),
 		'posts_per_page' => helppress_get_option( 'posts_per_page' ),
+		'paged'          => helppress_page_num(),
 	) );
 
 	$args = apply_filters( 'helppress_get_articles_args', $args );
@@ -205,5 +206,20 @@ function helppress_is_kb_page() {
 		|| helppress_is_kb_category()
 		|| helppress_is_kb_tag()
 		|| helppress_is_kb_search();
+
+}
+
+/**
+ * The query variable to use in custom `WP_Query` objects to make pagination work.
+ *
+ * @since 1.0.2
+ *
+ * @return int `page` or `paged` number.
+ */
+function helppress_page_num() {
+
+	global $paged;
+
+	return get_query_var( 'paged' ) ? get_query_var( 'paged' ) : ( get_query_var( 'page' ) ? get_query_var( 'page' ) : 1 );
 
 }
