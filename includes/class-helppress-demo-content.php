@@ -59,7 +59,7 @@ class HelpPress_Demo_Content {
 					'post_content' => $article_content,
 					'post_type'    => 'hp_article',
 					'post_status'  => 'publish',
-					'post_data'    => time() - ($i * DAY_IN_SECONDS),
+					'post_date'    => date( 'Y-m-d H:i:s', time() - ($i * DAY_IN_SECONDS) ),
 				) );
 
 				set_post_format( $post_id, $post_formats[ array_rand( $post_formats) ] );
