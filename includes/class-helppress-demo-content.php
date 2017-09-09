@@ -1,4 +1,10 @@
 <?php
+/**
+ * Demo Content
+ *
+ * @package WordPress
+ * @since 1.1.0
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -6,24 +12,74 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'HelpPress_Demo_Content' ) ) :
 
+/**
+ * Demo content class.
+ */
 class HelpPress_Demo_Content {
 
+	/**
+	 * Path to demo content structure data.
+	 *
+	 * @access protected
+	 * @since 1.1.0
+	 * @var string
+	 */
 	protected $structure = HELPPRESS_PATH . '/demo-content/structure.json';
 
+	/**
+	 * Path to demo content tags data.
+	 *
+	 * @access protected
+	 * @since 1.1.0
+	 * @var string
+	 */
 	protected $tags = HELPPRESS_PATH . '/demo-content/tags.json';
 
+	/**
+	 * Path to demo content article markup.
+	 *
+	 * @access protected
+	 * @since 1.1.0
+	 * @var string
+	 */
 	protected $article_content = HELPPRESS_PATH . '/demo-content/article.html';
 
+	/**
+	 * Admin AJAX action name to trigger demo content install
+	 *
+	 * @access protected
+	 * @since 1.1.0
+	 * @var string
+	 */
 	protected $action_name = 'helppress_install_demo_content';
 
+	/**
+	 * Option name to indicate demo content has been installed.
+	 *
+	 * @access protected
+	 * @since 1.1.0
+	 * @var string
+	 */
 	protected $option_name = 'helppress_demo_content_installed';
 
+	/**
+	 * Constructor.
+	 *
+	 * @access public
+	 * @since 1.1.0
+	 */
 	public function __construct() {
 
 		add_action( "wp_ajax_{$this->action_name}", array( $this, 'install' ) );
 
 	}
 
+	/**
+	 * Installs demo content.
+	 *
+	 * @access public
+	 * @since 1.1.0
+	 */
 	public function install() {
 
 		if ( $this->is_installed() ) {
@@ -87,6 +143,14 @@ class HelpPress_Demo_Content {
 
 	}
 
+	/**
+	 * Returns whether demo content has been installed.
+	 *
+	 * @access public
+	 * @since 1.1.0
+	 *
+	 * @return boolean Whether demo content has been installed.
+	 */
 	public function is_installed() {
 
 		return (bool) get_option( $this->option_name );
