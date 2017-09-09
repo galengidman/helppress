@@ -68,7 +68,7 @@ class HelpPress_Demo_Content {
 
 				for ( $i2 = 0; $i2 < 5; $i2++ ) {
 					$tag = $tags[ array_rand( $tags ) ];
-					wp_set_post_terms( $post_id, $tag, 'hp_tag' );
+					wp_set_post_terms( $post_id, $tag, 'hp_tag', true );
 					$i2++;
 				}
 
