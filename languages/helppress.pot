@@ -13,16 +13,20 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: includes/class-helppress-breadcrumb.php:52
+#: includes/class-helppress-breadcrumb.php:53
 msgid "Home"
 msgstr ""
 
-#: includes/class-helppress-demo-content.php:32
-msgid "Demo content already installed."
+#: includes/class-helppress-demo-content.php:168
+msgid "Demo content installed!"
 msgstr ""
 
-#: includes/class-helppress-demo-content.php:83
-msgid "Demo content successfully installed."
+#: includes/class-helppress-demo-content.php:241
+msgid "HelpPress includes build-in demo content to give you a head start. Would you like to install it now?"
+msgstr ""
+
+#: includes/class-helppress-demo-content.php:242
+msgid "Install Demo Content"
 msgstr ""
 
 #: includes/class-helppress-menu-archive-link.php:44, includes/post-types.php:36
