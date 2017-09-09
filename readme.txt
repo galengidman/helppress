@@ -53,6 +53,7 @@ Yes, but the slug settings will have no effect.
 
 = 1.0.2, September 9, 2017 =
 * New: Show category and tag columns in admin post table.
+* New: Added inline DocBlock-style documentation to functions and classes.
 * Fix: Pagination for the knowledge base archive when no categories are present.
 
 = 1.0.1, September 7, 2017 =
