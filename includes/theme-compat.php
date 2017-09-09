@@ -1,9 +1,31 @@
 <?php
+/**
+ * Theme Compatibility
+ *
+ * @package HelpPress
+ * @since 1.0.0
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Filters `post_content()` and `post_excerpt()` to add HelpPress content template.
+ *
+ * Applies custom content template if:
+ *
+ * - Is *not* admin
+ * - Is *not* feed
+ * - Is *not* JSON API
+ * - Is singular `hp_article`
+ * - Content comes from `hp_article` post type
+ *
+ * @since 1.0.0
+ *
+ * @param string $content Default post content.
+ * @return string Potentially modified post content.
+ */
 function helppress_content( $content ) {
 
 	global $post;
@@ -36,6 +58,17 @@ function helppress_content( $content ) {
 add_filter( 'the_content', 'helppress_content' );
 add_filter( 'the_excerpt', 'helppress_content' );
 
+/**
+ * Filters document title to make adjustments where needed.
+ *
+ * - Updates title on main KB archive to KB title as configured in admin Settings.
+ * - Updates title on KB taxonomy pages to single term title.
+ *
+ * @since 1.0.0
+ *
+ * @param array $title_parts Document title parts.
+ * @return array Potentially modified title parts.
+ */
 function helppress_document_title( $title_parts ) {
 
 	if ( helppress_is_kb_archive() ) {
@@ -51,6 +84,27 @@ function helppress_document_title( $title_parts ) {
 }
 add_filter( 'document_title_parts', 'helppress_document_title' );
 
+/**
+ * Filters template_include to power built-in theme compatibility.
+ *
+ * For most themes, it works best to adjust the default template hierarchy for HelpPress. It will
+ * first attempt to find one of the following in the active theme (or child theme) folder.
+ *
+ * - `helppress/helppress-article.php`
+ * - `helppress/helppress-archive.php`
+ * - `helppress/helppress-category.php`
+ * - `helppress/helppress-tag.php`
+ * - `helppress/helppress-search.php`
+ *
+ * If none of the above are found, it defaults to the first found fallback template from
+ * `helppress_get_compat_templates()`.
+ *
+ * @see helppress_get_compat_templates()
+ * @since 1.0.0
+ *
+ * @param string $template Default template.
+ * @return string Potentially modified template
+ */
 function helppress_template_include( $template ) {
 
 	if ( helppress_is_kb_article() ) {
@@ -117,6 +171,20 @@ function helppress_template_include( $template ) {
 }
 add_action( 'template_include', 'helppress_template_include' );
 
+/**
+ * Returns fallback theme compatibility templates to use custom templates aren't found.
+ *
+ * Returns, in order:
+ *
+ * - `helppress.php`
+ * - `page.php`
+ * - `single.php`
+ * - `index.php`
+ *
+ * @since 1.0.0
+ *
+ * @return array Theme compatiblity templates.
+ */
 function helppress_get_compat_templates() {
 
 	$templates = array(
@@ -130,6 +198,16 @@ function helppress_get_compat_templates() {
 
 }
 
+/**
+ * Fills up some WordPress globals with dummy data to stop your average page template from
+ * complaining about it missing.
+ *
+ * Straight up ripped from bbPress. :)
+ *
+ * @since 1.0.0
+ *
+ * @param array $args WP_Query arguments to override default, dummy query with.
+ */
 function helppress_reset_post( $args = array() ) {
 
 	global $wp_query, $post;
@@ -226,6 +304,16 @@ function helppress_reset_post( $args = array() ) {
 
 }
 
+/**
+ * Prepends a preferred template file in the theme (or child theme) directory to the default theme
+ * compatiblity templates.
+ *
+ * @see helppress_get_compat_templates()
+ * @since 1.0.0
+ *
+ * @param string $preferred Preferred template.
+ * @return array Preferred template prepended to the default theme compatiblity templates.
+ */
 function helppress_get_template( $preferred = null ) {
 
 	$preferred = 'helppress/' . $preferred;
@@ -238,6 +326,19 @@ function helppress_get_template( $preferred = null ) {
 
 }
 
+/**
+ * Outputs a template part similar to `get_template_part()`, but checks the following locations:
+ *
+ * - `[child-theme]/helppress/$slug-$name.php`
+ * - `[parent-theme]/helppress/$slug-$name.php`
+ * - `[plugin]/templates/$slug-$name.php`
+ *
+ * @see HelpPress_Template_Loader
+ * @since 1.0.0
+ *
+ * @param string $slug Template slug.
+ * @param string $name Template name.
+ */
 function helppress_get_template_part( $slug, $name = null ) {
 
 	$templates = new HelpPress_Template_Loader;
@@ -246,6 +347,16 @@ function helppress_get_template_part( $slug, $name = null ) {
 
 }
 
+/**
+ * Returns the output buffered result of `helppress_get_template_part()` with the same params.
+ *
+ * @see helppress_get_template_part()
+ * @since 1.0.0
+ *
+ * @param string $slug Template slug.
+ * @param string $name Template name.
+ * @return string Output of template part.
+ */
 function helppress_buffer_template_part( $slug, $name = null ) {
 
 	ob_start();
@@ -256,6 +367,25 @@ function helppress_buffer_template_part( $slug, $name = null ) {
 
 }
 
+/**
+ * Filters default post queries to apply custom sorting and other functionality needed for built-in
+ * theme compatibility.
+ *
+ * Only applies if:
+ *
+ * - Is *not* admin.
+ * - Is main query
+ *
+ * Makes the following modifications:
+ *
+ * - Updates `orderby`, `order`, and `posts_per_page` params as configured in admin Settings.
+ * - Limits search results on KB searches to `hp_article` post type.
+ *
+ * @since 1.0.0
+ *
+ * @param object $query Default WP_Query.
+ * @return object Potentially adjusted WP_Query.
+ */
 function helppress_pre_get_posts( $query ) {
 
 	if ( is_admin() ) {
@@ -286,6 +416,14 @@ function helppress_pre_get_posts( $query ) {
 }
 add_filter( 'pre_get_posts', 'helppress_pre_get_posts' );
 
+/**
+ * Adds additional query vars to WP_Query.
+ *
+ * @since 1.0.0
+ *
+ * @param array $vars Default query vars.
+ * @return array Extended query vars.
+ */
 function helppress_query_vars( $vars = [] ) {
 
 	$vars[] = 'hps';

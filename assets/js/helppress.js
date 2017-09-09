@@ -8,7 +8,7 @@
 		$searchInput.devbridgeAutocomplete({
 			serviceUrl: helppress_l10n.admin_ajax,
 			params: {
-				action: 'helppress_autocomplete_suggestions',
+				action: 'helppress_search_suggestions',
 			},
 			appendTo: $searchSuggestions,
 			forceFixPosition: true,

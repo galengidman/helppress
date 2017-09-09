@@ -2,7 +2,7 @@
 /**
  * Plugin Name: HelpPress
  * Description: A powerful and easy-to-use knowledge base plugin for WordPress. Compatible with 99% of themes out-of-the-box, or override with custom templates to futher customize. Includes categories and tags to organize content and live search to help your users find relevant content quicker.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      helppresswp
  * Author URI:  https://helppresswp.com/
  * License:     GPL2+
@@ -10,10 +10,15 @@
  * Domain Path: /languages/
  */
 
+/**
+ * Registers plugin constants.
+ *
+ * @since 1.0.0
+ */
 function helppress_constants() {
 
 	$constants = array(
-		'HELPPRESS_VERSION' => '1.0.0',
+		'HELPPRESS_VERSION' => '1.0.1',
 		'HELPPRESS_PATH'    => untrailingslashit( plugin_dir_path( __FILE__ ) ),
 		'HELPPRESS_URL'     => untrailingslashit( plugin_dir_url( __FILE__ ) ),
 	);
@@ -29,6 +34,11 @@ function helppress_constants() {
 }
 add_action( 'plugins_loaded', 'helppress_constants' );
 
+/**
+ * Includes plugin files.
+ *
+ * @since 1.0.0
+ */
 function helppress_includes() {
 
 	$includes = array(
@@ -40,7 +50,7 @@ function helppress_includes() {
 		// Classes
 		'/includes/class-helppress-breadcrumb.php',
 		'/includes/class-helppress-menu-archive-link.php',
-		'/includes/class-helppress-search-autocomplete.php',
+		'/includes/class-helppress-search-suggestions.php',
 		'/includes/class-helppress-settings.php',
 		'/includes/class-helppress-template-loader.php',
 
@@ -64,6 +74,11 @@ function helppress_includes() {
 }
 add_action( 'plugins_loaded', 'helppress_includes' );
 
+/**
+ * Loads plugin textdomain.
+ *
+ * @since 1.0.0
+ */
 function helppress_load_textdomain() {
 
 	load_plugin_textdomain( 'helppress', false, HELPPRESS_PATH . '/languages/' );

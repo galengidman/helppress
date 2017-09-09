@@ -1,19 +1,42 @@
 <?php
+/**
+ * Menu Archive Link
+ *
+ * @package HelpPress
+ * @since 1.0.0
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'HelpPress_Menu_Archive_Link' ) ) {
+if ( ! class_exists( 'HelpPress_Menu_Archive_Link' ) ) :
 
+/**
+ * Menu archive link class.
+ *
+ * @since 1.0.0
+ */
 class HelpPress_Menu_Archive_Link {
 
+	/**
+	 * Constructor.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 */
 	public function __construct() {
 
 		add_action( 'admin_init', array( $this, 'add_meta_box' ) );
 
 	}
 
+	/**
+	 * Adds the meta box to the nav menus screen.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 */
 	public function add_meta_box() {
 
 		add_meta_box(
@@ -27,6 +50,12 @@ class HelpPress_Menu_Archive_Link {
 
 	}
 
+	/**
+	 * Displays the meta box.
+	 *
+	 * @access public
+	 * @since 1.0.0
+	 */
 	public function display_meta_box() {
 
 		?>
@@ -91,6 +120,6 @@ class HelpPress_Menu_Archive_Link {
 
 }
 
-}
+endif;
 
 new HelpPress_Menu_Archive_Link();

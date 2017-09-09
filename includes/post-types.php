@@ -1,9 +1,20 @@
 <?php
+/**
+ * Post Types
+ *
+ * @package HelpPress
+ * @since 1.0.0
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Registers `hp_article` post type.
+ *
+ * @since 1.0.0
+ */
 function helppress_register_articles() {
 
 	$labels = array(
@@ -56,6 +67,11 @@ function helppress_register_articles() {
 }
 add_action( 'init', 'helppress_register_articles' );
 
+/**
+ * Adjusts the allowed post formats for articles.
+ *
+ * @since 1.0.0
+ */
 function helppress_article_post_formats() {
 
 	$screen = get_current_screen();

@@ -1,5 +1,26 @@
 <?php
+/**
+ * Formatting
+ *
+ * @package HelpPress
+ * @since 1.0.0
+ */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Sanitizes slug by ensuring it doesn't conflict with one of WordPress's reserved terms.
+ *
+ * If slug does conflict with a reserved term, the slug is prefixed with `kb-`.
+ *
+ * @since 1.0.0
+ * @see helppress_get_reserved_terms()
+ *
+ * @param string $slug Slug to sanitize.
+ * @return string Sanitized slug.
+ */
 function helppress_sanitize_slug( $slug ) {
 
 	$reserved_terms = helppress_get_reserved_terms();
@@ -12,9 +33,17 @@ function helppress_sanitize_slug( $slug ) {
 
 }
 
+/**
+ * Returns WordPress's reserved terms.
+ *
+ * https://codex.wordpress.org/Reserved_Terms
+ *
+ * @since 1.0.0
+ *
+ * @return array WordPress's reserved terms [description]
+ */
 function helppress_get_reserved_terms() {
 
-	// https://codex.wordpress.org/Reserved_Terms
 	$terms = array(
 		'attachment',
 		'attachment_id',
