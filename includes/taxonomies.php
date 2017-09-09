@@ -23,11 +23,12 @@ function helppress_register_categories() {
 	);
 
 	$args = array(
-		'labels'       => $labels,
-		'public'       => true,
-		'show_in_menu' => 'edit.php?post_type=hp_article',
-		'hierarchical' => true,
-		'rewrite'      => array(
+		'labels'            => $labels,
+		'public'            => true,
+		'show_in_menu'      => 'edit.php?post_type=hp_article',
+		'show_admin_column' => true,
+		'hierarchical'      => true,
+		'rewrite'           => array(
 			'slug'       => helppress_get_option( 'category_slug' ),
 			'with_front' => false,
 		),
@@ -53,10 +54,11 @@ function helppress_register_tags() {
 	);
 
 	$args = array(
-		'labels'       => $labels,
-		'public'       => true,
-		'show_in_menu' => 'edit.php?post_type=hp_article',
-		'rewrite'      => array(
+		'labels'            => $labels,
+		'public'            => true,
+		'show_in_menu'      => 'edit.php?post_type=hp_article',
+		'show_admin_column' => true,
+		'rewrite'           => array(
 			'slug'       => helppress_get_option( 'tag_slug' ),
 			'with_front' => false,
 		),
