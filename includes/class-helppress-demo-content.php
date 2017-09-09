@@ -10,6 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+use \YeEasyAdminNotices\V1\AdminNotice;
+
 if ( ! class_exists( 'HelpPress_Demo_Content' ) ) :
 
 /**
@@ -70,25 +72,41 @@ class HelpPress_Demo_Content {
 	 */
 	public function __construct() {
 
-		add_action( "wp_ajax_{$this->action_name}", array( $this, 'install' ) );
+		add_action( 'admin_init', array( $this, 'install' ) );
+
+		add_action( 'admin_notices', array( $this, 'prompt_admin_notice' ) );
 
 	}
 
 	/**
 	 * Installs demo content.
 	 *
+	 * Runs on admin_init if the following conditions are met:
+	 *
+	 * - Is in WordPress admin
+	 * - `helppress_action` URL parameter is set and equals `install_demo_content`
+	 * - `helppress_install_demo_content` nonce verifies
+	 * - Demo content has *not* already been installed
+	 *
 	 * @access public
 	 * @since 1.1.0
 	 */
 	public function install() {
 
-		if ( $this->is_installed() ) {
-			echo json_encode( array(
-				'status'  => 'error',
-				'message' => esc_html__( 'Demo content already installed.', 'helppress' ),
-			) );
+		if ( ! is_admin() ) {
+			return;
+		}
 
-			exit;
+		if ( ! isset( $_GET['helppress_action'] ) || $_GET['helppress_action'] !== 'install_demo_content' ) {
+			return;
+		}
+
+		if ( ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'helppress_install_demo_content' ) ) {
+			return;
+		}
+
+		if ( $this->is_installed() ) {
+			return;
 		}
 
 		$structure = json_decode( file_get_contents( $this->structure ) );
@@ -98,18 +116,12 @@ class HelpPress_Demo_Content {
 		$article_content = trim( file_get_contents( $this->article_content ) );
 
 		$post_formats = helppress_get_article_post_formats();
+		// Adding 6 `standard` format posts vs 1 of alternate formats
 		$post_formats = array_merge( $post_formats, array_fill( 0, 6, 'standard' ) );
 
 		$i = 1;
 		foreach ( $structure as $category ) {
 			foreach ( $category->articles as $article_title ) {
-				if ( term_exists( $category->name, 'hp_category' ) ) {
-					$category_id = get_term_by( 'name', $category->name, 'hp_category' );
-					$category_id = (int) $category_id->term_id;
-				} else {
-					$category_id = wp_insert_term( $category->name, 'hp_category' );
-				}
-
 				$post_id = wp_insert_post( array(
 					'post_title'   => $article_title,
 					'post_content' => $article_content,
@@ -118,14 +130,31 @@ class HelpPress_Demo_Content {
 					'post_date'    => date( 'Y-m-d H:i:s', time() - ($i * DAY_IN_SECONDS) ),
 				) );
 
-				set_post_format( $post_id, $post_formats[ array_rand( $post_formats) ] );
+				set_post_format( $post_id, $post_formats[ array_rand( $post_formats ) ] );
 
-				wp_set_post_terms( $post_id, $category_id, 'hp_category' );
+				if ( term_exists( $category->name, 'hp_category' ) ) {
+					$category_object = get_term_by( 'name', $category->name, 'hp_category', ARRAY_A );
+				} else {
+					$category_object = wp_insert_term( $category->name, 'hp_category' );
+				}
 
-				for ( $i2 = 0; $i2 < 5; $i2++ ) {
-					$tag = $tags[ array_rand( $tags ) ];
-					wp_set_post_terms( $post_id, $tag, 'hp_tag', true );
-					$i2++;
+				$category_id = (int) $category_object['term_id'];
+
+				wp_set_post_terms( $post_id, array( $category_id ), 'hp_category' );
+
+				$tag_indexes = array_rand( $tags, 4 );
+				foreach ( $tag_indexes as $index ) {
+					$tag_name = $tags[ $index ];
+
+					if ( term_exists( $tag_name, 'hp_tag' ) ) {
+						$tag_object = get_term_by( 'name', $tag_name, 'hp_tag', ARRAY_A );
+					} else {
+						$tag_object = wp_insert_term( $tag_name, 'hp_tag' );
+					}
+
+					$tag_id = (int) $tag_object['term_id'];
+
+					wp_set_post_terms( $post_id, array( $tag_id ), 'hp_tag', true );
 				}
 
 				$i++;
@@ -134,12 +163,11 @@ class HelpPress_Demo_Content {
 
 		update_option( $this->option_name, true, false );
 
-		echo json_encode( array(
-			'status'  => 'success',
-			'message' => esc_html__( 'Demo content successfully installed.', 'helppress' ),
-		) );
-
-		exit;
+		AdminNotice::create()
+			->success()
+			->text( esc_html__( 'Demo content installed!', 'helppress' ) )
+			->dismissible()
+			->show();
 
 	}
 
@@ -154,6 +182,74 @@ class HelpPress_Demo_Content {
 	public function is_installed() {
 
 		return (bool) get_option( $this->option_name );
+
+	}
+
+	/**
+	 * Conditionally prompts admin notice to install demo content.
+	 *
+	 * Displays if the following conditions are met:
+	 *
+	 * - Demo content is *not* already installed
+	 * - Admin screen is post_type `hp_article`
+	 * - No existing, published `hp_article` post types exist
+	 * - Notice has not been previously dismissed
+	 *
+	 * @access public
+	 * @since 1.1.0
+	 */
+	public function prompt_admin_notice() {
+
+		if ( $this->is_installed() ) {
+			return;
+		}
+
+		$screen = get_current_screen();
+		if ( $screen->post_type !== 'hp_article' ) {
+			return;
+		}
+
+		$existing_articles = get_posts( array(
+			'posts_per_page' => 1,
+			'post_type'      => 'hp_article',
+			'fields'         => 'ids',
+		) );
+
+		if ( $existing_articles ) {
+			return;
+		}
+
+		// Must replace &amp; → & to get persistent dismissal to work.
+		// That only took *forever* to figure out. :|
+		$install_url = str_replace( '&amp;', '&', esc_url_raw(
+			wp_nonce_url(
+				add_query_arg(
+					array(
+						'post_type' => 'hp_article',
+						'helppress_action' => 'install_demo_content',
+					),
+					admin_url( 'edit.php' )
+				),
+				'helppress_install_demo_content'
+			)
+		) );
+
+		ob_start();
+
+		?>
+
+		<p><?php esc_html_e( 'HelpPress includes build-in demo content to give you a head start. Would you like to install it now?', 'helppress' ); ?></p>
+		<p><a href="<?php echo $install_url; ?>" class="button button-primary"><?php esc_html_e( 'Install Demo Content', 'helppress' ); ?></a></p>
+
+		<?php
+
+		$notice_markup = ob_get_clean();
+
+		AdminNotice::create( 'helppress_install_demo_content' )
+			->info()
+			->rawHtml( $notice_markup )
+			->persistentlyDismissible()
+			->show();
 
 	}
 

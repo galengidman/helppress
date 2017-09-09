@@ -46,6 +46,7 @@ function helppress_includes() {
 		// Vendor
 		'/includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
 		'/includes/vendor/gambitph/titan-framework/titan-framework.php',
+		'/includes/vendor/yahnis-elsts/admin-notices/AdminNotice.php',
 
 		// Classes
 		'/includes/class-helppress-breadcrumb.php',
