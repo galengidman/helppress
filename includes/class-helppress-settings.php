@@ -10,6 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+use \YeEasyAdminNotices\V1\AdminNotice;
+
 if ( ! class_exists( 'HelpPress_Settings' ) ) :
 
 /**
@@ -320,16 +322,14 @@ class HelpPress_Settings {
 			return;
 		}
 
-		?>
-
-		<div class="notice notice-warning">
-			<p><?php printf(
-				__( 'HelpPress slugs are not compatible with Plain permalinks. You can fix this on the <a href="%s">Permalinks Settings</a> page.', 'helppress' ),
+		AdminNotice::create( 'helppress_install_demo_content' )
+			->warning()
+			->html( sprintf(
+				__( 'HelpPress slugs are not compatible with Plain permalinks. You can fix this from the <a href="%s">Permalinks Settings</a> page.', 'helppress' ),
 				esc_url( admin_url( 'options-permalink.php' ) )
-			); ?></p>
-		</div>
-
-		<?php
+			) )
+			->persistentlyDismissible()
+			->show();
 
 	}
 
