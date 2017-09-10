@@ -51,6 +51,9 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 1.1.1, September 9, 2017 =
+* Fix: Various bugs.
+
 = 1.1.0, September 9, 2017 =
 * New: Added built-in demo content installer. Will offer to install demo content if no published articles exist and demo content has not been previously installed.
 * Tweak: Added `helppress_article_post_formats` filter for allows post formats for articles.
