@@ -1,14 +1,18 @@
 .helppress-breadcrumb {
+	margin: 0;
+	padding: 0;
 	list-style-type: none;
 	font-size: .9em;
-	margin-left: 0;
-	padding-left: 0;
 }
 
 .helppress-breadcrumb__crumb {
 	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 
 	&:not(:first-child)::before {
 		content: attr(data-sep);
+		margin: 0 .25em;
 	}
 }
