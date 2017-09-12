@@ -24,10 +24,10 @@
 						'fields'      => 'ids',
 					) ); ?>
 
-					<h2 class="helppress-archive__cat-title">
+					<h3 class="helppress-archive__cat-title">
 						<span><?php echo $category->name; ?></span>
 						<small class="helppress-archive__cat-count"><?php printf( __( '<span>%d</span> Articles', 'helppress' ), $category->count ); ?></small>
-					</h2>
+					</h3>
 
 					<?php if ( $category->description ) : ?>
 						<p class="helppress-archive__cat-description"><?php echo wptexturize( $category->description ); ?></p>
