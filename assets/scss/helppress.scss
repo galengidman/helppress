@@ -1,12 +1,9 @@
-.helppress-content {
-	> * + * {
-		margin-top: 2.5em;
-	}
-
+#helppress {
 	@import 'helppress-archive';
-	@import 'helppress-article-item';
+	@import 'helppress-article-items';
 	@import 'helppress-article-list';
 	@import 'helppress-breadcrumb';
+	@import 'helppress-content';
 	@import 'helppress-genericon';
 	@import 'helppress-post-nav';
 	@import 'helppress-search';

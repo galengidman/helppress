@@ -1,0 +1,28 @@
+.helppress-article-items__item {
+	&::before {
+		content: '';
+		display: block;
+		height: 1px;
+		margin: 1.5em 0;
+		background: currentColor;
+		opacity: .15;
+	}
+
+	&:first-child::before {
+		margin-top: 0;
+	}
+}
+
+.helppress-article-items__item-title {
+	margin: 0;
+	padding: 0;
+}
+
+.helppress-article-items__item-excerpt {
+	margin-top: 1em;
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}

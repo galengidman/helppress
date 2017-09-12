@@ -1,32 +1,27 @@
-.helppress-content > * + * {
+#helppress .helppress-archive__cat {
     margin-top: 2.5em;
 }
 
-.helppress-content .helppress-archive__cat {
-    margin-top: 2.5em;
-}
-
-.helppress-content .helppress-archive__cat-title {
+#helppress .helppress-archive__cat-title {
     margin: 0;
     padding: 0;
 }
 
-.helppress-content .helppress-archive__cat-count {
+#helppress .helppress-archive__cat-count {
     opacity: .5;
 }
 
-.helppress-content .helppress-archive__cat-description {
+#helppress .helppress-archive__cat-description {
     font-size: .9em;
 }
 
-.helppress-content .helppress-archive__more {
+#helppress .helppress-archive__more {
     margin: 0;
     padding: 0;
 }
 
 @media screen and (min-width: 600px) {
-    .helppress-content .helppress-archive--2-col,
-    .helppress-content .helppress-archive--3-col {
+    #helppress .helppress-archive--2-col, #helppress .helppress-archive--3-col {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -44,8 +39,8 @@
         justify-content: space-between;
     }
 
-    .helppress-content .helppress-archive--2-col .helppress-archive__cat,
-    .helppress-content .helppress-archive--3-col .helppress-archive__cat {
+    #helppress .helppress-archive--2-col .helppress-archive__cat,
+    #helppress .helppress-archive--3-col .helppress-archive__cat {
         -webkit-box-flex: 0;
         -ms-flex-positive: 0;
         flex-grow: 0;
@@ -53,30 +48,30 @@
         flex-shrink: 0;
     }
 
-    .helppress-content .helppress-archive--2-col .helppress-archive__cat,
-    .helppress-content .helppress-archive--3-col .helppress-archive__cat {
+    #helppress .helppress-archive--2-col .helppress-archive__cat,
+    #helppress .helppress-archive--3-col .helppress-archive__cat {
         -ms-flex-preferred-size: 47.5%;
         flex-basis: 47.5%;
     }
 
-    .helppress-content .helppress-archive--2-col .helppress-archive__cat:nth-child(-n+2),
-    .helppress-content .helppress-archive--3-col .helppress-archive__cat:nth-child(-n+2) {
+    #helppress .helppress-archive--2-col .helppress-archive__cat:nth-child(-n+2),
+    #helppress .helppress-archive--3-col .helppress-archive__cat:nth-child(-n+2) {
         margin-top: 0;
     }
 }
 
 @media screen and (min-width: 900px) {
-    .helppress-content .helppress-archive--3-col .helppress-archive__cat {
+    #helppress .helppress-archive--3-col .helppress-archive__cat {
         -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
     }
 
-    .helppress-content .helppress-archive--3-col .helppress-archive__cat:nth-child(-n+3) {
+    #helppress .helppress-archive--3-col .helppress-archive__cat:nth-child(-n+3) {
         margin-top: 0;
     }
 }
 
-.helppress-content .helppress-article-item::before {
+#helppress .helppress-article-items__item::before {
     content: '';
     display: block;
     height: 1px;
@@ -85,23 +80,37 @@
     opacity: .15;
 }
 
-.helppress-content .helppress-article-item:first-child::before {
+#helppress .helppress-article-items__item:first-child::before {
     margin-top: 0;
 }
 
-.helppress-content .helppress-article-list {
+#helppress .helppress-article-items__item-title {
+    margin: 0;
+    padding: 0;
+}
+
+#helppress .helppress-article-items__item-excerpt {
+    margin-top: 1em;
+}
+
+#helppress .helppress-article-items__item-excerpt p {
+    margin: 0;
+    padding: 0;
+}
+
+#helppress .helppress-article-list {
     margin: 1.5em 0;
     padding: 0;
     list-style-type: none;
 }
 
-.helppress-content .helppress-article-list__item {
+#helppress .helppress-article-list__item {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.helppress-content .helppress-article-list__item::before {
+#helppress .helppress-article-list__item::before {
     content: '';
     display: block;
     height: 1px;
@@ -110,34 +119,38 @@
     opacity: .15;
 }
 
-.helppress-content .helppress-article-list__item:first-child::before {
+#helppress .helppress-article-list__item:first-child::before {
     margin-top: 0;
 }
 
-.helppress-content .helppress-article-list__item .helppress-icon {
+#helppress .helppress-article-list__item .helppress-icon {
     margin-right: .25em;
 }
 
-.helppress-content .helppress-breadcrumb {
+#helppress .helppress-breadcrumb {
     margin: 0;
     padding: 0;
     list-style-type: none;
     font-size: .9em;
 }
 
-.helppress-content .helppress-breadcrumb__crumb {
+#helppress .helppress-breadcrumb__crumb {
     display: inline-block;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.helppress-content .helppress-breadcrumb__crumb:not(:first-child)::before {
+#helppress .helppress-breadcrumb__crumb:not(:first-child)::before {
     content: attr(data-sep);
     margin: 0 .25em;
 }
 
-.helppress-content .helppress-genericon {
+#helppress .helppress-content > * + * {
+    margin-top: 2.5em;
+}
+
+#helppress .helppress-genericon {
     position: relative;
     top: -.1em;
     width: 1em;
@@ -146,12 +159,12 @@
     fill: currentColor;
 }
 
-.helppress-content .helppress-post-nav {
+#helppress .helppress-post-nav {
     margin: 2em 0;
     text-align: center;
 }
 
-.helppress-content .helppress-search__form {
+#helppress .helppress-search__form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -160,22 +173,22 @@
     align-items: center;
 }
 
-.helppress-content .helppress-search__label {
+#helppress .helppress-search__label {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
     margin: 0;
 }
 
-.helppress-content .helppress-search__input {
+#helppress .helppress-search__input {
     width: 98% !important;
 }
 
-.helppress-content .helppress-search__suggestions {
+#helppress .helppress-search__suggestions {
     color: #333;
 }
 
-.helppress-content .helppress-search__suggestions .autocomplete-suggestions {
+#helppress .helppress-search__suggestions .autocomplete-suggestions {
     padding: .5em;
     background: white;
     -webkit-box-shadow: 0 .25em 2em rgba(0, 0, 0, .15);
@@ -183,16 +196,16 @@
     overflow: auto;
 }
 
-.helppress-content .helppress-search__suggestions .autocomplete-suggestion {
+#helppress .helppress-search__suggestions .autocomplete-suggestion {
     padding: .5em;
     font-size: .9em;
     cursor: pointer;
 }
 
-.helppress-content .helppress-search__suggestions .autocomplete-suggestion:not(:hover) {
+#helppress .helppress-search__suggestions .autocomplete-suggestion:not(:hover) {
     opacity: .75;
 }
 
-.helppress-content .helppress-search__suggestions .autocomplete-suggestion + .autocomplete-suggestion {
+#helppress .helppress-search__suggestions .autocomplete-suggestion + .autocomplete-suggestion {
     border-top: solid 1px rgba(0, 0, 0, .15);
 }

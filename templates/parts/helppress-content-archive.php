@@ -1,4 +1,4 @@
-<div class="helppress-content helppress-content--archive">
+<?php helppress_get_template_part( 'parts/helppress-open-content' ); ?>
 	<?php helppress_get_template_part( 'parts/helppress-searchform', 'archive' ); ?>
 
 	<?php
@@ -65,4 +65,4 @@
 			<?php endif; ?>
 		<?php endif; ?>
 	</div>
-</div>
+<?php helppress_get_template_part( 'parts/helppress-close-content' );

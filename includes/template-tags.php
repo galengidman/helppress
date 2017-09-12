@@ -201,11 +201,45 @@ function helppress_is_kb_search() {
  */
 function helppress_is_kb_page() {
 
-	return helppress_is_kb_article()
-		|| helppress_is_kb_archive()
-		|| helppress_is_kb_category()
-		|| helppress_is_kb_tag()
-		|| helppress_is_kb_search();
+	return (bool) helppress_get_kb_context();
+
+}
+
+/**
+ * Gets the context of the current HelpPress page.
+ *
+ * Will return one of the following:
+ *
+ * - `'archive'`: main KB archive/index
+ * - `'article'`: KB article page
+ * - `'category'`: KB category archive
+ * - `'tag'`: KB tag archive
+ * - `'search'`: KB search results
+ * - `false`: not a KB page
+ *
+ * @since 1.2.0
+ *
+ * @return string|false Context string if KB page, false if not.
+ */
+function helppress_get_kb_context() {
+
+	$context = false;
+
+	if ( helppress_is_kb_article() ) {
+		$context = 'article';
+	} elseif ( helppress_is_kb_archive() ) {
+		$context = 'archive';
+	} elseif ( helppress_is_kb_category() ) {
+		$context = 'category';
+	} elseif ( helppress_is_kb_tag() ) {
+		$context = 'tag';
+	} elseif ( helppress_is_kb_search() ) {
+		$context = 'search';
+	}
+
+	$context = apply_filters( 'helppress_get_kb_context', $context );
+
+	return $context;
 
 }
 
