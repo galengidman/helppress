@@ -37,7 +37,7 @@ gulp.task('translate', function() {
 			package: 'HelpPress',
 			domain:  'helppress',
 		}))
-		.pipe(gulp.dest(`languages/helppress.pot`));
+		.pipe(gulp.dest('languages/helppress.pot'));
 });
 
 gulp.task('copy', ['translate'], function() {
