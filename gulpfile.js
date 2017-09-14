@@ -14,13 +14,13 @@ var pkg = JSON.parse(fs.readFileSync('package.json'));
 // DEV ------------------------------------------------------------------------
 
 gulp.task('scss', function() {
-  return gulp.src('assets/scss/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([
-    	autoprefixer(),
-    	perfectionist(),
-    ]))
-    .pipe(gulp.dest('assets/css'));
+	return gulp.src('assets/scss/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(postcss([
+			autoprefixer(),
+			perfectionist(),
+		]))
+		.pipe(gulp.dest('assets/css'));
 });
 
 gulp.task('dev', function() {
