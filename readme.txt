@@ -51,6 +51,14 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 1.2.0, September 13, 2017 =
+* New: `helppress_get_kb_context()` helper function.
+* Tweak: Search results and category/tag archive content templates now pull from new `parts/helppress-content-article-items.php` template
+* Tweak: Wrap content templates in new `#helppress` div.
+* Tweak: Generally more defensive CSS and consistent margins.
+* Tweak: Update archive category title headings from `h2` → `h3`.
+* Fix: Responsive archive columns CSS.
+
 = 1.1.1, September 9, 2017 =
 * Fix: Various bugs.
 
