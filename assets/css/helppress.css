@@ -225,4 +225,5 @@
 
 #helppress .helppress-search__submit {
     margin: 0;
+    min-width: 10%;
 }
