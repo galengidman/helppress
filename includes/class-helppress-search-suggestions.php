@@ -64,7 +64,7 @@ class HelpPress_Search_Suggestions {
 			);
 		}
 
-		echo json_encode( $suggestions );
+		echo html_entity_decode( json_encode( $suggestions ) );
 
 		exit;
 
