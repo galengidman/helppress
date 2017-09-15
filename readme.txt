@@ -51,6 +51,12 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 1.2.1, September 14, 2017 =
+* New: `helppress_category_article_count()` template tag to output number of articles in a given category.
+* Tweak: Updated styling for search field, button, and suggestions dropdown.
+* Tweak: Yoda conditionals to conform to PHP coding standards.
+* Fix: Decode HTML entities in search suggestions.
+
 = 1.2.0, September 13, 2017 =
 * New: `helppress_get_kb_context()` helper function.
 * Tweak: Search results and category/tag archive content templates now pull from new `parts/helppress-content-article-items.php` template.
