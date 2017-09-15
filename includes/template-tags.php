@@ -114,7 +114,7 @@ function helppress_category_article_count( $category ) {
 	$html[] = '</span>';
 	$html[] = ' ';
 
-	if ( $category->count === 1 ) {
+	if ( 1 === $category->count ) {
 		$html[] = esc_html__( 'Article' );
 	} else {
 		$html[] = esc_html__( 'Articles' );

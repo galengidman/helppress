@@ -97,7 +97,7 @@ function helppress_article_post_formats() {
 
 	$screen = get_current_screen();
 
-	if ( $screen->post_type === 'hp_article' ) {
+	if ( 'hp_article' === $screen->post_type ) {
 		add_theme_support( 'post-formats', helppress_get_article_post_formats() );
 	}
 
