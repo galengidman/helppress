@@ -181,31 +181,48 @@
 }
 
 #helppress .helppress-search__input {
+    margin: 0;
     width: 98% !important;
 }
 
 #helppress .helppress-search__suggestions {
-    color: #333;
+    color: #888;
+    font-size: .9em;
 }
 
 #helppress .helppress-search__suggestions .autocomplete-suggestions {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-top: 2px;
     padding: .5em;
     background: white;
-    -webkit-box-shadow: 0 .25em 2em rgba(0, 0, 0, .15);
-            box-shadow: 0 .25em 2em rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .05);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .05);
     overflow: auto;
 }
 
 #helppress .helppress-search__suggestions .autocomplete-suggestion {
     padding: .5em;
-    font-size: .9em;
     cursor: pointer;
 }
 
-#helppress .helppress-search__suggestions .autocomplete-suggestion:not(:hover) {
-    opacity: .75;
+#helppress .helppress-search__suggestions .autocomplete-suggestion:hover {
+    color: #666;
+    background: #f9f9f9;
+}
+
+#helppress .helppress-search__suggestions .autocomplete-suggestion:hover strong {
+    color: #444;
 }
 
 #helppress .helppress-search__suggestions .autocomplete-suggestion + .autocomplete-suggestion {
-    border-top: solid 1px rgba(0, 0, 0, .15);
+    border-top: solid 1px #e9e9e9;
+}
+
+#helppress .helppress-search__suggestions strong {
+    color: #666;
+}
+
+#helppress .helppress-search__submit {
+    margin: 0;
 }
