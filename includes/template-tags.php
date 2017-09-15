@@ -94,6 +94,38 @@ function helppress_get_categories( $args = array() ) {
 }
 
 /**
+ * Outputs category article count.
+ *
+ * @see 1.2.1
+ *
+ * @param integer|object $category Category ID or WP_Term object.
+ */
+if ( ! function_exists( 'helppress_category_article_count' ) ) :
+function helppress_category_article_count( $category ) {
+
+	if ( ! is_a( $category, 'WP_Term' ) ) {
+		$category = get_term( $category );
+	}
+
+	$html = array();
+
+	$html[] = '<span>';
+	$html[] = number_format_i18n( $category->count );
+	$html[] = '</span>';
+	$html[] = ' ';
+
+	if ( $category->count === 1 ) {
+		$html[] = esc_html__( 'Article' );
+	} else {
+		$html[] = esc_html__( 'Articles' );
+	}
+
+	echo join( '', $html );
+
+}
+endif;
+
+/**
  * Returns Knowledge base archive URL.
  *
  * @since 1.0.0

@@ -26,7 +26,7 @@
 
 					<h3 class="helppress-archive__cat-title">
 						<span><?php echo $category->name; ?></span>
-						<small class="helppress-archive__cat-count"><?php printf( __( '<span>%d</span> Articles', 'helppress' ), $category->count ); ?></small>
+						<small class="helppress-archive__cat-count"><?php helppress_category_article_count( $category ); ?></small>
 					</h3>
 
 					<?php if ( $category->description ) : ?>
