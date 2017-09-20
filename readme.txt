@@ -51,6 +51,10 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 1.3.0, September 19, 2017 =
+* New: Added dozens of action hooks to the front-end templates.
+* Fix: i18n strings for the `helppress_category_article_count()`.
+
 = 1.2.1, September 14, 2017 =
 * New: `helppress_category_article_count()` template tag to output number of articles in a given category.
 * Tweak: Updated styling for search field, button, and suggestions dropdown.
