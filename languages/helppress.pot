@@ -192,7 +192,7 @@ msgstr ""
 msgid "Text to use to separate breadcrumb links."
 msgstr ""
 
-#: includes/class-helppress-settings.php:210, includes/class-helppress-settings.php:219, templates/parts/helppress-searchform.php:29
+#: includes/class-helppress-settings.php:210, includes/class-helppress-settings.php:219, templates/parts/helppress-searchform.php:49
 msgid "Search"
 msgstr ""
 
@@ -330,11 +330,11 @@ msgctxt "articles count for 0 or > 1 articles"
 msgid "%s Articles"
 msgstr ""
 
-#: templates/parts/helppress-content-archive.php:46
+#: templates/parts/helppress-content-archive.php:83
 msgid "View more"
 msgstr ""
 
-#: templates/parts/helppress-content-archive.php:64
+#: templates/parts/helppress-content-archive.php:126
 msgid "Nothing to see here… yet."
 msgstr ""
 
@@ -342,6 +342,6 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: templates/parts/helppress-searchform.php:17
+#: templates/parts/helppress-searchform.php:28
 msgid "Search for:"
 msgstr ""
