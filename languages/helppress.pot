@@ -320,8 +320,14 @@ msgstr ""
 msgid "Article Tag"
 msgstr ""
 
-#: templates/parts/helppress-content-archive.php:29
-msgid "<span>%d</span> Articles"
+#: includes/template-tags.php:117
+msgctxt "articles count for 1 article"
+msgid "%s Article"
+msgstr ""
+
+#: includes/template-tags.php:119
+msgctxt "articles count for 0 or > 1 articles"
+msgid "%s Articles"
 msgstr ""
 
 #: templates/parts/helppress-content-archive.php:46

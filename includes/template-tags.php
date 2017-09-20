@@ -107,20 +107,19 @@ function helppress_category_article_count( $category ) {
 		$category = get_term( $category );
 	}
 
-	$html = array();
-
-	$html[] = '<span>';
-	$html[] = number_format_i18n( $category->count );
-	$html[] = '</span>';
-	$html[] = ' ';
+	$count   = array();
+	$count[] = '<span>';
+	$count[] = number_format_i18n( $category->count );
+	$count[] = '</span>';
+	$count   = join( '', $count );
 
 	if ( 1 === $category->count ) {
-		$html[] = esc_html__( 'Article' );
+		$html = sprintf( esc_html_x( '%s Article', 'articles count for 1 article', 'helppress' ), $count );
 	} else {
-		$html[] = esc_html__( 'Articles' );
+		$html = sprintf( esc_html_x( '%s Articles', 'articles count for 0 or > 1 articles', 'helppress' ), $count );
 	}
 
-	echo join( '', $html );
+	echo $html;
 
 }
 endif;
