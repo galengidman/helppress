@@ -36,13 +36,11 @@ function helppress_register_articles() {
 		'menu_name'             => esc_html__( 'HelpPress',                  'helppress' ),
 	);
 
-	$menu_icon = file_get_contents( HELPPRESS_PATH . '/assets/img/menu-icon.svg' );
-
 	$args = array(
 		'labels'        => $labels,
 		'public'        => true,
 		'menu_position' => 25,
-		'menu_icon'     => 'data:image/svg+xml;base64,' . base64_encode( $menu_icon ),
+		'menu_icon'     => 'dashicons-sos',
 		'supports'      => array(
 			'title',
 			'editor',
