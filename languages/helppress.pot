@@ -65,7 +65,7 @@ msgstr ""
 msgid "Sort By"
 msgstr ""
 
-#: includes/class-helppress-settings.php:70, includes/class-helppress-settings.php:84, includes/class-helppress-settings.php:95, includes/class-helppress-settings.php:252
+#: includes/class-helppress-settings.php:70, includes/class-helppress-settings.php:84, includes/class-helppress-settings.php:95, includes/class-helppress-settings.php:260
 msgstr ""
 
 #: includes/class-helppress-settings.php:72
@@ -141,106 +141,118 @@ msgid "Layout"
 msgstr ""
 
 #: includes/class-helppress-settings.php:149
-msgid "Columns"
+msgid "Page Template"
 msgstr ""
 
 #: includes/class-helppress-settings.php:150
+msgid "The page template used to display the knowledge base. This may be overridden by a theme using custom HelpPress templates."
+msgstr ""
+
+#: includes/class-helppress-settings.php:157
+msgid "Columns"
+msgstr ""
+
+#: includes/class-helppress-settings.php:158
 msgid "The number of columns to display on the knowledge base."
 msgstr ""
 
-#: includes/class-helppress-settings.php:159
+#: includes/class-helppress-settings.php:167
 msgid "CSS"
 msgstr ""
 
-#: includes/class-helppress-settings.php:166
+#: includes/class-helppress-settings.php:174
 msgid "Add custom CSS using the &ldquo;Additional CSS&rdquo; feature in the <a href=\"%s\">WordPress Customizer</a>."
 msgstr ""
 
-#: includes/class-helppress-settings.php:173
+#: includes/class-helppress-settings.php:181
 msgid "Disable CSS"
 msgstr ""
 
-#: includes/class-helppress-settings.php:174
+#: includes/class-helppress-settings.php:182
 msgid "You can disable the built-in CSS entirely if want to use your own."
 msgstr ""
 
-#: includes/class-helppress-settings.php:180, includes/class-helppress-settings.php:189
+#: includes/class-helppress-settings.php:188, includes/class-helppress-settings.php:197
 msgid "Breadcrumb"
 msgstr ""
 
-#: includes/class-helppress-settings.php:183, includes/class-helppress-settings.php:213, includes/class-helppress-settings.php:269
+#: includes/class-helppress-settings.php:191, includes/class-helppress-settings.php:221, includes/class-helppress-settings.php:277
 msgid "Settings"
 msgstr ""
 
-#: includes/class-helppress-settings.php:190
+#: includes/class-helppress-settings.php:198
 msgid "Turn the breadcrumb on or off globally."
 msgstr ""
 
-#: includes/class-helppress-settings.php:196
+#: includes/class-helppress-settings.php:204
 msgid "Home Link"
 msgstr ""
 
-#: includes/class-helppress-settings.php:197
+#: includes/class-helppress-settings.php:205
 msgid "Start the breadcrumb with a link to the home page."
 msgstr ""
 
-#: includes/class-helppress-settings.php:203
+#: includes/class-helppress-settings.php:211
 msgid "Separator"
 msgstr ""
 
-#: includes/class-helppress-settings.php:204
+#: includes/class-helppress-settings.php:212
 msgid "Text to use to separate breadcrumb links."
 msgstr ""
 
-#: includes/class-helppress-settings.php:210, includes/class-helppress-settings.php:219, templates/parts/helppress-searchform.php:49
+#: includes/class-helppress-settings.php:218, includes/class-helppress-settings.php:227, templates/parts/helppress-searchform.php:49
 msgid "Search"
 msgstr ""
 
-#: includes/class-helppress-settings.php:220
+#: includes/class-helppress-settings.php:228
 msgid "Turn search on or off globally."
 msgstr ""
 
-#: includes/class-helppress-settings.php:226
+#: includes/class-helppress-settings.php:234
 msgid "Placeholder Text"
 msgstr ""
 
-#: includes/class-helppress-settings.php:227
+#: includes/class-helppress-settings.php:235
 msgid "Help text to show in the search box."
 msgstr ""
 
-#: includes/class-helppress-settings.php:233
+#: includes/class-helppress-settings.php:241
 msgid "Autofocus Search"
 msgstr ""
 
-#: includes/class-helppress-settings.php:234
+#: includes/class-helppress-settings.php:242
 msgid "Focus the cursor in the search box when the page loads."
 msgstr ""
 
-#: includes/class-helppress-settings.php:238
+#: includes/class-helppress-settings.php:246
 msgid "Suggestions"
 msgstr ""
 
-#: includes/class-helppress-settings.php:244
+#: includes/class-helppress-settings.php:252
 msgid "Live Suggestions"
 msgstr ""
 
-#: includes/class-helppress-settings.php:245
+#: includes/class-helppress-settings.php:253
 msgid "Suggest relevant articles to users as they enter search terms."
 msgstr ""
 
-#: includes/class-helppress-settings.php:251
+#: includes/class-helppress-settings.php:259
 msgid "Number of Suggestions"
 msgstr ""
 
-#: includes/class-helppress-settings.php:302
+#: includes/class-helppress-settings.php:310
 msgid "View KB &rarr;"
 msgstr ""
 
-#: includes/class-helppress-settings.php:328
+#: includes/class-helppress-settings.php:336
 msgid "HelpPress slugs are not compatible with Plain permalinks. You can fix this from the <a href=\"%s\">Permalinks Settings</a> page."
 msgstr ""
 
-#: includes/options.php:48
+#: includes/class-helppress-settings.php:354
+msgid "Default Template"
+msgstr ""
+
+#: includes/options.php:49
 msgid "Search the knowledge base …"
 msgstr ""
 

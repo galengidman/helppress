@@ -35,6 +35,7 @@ function helppress_get_option_defaults() {
 		'tag_slug'                  => 'kb-tag',
 
 		// Display
+		'page_template'             => 'default',
 		'columns'                   => 2,
 		'disable_css'               => false,
 

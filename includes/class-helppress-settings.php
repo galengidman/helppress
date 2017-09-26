@@ -144,6 +144,14 @@ class HelpPress_Settings {
 						'type' => 'heading',
 					),
 					array(
+						'type'    => 'select',
+						'id'      => 'page_template',
+						'name'    => esc_html__( 'Page Template', 'helppress' ),
+						'desc'    => esc_html__( 'The page template used to display the knowledge base. This may be overridden by a theme using custom HelpPress templates.', 'helppress' ),
+						'options' => $this->get_page_templates(),
+						'default' => helppress_get_option_default( 'page_template' ),
+					),
+					array(
 						'type'    => 'radio-image',
 						'id'      => 'columns',
 						'name'    => esc_html__( 'Columns', 'helppress' ),
@@ -330,6 +338,23 @@ class HelpPress_Settings {
 			) )
 			->persistentlyDismissible()
 			->show();
+
+	}
+
+	/**
+	 * Gets page templates from active theme.
+	 *
+	 * @access public
+	 * @since 1.4.0
+	 *
+	 * @return array Page templates.
+	 */
+	public function get_page_templates() {
+
+		$page_templates = array( 'default' => esc_html__( 'Default Template', 'helppress' ) );
+		$page_templates = array_merge( $page_templates, wp_get_theme()->get_page_templates() );
+
+		return $page_templates;
 
 	}
 

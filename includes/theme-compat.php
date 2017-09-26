@@ -194,6 +194,10 @@ function helppress_get_compat_templates() {
 		'index.php',
 	);
 
+	if ( helppress_get_option( 'page_template' ) !== 'default' ) {
+		$templates = array_merge( array( helppress_get_option( 'page_template' ) ), $templates );
+	}
+
 	return apply_filters( 'helppress_get_compat_templates', $templates );
 
 }
@@ -432,3 +436,40 @@ function helppress_query_vars( $vars = [] ) {
 
 }
 add_action( 'query_vars', 'helppress_query_vars' );
+
+/**
+ * Adds custom body classes.
+ *
+ * @see body_class()
+ * @since 1.4.0
+ *
+ * @param array $classes Default WP body classes.
+ * @return array Filtered body classes.
+ */
+function helppress_body_class( $classes ) {
+
+	if ( helppress_is_kb_page() ) {
+		$classes[] = 'helppress';
+		$classes[] = sanitize_html_class( 'helppress-' . helppress_get_kb_context() );
+	}
+
+	// Mimic the WordPress body classes for page templates to help with theme styling
+	if ( helppress_is_kb_page() && helppress_get_option( 'page_template' ) !== 'default' ) {
+
+		$classes[] = 'page-template';
+
+		$template_slug  = helppress_get_option( 'page_template' );
+		$template_parts = explode( '/', $template_slug );
+
+		foreach ( $template_parts as $part ) {
+			$classes[] = 'page-template-' . sanitize_html_class( str_replace( array( '.', '/' ), '-', basename( $part, '.php' ) ) );
+		}
+
+		$classes[] = 'page-template-' . sanitize_html_class( str_replace( '.', '-', $template_slug ) );
+
+	}
+
+	return $classes;
+
+}
+add_action( 'body_class', 'helppress_body_class' );
