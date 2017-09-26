@@ -51,6 +51,10 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 1.4.0, September 25, 2017 =
+* New: Add option to use page template as knowledge base template.
+* Tweak: Use dashicons for menu icon.
+
 = 1.3.0, September 19, 2017 =
 * New: Added dozens of action hooks to the front-end templates.
 * Fix: i18n strings for the `helppress_category_article_count()`.
