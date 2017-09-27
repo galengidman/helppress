@@ -2,6 +2,8 @@
 
 <?php helppress_get_template_part( 'parts/helppress-open-content', $context ); ?>
 
+	<?php helppress_get_template_part( 'parts/helppress-searchform', $context ); ?>
+
 	<?php helppress_get_template_part( 'parts/helppress-breadcrumb', $context ); ?>
 
 	<?php do_action( 'helppress_before_article_items' ); ?>

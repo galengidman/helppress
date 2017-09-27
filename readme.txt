@@ -53,6 +53,7 @@ Yes, but the slug settings will have no effect.
 
 = 1.4.0, September 25, 2017 =
 * New: Add option to use page template as knowledge base template.
+* New: Added search form to the top of the article items and article templates.
 * Tweak: Use dashicons for menu icon.
 
 = 1.3.0, September 19, 2017 =
