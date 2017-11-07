@@ -3,10 +3,11 @@
 	padding: 0;
 	list-style-type: none;
 	font-size: .9em;
+	word-wrap: break-word;
 }
 
 .helppress-breadcrumb__crumb {
-	display: inline-block;
+	display: inline;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
