@@ -167,7 +167,7 @@ function helppress_get_post_format( $post_id = null ) {
  */
 function helppress_is_kb_article() {
 
-	return is_singular( 'hp_article' );
+	return is_singular( 'hp_article' ) && ! is_admin();
 
 }
 
@@ -180,7 +180,7 @@ function helppress_is_kb_article() {
  */
 function helppress_is_kb_archive() {
 
-	return is_post_type_archive( 'hp_article' ) && ! is_search();
+	return is_post_type_archive( 'hp_article' ) && ! is_search() && ! is_admin();
 
 }
 
@@ -193,7 +193,7 @@ function helppress_is_kb_archive() {
  */
 function helppress_is_kb_category() {
 
-	return is_tax( 'hp_category' );
+	return is_tax( 'hp_category' ) && ! is_admin();
 
 }
 
@@ -206,7 +206,7 @@ function helppress_is_kb_category() {
  */
 function helppress_is_kb_tag() {
 
-	return is_tax( 'hp_tag' );
+	return is_tax( 'hp_tag' ) && ! is_admin();
 
 }
 
@@ -219,7 +219,7 @@ function helppress_is_kb_tag() {
  */
 function helppress_is_kb_search() {
 
-	return is_search() && get_query_var( 'hps' );
+	return is_search() && get_query_var( 'hps' ) && ! is_admin();
 
 }
 
