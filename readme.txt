@@ -51,6 +51,10 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 1.4.1, November 7, 2017 =
+* Tweak: CSS enhancements for breadcrumb styling.
+* Fix: Exclude admin area from context helper functions.
+
 = 1.4.0, September 25, 2017 =
 * New: Add option to use page template as knowledge base template.
 * New: Added search form to the top of the article items and article templates.
