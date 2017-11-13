@@ -2,7 +2,7 @@
 /**
  * Plugin Name: HelpPress
  * Description: A powerful and easy-to-use knowledge base plugin for WordPress, compatible with 99% of themes.
- * Version:     1.4.1
+ * Version:     1.4.2
  * Author:      helppresswp
  * Author URI:  https://helppresswp.com/
  * License:     GPL2+
@@ -21,7 +21,7 @@ function helppress_constants() {
 		'HELPPRESS_BASENAME' => plugin_basename( __FILE__ ),
 		'HELPPRESS_PATH'     => untrailingslashit( plugin_dir_path( __FILE__ ) ),
 		'HELPPRESS_URL'      => untrailingslashit( plugin_dir_url( __FILE__ ) ),
-		'HELPPRESS_VERSION'  => '1.4.1',
+		'HELPPRESS_VERSION'  => '1.4.2',
 	);
 
 	$constants = apply_filters( 'helppress_constants', $constants );

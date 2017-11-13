@@ -51,6 +51,10 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 1.4.2, November 13, 2017 =
+* New: Add link Settings page to the plugin's action links.
+* Fix: Fix user permissions for admin menu item and "View Live" link.
+
 = 1.4.1, November 7, 2017 =
 * Tweak: CSS enhancements for breadcrumb styling.
 * Fix: Exclude admin area from context helper functions.
