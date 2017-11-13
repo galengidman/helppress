@@ -240,15 +240,15 @@ msgstr ""
 msgid "Number of Suggestions"
 msgstr ""
 
-#: includes/class-helppress-settings.php:310
-msgid "View KB &rarr;"
+#: includes/class-helppress-settings.php:314
+msgid "View KB"
 msgstr ""
 
-#: includes/class-helppress-settings.php:336
+#: includes/class-helppress-settings.php:340
 msgid "HelpPress slugs are not compatible with Plain permalinks. You can fix this from the <a href=\"%s\">Permalinks Settings</a> page."
 msgstr ""
 
-#: includes/class-helppress-settings.php:354
+#: includes/class-helppress-settings.php:358
 msgid "Default Template"
 msgstr ""
 

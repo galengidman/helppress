@@ -306,10 +306,14 @@ class HelpPress_Settings {
 
 		global $submenu;
 
-		$url   = helppress_get_kb_url();
-		$label = esc_html__( 'View KB &rarr;', 'helppress' );
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			return;
+		}
 
-		$submenu['edit.php?post_type=hp_article'][] = array( $label, 'manage_options', $url );
+		$url   = helppress_get_kb_url();
+		$label = esc_html__( 'View KB', 'helppress' ) . ' &rarr;';
+
+		$submenu['edit.php?post_type=hp_article'][] = array( $label, 'edit_posts', $url );
 
 	}
 
