@@ -27,12 +27,34 @@ class HelpPress_Settings {
 	 */
 	public function __construct() {
 
+		add_filter( 'plugin_action_links_' . HELPPRESS_BASENAME, array( $this, 'action_link' ) );
+
 		add_action( 'tf_create_options', array( $this, 'register_settings' ) );
 		add_action( 'tf_save_admin_helppress', 'flush_rewrite_rules' );
 
 		add_action( 'admin_menu', array( $this, 'view_live_link' ) );
 
 		add_action( 'admin_notices', array( $this, 'permalink_structure_notice' ) );
+
+	}
+
+	/**
+	 * Adds "Settings" link to plugin action links.
+	 *
+	 * @access public
+	 * @since 1.4.2
+	 *
+	 * @param array $links Default action links.
+	 * @return array Action links.
+	 */
+	public function action_link( $links ) {
+
+		$url   = esc_url( admin_url( 'edit.php?post_type=hp_article&page=helppress' ) );
+		$label = esc_html__( 'Settings', 'helppress' );
+
+		$settings_link = array( "<a href='{$url}'>{$label}</a>" );
+
+		return array_merge( $settings_link, $links );
 
 	}
 

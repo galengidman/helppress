@@ -18,9 +18,10 @@
 function helppress_constants() {
 
 	$constants = array(
-		'HELPPRESS_VERSION' => '1.4.1',
-		'HELPPRESS_PATH'    => untrailingslashit( plugin_dir_path( __FILE__ ) ),
-		'HELPPRESS_URL'     => untrailingslashit( plugin_dir_url( __FILE__ ) ),
+		'HELPPRESS_BASENAME' => plugin_basename( __FILE__ ),
+		'HELPPRESS_PATH'     => untrailingslashit( plugin_dir_path( __FILE__ ) ),
+		'HELPPRESS_URL'      => untrailingslashit( plugin_dir_url( __FILE__ ) ),
+		'HELPPRESS_VERSION'  => '1.4.1',
 	);
 
 	$constants = apply_filters( 'helppress_constants', $constants );
