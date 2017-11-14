@@ -20,6 +20,15 @@ if ( ! class_exists( 'HelpPress_Settings' ) ) :
 class HelpPress_Settings {
 
 	/**
+	 * Stores the configuration for the Settings page.
+	 *
+	 * @access protected
+	 * @since 1.5.0
+	 * @var array
+	 */
+	protected $settings = array();
+
+	/**
 	 * Constructor.
 	 *
 	 * @access public
@@ -59,6 +68,46 @@ class HelpPress_Settings {
 	}
 
 	/**
+	 * Adds a tab to the Settings screen.
+	 *
+	 * @access private
+	 * @since 1.5.0
+	 *
+	 * @param integer $tab_index Array index of tab.
+	 * @param string $name Tab label.
+	 */
+	private function add_tab( $tab_index, $name ) {
+
+		$this->settings[ $tab_index ] = array(
+			'name'    => $name,
+			'options' => array(),
+		);
+
+	}
+
+	/**
+	 * Adds an option to the Settings screen.
+	 *
+	 * Can later disable option by returning `true` to
+	 * `helppress_disable_option_{id}` filter.
+	 *
+	 * @access private
+	 * @since 1.5.0
+	 *
+	 * @param integer $tab_index Array index of tab.
+	 * @param array $option Option args.
+	 */
+	private function add_option( $tab_index, $option ) {
+
+		$disabled = apply_filters( "helppress_disable_option_{$option['id']}", false );
+
+		if ( ! $disabled ) {
+			$this->settings[ $tab_index ]['options'][] = $option;
+		}
+
+	}
+
+	/**
 	 * Registers settings via the Titan Framework.
 	 *
 	 * @access public
@@ -66,34 +115,33 @@ class HelpPress_Settings {
 	 */
 	public function register_settings() {
 
-		$settings = array();
+		$settings = $this->settings;
 
 		// General -------------------------------------------------------------
 
-		$settings[10] = array(
-			'name'    => esc_html__( 'General', 'helppress' ),
-			'options' => array(),
-		);
+		$this->add_tab( 10, esc_html__( 'General', 'helppress' ) );
 
-		$settings[10]['options'][] = array(
-			'name' => esc_html__( 'Labels', 'helppress' ),
+		$this->add_option( 10, array(
 			'type' => 'heading',
-		);
+			'id'   => 'general_heading_labels',
+			'name' => esc_html__( 'Labels', 'helppress' ),
+		) );
 
-		$settings[10]['options'][] = array(
+		$this->add_option( 10, array(
 			'type'    => 'text',
 			'id'      => 'title',
 			'name'    => esc_html__( 'Knowledge Base Title', 'helppress' ),
 			'desc'    => esc_html__( 'You could rename the knowledge base to something else, such as “Documentation” or “Help Center.”', 'helppress' ),
 			'default' => helppress_get_option_default( 'title' ),
-		);
+		) );
 
-		$settings[10]['options'][] = array(
-			'name' => esc_html__( 'Queries', 'helppress' ),
+		$this->add_option( 10, array(
 			'type' => 'heading',
-		);
+			'id'   => 'general_heading_queries',
+			'name' => esc_html__( 'Queries', 'helppress' ),
+		) );
 
-		$settings[10]['options'][] = array(
+		$this->add_option( 10, array(
 			'type'    => 'select',
 			'id'      => 'orderby',
 			'name'    => esc_html__( 'Sort By', 'helppress' ),
@@ -106,9 +154,9 @@ class HelpPress_Settings {
 				'comment_count' => esc_html__( 'Comment count', 'helppress' ),
 			),
 			'default' => helppress_get_option_default( 'orderby' ),
-		);
+		) );
 
-		$settings[10]['options'][] = array(
+		$this->add_option( 10, array(
 			'type'    => 'select',
 			'id'      => 'order',
 			'name'    => esc_html__( 'Sort Order', 'helppress' ),
@@ -118,9 +166,9 @@ class HelpPress_Settings {
 				'DESC' => esc_html__( 'Decending', 'helppress' ),
 			),
 			'default' => helppress_get_option_default( 'order' ),
-		);
+		) );
 
-		$settings[10]['options'][] = array(
+		$this->add_option( 10, array(
 			'type'    => 'number',
 			'id'      => 'posts_per_page',
 			'name'    => esc_html__( 'Articles Per Page', 'helppress' ),
@@ -128,14 +176,15 @@ class HelpPress_Settings {
 			'default' => helppress_get_option_default( 'posts_per_page' ),
 			'min'     => 1,
 			'max'     => 25,
-		);
+		) );
 
-		$settings[10]['options'][] = array(
-			'name' => esc_html__( 'Slugs', 'helppress' ),
+		$this->add_option( 10, array(
 			'type' => 'heading',
-		);
+			'id'   => 'general_heading_slugs',
+			'name' => esc_html__( 'Slugs', 'helppress' ),
+		) );
 
-		$settings[10]['options'][] = array(
+		$this->add_option( 10, array(
 			'type'               => 'text',
 			'id'                 => 'knowledge_base_slug',
 			'name'               => esc_html__( 'Knowledge Base URL Slug', 'helppress' ),
@@ -145,9 +194,9 @@ class HelpPress_Settings {
 			),
 			'default'            => helppress_get_option_default( 'knowledge_base_slug' ),
 			'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
-		);
+		) );
 
-		$settings[10]['options'][] = array(
+		$this->add_option( 10, array(
 			'type'               => 'text',
 			'id'                 => 'category_slug',
 			'name'               => esc_html__( 'Category URL Slug', 'helppress' ),
@@ -157,9 +206,9 @@ class HelpPress_Settings {
 			),
 			'default'            => helppress_get_option_default( 'category_slug' ),
 			'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
-		);
+		) );
 
-		$settings[10]['options'][] = array(
+		$this->add_option( 10, array(
 			'type'               => 'text',
 			'id'                 => 'tag_slug',
 			'name'               => esc_html__( 'Tag URL Slug', 'helppress' ),
@@ -169,30 +218,28 @@ class HelpPress_Settings {
 			),
 			'default'            => helppress_get_option_default( 'tag_slug' ),
 			'sanitize_callbacks' => array( 'sanitize_title', 'helppress_sanitize_slug' ),
-		);
+		) );
 
 		// Display -------------------------------------------------------------
 
-		$settings[20] = array(
-			'name'    => esc_html__( 'Display', 'helppress' ),
-			'options' => array(),
-		);
+		$this->add_tab( 20, esc_html__( 'Display', 'helppress' ) );
 
-		$settings[20]['options'][] = array(
-			'name' => esc_html__( 'Layout', 'helppress' ),
+		$this->add_option( 20, array(
 			'type' => 'heading',
-		);
+			'id'   => 'display_heading_layout',
+			'name' => esc_html__( 'Layout', 'helppress' ),
+		) );
 
-		$settings[20]['options'][] = array(
+		$this->add_option( 20, array(
 			'type'    => 'select',
 			'id'      => 'page_template',
 			'name'    => esc_html__( 'Page Template', 'helppress' ),
 			'desc'    => esc_html__( 'The page template used to display the knowledge base. This may be overridden by a theme using custom HelpPress templates.', 'helppress' ),
 			'options' => $this->get_page_templates(),
 			'default' => helppress_get_option_default( 'page_template' ),
-		);
+		) );
 
-		$settings[20]['options'][] = array(
+		$this->add_option( 20, array(
 			'type'    => 'radio-image',
 			'id'      => 'columns',
 			'name'    => esc_html__( 'Columns', 'helppress' ),
@@ -203,116 +250,115 @@ class HelpPress_Settings {
 				3 => esc_url( HELPPRESS_URL . '/assets/img/columns-3.svg' ),
 			),
 			'default' => helppress_get_option_default( 'columns' ),
-		);
+		) );
 
-		$settings[20]['options'][] = array(
-			'name' => esc_html__( 'CSS', 'helppress' ),
+		$this->add_option( 20, array(
 			'type' => 'heading',
-		);
+			'id'   => 'display_heading_css',
+			'name' => esc_html__( 'CSS', 'helppress' ),
+		) );
 
-		$settings[20]['options'][] = array(
+		$this->add_option( 20, array(
 			'type' => 'note',
+			'id'   => 'custom_css',
 			'name' => 'Custom CSS',
 			'desc' => sprintf(
 				__( 'Add custom CSS using the “Additional CSS” feature in the <a href="%s">WordPress Customizer</a>.', 'helppress' ),
 				esc_url( admin_url( 'customize.php' ) )
 			),
-		);
+		) );
 
-		$settings[20]['options'][] = array(
+		$this->add_option( 20, array(
 			'type'    => 'checkbox',
 			'id'      => 'disable_css',
 			'name'    => esc_html__( 'Disable CSS', 'helppress' ),
 			'desc'    => esc_html__( 'You can disable the built-in CSS entirely if want to use your own.', 'helppress' ),
 			'default' => helppress_get_option_default( 'disable_css' ),
-		);
+		) );
 
 		// Breadcrumb ----------------------------------------------------------
 
-		$settings[30] = array(
-			'name'    => esc_html__( 'Breadcrumb', 'helppress' ),
-			'options' => array(),
-		);
+		$this->add_tab( 30, esc_html__( 'Breadcrumb', 'helppress' ) );
 
-		$settings[30]['options'][] = array(
-			'name' => esc_html__( 'Settings', 'helppress' ),
+		$this->add_option( 30, array(
 			'type' => 'heading',
-		);
+			'id'   => 'breadcrumb_heading_settings',
+			'name' => esc_html__( 'Settings', 'helppress' ),
+		) );
 
-		$settings[30]['options'][] = array(
+		$this->add_option( 30, array(
 			'type'    => 'enable',
 			'id'      => 'breadcrumb',
 			'name'    => esc_html__( 'Breadcrumb', 'helppress' ),
 			'desc'    => esc_html__( 'Turn the breadcrumb on or off globally.', 'helppress' ),
 			'default' => helppress_get_option_default( 'breadcrumb' ),
-		);
+		) );
 
-		$settings[30]['options'][] = array(
+		$this->add_option( 30, array(
 			'type'    => 'enable',
 			'id'      => 'breadcrumb_home',
 			'name'    => esc_html__( 'Home Link', 'helppress' ),
 			'desc'    => esc_html__( 'Start the breadcrumb with a link to the home page.', 'helppress' ),
 			'default' => helppress_get_option_default( 'breadcrumb_home' ),
-		);
+		) );
 
-		$settings[30]['options'][] = array(
+		$this->add_option( 30, array(
 			'type'    => 'text',
 			'id'      => 'breadcrumb_sep',
 			'name'    => esc_html__( 'Separator', 'helppress' ),
 			'desc'    => esc_html__( 'Text to use to separate breadcrumb links.', 'helppress' ),
 			'default' => helppress_get_option_default( 'breadcrumb_sep' ),
-		);
+		) );
 
 		// Search --------------------------------------------------------------
 
-		$settings[40] = array(
-			'name'    => esc_html__( 'Search', 'helppress' ),
-			'options' => array(),
-		);
+		$this->add_tab( 40, esc_html__( 'Search', 'helppress' ) );
 
-		$settings[40]['options'][] = array(
-			'name' => esc_html__( 'Settings', 'helppress' ),
+		$this->add_option( 40, array(
 			'type' => 'heading',
-		);
+			'id'   => 'search_heading_settings',
+			'name' => esc_html__( 'Settings', 'helppress' ),
+		) );
 
-		$settings[40]['options'][] = array(
+		$this->add_option( 40, array(
 			'type'    => 'enable',
 			'id'      => 'search',
 			'name'    => esc_html__( 'Search', 'helppress' ),
 			'desc'    => esc_html__( 'Turn search on or off globally.', 'helppress' ),
 			'default' => helppress_get_option_default( 'search' ),
-		);
+		) );
 
-		$settings[40]['options'][] = array(
+		$this->add_option( 40, array(
 			'type'    => 'text',
 			'id'      => 'search_placeholder',
 			'name'    => esc_html__( 'Placeholder Text', 'helppress' ),
 			'desc'    => esc_html__( 'Help text to show in the search box.', 'helppress' ),
 			'default' => helppress_get_option_default( 'search_placeholder' ),
-		);
+		) );
 
-		$settings[40]['options'][] = array(
+		$this->add_option( 40, array(
 			'type'    => 'enable',
 			'id'      => 'search_autofocus',
 			'name'    => esc_html__( 'Autofocus Search', 'helppress' ),
 			'desc'    => esc_html__( 'Focus the cursor in the search box when the page loads.', 'helppress' ),
 			'default' => helppress_get_option_default( 'search_autofocus' ),
-		);
+		) );
 
-		$settings[40]['options'][] = array(
-			'name' => esc_html__( 'Suggestions', 'helppress' ),
+		$this->add_option( 40, array(
 			'type' => 'heading',
-		);
+			'id'   => 'search_heading_suggestions',
+			'name' => esc_html__( 'Suggestions', 'helppress' ),
+		) );
 
-		$settings[40]['options'][] = array(
+		$this->add_option( 40, array(
 			'type'    => 'enable',
 			'id'      => 'search_suggestions',
 			'name'    => esc_html__( 'Live Suggestions', 'helppress' ),
 			'desc'    => esc_html__( 'Suggest relevant articles to users as they enter search terms.', 'helppress' ),
 			'default' => helppress_get_option_default( 'search_suggestions' ),
-		);
+		) );
 
-		$settings[40]['options'][] = array(
+		$this->add_option( 40, array(
 			'type'    => 'number',
 			'id'      => 'search_suggestions_number',
 			'name'    => esc_html__( 'Number of Suggestions', 'helppress' ),
@@ -320,9 +366,9 @@ class HelpPress_Settings {
 			'default' => helppress_get_option_default( 'search_suggestions_number' ),
 			'min'     => 1,
 			'max'     => 10,
-		);
+		) );
 
-		$settings = apply_filters( 'helppress_settings', $settings );
+		$settings = apply_filters( 'helppress_settings', $this->settings );
 
 		ksort( $settings );
 
