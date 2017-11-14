@@ -115,8 +115,6 @@ class HelpPress_Settings {
 	 */
 	public function register_settings() {
 
-		$settings = $this->settings;
-
 		// General -------------------------------------------------------------
 
 		$this->add_tab( 10, esc_html__( 'General', 'helppress' ) );
