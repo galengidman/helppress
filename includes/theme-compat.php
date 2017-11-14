@@ -194,8 +194,11 @@ function helppress_get_compat_templates() {
 		'index.php',
 	);
 
-	if ( helppress_get_option( 'page_template' ) !== 'default' ) {
-		$templates = array_merge( array( helppress_get_option( 'page_template' ) ), $templates );
+	$page_template         = helppress_get_option( 'page_template' );
+	$disable_page_template = apply_filters( 'helppress_disable_page_template', false );
+
+	if ( $page_template !== 'default' && ! $disable_page_template ) {
+		$templates = array_merge( array( $page_template ), $templates );
 	}
 
 	return apply_filters( 'helppress_get_compat_templates', $templates );
