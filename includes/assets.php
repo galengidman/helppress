@@ -35,7 +35,10 @@ function helppress_assets() {
 		'admin_ajax' => esc_url( admin_url( 'admin-ajax.php' ) ),
 	) );
 
-	if ( ! helppress_get_option( 'disable_css' ) ) {
+	$disable_css = apply_filters( 'helppress_disable_css', false );
+	$disable_css_option = helppress_get_option( 'disable_css' );
+
+	if ( ! $disable_css && ! $disable_css_option ) {
 		wp_enqueue_style(
 			'helppress',
 			esc_url( HELPPRESS_URL . '/assets/css/helppress.css' ),
