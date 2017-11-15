@@ -24,6 +24,9 @@ function helppress_get_option_defaults() {
 		// Text
 		'title'                     => esc_html__( 'Knowledge Base', 'helppress' ),
 
+		// Homepage
+		'show_on_front'             => false,
+
 		// Queries
 		'orderby'                   => 'date',
 		'order'                     => 'ASC',

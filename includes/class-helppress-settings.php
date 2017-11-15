@@ -44,6 +44,7 @@ class HelpPress_Settings {
 		add_action( 'admin_menu', array( $this, 'view_live_link' ) );
 
 		add_action( 'admin_notices', array( $this, 'permalink_structure_notice' ) );
+		add_action( 'admin_notices', array( $this, 'show_on_front_notice' ) );
 
 	}
 
@@ -137,6 +138,14 @@ class HelpPress_Settings {
 			'type' => 'heading',
 			'id'   => 'general_heading_queries',
 			'name' => esc_html__( 'Queries', 'helppress' ),
+		) );
+
+		$this->add_option( 10, array(
+			'type'    => 'enable',
+			'id'      => 'show_on_front',
+			'name'    => esc_html__( 'Show on Homepage', 'helppress' ),
+			'desc'    => esc_html__( 'Show the knowledge base on the homepage, replacing the current posts or static page.', 'helppress' ),
+			'default' => helppress_get_option_default( 'home' ),
 		) );
 
 		$this->add_option( 10, array(
@@ -437,6 +446,36 @@ class HelpPress_Settings {
 				esc_url( admin_url( 'options-permalink.php' ) )
 			) )
 			->persistentlyDismissible()
+			->show();
+
+	}
+
+	/**
+	 * Displays a warning on static front page when HelpPress is configured to show on front.
+	 *
+	 * @access public
+	 * @since 1.5.0
+	 */
+	public function show_on_front_notice() {
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
+		if ( ! helppress_get_option( 'show_on_front' ) ) {
+			return;
+		}
+
+		if ( get_the_ID() != get_option( 'page_on_front' ) ) {
+			return;
+		}
+
+		AdminNotice::create()
+			->warning()
+			->html( sprintf(
+				__( 'You have configured HelpPress to display on the homepage of your site, overriding this. This behavior can be disabled from the <a href="">HelpPress Settings</a> page.', 'helppress' ),
+				esc_url( admin_url( 'options-reading.php' ) )
+			) )
 			->show();
 
 	}

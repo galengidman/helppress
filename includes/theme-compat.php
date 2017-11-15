@@ -403,6 +403,21 @@ function helppress_pre_get_posts( $query ) {
 		return $query;
 	}
 
+	if ( helppress_get_option( 'show_on_front' ) ) {
+		$front_page = get_option( 'page_on_front' );
+
+		if ( $front_page && $front_page == $query->get( 'page_id' ) || is_home() ) {
+			$query->set( 'post_type', 'hp_article' );
+			$query->set( 'page_id', 0 );
+
+			$query->is_archive           = true;
+			$query->is_home              = false;
+			$query->is_page              = false;
+			$query->is_post_type_archive = true;
+			$query->is_singular          = false;
+		}
+	}
+
 	if (
 		helppress_is_kb_archive()
 		|| helppress_is_kb_category()
