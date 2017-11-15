@@ -76,16 +76,20 @@
 
 					<?php endif; ?>
 
-					<?php do_action( 'helppress_before_archive_more' ); ?>
+					<?php if ( helppress_get_option( 'posts_per_page' ) > -1 ) : ?>
 
-					<p class="helppress-archive__more">
-						<a href="<?php echo esc_url( get_term_link( $category ) ) ?>">
-							<span><?php esc_html_e( 'View more', 'helppress' ); ?></span>
-							<?php echo helppress_genericon( 'next' ); ?>
-						</a>
-					</p>
+						<?php do_action( 'helppress_before_archive_more' ); ?>
 
-					<?php do_action( 'helppress_after_archive_more' ); ?>
+						<p class="helppress-archive__more">
+							<a href="<?php echo esc_url( get_term_link( $category ) ) ?>">
+								<span><?php esc_html_e( 'View more', 'helppress' ); ?></span>
+								<?php echo helppress_genericon( 'next' ); ?>
+							</a>
+						</p>
+
+						<?php do_action( 'helppress_after_archive_more' ); ?>
+
+					<?php endif; ?>
 
 					<?php do_action( 'helppress_after_archive_cat_content' ); ?>
 

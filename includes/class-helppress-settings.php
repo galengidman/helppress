@@ -179,9 +179,12 @@ class HelpPress_Settings {
 			'type'    => 'number',
 			'id'      => 'posts_per_page',
 			'name'    => esc_html__( 'Articles per Page', 'helppress' ),
-			'desc'    => esc_html__( '', 'helppress' ),
+			'desc'    => sprintf(
+				__( '<code>-1</code> = no pagination, <code>0</code> = site default from <a href="%s">Reading Settings</a>.', 'helppress' ),
+				esc_url( admin_url( 'options-reading.php' ) )
+			),
 			'default' => helppress_get_option_default( 'posts_per_page' ),
-			'min'     => 1,
+			'min'     => -1,
 			'max'     => 25,
 		) );
 
@@ -369,7 +372,6 @@ class HelpPress_Settings {
 			'type'    => 'number',
 			'id'      => 'search_suggestions_number',
 			'name'    => esc_html__( 'Number of Suggestions', 'helppress' ),
-			'desc'    => esc_html__( '', 'helppress' ),
 			'default' => helppress_get_option_default( 'search_suggestions_number' ),
 			'min'     => 1,
 			'max'     => 10,

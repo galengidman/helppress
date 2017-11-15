@@ -1,13 +1,17 @@
-<?php do_action( 'helppress_before_post_nav' ); ?>
+<?php if ( helppress_get_option( 'posts_per_page' ) > -1 ) : ?>
 
-<nav class="helppress-post-nav">
+	<?php do_action( 'helppress_before_post_nav' ); ?>
 
-	<?php do_action( 'helppress_before_post_nav_content' ); ?>
+	<nav class="helppress-post-nav">
 
-	<?php posts_nav_link(); ?>
+		<?php do_action( 'helppress_before_post_nav_content' ); ?>
 
-	<?php do_action( 'helppress_after_post_nav_content' ); ?>
+		<?php posts_nav_link(); ?>
 
-</nav>
+		<?php do_action( 'helppress_after_post_nav_content' ); ?>
 
-<?php do_action( 'helppress_after_post_nav' );
+	</nav>
+
+	<?php do_action( 'helppress_after_post_nav' ); ?>
+
+<?php endif;
