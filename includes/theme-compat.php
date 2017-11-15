@@ -403,6 +403,11 @@ function helppress_pre_get_posts( $query ) {
 		return $query;
 	}
 
+	/**
+	 * Modifies query to show front page if enabled in settings.
+	 *
+	 * @since 1.5.0
+	 */
 	if ( helppress_get_option( 'show_on_front' ) ) {
 		$front_page = get_option( 'page_on_front' );
 
@@ -418,17 +423,22 @@ function helppress_pre_get_posts( $query ) {
 		}
 	}
 
-	if (
-		helppress_is_kb_archive()
-		|| helppress_is_kb_category()
-		|| helppress_is_kb_tag()
-		|| helppress_is_kb_search()
-		) {
+	/**
+	 * Updates order and ppp params whatever is configured in settings on KB pages.
+	 *
+	 * @since 1.0.0
+	 */
+	if ( helppress_is_kb_page() && ! helppress_is_kb_article() ) {
 		$query->set( 'orderby',        helppress_get_option( 'orderby' ) );
 		$query->set( 'order',          helppress_get_option( 'order' ) );
 		$query->set( 'posts_per_page', helppress_get_option( 'posts_per_page' ) );
 	}
 
+	/**
+	 * Limits KB search to only articles.
+	 *
+	 * @since 1.0.0
+	 */
 	if ( helppress_is_kb_search() ) {
 		$query->set( 'post_type', 'hp_article' );
 	}
