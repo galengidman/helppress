@@ -300,7 +300,7 @@ function helppress_page_num() {
  *
  * @since 1.5.0
  *
- * @return bool Whether HelpPress is paginated.
+ * @return boolean Whether HelpPress is paginated.
  */
 function helppress_is_paginated() {
 
