@@ -178,7 +178,7 @@ class HelpPress_Settings {
 		$this->add_option( 10, array(
 			'type'    => 'number',
 			'id'      => 'posts_per_page',
-			'name'    => esc_html__( 'Articles Per Page', 'helppress' ),
+			'name'    => esc_html__( 'Articles per Page', 'helppress' ),
 			'desc'    => esc_html__( '', 'helppress' ),
 			'default' => helppress_get_option_default( 'posts_per_page' ),
 			'min'     => 1,
@@ -304,8 +304,8 @@ class HelpPress_Settings {
 		$this->add_option( 30, array(
 			'type'    => 'enable',
 			'id'      => 'breadcrumb_home',
-			'name'    => esc_html__( 'Home Link', 'helppress' ),
-			'desc'    => esc_html__( 'Start the breadcrumb with a link to the home page.', 'helppress' ),
+			'name'    => esc_html__( 'Homepage Link', 'helppress' ),
+			'desc'    => esc_html__( 'Start the breadcrumb with a link to the homepage.', 'helppress' ),
 			'default' => helppress_get_option_default( 'breadcrumb_home' ),
 		) );
 
