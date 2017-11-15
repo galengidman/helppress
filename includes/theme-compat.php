@@ -411,7 +411,7 @@ function helppress_pre_get_posts( $query ) {
 	if ( helppress_get_option( 'show_on_front' ) ) {
 		$front_page = get_option( 'page_on_front' );
 
-		if ( $front_page && $front_page == $query->get( 'page_id' ) || is_home() ) {
+		if ( $front_page && $front_page == $query->get( 'page_id' ) || is_front_page() ) {
 			$query->set( 'post_type', 'hp_article' );
 			$query->set( 'page_id', 0 );
 
