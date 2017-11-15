@@ -294,3 +294,16 @@ function helppress_page_num() {
 	return get_query_var( 'paged' ) ? get_query_var( 'paged' ) : ( get_query_var( 'page' ) ? get_query_var( 'page' ) : 1 );
 
 }
+
+/**
+ * Returns whether HelpPress is configured to return -1 (all) posts_per_page or it is paginated.
+ *
+ * @since 1.5.0
+ *
+ * @return bool Whether HelpPress is paginated.
+ */
+function helppress_is_paginated() {
+
+	return helppress_get_option( 'posts_per_page' ) > -1;
+
+}

@@ -1,4 +1,4 @@
-<?php if ( helppress_get_option( 'posts_per_page' ) > -1 ) : ?>
+<?php if ( helppress_is_paginated() ) : ?>
 
 	<?php do_action( 'helppress_before_post_nav' ); ?>
 
