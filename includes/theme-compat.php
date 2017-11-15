@@ -412,8 +412,9 @@ function helppress_pre_get_posts( $query ) {
 		$front_page = get_option( 'page_on_front' );
 
 		if ( $front_page && $front_page == $query->get( 'page_id' ) || is_front_page() ) {
+			$query->set( 'page_id',   0 );
+			$query->set( 'paged',     helppress_page_num() );
 			$query->set( 'post_type', 'hp_article' );
-			$query->set( 'page_id', 0 );
 
 			$query->is_archive           = true;
 			$query->is_home              = false;
