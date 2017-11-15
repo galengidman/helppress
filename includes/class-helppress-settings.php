@@ -430,6 +430,10 @@ class HelpPress_Settings {
 	 */
 	public function permalink_structure_notice() {
 
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
 		if ( get_option( 'permalink_structure' ) !== '' ) {
 			return;
 		}
