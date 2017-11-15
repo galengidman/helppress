@@ -133,7 +133,13 @@ endif;
  */
 function helppress_get_kb_url() {
 
-	return get_post_type_archive_link( 'hp_article' );
+	if ( helppress_get_option( 'show_on_front' ) ) {
+		$url = home_url( '/' );
+	} else {
+		$url = get_post_type_archive_link( 'hp_article' );
+	}
+
+	return $url;
 
 }
 
