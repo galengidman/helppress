@@ -470,15 +470,16 @@ class HelpPress_Settings {
 			return;
 		}
 
-		if ( get_the_ID() != get_option( 'page_on_front' ) ) {
+		$screen = get_current_screen();
+		if ( ! ( ( $screen->id === 'page' && get_the_ID() == get_option( 'page_on_front' ) ) || $screen->id === 'options-reading' ) ) {
 			return;
 		}
 
 		AdminNotice::create()
 			->warning()
 			->html( sprintf(
-				__( 'You have configured HelpPress to display on the homepage of your site, overriding this. This behavior can be disabled from the <a href="">HelpPress Settings</a> page.', 'helppress' ),
-				esc_url( admin_url( 'options-reading.php' ) )
+				__( 'You have configured HelpPress to display on the homepage of your site, overriding this. This behavior can be disabled from <a href="%s">HelpPress Settings</a>.', 'helppress' ),
+				esc_url( admin_url( 'edit.php?post_type=hp_article&page=helppress' ) )
 			) )
 			->show();
 
