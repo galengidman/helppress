@@ -428,7 +428,7 @@ function helppress_pre_get_posts( $query ) {
 	 *
 	 * @since 1.0.0
 	 */
-	if ( helppress_is_kb_page() && ! helppress_is_kb_article() ) {
+	if ( is_archive() && helppress_is_kb_page() ) {
 		$query->set( 'orderby',        helppress_get_option( 'orderby' ) );
 		$query->set( 'order',          helppress_get_option( 'order' ) );
 		$query->set( 'posts_per_page', helppress_get_option( 'posts_per_page' ) );
@@ -440,7 +440,8 @@ function helppress_pre_get_posts( $query ) {
 	 * @since 1.0.0
 	 */
 	if ( helppress_is_kb_search() ) {
-		$query->set( 'post_type', 'hp_article' );
+		$query->set( 'post_type',      'hp_article' );
+		$query->set( 'posts_per_page', helppress_get_option( 'posts_per_page' ) );
 	}
 
 	return $query;
