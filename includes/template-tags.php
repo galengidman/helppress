@@ -307,3 +307,17 @@ function helppress_is_paginated() {
 	return helppress_get_option( 'posts_per_page' ) > -1;
 
 }
+
+/**
+ * Returns whether WordPress is debug mode.
+ *
+ * @see WP_DEBUG
+ * @since 1.5.0
+ *
+ * @return boolean WordPress debug mode.
+ */
+function helppress_is_debug() {
+
+	return defined( 'WP_DEBUG' ) && WP_DEBUG;
+
+}
