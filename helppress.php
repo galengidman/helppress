@@ -53,7 +53,7 @@ function helppress_includes() {
 		'/includes/class-helppress-breadcrumb.php',
 		'/includes/class-helppress-demo-content.php',
 		'/includes/class-helppress-menu-archive-link.php',
-		'/includes/class-helppress-search-suggestions.php',
+		'/includes/class-helppress-search.php',
 		'/includes/class-helppress-settings.php',
 		'/includes/class-helppress-template-loader.php',
 
