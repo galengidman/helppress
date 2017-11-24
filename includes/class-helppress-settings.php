@@ -23,7 +23,7 @@ class HelpPress_Settings {
 	 * Stores the configuration for the Settings page.
 	 *
 	 * @access protected
-	 * @since 1.5.0
+	 * @since 2.0.0
 	 * @var array
 	 */
 	protected $settings = array();
@@ -72,7 +72,7 @@ class HelpPress_Settings {
 	 * Adds a tab to the Settings screen.
 	 *
 	 * @access protected
-	 * @since 1.5.0
+	 * @since 2.0.0
 	 *
 	 * @param integer $tab_index Array index of tab.
 	 * @param string $name Tab label.
@@ -93,7 +93,7 @@ class HelpPress_Settings {
 	 * `helppress_disable_option_{id}` filter.
 	 *
 	 * @access protected
-	 * @since 1.5.0
+	 * @since 2.0.0
 	 *
 	 * @param integer $tab_index Array index of tab.
 	 * @param array $option Option args.
@@ -460,7 +460,7 @@ class HelpPress_Settings {
 	 * Displays a warning on static front page when HelpPress is configured to show on front.
 	 *
 	 * @access public
-	 * @since 1.5.0
+	 * @since 2.0.0
 	 */
 	public function show_on_front_notice() {
 

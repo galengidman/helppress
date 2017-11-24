@@ -298,7 +298,7 @@ function helppress_page_num() {
 /**
  * Returns whether HelpPress is configured to return -1 (all) posts_per_page or it is paginated.
  *
- * @since 1.5.0
+ * @since 2.0.0
  *
  * @return boolean Whether HelpPress is paginated.
  */
@@ -312,7 +312,7 @@ function helppress_is_paginated() {
  * Returns whether WordPress is debug mode.
  *
  * @see WP_DEBUG
- * @since 1.5.0
+ * @since 2.0.0
  *
  * @return boolean WordPress debug mode.
  */
