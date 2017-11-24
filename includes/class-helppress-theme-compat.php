@@ -110,7 +110,7 @@ class HelpPress_Theme_Compat {
 	 */
 	public function template_include( $template ) {
 
-		if ( ! helppress_is_kb_page() ) {
+		if ( ! helppress_is_kb() ) {
 			return $template;
 		}
 
@@ -220,7 +220,7 @@ class HelpPress_Theme_Compat {
 		 *
 		 * @since 1.0.0
 		 */
-		if ( is_archive() && helppress_is_kb_page() ) {
+		if ( is_archive() && helppress_is_kb() ) {
 			$query->set( 'orderby',        helppress_get_option( 'orderby' ) );
 			$query->set( 'order',          helppress_get_option( 'order' ) );
 			$query->set( 'posts_per_page', helppress_get_option( 'posts_per_page' ) );
@@ -394,13 +394,13 @@ class HelpPress_Theme_Compat {
 	 */
 	public function body_classes( $classes ) {
 
-		if ( helppress_is_kb_page() ) {
+		if ( helppress_is_kb() ) {
 			$classes[] = 'helppress';
 			$classes[] = sanitize_html_class( 'helppress-' . helppress_get_kb_context() );
 		}
 
 		// Mimic the WordPress body classes for page templates to help with theme styling
-		if ( helppress_is_kb_page() && helppress_get_option( 'page_template' ) !== 'default' ) {
+		if ( helppress_is_kb() && helppress_get_option( 'page_template' ) !== 'default' ) {
 
 			$classes[] = 'page-template';
 

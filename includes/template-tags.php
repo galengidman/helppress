@@ -232,11 +232,11 @@ function helppress_is_kb_search() {
 /**
  * Returns whether KB page.
  *
- * @since 1.0.0
+ * @since 2.0.0
  *
  * @return boolean
  */
-function helppress_is_kb_page() {
+function helppress_is_kb() {
 
 	return (bool) helppress_get_kb_context();
 
