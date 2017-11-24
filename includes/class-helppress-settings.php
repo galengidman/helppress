@@ -71,13 +71,13 @@ class HelpPress_Settings {
 	/**
 	 * Adds a tab to the Settings screen.
 	 *
-	 * @access private
+	 * @access protected
 	 * @since 1.5.0
 	 *
 	 * @param integer $tab_index Array index of tab.
 	 * @param string $name Tab label.
 	 */
-	private function add_tab( $tab_index, $name ) {
+	protected function add_tab( $tab_index, $name ) {
 
 		$this->settings[ $tab_index ] = array(
 			'name'    => $name,
@@ -92,13 +92,13 @@ class HelpPress_Settings {
 	 * Can later disable option by returning `true` to
 	 * `helppress_disable_option_{id}` filter.
 	 *
-	 * @access private
+	 * @access protected
 	 * @since 1.5.0
 	 *
 	 * @param integer $tab_index Array index of tab.
 	 * @param array $option Option args.
 	 */
-	private function add_option( $tab_index, $option ) {
+	protected function add_option( $tab_index, $option ) {
 
 		$disabled = apply_filters( "helppress_disable_option_{$option['id']}", false );
 
