@@ -155,9 +155,14 @@ class HelpPress_Theme_Compat {
 					),
 					'post_content' => helppress_buffer_template_part( 'parts/helppress-content-search' ),
 				) );
+
+			$context = helppress_get_kb_context();
+
+			if ( in_array( $context, array( 'category', 'tag' ) ) ) {
+				$this->add_compat_template( 'helppress/helppress-taxonomy.php' );
 			}
 
-			$this->add_compat_template( 'helppress/helppress-' . helppress_get_kb_context() . '.php' );
+			$this->add_compat_template( "helppress/helppress-{$context}.php" );
 
 		}
 
