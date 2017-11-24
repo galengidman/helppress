@@ -321,3 +321,44 @@ function helppress_is_debug() {
 	return defined( 'WP_DEBUG' ) && WP_DEBUG;
 
 }
+
+/**
+ * Outputs a template part similar to `get_template_part()`, but checks the following locations:
+ *
+ * - `[child-theme]/helppress/$slug-$name.php`
+ * - `[parent-theme]/helppress/$slug-$name.php`
+ * - `[plugin]/templates/$slug-$name.php`
+ *
+ * @see HelpPress_Template_Loader
+ * @since 1.0.0
+ *
+ * @param string $slug Template slug.
+ * @param string $name Template name.
+ */
+function helppress_get_template_part( $slug, $name = null ) {
+
+	$templates = new HelpPress_Template_Loader();
+
+	$templates->get_template_part( $slug, $name );
+
+}
+
+/**
+ * Returns the output buffered result of `helppress_get_template_part()` with the same params.
+ *
+ * @see helppress_get_template_part()
+ * @since 1.0.0
+ *
+ * @param string $slug Template slug.
+ * @param string $name Template name.
+ * @return string Output of template part.
+ */
+function helppress_buffer_template_part( $slug, $name = null ) {
+
+	ob_start();
+
+	helppress_get_template_part( $slug, $name );
+
+	return ob_get_clean();
+
+}
