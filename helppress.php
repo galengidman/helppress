@@ -56,6 +56,7 @@ function helppress_includes() {
 		'/includes/class-helppress-search.php',
 		'/includes/class-helppress-settings.php',
 		'/includes/class-helppress-template-loader.php',
+		'/includes/class-helppress-theme-compat.php',
 
 		// General
 		'/includes/assets.php',
@@ -64,7 +65,6 @@ function helppress_includes() {
 		'/includes/post-types.php',
 		'/includes/taxonomies.php',
 		'/includes/template-tags.php',
-		'/includes/theme-compat.php',
 
 	);
 
