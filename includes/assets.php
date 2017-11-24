@@ -17,19 +17,18 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function helppress_assets() {
 
-	$js_postfix  = helppress_is_debug() ? '.js'  : '.min.js';
-	$css_postfix = helppress_is_debug() ? '.css' : '.min.css';
+	$min = helppress_is_debug() ? ''  : '.min';
 
 	wp_enqueue_script(
 		'jquery-devbridge-autocomplete',
-		esc_url( HELPPRESS_URL . "/assets/vendor/jquery.autocomplete{$js_postfix}" ),
+		esc_url( HELPPRESS_URL . "/assets/vendor/jquery.autocomplete{$min}.js" ),
 		array( 'jquery' ),
 		HELPPRESS_VERSION
 	);
 
 	wp_enqueue_script(
 		'helppress',
-		esc_url( HELPPRESS_URL . "/assets/dist/helppress{$js_postfix}" ),
+		esc_url( HELPPRESS_URL . "/assets/dist/helppress{$min}.js" ),
 		array( 'jquery', 'jquery-devbridge-autocomplete' ),
 		HELPPRESS_VERSION
 	);
@@ -44,7 +43,7 @@ function helppress_assets() {
 	if ( ! $disable_css && ! $disable_css_option ) {
 		wp_enqueue_style(
 			'helppress',
-			esc_url( HELPPRESS_URL . "/assets/dist/helppress{$css_postfix}" ),
+			esc_url( HELPPRESS_URL . "/assets/dist/helppress{$min}.css" ),
 			array(),
 			HELPPRESS_VERSION
 		);
