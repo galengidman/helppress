@@ -7,7 +7,6 @@
  * Author URI:  https://helppresswp.com/
  * License:     GPL2+
  * Text Domain: helppress
- * Domain Path: /languages/
  */
 
 define( 'HELPPRESS_VERSION',  '2.0.0' );
