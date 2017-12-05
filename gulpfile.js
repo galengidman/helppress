@@ -9,7 +9,6 @@ var rename        = require('gulp-rename');
 var sass          = require('gulp-sass');
 var shell         = require('gulp-shell');
 var uglify        = require('gulp-uglify');
-var wpPot         = require('gulp-wp-pot');
 var zip           = require('gulp-zip');
 
 var pkg = JSON.parse(fs.readFileSync('package.json'));
@@ -48,16 +47,7 @@ gulp.task('default', ['dev']);
 
 // RELEASE ---------------------------------------------------------------------
 
-gulp.task('translate', function() {
-	return gulp.src('**/*.php')
-		.pipe(wpPot({
-			package: 'HelpPress',
-			domain:  'helppress',
-		}))
-		.pipe(gulp.dest('languages/helppress.pot'));
-});
-
-gulp.task('copy', ['translate'], function() {
+gulp.task('copy', function() {
 	return gulp.src([
 			'**',
 			'!composer.json',
