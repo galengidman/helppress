@@ -2,7 +2,7 @@
 /**
  * Plugin Name: HelpPress
  * Description: A powerful and easy-to-use knowledge base plugin for WordPress, compatible with 99% of themes.
- * Version:     1.4.2
+ * Version:     2.0.0
  * Author:      helppresswp
  * Author URI:  https://helppresswp.com/
  * License:     GPL2+
@@ -10,84 +10,52 @@
  * Domain Path: /languages/
  */
 
-/**
- * Registers plugin constants.
- *
- * @since 1.0.0
- */
-function helppress_constants() {
+define( 'HELPPRESS_VERSION',  '2.0.0' );
+define( 'HELPPRESS_FILE',     __FILE__ );
+define( 'HELPPRESS_PATH',     plugin_dir_path( HELPPRESS_FILE ) );
+define( 'HELPPRESS_URL',      plugin_dir_url( HELPPRESS_FILE ) );
+define( 'HELPPRESS_BASENAME', plugin_basename( HELPPRESS_FILE ) );
+define( 'HELPPRESS_MIN_PHP',  '5.4' );
+define( 'HELPPRESS_MIN_WP',   '4.5' );
 
-	$constants = array(
-		'HELPPRESS_BASENAME' => plugin_basename( __FILE__ ),
-		'HELPPRESS_PATH'     => untrailingslashit( plugin_dir_path( __FILE__ ) ),
-		'HELPPRESS_URL'      => untrailingslashit( plugin_dir_url( __FILE__ ) ),
-		'HELPPRESS_VERSION'  => '1.4.2',
-	);
+register_activation_hook( HELPPRESS_FILE, 'flush_rewrite_rules' );
+register_deactivation_hook( HELPPRESS_FILE, 'flush_rewrite_rules' );
 
-	$constants = apply_filters( 'helppress_constants', $constants );
+add_action( 'plugins_loaded', 'helppress_init' );
+add_action( 'plugins_loaded', 'helppress_load_plugin_textdomain' );
 
-	foreach ( $constants as $constant => $value ) {
-		if ( ! defined( $constant ) ) {
-			define( $constant, $value );
-		}
+function helppress_init() {
+
+	if ( ! version_compare( PHP_VERSION, HELPPRESS_MIN_PHP, '>=' ) ) {
+		add_action( 'admin_notices', 'helppress_fail_php_version' );
+	} elseif ( ! version_compare( get_bloginfo( 'version' ), HELPPRESS_MIN_WP, '>=' ) ) {
+		add_action( 'admin_notices', 'helppress_fail_wp_version' );
+	} else {
+		include HELPPRESS_PATH . 'includes/class-helppress-plugin.php';
 	}
 
 }
-add_action( 'plugins_loaded', 'helppress_constants' );
 
-/**
- * Includes plugin files.
- *
- * @since 1.0.0
- */
-function helppress_includes() {
+function helppress_load_plugin_textdomain() {
 
-	$includes = array(
-
-		// Vendor
-		'/includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
-		'/includes/vendor/gambitph/titan-framework/titan-framework.php',
-		'/includes/vendor/yahnis-elsts/admin-notices/AdminNotice.php',
-
-		// Classes
-		'/includes/class-helppress-breadcrumb.php',
-		'/includes/class-helppress-demo-content.php',
-		'/includes/class-helppress-menu-archive-link.php',
-		'/includes/class-helppress-search.php',
-		'/includes/class-helppress-settings.php',
-		'/includes/class-helppress-template-loader.php',
-		'/includes/class-helppress-theme-compat.php',
-
-		// General
-		'/includes/assets.php',
-		'/includes/formatting.php',
-		'/includes/options.php',
-		'/includes/post-types.php',
-		'/includes/taxonomies.php',
-		'/includes/template-tags.php',
-
-	);
-
-	$includes = apply_filters( 'helppress_includes', $includes );
-
-	foreach ( $includes as $file ) {
-		include HELPPRESS_PATH . $file;
-	}
+	load_plugin_textdomain( 'helppress' );
 
 }
-add_action( 'plugins_loaded', 'helppress_includes' );
 
-/**
- * Loads plugin textdomain.
- *
- * @since 1.0.0
- */
-function helppress_load_textdomain() {
+function helppress_fail_php_version() {
 
-	load_plugin_textdomain( 'helppress', false, HELPPRESS_PATH . '/languages/' );
+	$message = sprintf( esc_html__( 'HelpPress requires PHP version %s+, plugin is currently NOT ACTIVE.', 'helppress' ), HELPPRESS_MIN_PHP );
+	$message = sprintf( '<div class="error">%s</div>', wpautop( $message ) );
+
+	echo wp_kses_post( $message );
 
 }
-add_action( 'plugins_loaded', 'helppress_load_textdomain' );
 
-register_activation_hook( __FILE__, 'flush_rewrite_rules' );
-register_deactivation_hook( __FILE__, 'flush_rewrite_rules' );
+function helppress_fail_wp_version() {
+
+	$message = sprintf( esc_html__( 'HelpPress requires WordPress version %s+, plugin is currently NOT ACTIVE.', 'helppress' ), HELPPRESS_MIN_WP );
+	$message = sprintf( '<div class="error">%s</div>', wpautop( $message ) );
+
+	echo wp_kses_post( $message );
+
+}

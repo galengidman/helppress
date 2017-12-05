@@ -6,7 +6,7 @@
 		var $searchSuggestions = $('.helppress-search__suggestions');
 
 		$searchInput.devbridgeAutocomplete({
-			serviceUrl: helppress_l10n.admin_ajax,
+			serviceUrl: helppressL10n.adminAjax,
 			params: {
 				action: 'helppress_search_suggestions',
 			},
