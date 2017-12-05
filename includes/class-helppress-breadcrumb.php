@@ -26,7 +26,7 @@ class HelpPress_Breadcrumb {
 	 * @since 1.0.0
 	 * @var array
 	 */
-	protected $trail = array();
+	protected $trail = [];
 
 	/**
 	 * Constructor.
@@ -64,7 +64,7 @@ class HelpPress_Breadcrumb {
 			$article_categories = wp_get_post_terms(
 				get_the_id(),
 				'hp_category',
-				array( 'fields' => 'ids' )
+				[ 'fields' => 'ids' ]
 			);
 
 			if ( isset( $article_categories[0] ) ) {
@@ -77,7 +77,7 @@ class HelpPress_Breadcrumb {
 			);
 		}
 
-		if ( is_tax( array( 'hp_category', 'hp_tag' ) ) ) {
+		if ( is_tax( [ 'hp_category', 'hp_tag' ] ) ) {
 			$this->add_tax_tree( get_queried_object_id() );
 		}
 
@@ -115,7 +115,7 @@ class HelpPress_Breadcrumb {
 	 */
 	protected function add( $label, $url ) {
 
-		$this->trail[] = array( 'label' => $label, 'url' => $url );
+		$this->trail[] = [ 'label' => $label, 'url' => $url ];
 
 	}
 
@@ -132,7 +132,7 @@ class HelpPress_Breadcrumb {
 		if ( term_exists( $term_id ) ) {
 
 			$term      = get_term( $term_id );
-			$tree      = array( $term->term_id );
+			$tree      = [ $term->term_id ];
 			$ancestors = get_ancestors( $term->term_id, $term->term_slug, 'taxonomy' );
 
 			if ( $ancestors ) {

@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function helppress_register_articles() {
 
-	$labels = array(
+	$labels = [
 		'name'                  => esc_html__( 'Articles',                   'helppress' ),
 		'singular_name'         => esc_html__( 'Article',                    'helppress' ),
 		'add_new'               => esc_html__( 'Add New',                    'helppress' ),
@@ -34,14 +34,14 @@ function helppress_register_articles() {
 		'insert_into_item'      => esc_html__( 'Insert into article',        'helppress' ),
 		'uploaded_to_this_item' => esc_html__( 'Uploaded to this article',   'helppress' ),
 		'menu_name'             => esc_html__( 'HelpPress',                  'helppress' ),
-	);
+	];
 
-	$args = array(
+	$args = [
 		'labels'        => $labels,
 		'public'        => true,
 		'menu_position' => 25,
 		'menu_icon'     => 'dashicons-sos',
-		'supports'      => array(
+		'supports'      => [
 			'title',
 			'editor',
 			'author',
@@ -50,13 +50,13 @@ function helppress_register_articles() {
 			'comments',
 			'revisions',
 			'post-formats',
-		),
+		],
 		'has_archive'   => true,
-		'rewrite'       => array(
+		'rewrite'       => [
 			'slug'       => helppress_get_option( 'knowledge_base_slug' ),
 			'with_front' => false,
-		),
-	);
+		],
+	];
 
 	$args = apply_filters( 'helppress_register_articles_args', $args );
 
@@ -74,13 +74,13 @@ add_action( 'init', 'helppress_register_articles' );
  */
 function helppress_get_article_post_formats() {
 
-	$post_formats = array(
+	$post_formats = [
 		'gallery',
 		'link',
 		'image',
 		'video',
 		'audio',
-	);
+	];
 
 	return apply_filters( 'helppress_article_post_formats', $post_formats );
 

@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function helppress_get_option_defaults() {
 
-	$defaults = array(
+	$defaults = [
 
 		// Text
 		'title'                     => esc_html__( 'Knowledge Base', 'helppress' ),
@@ -54,7 +54,7 @@ function helppress_get_option_defaults() {
 		'search_suggestions'        => true,
 		'search_suggestions_number' => 5,
 
-	);
+	];
 
 	return apply_filters( 'helppress_option_defaults', $defaults );
 

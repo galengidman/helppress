@@ -4,7 +4,7 @@ if ( ! helppress_get_option( 'search' ) ) {
 	return;
 }
 
-$input_classes = array( 'helppress-search__input' );
+$input_classes = [ 'helppress-search__input' ];
 if ( helppress_get_option( 'search_suggestions' ) ) {
 	$input_classes[] = 'helppress-search__input--suggest';
 }

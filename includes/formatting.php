@@ -44,7 +44,7 @@ function helppress_sanitize_slug( $slug ) {
  */
 function helppress_get_reserved_terms() {
 
-	$terms = array(
+	$terms = [
 		'attachment',
 		'attachment_id',
 		'author',
@@ -127,7 +127,7 @@ function helppress_get_reserved_terms() {
 		'withcomments',
 		'withoutcomments',
 		'year',
-	);
+	];
 
 	return apply_filters( 'helppress_get_reserved_terms', $terms );
 

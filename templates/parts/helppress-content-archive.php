@@ -6,7 +6,7 @@
 
 	$categories = helppress_get_categories();
 
-	$archive_classes = array( 'helppress-archive' );
+	$archive_classes = [ 'helppress-archive' ];
 	if ( $categories ) {
 		$archive_classes[] = 'helppress-archive--has-cats';
 		$archive_classes[] = 'helppress-archive--' . helppress_get_option( 'columns' ) . '-col';
@@ -51,10 +51,10 @@
 
 					<?php endif; ?>
 
-					<?php $articles = helppress_get_articles( array(
+					<?php $articles = helppress_get_articles( [
 						'hp_category' => $category->slug,
 						'fields'      => 'ids',
-					) ); ?>
+					] ); ?>
 
 					<?php if ( $articles->have_posts() ) : ?>
 
@@ -101,7 +101,7 @@
 
 		<?php else : ?>
 
-			<?php $articles = helppress_get_articles( array( 'fields' => 'ids' ) ); ?>
+			<?php $articles = helppress_get_articles( [ 'fields' => 'ids' ] ); ?>
 
 			<?php if ( $articles->have_posts() ) : ?>
 

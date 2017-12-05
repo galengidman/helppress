@@ -17,22 +17,22 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function helppress_register_categories() {
 
-	$labels = array(
+	$labels = [
 		'name'          => esc_html__( 'Article Categories', 'helppress' ),
 		'singular_name' => esc_html__( 'Article Category',   'helppress' ),
-	);
+	];
 
-	$args = array(
+	$args = [
 		'labels'            => $labels,
 		'public'            => true,
 		'show_in_menu'      => 'edit.php?post_type=hp_article',
 		'show_admin_column' => true,
 		'hierarchical'      => true,
-		'rewrite'           => array(
+		'rewrite'           => [
 			'slug'       => helppress_get_option( 'category_slug' ),
 			'with_front' => false,
-		),
-	);
+		],
+	];
 
 	$args = apply_filters( 'helppress_register_categories_args', $args );
 
@@ -48,21 +48,21 @@ add_action( 'init', 'helppress_register_categories' );
  */
 function helppress_register_tags() {
 
-	$labels = array(
+	$labels = [
 		'name'          => esc_html__( 'Article Tags', 'helppress' ),
 		'singular_name' => esc_html__( 'Article Tag',  'helppress' ),
-	);
+	];
 
-	$args = array(
+	$args = [
 		'labels'            => $labels,
 		'public'            => true,
 		'show_in_menu'      => 'edit.php?post_type=hp_article',
 		'show_admin_column' => true,
-		'rewrite'           => array(
+		'rewrite'           => [
 			'slug'       => helppress_get_option( 'tag_slug' ),
 			'with_front' => false,
-		),
-	);
+		],
+	];
 
 	$args = apply_filters( 'helppress_register_tags_args', $args );
 

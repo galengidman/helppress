@@ -70,20 +70,20 @@ class HelpPress_Plugin {
 		wp_enqueue_script(
 			'jquery-devbridge-autocomplete',
 			esc_url( HELPPRESS_URL . "/assets/vendor/jquery.autocomplete{$min}.js" ),
-			array( 'jquery' ),
+			[ 'jquery' ],
 			HELPPRESS_VERSION
 		);
 
 		wp_enqueue_script(
 			'helppress',
 			esc_url( HELPPRESS_URL . "/assets/dist/helppress{$min}.js" ),
-			array( 'jquery', 'jquery-devbridge-autocomplete' ),
+			[ 'jquery', 'jquery-devbridge-autocomplete' ],
 			HELPPRESS_VERSION
 		);
 
-		wp_localize_script( 'helppress', 'helppressL10n', array(
+		wp_localize_script( 'helppress', 'helppressL10n', [
 			'adminAjax' => esc_url( admin_url( 'admin-ajax.php' ) ),
-		) );
+		] );
 
 		$disable_css        = apply_filters( 'helppress_disable_css', false );
 		$disable_css_option = helppress_get_option( 'disable_css' );
@@ -92,7 +92,7 @@ class HelpPress_Plugin {
 			wp_enqueue_style(
 				'helppress',
 				esc_url( HELPPRESS_URL . "/assets/dist/helppress{$min}.css" ),
-				array(),
+				[],
 				HELPPRESS_VERSION
 			);
 		}

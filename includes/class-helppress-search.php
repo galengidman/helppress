@@ -27,11 +27,11 @@ class HelpPress_Search {
 	 */
 	public function __construct() {
 
-		add_action( 'query_vars', array( $this, 'add_query_var' ) );
-		add_filter( 'pre_get_posts', array( $this, 'search_query_mods' ) );
+		add_action( 'query_vars', [ $this, 'add_query_var' ] );
+		add_filter( 'pre_get_posts', [ $this, 'search_query_mods' ] );
 
-		add_action( 'wp_ajax_helppress_search_suggestions',        array( $this, 'get_suggestions' ) );
-		add_action( 'wp_ajax_nopriv_helppress_search_suggestions', array( $this, 'get_suggestions' ) );
+		add_action( 'wp_ajax_helppress_search_suggestions',        [ $this, 'get_suggestions' ] );
+		add_action( 'wp_ajax_nopriv_helppress_search_suggestions', [ $this, 'get_suggestions' ] );
 
 	}
 
@@ -43,7 +43,7 @@ class HelpPress_Search {
 	 * @param array $vars Default query vars.
 	 * @return array Extended query vars.
 	 */
-	public function add_query_var( $vars = array() ) {
+	public function add_query_var( $vars = [] ) {
 
 		$vars[] = 'hps';
 
@@ -98,21 +98,21 @@ class HelpPress_Search {
 	 */
 	public function get_suggestions() {
 
-		$articles = new WP_Query( array(
+		$articles = new WP_Query( [
 			's'              => $_REQUEST['query'],
 			'post_type'      => 'hp_article',
 			'fields'         => 'ids',
 			'no_found_rows'  => true,
 			'posts_per_page' => helppress_get_option( 'search_suggestions_number' ),
-		) );
+		] );
 
-		$suggestions = array( 'suggestions' => array() );
+		$suggestions = [ 'suggestions' => [] ];
 
 		foreach ( $articles->posts as $article_id ) {
-			$suggestions['suggestions'][] = array(
+			$suggestions['suggestions'][] = [
 				'value' => get_the_title( $article_id ),
 				'data'  => esc_url( get_permalink( $article_id ) ),
-			);
+			];
 		}
 
 		echo html_entity_decode( json_encode( $suggestions ) );

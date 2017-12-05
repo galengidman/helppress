@@ -72,9 +72,9 @@ class HelpPress_Demo_Content {
 	 */
 	public function __construct() {
 
-		add_action( 'admin_init', array( $this, 'install' ) );
+		add_action( 'admin_init', [ $this, 'install' ] );
 
-		add_action( 'admin_notices', array( $this, 'prompt_admin_notice' ) );
+		add_action( 'admin_notices', [ $this, 'prompt_admin_notice' ] );
 
 	}
 
@@ -122,13 +122,13 @@ class HelpPress_Demo_Content {
 		$i = 1;
 		foreach ( $structure as $category ) {
 			foreach ( $category->articles as $article_title ) {
-				$post_id = wp_insert_post( array(
+				$post_id = wp_insert_post( [
 					'post_title'   => $article_title,
 					'post_content' => $article_content,
 					'post_type'    => 'hp_article',
 					'post_status'  => 'publish',
 					'post_date'    => date( 'Y-m-d H:i:s', time() - ($i * DAY_IN_SECONDS) ),
-				) );
+				] );
 
 				set_post_format( $post_id, $post_formats[ array_rand( $post_formats ) ] );
 
@@ -140,7 +140,7 @@ class HelpPress_Demo_Content {
 
 				$category_id = (int) $category_object['term_id'];
 
-				wp_set_post_terms( $post_id, array( $category_id ), 'hp_category' );
+				wp_set_post_terms( $post_id, [ $category_id ], 'hp_category' );
 
 				$tag_indexes = array_rand( $tags, 4 );
 				foreach ( $tag_indexes as $index ) {
@@ -154,7 +154,7 @@ class HelpPress_Demo_Content {
 
 					$tag_id = (int) $tag_object['term_id'];
 
-					wp_set_post_terms( $post_id, array( $tag_id ), 'hp_tag', true );
+					wp_set_post_terms( $post_id, [ $tag_id ], 'hp_tag', true );
 				}
 
 				$i++;
@@ -209,11 +209,11 @@ class HelpPress_Demo_Content {
 			return;
 		}
 
-		$existing_articles = get_posts( array(
+		$existing_articles = get_posts( [
 			'posts_per_page' => 1,
 			'post_type'      => 'hp_article',
 			'fields'         => 'ids',
-		) );
+		] );
 
 		if ( $existing_articles ) {
 			return;
@@ -223,13 +223,10 @@ class HelpPress_Demo_Content {
 		// That only took *forever* to figure out. :|
 		$install_url = str_replace( '&amp;', '&', esc_url_raw(
 			wp_nonce_url(
-				add_query_arg(
-					array(
-						'post_type' => 'hp_article',
-						'helppress_action' => 'install_demo_content',
-					),
-					admin_url( 'edit.php' )
-				),
+				add_query_arg( [
+					'post_type' => 'hp_article',
+					'helppress_action' => 'install_demo_content',
+				], admin_url( 'edit.php' ) ),
 				'helppress_install_demo_content'
 			)
 		) );

@@ -27,7 +27,7 @@ class HelpPress_Menu_Archive_Link {
 	 */
 	public function __construct() {
 
-		add_action( 'admin_init', array( $this, 'add_meta_box' ) );
+		add_action( 'admin_init', [ $this, 'add_meta_box' ] );
 
 	}
 
@@ -42,7 +42,7 @@ class HelpPress_Menu_Archive_Link {
 		add_meta_box(
 			'add-helppress-archive-link',
 			esc_html__( 'HelpPress', 'helppress' ),
-			array( $this, 'display_meta_box' ),
+			[ $this, 'display_meta_box' ],
 			'nav-menus',
 			'side',
 			'low'

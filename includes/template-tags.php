@@ -37,15 +37,15 @@ endif;
  * @param array $args Additional `WP_Query` args to apply to the article query.
  * @return object `WP_Query` object.
  */
-function helppress_get_articles( $args = array() ) {
+function helppress_get_articles( $args = [] ) {
 
-	$args = wp_parse_args( $args, array(
+	$args = wp_parse_args( $args, [
 		'post_type'      => 'hp_article',
 		'orderby'        => helppress_get_option( 'orderby' ),
 		'order'          => helppress_get_option( 'order' ),
 		'posts_per_page' => helppress_get_option( 'posts_per_page' ),
 		'paged'          => helppress_page_num(),
-	) );
+	] );
 
 	$args = apply_filters( 'helppress_get_articles_args', $args );
 
@@ -78,12 +78,12 @@ function helppress_get_breadcrumb() {
  * @param array $args Additional `get_terms()` args to apply to query.
  * @return array `get_terms()` result.
  */
-function helppress_get_categories( $args = array() ) {
+function helppress_get_categories( $args = [] ) {
 
-	$args = wp_parse_args( $args, array(
+	$args = wp_parse_args( $args, [
 		'taxonomy' => 'hp_category',
 		'orderby'  => 'menu_order',
-	) );
+	] );
 
 	$args = apply_filters( 'helppress_get_categories_args', $args );
 
@@ -107,7 +107,7 @@ function helppress_category_article_count( $category ) {
 		$category = get_term( $category );
 	}
 
-	$count   = array();
+	$count   = [];
 	$count[] = '<span>';
 	$count[] = number_format_i18n( $category->count );
 	$count[] = '</span>';
