@@ -119,6 +119,8 @@ class HelpPress_Demo_Content {
 		// Adding 6 `standard` format posts vs 1 of alternate formats
 		$post_formats = array_merge( $post_formats, array_fill( 0, 6, 'standard' ) );
 
+		$existing_terms = [];
+
 		$i = 1;
 		foreach ( $structure as $category ) {
 			foreach ( $category->articles as $article_title ) {
@@ -132,10 +134,11 @@ class HelpPress_Demo_Content {
 
 				set_post_format( $post_id, $post_formats[ array_rand( $post_formats ) ] );
 
-				if ( term_exists( $category->name, 'hp_category' ) ) {
-					$category_object = get_term_by( 'name', $category->name, 'hp_category', ARRAY_A );
+				if ( array_key_exists( $category->name, $existing_terms ) ) {
+					$category_object = $existing_terms[ $category->name ];
 				} else {
 					$category_object = wp_insert_term( $category->name, 'hp_category' );
+					$existing_terms[ $category->name ] = $category_object;
 				}
 
 				$category_id = (int) $category_object['term_id'];
