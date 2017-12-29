@@ -71,7 +71,7 @@ class HelpPress_Menu_Archive_Link {
 								name="menu-item[-1][menu-item-object-id]"
 								value="-1"><?php
 
-							esc_html_e( 'Knowledge Base', 'helppress' ); ?>
+							echo esc_html( helppress_get_option( 'title' ) ); ?>
 						</label>
 
 						<input
@@ -84,7 +84,7 @@ class HelpPress_Menu_Archive_Link {
 							type="hidden"
 							class="menu-item-title"
 							name="menu-item[-1][menu-item-title]"
-							value="<?php esc_attr_e( 'Knowledge Base', 'helppress' ); ?>">
+							value="<?php echo esc_attr( helppress_get_option( 'title' ) ); ?>">
 
 						<input
 							type="hidden"
