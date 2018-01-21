@@ -40,7 +40,8 @@ gulp.task('js', function() {
 });
 
 gulp.task('dev', function() {
-  gulp.watch('assets/scss/**/*.scss', ['scss', 'js']);
+	gulp.watch('assets/scss/**/*.scss', ['scss']);
+	gulp.watch('assets/scsjss/**/*.js', ['js']);
 });
 
 gulp.task('default', ['dev']);
