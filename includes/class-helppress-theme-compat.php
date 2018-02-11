@@ -108,47 +108,46 @@ class HelpPress_Theme_Compat {
 		}
 
 		if ( helppress_is_kb_article() ) {
-
 			$this->add_compat_template( 'helppress/helppress-article.php' );
-
 		} else {
+			if ( ! $this->is_theme_compat_disabled() ) {
+				remove_all_filters( 'the_content' );
 
-			// remove_all_filters( 'the_content' );
+				if ( helppress_is_kb_archive() ) {
+					$this->reset_post( [
+						'post_title'   => helppress_get_option( 'title' ),
+						'post_content' => helppress_buffer_template_part( 'parts/helppress-content-archive' ),
+					] );
+				}
 
-			// if ( helppress_is_kb_archive() ) {
-			// 	$this->reset_post( [
-			// 		'post_title'   => helppress_get_option( 'title' ),
-			// 		'post_content' => helppress_buffer_template_part( 'parts/helppress-content-archive' ),
-			// 	] );
-			// }
+				elseif ( helppress_is_kb_category() ) {
+					$this->reset_post( [
+						'post_title'   => single_term_title( '', false ),
+						'post_content' => helppress_buffer_template_part( 'parts/helppress-content-category' ),
+						'is_archive'   => true,
+						'is_tax'       => true,
+					] );
+				}
 
-			// elseif ( helppress_is_kb_category() ) {
-			// 	$this->reset_post( [
-			// 		'post_title'   => single_term_title( '', false ),
-			// 		'post_content' => helppress_buffer_template_part( 'parts/helppress-content-category' ),
-			// 		'is_archive'   => true,
-			// 		'is_tax'       => true,
-			// 	] );
-			// }
+				elseif ( helppress_is_kb_tag() ) {
+					$this->reset_post( [
+						'post_title'   => single_term_title( '', false ),
+						'post_content' => helppress_buffer_template_part( 'parts/helppress-content-tag' ),
+						'is_archive'   => true,
+						'is_tax'       => true,
+					] );
+				}
 
-			// elseif ( helppress_is_kb_tag() ) {
-			// 	$this->reset_post( [
-			// 		'post_title'   => single_term_title( '', false ),
-			// 		'post_content' => helppress_buffer_template_part( 'parts/helppress-content-tag' ),
-			// 		'is_archive'   => true,
-			// 		'is_tax'       => true,
-			// 	] );
-			// }
-
-			// elseif ( helppress_is_kb_search() ) {
-			// 	$this->reset_post( [
-			// 		'post_title'   => sprintf(
-			// 			esc_html__( 'Search results: &ldquo;%s&rdquo;', 'helppress' ),
-			// 			get_search_query()
-			// 		),
-			// 		'post_content' => helppress_buffer_template_part( 'parts/helppress-content-search' ),
-			// 	] );
-			// }
+				elseif ( helppress_is_kb_search() ) {
+					$this->reset_post( [
+						'post_title'   => sprintf(
+							esc_html__( 'Search results: &ldquo;%s&rdquo;', 'helppress' ),
+							get_search_query()
+						),
+						'post_content' => helppress_buffer_template_part( 'parts/helppress-content-search' ),
+					] );
+				}
+			}
 
 			$context = helppress_get_kb_context();
 
@@ -157,7 +156,6 @@ class HelpPress_Theme_Compat {
 			}
 
 			$this->add_compat_template( "helppress/helppress-{$context}.php" );
-
 		}
 
 		return locate_template( $this->compat_templates );
@@ -430,6 +428,17 @@ class HelpPress_Theme_Compat {
 		}
 
 		return $title_parts;
+	}
+
+	/**
+	 * Returns whether theme compatibilty has been disabled.
+	 *
+	 * @since 2.0.0
+	 *
+	 * @return boolean Theme compatiblity status.
+	 */
+	protected function is_theme_compat_disabled() {
+		return apply_filters( 'helppress_disable_theme_compat_mode', false );
 	}
 
 }
