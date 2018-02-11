@@ -35,7 +35,6 @@ class HelpPress_Settings {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-
 		add_filter( 'plugin_action_links_' . HELPPRESS_BASENAME, [ $this, 'action_link' ] );
 
 		add_action( 'tf_create_options', [ $this, 'register_settings' ] );
@@ -45,7 +44,6 @@ class HelpPress_Settings {
 
 		add_action( 'admin_notices', [ $this, 'permalink_structure_notice' ] );
 		add_action( 'admin_notices', [ $this, 'show_on_front_notice' ] );
-
 	}
 
 	/**
@@ -58,14 +56,12 @@ class HelpPress_Settings {
 	 * @return array Action links.
 	 */
 	public function action_link( $links ) {
-
 		$url   = esc_url( admin_url( 'edit.php?post_type=hp_article&page=helppress' ) );
 		$label = esc_html__( 'Settings', 'helppress' );
 
 		$settings_link = [ "<a href='{$url}'>{$label}</a>" ];
 
 		return array_merge( $settings_link, $links );
-
 	}
 
 	/**
@@ -78,12 +74,10 @@ class HelpPress_Settings {
 	 * @param string $name Tab label.
 	 */
 	protected function add_tab( $tab_index, $name ) {
-
 		$this->settings[ $tab_index ] = [
 			'name'    => $name,
 			'options' => [],
 		];
-
 	}
 
 	/**
@@ -99,13 +93,11 @@ class HelpPress_Settings {
 	 * @param array $option Option args.
 	 */
 	protected function add_option( $tab_index, $option ) {
-
 		$disabled = apply_filters( "helppress_disable_option_{$option['id']}", false );
 
 		if ( ! $disabled ) {
 			$this->settings[ $tab_index ]['options'][] = $option;
 		}
-
 	}
 
 	/**
@@ -115,8 +107,7 @@ class HelpPress_Settings {
 	 * @since 1.0.0
 	 */
 	public function register_settings() {
-
-		// General -------------------------------------------------------------
+		// General ---------------------------------------------------------------
 
 		$this->add_tab( 10, esc_html__( 'General', 'helppress' ) );
 
@@ -230,7 +221,7 @@ class HelpPress_Settings {
 			'sanitize_callbacks' => [ 'sanitize_title', 'helppress_sanitize_slug' ],
 		] );
 
-		// Display -------------------------------------------------------------
+		// Display ---------------------------------------------------------------
 
 		$this->add_tab( 20, esc_html__( 'Display', 'helppress' ) );
 
@@ -286,7 +277,7 @@ class HelpPress_Settings {
 			'default' => helppress_get_option_default( 'disable_css' ),
 		] );
 
-		// Breadcrumb ----------------------------------------------------------
+		// Breadcrumb ------------------------------------------------------------
 
 		$this->add_tab( 30, esc_html__( 'Breadcrumb', 'helppress' ) );
 
@@ -320,7 +311,7 @@ class HelpPress_Settings {
 			'default' => helppress_get_option_default( 'breadcrumb_sep' ),
 		] );
 
-		// Search --------------------------------------------------------------
+		// Search ----------------------------------------------------------------
 
 		$this->add_tab( 40, esc_html__( 'Search', 'helppress' ) );
 
@@ -400,7 +391,6 @@ class HelpPress_Settings {
 				$tab->createOption( $option );
 			}
 		}
-
 	}
 
 	/**
@@ -410,7 +400,6 @@ class HelpPress_Settings {
 	 * @since 1.0.0
 	 */
 	public function view_live_link() {
-
 		global $submenu;
 
 		if ( ! current_user_can( 'edit_posts' ) ) {
@@ -421,7 +410,6 @@ class HelpPress_Settings {
 		$label = esc_html__( 'View KB', 'helppress' ) . ' &rarr;';
 
 		$submenu['edit.php?post_type=hp_article'][] = [ $label, 'edit_posts', $url ];
-
 	}
 
 	/**
@@ -431,7 +419,6 @@ class HelpPress_Settings {
 	 * @since 1.0.0
 	 */
 	public function permalink_structure_notice() {
-
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
@@ -453,7 +440,6 @@ class HelpPress_Settings {
 			) )
 			->persistentlyDismissible()
 			->show();
-
 	}
 
 	/**
@@ -463,7 +449,6 @@ class HelpPress_Settings {
 	 * @since 2.0.0
 	 */
 	public function show_on_front_notice() {
-
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
@@ -484,7 +469,6 @@ class HelpPress_Settings {
 				esc_url( admin_url( 'edit.php?post_type=hp_article&page=helppress' ) )
 			) )
 			->show();
-
 	}
 
 	/**
@@ -496,12 +480,10 @@ class HelpPress_Settings {
 	 * @return array Page templates.
 	 */
 	public function get_page_templates() {
-
 		$page_templates = [ 'default' => esc_html__( 'Default Template', 'helppress' ) ];
 		$page_templates = array_merge( $page_templates, wp_get_theme()->get_page_templates() );
 
 		return $page_templates;
-
 	}
 
 }

@@ -22,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string Sanitized slug.
  */
 function helppress_sanitize_slug( $slug ) {
-
 	$reserved_terms = helppress_get_reserved_terms();
 
 	if ( in_array( $slug, $reserved_terms ) ) {
@@ -30,7 +29,6 @@ function helppress_sanitize_slug( $slug ) {
 	}
 
 	return apply_filters( 'helppress_sanitize_slug', $slug );
-
 }
 
 /**
@@ -43,7 +41,6 @@ function helppress_sanitize_slug( $slug ) {
  * @return array WordPress's reserved terms [description]
  */
 function helppress_get_reserved_terms() {
-
 	$terms = [
 		'attachment',
 		'attachment_id',
@@ -130,5 +127,4 @@ function helppress_get_reserved_terms() {
 	];
 
 	return apply_filters( 'helppress_get_reserved_terms', $terms );
-
 }

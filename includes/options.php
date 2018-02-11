@@ -18,7 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return array Option defaults.
  */
 function helppress_get_option_defaults() {
-
 	$defaults = [
 
 		// Text
@@ -57,7 +56,6 @@ function helppress_get_option_defaults() {
 	];
 
 	return apply_filters( 'helppress_option_defaults', $defaults );
-
 }
 
 /**
@@ -69,7 +67,6 @@ function helppress_get_option_defaults() {
  * @return mixed Default option value.
  */
 function helppress_get_option_default( $key = null ) {
-
 	$defaults = helppress_get_option_defaults();
 	$value    = false;
 
@@ -78,7 +75,6 @@ function helppress_get_option_default( $key = null ) {
 	}
 
 	return apply_filters( 'helppress_get_option_default', $value, $key );
-
 }
 
 /**
@@ -90,7 +86,6 @@ function helppress_get_option_default( $key = null ) {
  * @return mixed Option value if it exists; default value if not.
  */
 function helppress_get_option( $key = null ) {
-
 	$options = maybe_unserialize( get_option( 'helppress_options' ) );
 	$value   = false;
 
@@ -101,5 +96,4 @@ function helppress_get_option( $key = null ) {
 	}
 
 	return apply_filters( 'helppress_get_option', $value, $key );
-
 }

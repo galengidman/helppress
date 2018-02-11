@@ -35,9 +35,7 @@ class HelpPress_Breadcrumb {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-
 		$this->build_trail();
-
 	}
 
 	/**
@@ -47,7 +45,6 @@ class HelpPress_Breadcrumb {
 	 * @since 1.0.0
 	 */
 	public function build_trail() {
-
 		if ( helppress_get_option( 'breadcrumb_home' ) ) {
 			$this->add(
 				esc_html__( 'Home', 'helppress' ),
@@ -87,7 +84,6 @@ class HelpPress_Breadcrumb {
 				get_search_link()
 			);
 		}
-
 	}
 
 	/**
@@ -99,9 +95,7 @@ class HelpPress_Breadcrumb {
 	 * @return array Breadcrumb trail.
 	 */
 	public function get_trail() {
-
 		return $this->trail;
-
 	}
 
 	/**
@@ -114,9 +108,7 @@ class HelpPress_Breadcrumb {
 	 * @param string $url Crumb URL.
 	 */
 	protected function add( $label, $url ) {
-
 		$this->trail[] = [ 'label' => $label, 'url' => $url ];
-
 	}
 
 	/**
@@ -128,9 +120,7 @@ class HelpPress_Breadcrumb {
 	 * @param integer $term_id Term ID to add.
 	 */
 	protected function add_tax_tree( $term_id ) {
-
 		if ( term_exists( $term_id ) ) {
-
 			$term      = get_term( $term_id );
 			$tree      = [ $term->term_id ];
 			$ancestors = get_ancestors( $term->term_id, $term->term_slug, 'taxonomy' );
@@ -147,9 +137,7 @@ class HelpPress_Breadcrumb {
 					get_term_link( $term )
 				);
 			}
-
 		}
-
 	}
 
 }

@@ -24,7 +24,6 @@ class HelpPress_Plugin {
 	 * @since 2.0.0
 	 */
 	public function __construct() {
-
 		$this->include_files();
 
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_assets' ] );
@@ -34,7 +33,6 @@ class HelpPress_Plugin {
 
 		add_action( 'load-post.php',     [ $this, 'add_article_post_formats_support' ] );
 		add_action( 'load-post-new.php', [ $this, 'add_article_post_formats_support' ] );
-
 	}
 
 	/**
@@ -44,7 +42,6 @@ class HelpPress_Plugin {
 	 * @since 2.0.0
 	 */
 	protected function include_files() {
-
 		$includes = [
 
 			'includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
@@ -70,7 +67,6 @@ class HelpPress_Plugin {
 		foreach ( $includes as $file ) {
 			include HELPPRESS_PATH . $file;
 		}
-
 	}
 
 	/**
@@ -80,7 +76,6 @@ class HelpPress_Plugin {
 	 * @since 2.0.0
 	 */
 	public function enqueue_assets() {
-
 		$min = helppress_is_debug() ? ''  : '.min';
 
 		wp_enqueue_script(
@@ -112,7 +107,6 @@ class HelpPress_Plugin {
 				HELPPRESS_VERSION
 			);
 		}
-
 	}
 
 	/**
@@ -122,7 +116,6 @@ class HelpPress_Plugin {
 	 * @since 2.0.0
 	 */
 	public function register_post_types() {
-
 		$labels = [
 			'name'                  => esc_html__( 'Articles',                   'helppress' ),
 			'singular_name'         => esc_html__( 'Article',                    'helppress' ),
@@ -167,7 +160,6 @@ class HelpPress_Plugin {
 		$args = apply_filters( 'helppress_register_articles_args', $args );
 
 		register_post_type( 'hp_article', $args );
-
 	}
 
 	/**
@@ -177,7 +169,6 @@ class HelpPress_Plugin {
 	 * @since 2.0.0
 	 */
 	public function register_taxonomies() {
-
 		$labels = [
 			'name'          => esc_html__( 'Article Categories', 'helppress' ),
 			'singular_name' => esc_html__( 'Article Category',   'helppress' ),
@@ -218,7 +209,6 @@ class HelpPress_Plugin {
 		$args = apply_filters( 'helppress_register_tags_args', $args );
 
 		register_taxonomy( 'hp_tag', 'hp_article', $args );
-
 	}
 
 	/**
@@ -230,7 +220,6 @@ class HelpPress_Plugin {
 	 * @return array Allowed post types.
 	 */
 	public static function get_article_post_formats() {
-
 		$post_formats = [
 			'gallery',
 			'link',
@@ -240,7 +229,6 @@ class HelpPress_Plugin {
 		];
 
 		return apply_filters( 'helppress_article_post_formats', $post_formats );
-
 	}
 
 	/**
@@ -249,13 +237,11 @@ class HelpPress_Plugin {
 	 * @since 2.0.0
 	 */
 	public function add_article_post_formats_support() {
-
 		$screen = get_current_screen();
 
 		if ( 'hp_article' === $screen->post_type ) {
 			add_theme_support( 'post-formats', self::get_article_post_formats() );
 		}
-
 	}
 
 }

@@ -21,11 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 if ( ! function_exists( 'helppress_genericon' ) ) :
 function helppress_genericon( $icon, $size = 16 ) {
-
 	$svg_url = esc_url( HELPPRESS_URL . '/assets/img/genericons-neue.svg' );
-
 	return "<svg class='helppress-genericon helppress-genericon--{$icon} helppress-genericon--{$size}' width='{$size}px' height='{$size}px'><use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='{$svg_url}#hp-genericon-{$icon}'></use></svg>";
-
 }
 endif;
 
@@ -38,7 +35,6 @@ endif;
  * @return object `WP_Query` object.
  */
 function helppress_get_articles( $args = [] ) {
-
 	$args = wp_parse_args( $args, [
 		'post_type'      => 'hp_article',
 		'orderby'        => helppress_get_option( 'orderby' ),
@@ -52,7 +48,6 @@ function helppress_get_articles( $args = [] ) {
 	$articles = new WP_Query( $args );
 
 	return apply_filters( 'helppress_get_articles', $articles );
-
 }
 
 /**
@@ -63,11 +58,8 @@ function helppress_get_articles( $args = [] ) {
  * @return array Breadcrumb trail.
  */
 function helppress_get_breadcrumb() {
-
 	$breadcrumb = new HelpPress_Breadcrumb();
-
 	return $breadcrumb->get_trail();
-
 }
 
 /**
@@ -79,7 +71,6 @@ function helppress_get_breadcrumb() {
  * @return array `get_terms()` result.
  */
 function helppress_get_categories( $args = [] ) {
-
 	$args = wp_parse_args( $args, [
 		'taxonomy' => 'hp_category',
 		'orderby'  => 'menu_order',
@@ -90,7 +81,6 @@ function helppress_get_categories( $args = [] ) {
 	$terms = get_terms( $args );
 
 	return apply_filters( 'helppress_get_categories', $terms );
-
 }
 
 /**
@@ -102,7 +92,6 @@ function helppress_get_categories( $args = [] ) {
  */
 if ( ! function_exists( 'helppress_category_article_count' ) ) :
 function helppress_category_article_count( $category ) {
-
 	if ( ! is_a( $category, 'WP_Term' ) ) {
 		$category = get_term( $category );
 	}
@@ -120,7 +109,6 @@ function helppress_category_article_count( $category ) {
 	}
 
 	echo $html;
-
 }
 endif;
 
@@ -132,7 +120,6 @@ endif;
  * @return string Archive URL.
  */
 function helppress_get_kb_url() {
-
 	if ( helppress_get_option( 'show_on_front' ) ) {
 		$url = home_url( '/' );
 	} else {
@@ -140,7 +127,6 @@ function helppress_get_kb_url() {
 	}
 
 	return $url;
-
 }
 
 /**
@@ -152,7 +138,6 @@ function helppress_get_kb_url() {
  * @return string Post format.
  */
 function helppress_get_post_format( $post_id = null ) {
-
 	if ( ! $post_id ) {
 		$post_id = get_the_id();
 	}
@@ -161,7 +146,6 @@ function helppress_get_post_format( $post_id = null ) {
 	$format = $format ? $format : 'standard';
 
 	return apply_filters( 'helppress_get_post_format', $format );
-
 }
 
 /**
@@ -172,9 +156,7 @@ function helppress_get_post_format( $post_id = null ) {
  * @return boolean
  */
 function helppress_is_kb_article() {
-
 	return is_singular( 'hp_article' ) && ! is_admin();
-
 }
 
 /**
@@ -185,9 +167,7 @@ function helppress_is_kb_article() {
  * @return boolean
  */
 function helppress_is_kb_archive() {
-
 	return is_post_type_archive( 'hp_article' ) && ! is_search() && ! is_admin();
-
 }
 
 /**
@@ -198,9 +178,7 @@ function helppress_is_kb_archive() {
  * @return boolean
  */
 function helppress_is_kb_category() {
-
 	return is_tax( 'hp_category' ) && ! is_admin();
-
 }
 
 /**
@@ -211,9 +189,7 @@ function helppress_is_kb_category() {
  * @return boolean
  */
 function helppress_is_kb_tag() {
-
 	return is_tax( 'hp_tag' ) && ! is_admin();
-
 }
 
 /**
@@ -224,9 +200,7 @@ function helppress_is_kb_tag() {
  * @return boolean
  */
 function helppress_is_kb_search() {
-
 	return is_search() && get_query_var( 'hps' ) && ! is_admin();
-
 }
 
 /**
@@ -237,9 +211,7 @@ function helppress_is_kb_search() {
  * @return boolean
  */
 function helppress_is_kb() {
-
 	return (bool) helppress_get_kb_context();
-
 }
 
 /**
@@ -259,7 +231,6 @@ function helppress_is_kb() {
  * @return string|false Context string if KB page, false if not.
  */
 function helppress_get_kb_context() {
-
 	$context = false;
 
 	if ( helppress_is_kb_article() ) {
@@ -277,7 +248,6 @@ function helppress_get_kb_context() {
 	$context = apply_filters( 'helppress_get_kb_context', $context );
 
 	return $context;
-
 }
 
 /**
@@ -288,11 +258,8 @@ function helppress_get_kb_context() {
  * @return int `page` or `paged` number.
  */
 function helppress_page_num() {
-
 	global $paged;
-
 	return get_query_var( 'paged' ) ? get_query_var( 'paged' ) : ( get_query_var( 'page' ) ? get_query_var( 'page' ) : 1 );
-
 }
 
 /**
@@ -303,9 +270,7 @@ function helppress_page_num() {
  * @return boolean Whether HelpPress is paginated.
  */
 function helppress_is_paginated() {
-
 	return helppress_get_option( 'posts_per_page' ) > -1;
-
 }
 
 /**
@@ -317,9 +282,7 @@ function helppress_is_paginated() {
  * @return boolean WordPress debug mode.
  */
 function helppress_is_debug() {
-
 	return defined( 'WP_DEBUG' ) && WP_DEBUG;
-
 }
 
 /**
@@ -336,11 +299,8 @@ function helppress_is_debug() {
  * @param string $name Template name.
  */
 function helppress_get_template_part( $slug, $name = null ) {
-
 	$templates = new HelpPress_Template_Loader();
-
 	$templates->get_template_part( $slug, $name );
-
 }
 
 /**
@@ -354,11 +314,7 @@ function helppress_get_template_part( $slug, $name = null ) {
  * @return string Output of template part.
  */
 function helppress_buffer_template_part( $slug, $name = null ) {
-
 	ob_start();
-
 	helppress_get_template_part( $slug, $name );
-
 	return ob_get_clean();
-
 }

@@ -71,11 +71,8 @@ class HelpPress_Demo_Content {
 	 * @since 1.1.0
 	 */
 	public function __construct() {
-
 		add_action( 'admin_init', [ $this, 'install' ] );
-
 		add_action( 'admin_notices', [ $this, 'prompt_admin_notice' ] );
-
 	}
 
 	/**
@@ -92,7 +89,6 @@ class HelpPress_Demo_Content {
 	 * @since 1.1.0
 	 */
 	public function install() {
-
 		if ( ! is_admin() ) {
 			return;
 		}
@@ -171,7 +167,6 @@ class HelpPress_Demo_Content {
 			->text( esc_html__( 'Demo content installed!', 'helppress' ) )
 			->dismissible()
 			->show();
-
 	}
 
 	/**
@@ -183,9 +178,7 @@ class HelpPress_Demo_Content {
 	 * @return boolean Whether demo content has been installed.
 	 */
 	public function is_installed() {
-
 		return (bool) get_option( $this->option_name );
-
 	}
 
 	/**
@@ -202,7 +195,6 @@ class HelpPress_Demo_Content {
 	 * @since 1.1.0
 	 */
 	public function prompt_admin_notice() {
-
 		if ( $this->is_installed() ) {
 			return;
 		}
@@ -250,7 +242,6 @@ class HelpPress_Demo_Content {
 			->rawHtml( $notice_markup )
 			->persistentlyDismissible()
 			->show();
-
 	}
 
 }

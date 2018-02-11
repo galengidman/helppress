@@ -26,9 +26,7 @@ class HelpPress_Menu_Archive_Link {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-
 		add_action( 'admin_init', [ $this, 'add_meta_box' ] );
-
 	}
 
 	/**
@@ -38,7 +36,6 @@ class HelpPress_Menu_Archive_Link {
 	 * @since 1.0.0
 	 */
 	public function add_meta_box() {
-
 		add_meta_box(
 			'add-helppress-archive-link',
 			esc_html__( 'HelpPress', 'helppress' ),
@@ -47,7 +44,6 @@ class HelpPress_Menu_Archive_Link {
 			'side',
 			'low'
 		);
-
 	}
 
 	/**
@@ -57,7 +53,6 @@ class HelpPress_Menu_Archive_Link {
 	 * @since 1.0.0
 	 */
 	public function display_meta_box() {
-
 		?>
 
 		<div id="helppress-archive-link" class="taxonomydiv">
@@ -115,7 +110,6 @@ class HelpPress_Menu_Archive_Link {
 		</div>
 
 		<?php
-
 	}
 
 }

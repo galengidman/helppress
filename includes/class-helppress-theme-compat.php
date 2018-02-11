@@ -40,7 +40,6 @@ class HelpPress_Theme_Compat {
 	 * @since 2.0.0
 	 */
 	public function __construct() {
-
 		add_action( 'init', [ $this, 'compat_page_template' ] );
 
 		add_action( 'template_include', [ $this, 'template_include' ] );
@@ -53,7 +52,6 @@ class HelpPress_Theme_Compat {
 		add_action( 'body_class', [ $this, 'body_classes' ] );
 
 		add_filter( 'document_title_parts', [ $this, 'document_title' ] );
-
 	}
 
 	/**
@@ -65,9 +63,7 @@ class HelpPress_Theme_Compat {
 	 * @param string $template Template file.
 	 */
 	protected function add_compat_template( $template ) {
-
 		$this->compat_templates = array_merge( [ $template ], $this->compat_templates );
-
 	}
 
 	/**
@@ -77,14 +73,12 @@ class HelpPress_Theme_Compat {
 	 * @since 2.0.0
 	 */
 	public function compat_page_template() {
-
 		$page_template         = helppress_get_option( 'page_template' );
 		$disable_page_template = apply_filters( 'helppress_disable_page_template', false );
 
 		if ( $page_template !== 'default' && ! $disable_page_template ) {
 			$this->add_compat_template( $page_template );
 		}
-
 	}
 
 	/**
@@ -109,7 +103,6 @@ class HelpPress_Theme_Compat {
 	 * @return string Potentially modified template
 	 */
 	public function template_include( $template ) {
-
 		if ( ! helppress_is_kb() ) {
 			return $template;
 		}
@@ -168,7 +161,6 @@ class HelpPress_Theme_Compat {
 		}
 
 		return locate_template( $this->compat_templates );
-
 	}
 
 	/**
@@ -191,7 +183,6 @@ class HelpPress_Theme_Compat {
 	 * @return object Potentially adjusted WP_Query.
 	 */
 	public function query_mods( $query ) {
-
 		if ( is_admin() ) {
 			return $query;
 		}
@@ -233,7 +224,6 @@ class HelpPress_Theme_Compat {
 		}
 
 		return $query;
-
 	}
 
 	/**
@@ -254,7 +244,6 @@ class HelpPress_Theme_Compat {
 	 * @return string Potentially modified post content.
 	 */
 	public function custom_content( $content ) {
-
 		global $post;
 
 		if ( is_admin() ) {
@@ -280,7 +269,6 @@ class HelpPress_Theme_Compat {
 		}
 
 		return $content;
-
 	}
 
 	/**
@@ -294,7 +282,6 @@ class HelpPress_Theme_Compat {
 	 * @param array $args WP_Query arguments to override default, dummy query with.
 	 */
 	public static function reset_post( $args = [] ) {
-
 		global $wp_query, $post;
 
 		if ( isset( $wp_query->post ) ) {
@@ -386,7 +373,6 @@ class HelpPress_Theme_Compat {
 		if ( ! $wp_query->is_404() ) {
 			status_header( 200 );
 		}
-
 	}
 
 	/**
@@ -399,7 +385,6 @@ class HelpPress_Theme_Compat {
 	 * @return array Filtered body classes.
 	 */
 	public function body_classes( $classes ) {
-
 		if ( helppress_is_kb() ) {
 			$classes[] = 'helppress';
 			$classes[] = sanitize_html_class( 'helppress-' . helppress_get_kb_context() );
@@ -422,7 +407,6 @@ class HelpPress_Theme_Compat {
 		}
 
 		return $classes;
-
 	}
 
 	/**
@@ -437,7 +421,6 @@ class HelpPress_Theme_Compat {
 	 * @return array Potentially modified title parts.
 	 */
 	public function document_title( $title_parts ) {
-
 		if ( helppress_is_kb_archive() ) {
 			$title_parts['title'] = helppress_get_option( 'title' );
 		}
@@ -447,7 +430,6 @@ class HelpPress_Theme_Compat {
 		}
 
 		return $title_parts;
-
 	}
 
 }

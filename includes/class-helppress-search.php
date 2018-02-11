@@ -26,13 +26,11 @@ class HelpPress_Search {
 	 * @since 2.0.0
 	 */
 	public function __construct() {
-
 		add_action( 'query_vars', [ $this, 'add_query_var' ] );
 		add_filter( 'pre_get_posts', [ $this, 'search_query_mods' ] );
 
 		add_action( 'wp_ajax_helppress_search_suggestions',        [ $this, 'get_suggestions' ] );
 		add_action( 'wp_ajax_nopriv_helppress_search_suggestions', [ $this, 'get_suggestions' ] );
-
 	}
 
 	/**
@@ -44,11 +42,8 @@ class HelpPress_Search {
 	 * @return array Extended query vars.
 	 */
 	public function add_query_var( $vars = [] ) {
-
 		$vars[] = 'hps';
-
 		return $vars;
-
 	}
 
 	/**
@@ -70,7 +65,6 @@ class HelpPress_Search {
 	 * @return object Potentially adjusted WP_Query.
 	 */
 	public function search_query_mods( $query ) {
-
 		if ( is_admin() ) {
 			return $query;
 		}
@@ -87,7 +81,6 @@ class HelpPress_Search {
 		$query->set( 'posts_per_page', helppress_get_option( 'posts_per_page' ) );
 
 		return $query;
-
 	}
 
 	/**
@@ -97,7 +90,6 @@ class HelpPress_Search {
 	 * @since 2.0.0
 	 */
 	public function get_suggestions() {
-
 		$articles = new WP_Query( [
 			's'              => $_REQUEST['query'],
 			'post_type'      => 'hp_article',
@@ -118,7 +110,6 @@ class HelpPress_Search {
 		echo html_entity_decode( json_encode( $suggestions ) );
 
 		exit;
-
 	}
 
 }
