@@ -51,6 +51,25 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 2.0.0, February 11, 2018 =
+* New: Add option to display the knowledge base on the front page.
+* New: Allow for unlimitted articles/page setting (-1) and disable pagination if chosen.
+* New: Add `helppress_disable_option_{option_id}` filter to disable UI of individual setting fields.
+* New: Add `helppress_disable_css` filter to forcibly disable output of HelpPress CSS.
+* New: Add `helppress_disable_page_template` filter to forcibly disable using the page template setting, even if option exists in DB.
+* New: Add `helppress_is_paginated()` helper.
+* New: Add `helppress-taxonomy.php` template file as default for `helppress-category.php` and `helppress-tag.php`.
+* New: Add `helppress_disable_theme_compat_mode` filter to disable post resetting and content filtering — needed for custom theming.
+* Tweak: Enqueue minified assets unless `WP_DEBUG` is `true`.
+* Tweak: Various text capitalizations and strings.
+* Tweak: Upgraded jQuery Autocomplete script.
+* Tweak: Rename `helppress_is_kb_page()` to `helppress_is_kb()`. Kept old function as alias for backwards compatiblity.
+* Tweak: Don't load plugin if WordPress or PHP is below required version.
+* Tweak: Remove included POT file in liue of GlotPress.
+* Tweak: Improved performance of demo content import.
+* Fix: Only show permalinks notice to users that can manage options.
+* Fix: Use knowledge base title for menu archive link.
+
 = 1.4.2, November 13, 2017 =
 * New: Add link Settings page to the plugin's action links.
 * Fix: Fix user permissions for admin menu item and "View Live" link.
