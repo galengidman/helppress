@@ -72,4 +72,4 @@ gulp.task('clean', ['export'], function() {
 	return del(`${pkg.name}`);
 });
 
-gulp.task('release', ['translate', 'copy', 'zip', 'export', 'clean']);
+gulp.task('release', ['copy', 'zip', 'export', 'clean']);
