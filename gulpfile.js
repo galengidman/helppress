@@ -61,15 +61,15 @@ gulp.task('copy', function() {
 			'!node_modules/**',
 			'!package.json',
 		])
-		.pipe(gulp.dest('helppress'));
+		.pipe(gulp.dest(`${pkg.name}`));
 });
 
-gulp.task('zip', ['copy'], shell.task(`zip -r helppress-${pkg.version}.zip helppress`));
+gulp.task('zip', ['copy'], shell.task(`zip -r ${pkg.name}-${pkg.version}.zip ${pkg.name}`));
 
-gulp.task('export', ['zip'], shell.task(`mv helppress-${pkg.version}.zip ~/Desktop/`));
+gulp.task('export', ['zip'], shell.task(`mv ${pkg.name}-${pkg.version}.zip ~/Desktop/`));
 
 gulp.task('clean', ['export'], function() {
-	return del('helppress');
+	return del(`${pkg.name}`);
 });
 
 gulp.task('release', ['translate', 'copy', 'zip', 'export', 'clean']);
