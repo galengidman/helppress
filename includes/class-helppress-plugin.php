@@ -56,10 +56,9 @@ class HelpPress_Plugin {
 			'includes/class-helppress-template-loader.php',
 			'includes/class-helppress-theme-compat.php',
 
-			'includes/formatting.php',
-			'includes/options.php',
-			'includes/template-tags.php',
-
+			'includes/formatting-functions.php',
+			'includes/options-functions.php',
+			'includes/template-functions.php',
 		];
 
 		$includes = apply_filters( 'helppress_includes', $includes );

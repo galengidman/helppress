@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Tags
+ * Template Functions
  *
  * @package HelpPress
  * @since 1.0.0
@@ -208,7 +208,7 @@ function helppress_is_kb_search() {
  *
  * @since 2.0.0
  *
- * @return boolean
+ * @return boolean HelpPress page or not.
  */
 function helppress_is_kb() {
 	return (bool) helppress_get_kb_context();
