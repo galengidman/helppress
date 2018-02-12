@@ -46,8 +46,8 @@ class HelpPress_Theme_Compat {
 
 		add_filter( 'pre_get_posts', [ $this, 'query_mods' ] );
 
-		// add_filter( 'the_content', [ $this, 'custom_content' ] );
-		// add_filter( 'the_excerpt', [ $this, 'custom_content' ] );
+		add_filter( 'the_content', [ $this, 'custom_content' ] );
+		add_filter( 'the_excerpt', [ $this, 'custom_content' ] );
 
 		add_action( 'body_class', [ $this, 'body_classes' ] );
 
@@ -243,6 +243,10 @@ class HelpPress_Theme_Compat {
 	 */
 	public function custom_content( $content ) {
 		global $post;
+
+		if ( $this->is_theme_compat_disabled() ) {
+			return $content;
+		}
 
 		if ( is_admin() ) {
 			return $content;
