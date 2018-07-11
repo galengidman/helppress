@@ -112,12 +112,6 @@ class HelpPress_Settings {
 		$this->add_tab( 10, esc_html__( 'General', 'helppress' ) );
 
 		$this->add_option( 10, [
-			'type' => 'heading',
-			'id'   => 'general_heading_labels',
-			'name' => esc_html__( 'Labels', 'helppress' ),
-		] );
-
-		$this->add_option( 10, [
 			'type'    => 'text',
 			'id'      => 'title',
 			'name'    => esc_html__( 'Knowledge Base Title', 'helppress' ),
@@ -226,12 +220,6 @@ class HelpPress_Settings {
 		$this->add_tab( 20, esc_html__( 'Display', 'helppress' ) );
 
 		$this->add_option( 20, [
-			'type' => 'heading',
-			'id'   => 'display_heading_layout',
-			'name' => esc_html__( 'Layout', 'helppress' ),
-		] );
-
-		$this->add_option( 20, [
 			'type'    => 'select',
 			'id'      => 'page_template',
 			'name'    => esc_html__( 'Page Template', 'helppress' ),
@@ -282,12 +270,6 @@ class HelpPress_Settings {
 		$this->add_tab( 30, esc_html__( 'Breadcrumb', 'helppress' ) );
 
 		$this->add_option( 30, [
-			'type' => 'heading',
-			'id'   => 'breadcrumb_heading_settings',
-			'name' => esc_html__( 'Settings', 'helppress' ),
-		] );
-
-		$this->add_option( 30, [
 			'type'    => 'enable',
 			'id'      => 'breadcrumb',
 			'name'    => esc_html__( 'Breadcrumb', 'helppress' ),
@@ -314,12 +296,6 @@ class HelpPress_Settings {
 		// Search ----------------------------------------------------------------
 
 		$this->add_tab( 40, esc_html__( 'Search', 'helppress' ) );
-
-		$this->add_option( 40, [
-			'type' => 'heading',
-			'id'   => 'search_heading_settings',
-			'name' => esc_html__( 'Settings', 'helppress' ),
-		] );
 
 		$this->add_option( 40, [
 			'type'    => 'enable',
