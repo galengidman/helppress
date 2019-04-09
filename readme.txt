@@ -2,7 +2,7 @@
 Contributors:      helppresswp, galengidman
 Tags:              knowledge base, knowledgebase, help desk, helpdesk, wiki
 Requires at least: 4.4
-Tested up to:      5.2
+Tested up to:      5.1
 Stable tag:        trunk
 
 A WordPress knowledge base plugin compatible with almost any theme.
