@@ -51,7 +51,7 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
-= 2.0.0, February 11, 2018 =
+= 2.0.1, April 9, 2019 =
 * Tweak: Updated contributors and bump up compatible WP versions.
 
 = 2.0.0, February 11, 2018 =
