@@ -1,8 +1,8 @@
 === HelpPress Knowledge Base ===
-Contributors:      helppresswp, themebright, galengidman
+Contributors:      helppresswp, galengidman
 Tags:              knowledge base, knowledgebase, help desk, helpdesk, wiki
 Requires at least: 4.4
-Tested up to:      4.9.4
+Tested up to:      5.1
 Stable tag:        trunk
 
 A WordPress knowledge base plugin compatible with almost any theme.
@@ -50,6 +50,9 @@ Yes, but the slug settings will have no effect.
 6. Search settings.
 
 == Changelog ==
+
+= 2.0.1, April 9, 2019 =
+* Tweak: Updated contributors and bump up compatible WP versions.
 
 = 2.0.0, February 11, 2018 =
 * New: Add option to display the knowledge base on the front page.
