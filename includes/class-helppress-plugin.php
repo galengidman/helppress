@@ -43,6 +43,7 @@ class HelpPress_Plugin {
 	 */
 	protected function include_files() {
 		$includes = [
+			'includes/vendor/cmb2/cmb2/init.php',
 			'includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
 			'includes/vendor/gambitph/titan-framework/titan-framework.php',
 			'includes/vendor/yahnis-elsts/admin-notices/AdminNotice.php',
@@ -56,8 +57,8 @@ class HelpPress_Plugin {
 			'includes/class-helppress-theme-compat.php',
 
 			'includes/deprecated-functions.php',
-			'includes/formatting-functions.php',
 			'includes/options-functions.php',
+			'includes/sanitization-functions.php',
 			'includes/template-functions.php',
 		];
 

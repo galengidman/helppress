@@ -1,9 +1,9 @@
 <?php
 /**
- * Formatting
+ * Sanitization
  *
  * @package HelpPress
- * @since 1.0.0
+ * @since 3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -22,13 +22,53 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return string Sanitized slug.
  */
 function helppress_sanitize_slug( $slug ) {
-	$reserved_terms = helppress_get_reserved_terms();
+	$slug = sanitize_title( $slug );
 
-	if ( in_array( $slug, $reserved_terms ) ) {
+	if ( in_array( $slug, helppress_get_reserved_terms() ) ) {
 		$slug = 'kb-' . $slug;
 	}
 
 	return apply_filters( 'helppress_sanitize_slug', $slug );
+}
+
+/**
+ * Sanitizes the posts_per_page option to ensure a intval between -1 and 50.
+ *
+ * @since 3.0.0
+ *
+ * @param string $number String to sanitize.
+ * @return int Sanitized integer.
+ */
+function helppress_sanitize_posts_per_page( $number ) {
+	$number = intval( $number );
+
+	if ( $number < -1 ) {
+		$number = -1;
+	} elseif ( $number > 50 ) {
+		$number = 50;
+	}
+
+	return apply_filters( 'helppress_sanitize_posts_per_page', $number );
+}
+
+/**
+ * Sanitizes the search_suggestions_number option to ensure a intval between 1 and 10.
+ *
+ * @since 3.0.0
+ *
+ * @param string $number String to sanitize.
+ * @return int Sanitized integer.
+ */
+function helppress_sanitize_search_suggestions_number( $number ) {
+	$number = intval( $number );
+
+	if ( $number < 1 ) {
+		$number = 1;
+	} elseif ( $number > 10 ) {
+		$number = 10;
+	}
+
+	return apply_filters( 'helppress_sanitize_search_suggestions_number', $number );
 }
 
 /**
@@ -126,5 +166,5 @@ function helppress_get_reserved_terms() {
 		'year',
 	];
 
-	return apply_filters( 'helppress_get_reserved_terms', $terms );
+	return apply_filters( 'helppress_reserved_terms', $terms );
 }

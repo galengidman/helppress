@@ -5,6 +5,7 @@
 	"require": {
 		"gambitph/Titan-Framework": "^1.9",
 		"gamajo/template-loader": "^1.3",
-		"yahnis-elsts/admin-notices": "^1.0"
+		"yahnis-elsts/admin-notices": "^1.0",
+		"cmb2/cmb2": "^2.6"
 	}
 }
