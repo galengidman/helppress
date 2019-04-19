@@ -1,6 +1,6 @@
 {
   "name": "helppress",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "devDependencies": {
     "autoprefixer": "^7.1.3",
     "cssnano": "^3.10.0",

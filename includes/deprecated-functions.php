@@ -17,15 +17,3 @@
 function helppress_is_kb_page() {
 	return helppress_is_kb();
 }
-
-/**
- * Aliase of HelpPress_Plugin::get_article_post_formats() for backwards compatiblity.
- *
- * @deprecated 2.0.0 Use `HelpPress_Plugin::get_article_post_formats()`
- * @since 1.1.0
- *
- * @return array Allowed post formats.
- */
-function helppress_get_article_post_formats() {
-	return HelpPress_Plugin::get_article_post_formats();
-}

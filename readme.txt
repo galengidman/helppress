@@ -1,5 +1,5 @@
 === HelpPress Knowledge Base ===
-Contributors:      helppresswp, galengidman
+Contributors:      galengidman
 Tags:              knowledge base, knowledgebase, help desk, helpdesk, wiki
 Requires at least: 4.4
 Tested up to:      5.1
