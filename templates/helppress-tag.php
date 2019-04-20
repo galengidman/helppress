@@ -1,3 +1,3 @@
 <?php
 
-helppress_get_template_part( 'helppress-tag' );
+helppress_get_template_part('helppress-tag');

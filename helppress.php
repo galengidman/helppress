@@ -9,25 +9,25 @@
  * Text Domain: helppress
  */
 
-if ( ! class_exists( 'HelpPress_Plugin' ) ) :
+if (! class_exists('HelpPress_Plugin')) :
 
 final class HelpPress_Plugin {
 
 	protected static $instance;
 
 	public static function instance() {
-		if ( empty( self::$instance ) ) {
+		if (empty(self::$instance)) {
 			self::$instance = new self();
 
 			self::$instance->constants();
 
-			if ( ! version_compare( PHP_VERSION, HELPPRESS_MIN_PHP, '>=' ) ) {
-				add_action( 'admin_notices', [ self::$instance, 'fail_php_version' ] );
-			} elseif ( ! version_compare( get_bloginfo( 'version' ), HELPPRESS_MIN_WP, '>=' ) ) {
-				add_action( 'admin_notices', [ self::$instance, 'fail_wp_version' ] );
+			if (! version_compare(PHP_VERSION, HELPPRESS_MIN_PHP, '>=')) {
+				add_action('admin_notices', [self::$instance, 'fail_php_version']);
+			} elseif (! version_compare(get_bloginfo('version'), HELPPRESS_MIN_WP, '>=')) {
+				add_action('admin_notices', [self::$instance, 'fail_wp_version']);
 			} else {
 				self::$instance->includes();
-				add_action( 'plugins_loaded', [ self::$instance, 'load_textdomain' ] );
+				add_action('plugins_loaded', [self::$instance, 'load_textdomain']);
 			}
 		}
 
@@ -35,17 +35,17 @@ final class HelpPress_Plugin {
 	}
 
 	protected function constants() {
-		define( 'HELPPRESS_VERSION',  '3.0.0' );
-		define( 'HELPPRESS_FILE',     __FILE__ );
-		define( 'HELPPRESS_PATH',     plugin_dir_path( HELPPRESS_FILE ) );
-		define( 'HELPPRESS_URL',      plugin_dir_url( HELPPRESS_FILE ) );
-		define( 'HELPPRESS_BASENAME', plugin_basename( HELPPRESS_FILE ) );
-		define( 'HELPPRESS_MIN_PHP',  '5.4' );
-		define( 'HELPPRESS_MIN_WP',   '4.5' );
+		define('HELPPRESS_VERSION',  '3.0.0');
+		define('HELPPRESS_FILE',     __FILE__);
+		define('HELPPRESS_PATH',     plugin_dir_path(HELPPRESS_FILE));
+		define('HELPPRESS_URL',      plugin_dir_url(HELPPRESS_FILE));
+		define('HELPPRESS_BASENAME', plugin_basename(HELPPRESS_FILE));
+		define('HELPPRESS_MIN_PHP',  '5.4');
+		define('HELPPRESS_MIN_WP',   '4.5');
 	}
 
 	protected function includes() {
-		$includes = apply_filters( 'helppress_includes', [
+		$includes = apply_filters('helppress_includes', [
 			'includes/vendor/cmb2/cmb2/init.php',
 			'includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
 			'includes/vendor/gambitph/titan-framework/titan-framework.php',
@@ -67,37 +67,37 @@ final class HelpPress_Plugin {
 			'includes/sanitization-functions.php',
 			'includes/template-functions.php',
 			'includes/upgrade.php',
-		] );
+		]);
 
-		foreach ( $includes as $file ) {
+		foreach ($includes as $file) {
 			include HELPPRESS_PATH . $file;
 		}
 	}
 
 	public function load_textdomain() {
-		load_plugin_textdomain( 'helppress' );
+		load_plugin_textdomain('helppress');
 	}
 
 	public function fail_php_version() {
 		$message = sprintf(
-			esc_html__( 'HelpPress requires PHP version %s+, plugin is currently NOT ACTIVE.', 'helppress' ),
+			esc_html__('HelpPress requires PHP version %s+, plugin is currently NOT ACTIVE.', 'helppress'),
 			HELPPRESS_MIN_PHP
 		);
 
-		$message = sprintf( '<div class="error">%s</div>', wpautop( $message ) );
+		$message = sprintf('<div class="error">%s</div>', wpautop($message));
 
-		echo wp_kses_post( $message );
+		echo wp_kses_post($message);
 	}
 
 	public function fail_wp_version() {
 		$message = sprintf(
-			esc_html__( 'HelpPress requires WordPress version %s+, plugin is currently NOT ACTIVE.', 'helppress' ),
+			esc_html__('HelpPress requires WordPress version %s+, plugin is currently NOT ACTIVE.', 'helppress'),
 			HELPPRESS_MIN_WP
 		);
 
-		$message = sprintf( '<div class="error">%s</div>', wpautop( $message ) );
+		$message = sprintf('<div class="error">%s</div>', wpautop($message));
 
-		echo wp_kses_post( $message );
+		echo wp_kses_post($message);
 	}
 
 }

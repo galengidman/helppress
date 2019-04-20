@@ -6,13 +6,13 @@
  * @since 1.1.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit;
 }
 
 use \YeEasyAdminNotices\V1\AdminNotice;
 
-if ( ! class_exists( 'HelpPress_Demo_Content' ) ) :
+if (! class_exists('HelpPress_Demo_Content')) :
 
 /**
  * Demo content class.
@@ -71,8 +71,8 @@ class HelpPress_Demo_Content {
 	 * @since 1.1.0
 	 */
 	public function __construct() {
-		add_action( 'admin_init', [ $this, 'install' ] );
-		add_action( 'admin_notices', [ $this, 'prompt_admin_notice' ] );
+		add_action('admin_init', [$this, 'install']);
+		add_action('admin_notices', [$this, 'prompt_admin_notice']);
 	}
 
 	/**
@@ -89,82 +89,82 @@ class HelpPress_Demo_Content {
 	 * @since 1.1.0
 	 */
 	public function install() {
-		if ( ! is_admin() ) {
+		if (! is_admin()) {
 			return;
 		}
 
-		if ( ! isset( $_GET['helppress_action'] ) || $_GET['helppress_action'] !== 'install_demo_content' ) {
+		if (! isset($_GET['helppress_action']) || $_GET['helppress_action'] !== 'install_demo_content') {
 			return;
 		}
 
-		if ( ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'helppress_install_demo_content' ) ) {
+		if (! wp_verify_nonce($_REQUEST['_wpnonce'], 'helppress_install_demo_content')) {
 			return;
 		}
 
-		if ( $this->is_installed() ) {
+		if ($this->is_installed()) {
 			return;
 		}
 
-		$structure = json_decode( file_get_contents( $this->structure ) );
+		$structure = json_decode(file_get_contents($this->structure));
 
-		$tags = json_decode( file_get_contents( $this->tags ) );
+		$tags = json_decode(file_get_contents($this->tags));
 
-		$article_content = trim( file_get_contents( $this->article_content ) );
+		$article_content = trim(file_get_contents($this->article_content));
 
 		$post_formats = helppress_get_article_post_formats();
 		// Adding 6 `standard` format posts vs 1 of alternate formats
-		$post_formats = array_merge( $post_formats, array_fill( 0, 6, 'standard' ) );
+		$post_formats = array_merge($post_formats, array_fill(0, 6, 'standard'));
 
 		$existing_terms = [];
 
 		$i = 1;
-		foreach ( $structure as $category ) {
-			foreach ( $category->articles as $article_title ) {
-				$post_id = wp_insert_post( [
+		foreach ($structure as $category) {
+			foreach ($category->articles as $article_title) {
+				$post_id = wp_insert_post([
 					'post_title'   => $article_title,
 					'post_content' => $article_content,
 					'post_type'    => 'hp_article',
 					'post_status'  => 'publish',
-					'post_date'    => date( 'Y-m-d H:i:s', time() - ( $i * DAY_IN_SECONDS ) ),
-				] );
+					'post_date'    => date('Y-m-d H:i:s', time() - ($i * DAY_IN_SECONDS)),
+				]);
 
-				set_post_format( $post_id, $post_formats[ array_rand( $post_formats ) ] );
+				set_post_format($post_id, $post_formats[array_rand($post_formats)]);
 
-				if ( array_key_exists( $category->name, $existing_terms ) ) {
-					$category_object = $existing_terms[ $category->name ];
+				if (array_key_exists($category->name, $existing_terms)) {
+					$category_object = $existing_terms[$category->name];
 				} else {
-					$category_object = wp_insert_term( $category->name, 'hp_category' );
-					$existing_terms[ $category->name ] = $category_object;
+					$category_object = wp_insert_term($category->name, 'hp_category');
+					$existing_terms[$category->name] = $category_object;
 				}
 
 				$category_id = (int) $category_object['term_id'];
 
-				wp_set_post_terms( $post_id, [ $category_id ], 'hp_category' );
+				wp_set_post_terms($post_id, [$category_id], 'hp_category');
 
-				$tag_indexes = array_rand( $tags, 4 );
-				foreach ( $tag_indexes as $index ) {
-					$tag_name = $tags[ $index ];
+				$tag_indexes = array_rand($tags, 4);
+				foreach ($tag_indexes as $index) {
+					$tag_name = $tags[$index];
 
-					if ( term_exists( $tag_name, 'hp_tag' ) ) {
-						$tag_object = get_term_by( 'name', $tag_name, 'hp_tag', ARRAY_A );
+					if (term_exists($tag_name, 'hp_tag')) {
+						$tag_object = get_term_by('name', $tag_name, 'hp_tag', ARRAY_A);
 					} else {
-						$tag_object = wp_insert_term( $tag_name, 'hp_tag' );
+						$tag_object = wp_insert_term($tag_name, 'hp_tag');
 					}
 
 					$tag_id = (int) $tag_object['term_id'];
 
-					wp_set_post_terms( $post_id, [ $tag_id ], 'hp_tag', true );
+					wp_set_post_terms($post_id, [$tag_id], 'hp_tag', true);
 				}
 
 				$i++;
 			}
 		}
 
-		update_option( $this->option_name, true, false );
+		update_option($this->option_name, true, false);
 
 		AdminNotice::create()
 			->success()
-			->text( esc_html__( 'Demo content installed!', 'helppress' ) )
+			->text(esc_html__('Demo content installed!', 'helppress'))
 			->dismissible()
 			->show();
 	}
@@ -178,7 +178,7 @@ class HelpPress_Demo_Content {
 	 * @return boolean Whether demo content has been installed.
 	 */
 	public function is_installed() {
-		return (bool) get_option( $this->option_name );
+		return (bool) get_option($this->option_name);
 	}
 
 	/**
@@ -195,51 +195,51 @@ class HelpPress_Demo_Content {
 	 * @since 1.1.0
 	 */
 	public function prompt_admin_notice() {
-		if ( $this->is_installed() ) {
+		if ($this->is_installed()) {
 			return;
 		}
 
 		$screen = get_current_screen();
-		if ( $screen->post_type !== 'hp_article' ) {
+		if ($screen->post_type !== 'hp_article') {
 			return;
 		}
 
-		$existing_articles = get_posts( [
+		$existing_articles = get_posts([
 			'posts_per_page' => 1,
 			'post_type'      => 'hp_article',
 			'fields'         => 'ids',
-		] );
+		]);
 
-		if ( $existing_articles ) {
+		if ($existing_articles) {
 			return;
 		}
 
 		// Must replace &amp; → & to get persistent dismissal to work.
 		// That only took *forever* to figure out. :|
-		$install_url = str_replace( '&amp;', '&', esc_url_raw(
+		$install_url = str_replace('&amp;', '&', esc_url_raw(
 			wp_nonce_url(
-				add_query_arg( [
+				add_query_arg([
 					'post_type' => 'hp_article',
 					'helppress_action' => 'install_demo_content',
-				], admin_url( 'edit.php' ) ),
+				], admin_url('edit.php')),
 				'helppress_install_demo_content'
 			)
-		) );
+		));
 
 		ob_start();
 
 		?>
 
-		<p><?php esc_html_e( 'HelpPress includes build-in demo content to give you a head start. Would you like to install it now?', 'helppress' ); ?></p>
-		<p><a href="<?php echo $install_url; ?>" class="button button-primary"><?php esc_html_e( 'Install Demo Content', 'helppress' ); ?></a></p>
+		<p><?php esc_html_e('HelpPress includes build-in demo content to give you a head start. Would you like to install it now?', 'helppress'); ?></p>
+		<p><a href="<?php echo $install_url; ?>" class="button button-primary"><?php esc_html_e('Install Demo Content', 'helppress'); ?></a></p>
 
 		<?php
 
 		$notice_markup = ob_get_clean();
 
-		AdminNotice::create( 'helppress_install_demo_content' )
+		AdminNotice::create('helppress_install_demo_content')
 			->info()
-			->rawHtml( $notice_markup )
+			->rawHtml($notice_markup)
 			->persistentlyDismissible()
 			->show();
 	}

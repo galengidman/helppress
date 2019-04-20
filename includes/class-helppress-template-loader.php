@@ -6,11 +6,11 @@
  * @since 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit;
 }
 
-if ( ! class_exists( 'HelpPress_Template_Loader' ) ) :
+if (! class_exists('HelpPress_Template_Loader')) :
 
 /**
  * Template loader class.

@@ -6,11 +6,11 @@
  * @since 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit;
 }
 
-if ( ! class_exists( 'HelpPress_Menu_Archive_Link' ) ) :
+if (! class_exists('HelpPress_Menu_Archive_Link')) :
 
 /**
  * Menu archive link class.
@@ -26,7 +26,7 @@ class HelpPress_Menu_Archive_Link {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		add_action( 'admin_init', [ $this, 'add_meta_box' ] );
+		add_action('admin_init', [$this, 'add_meta_box']);
 	}
 
 	/**
@@ -38,8 +38,8 @@ class HelpPress_Menu_Archive_Link {
 	public function add_meta_box() {
 		add_meta_box(
 			'add-helppress-archive-link',
-			esc_html__( 'HelpPress', 'helppress' ),
-			[ $this, 'display_meta_box' ],
+			esc_html__('HelpPress', 'helppress'),
+			[$this, 'display_meta_box'],
 			'nav-menus',
 			'side',
 			'low'
@@ -66,7 +66,7 @@ class HelpPress_Menu_Archive_Link {
 								name="menu-item[-1][menu-item-object-id]"
 								value="-1"><?php
 
-							echo esc_html( helppress_get_option( 'title' ) ); ?>
+							echo esc_html(helppress_get_option('title')); ?>
 						</label>
 
 						<input
@@ -79,13 +79,13 @@ class HelpPress_Menu_Archive_Link {
 							type="hidden"
 							class="menu-item-title"
 							name="menu-item[-1][menu-item-title]"
-							value="<?php echo esc_attr( helppress_get_option( 'title' ) ); ?>">
+							value="<?php echo esc_attr(helppress_get_option('title')); ?>">
 
 						<input
 							type="hidden"
 							class="menu-item-url"
 							name="menu-item[-1][menu-item-url]"
-							value="<?php echo esc_url( helppress_get_kb_url() ); ?>">
+							value="<?php echo esc_url(helppress_get_kb_url()); ?>">
 
 						<input
 							type="hidden"
@@ -100,7 +100,7 @@ class HelpPress_Menu_Archive_Link {
 					<input
 						type="submit"
 						class="button-secondary submit-add-to-menu right"
-						value="<?php esc_attr_e( 'Add to Menu', 'helppress' ); ?>"
+						value="<?php esc_attr_e('Add to Menu', 'helppress'); ?>"
 						name="add-taxonomy-menu-item"
 						id="submit-helppress-archive-link">
 

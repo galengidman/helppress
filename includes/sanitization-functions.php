@@ -6,7 +6,7 @@
  * @since 3.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit;
 }
 
@@ -21,14 +21,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param string $slug Slug to sanitize.
  * @return string Sanitized slug.
  */
-function helppress_sanitize_slug( $slug ) {
-	$slug = sanitize_title( $slug );
+function helppress_sanitize_slug($slug) {
+	$slug = sanitize_title($slug);
 
-	if ( in_array( $slug, helppress_get_reserved_terms() ) ) {
+	if (in_array($slug, helppress_get_reserved_terms())) {
 		$slug = 'kb-' . $slug;
 	}
 
-	return apply_filters( 'helppress_sanitize_slug', $slug );
+	return apply_filters('helppress_sanitize_slug', $slug);
 }
 
 /**
@@ -39,16 +39,16 @@ function helppress_sanitize_slug( $slug ) {
  * @param string $number String to sanitize.
  * @return int Sanitized integer.
  */
-function helppress_sanitize_posts_per_page( $number ) {
-	$number = intval( $number );
+function helppress_sanitize_posts_per_page($number) {
+	$number = intval($number);
 
-	if ( $number < -1 ) {
+	if ($number < -1) {
 		$number = -1;
-	} elseif ( $number > 50 ) {
+	} elseif ($number > 50) {
 		$number = 50;
 	}
 
-	return apply_filters( 'helppress_sanitize_posts_per_page', $number );
+	return apply_filters('helppress_sanitize_posts_per_page', $number);
 }
 
 /**
@@ -59,16 +59,16 @@ function helppress_sanitize_posts_per_page( $number ) {
  * @param string $number String to sanitize.
  * @return int Sanitized integer.
  */
-function helppress_sanitize_search_suggestions_number( $number ) {
-	$number = intval( $number );
+function helppress_sanitize_search_suggestions_number($number) {
+	$number = intval($number);
 
-	if ( $number < 1 ) {
+	if ($number < 1) {
 		$number = 1;
-	} elseif ( $number > 10 ) {
+	} elseif ($number > 10) {
 		$number = 10;
 	}
 
-	return apply_filters( 'helppress_sanitize_search_suggestions_number', $number );
+	return apply_filters('helppress_sanitize_search_suggestions_number', $number);
 }
 
 /**
@@ -166,5 +166,5 @@ function helppress_get_reserved_terms() {
 		'year',
 	];
 
-	return apply_filters( 'helppress_reserved_terms', $terms );
+	return apply_filters('helppress_reserved_terms', $terms);
 }
