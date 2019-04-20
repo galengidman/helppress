@@ -53,7 +53,7 @@
 
 					<?php $articles = helppress_get_articles([
 						'hp_category' => $category->slug,
-						'fields'      => 'ids',
+						'fields' => 'ids',
 					]); ?>
 
 					<?php if ($articles->have_posts()) : ?>

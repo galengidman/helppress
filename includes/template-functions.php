@@ -36,11 +36,11 @@ endif;
  */
 function helppress_get_articles($args = []) {
 	$args = wp_parse_args($args, [
-		'post_type'      => 'hp_article',
-		'orderby'        => helppress_get_option('orderby'),
-		'order'          => helppress_get_option('order'),
+		'post_type' => 'hp_article',
+		'orderby' => helppress_get_option('orderby'),
+		'order' => helppress_get_option('order'),
 		'posts_per_page' => helppress_get_option('posts_per_page'),
-		'paged'          => helppress_page_num(),
+		'paged' => helppress_page_num(),
 	]);
 
 	$args = apply_filters('helppress_get_articles_args', $args);
@@ -73,7 +73,7 @@ function helppress_get_breadcrumb() {
 function helppress_get_categories($args = []) {
 	$args = wp_parse_args($args, [
 		'taxonomy' => 'hp_category',
-		'orderby'  => 'menu_order',
+		'orderby' => 'menu_order',
 	]);
 
 	$args = apply_filters('helppress_get_categories_args', $args);
@@ -96,11 +96,11 @@ function helppress_category_article_count($category) {
 		$category = get_term($category);
 	}
 
-	$count   = [];
+	$count = [];
 	$count[] = '<span>';
 	$count[] = number_format_i18n($category->count);
 	$count[] = '</span>';
-	$count   = join('', $count);
+	$count = join('', $count);
 
 	if (1 === $category->count) {
 		$html = sprintf(esc_html_x('%s Article', 'articles count for 1 article', 'helppress'), $count);

@@ -2,10 +2,10 @@
 /**
  * Plugin Name: HelpPress
  * Description: A powerful and easy-to-use knowledge base plugin for WordPress, compatible with 99% of themes.
- * Version:     3.0.0
- * Author:      Galen Gidman
- * Author URI:  https://galengidman.com/
- * License:     GPL2+
+ * Version: 3.0.0
+ * Author: Galen Gidman
+ * Author URI: https://galengidman.com/
+ * License: GPL2+
  * Text Domain: helppress
  */
 
@@ -35,13 +35,13 @@ final class HelpPress_Plugin {
 	}
 
 	protected function constants() {
-		define('HELPPRESS_VERSION',  '3.0.0');
-		define('HELPPRESS_FILE',     __FILE__);
-		define('HELPPRESS_PATH',     plugin_dir_path(HELPPRESS_FILE));
-		define('HELPPRESS_URL',      plugin_dir_url(HELPPRESS_FILE));
+		define('HELPPRESS_VERSION', '3.0.0');
+		define('HELPPRESS_FILE', __FILE__);
+		define('HELPPRESS_PATH', plugin_dir_path(HELPPRESS_FILE));
+		define('HELPPRESS_URL', plugin_dir_url(HELPPRESS_FILE));
 		define('HELPPRESS_BASENAME', plugin_basename(HELPPRESS_FILE));
-		define('HELPPRESS_MIN_PHP',  '5.4');
-		define('HELPPRESS_MIN_WP',   '4.5');
+		define('HELPPRESS_MIN_PHP', '5.4');
+		define('HELPPRESS_MIN_WP', '4.5');
 	}
 
 	protected function includes() {

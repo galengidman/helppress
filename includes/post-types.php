@@ -2,30 +2,30 @@
 
 function helppress_register_post_types() {
 	$labels = [
-		'name'                  => esc_html__('Articles',                   'helppress'),
-		'singular_name'         => esc_html__('Article',                    'helppress'),
-		'add_new'               => esc_html__('Add New',                    'helppress'),
-		'add_new_item'          => esc_html__('Add New Article',            'helppress'),
-		'edit_item'             => esc_html__('Edit Article',               'helppress'),
-		'new_item'              => esc_html__('New Article',                'helppress'),
-		'view_item'             => esc_html__('View Article',               'helppress'),
-		'view_items'            => esc_html__('View Articles',              'helppress'),
-		'search_items'          => esc_html__('Search Articles',            'helppress'),
-		'not_found'             => esc_html__('No articles found',          'helppress'),
-		'not_found_in_trash'    => esc_html__('No articles found in Trash', 'helppress'),
-		'parent_item_colon'     => esc_html__('Parent Article:',            'helppress'),
-		'all_items'             => esc_html__('All Articles',               'helppress'),
-		'insert_into_item'      => esc_html__('Insert into article',        'helppress'),
-		'uploaded_to_this_item' => esc_html__('Uploaded to this article',   'helppress'),
-		'menu_name'             => esc_html__('HelpPress',                  'helppress'),
+		'name' => esc_html__('Articles', 'helppress'),
+		'singular_name' => esc_html__('Article', 'helppress'),
+		'add_new' => esc_html__('Add New', 'helppress'),
+		'add_new_item' => esc_html__('Add New Article', 'helppress'),
+		'edit_item' => esc_html__('Edit Article', 'helppress'),
+		'new_item' => esc_html__('New Article', 'helppress'),
+		'view_item' => esc_html__('View Article', 'helppress'),
+		'view_items' => esc_html__('View Articles', 'helppress'),
+		'search_items' => esc_html__('Search Articles', 'helppress'),
+		'not_found' => esc_html__('No articles found', 'helppress'),
+		'not_found_in_trash' => esc_html__('No articles found in Trash', 'helppress'),
+		'parent_item_colon' => esc_html__('Parent Article:', 'helppress'),
+		'all_items' => esc_html__('All Articles', 'helppress'),
+		'insert_into_item' => esc_html__('Insert into article', 'helppress'),
+		'uploaded_to_this_item' => esc_html__('Uploaded to this article', 'helppress'),
+		'menu_name' => esc_html__('HelpPress', 'helppress'),
 	];
 
 	$args = [
-		'labels'        => $labels,
-		'public'        => true,
+		'labels' => $labels,
+		'public' => true,
 		'menu_position' => 25,
-		'menu_icon'     => 'dashicons-sos',
-		'supports'      => [
+		'menu_icon' => 'dashicons-sos',
+		'supports' => [
 			'title',
 			'editor',
 			'author',
@@ -35,9 +35,9 @@ function helppress_register_post_types() {
 			'revisions',
 			'post-formats',
 		],
-		'has_archive'   => true,
-		'rewrite'       => [
-			'slug'       => helppress_get_option('knowledge_base_slug'),
+		'has_archive' => true,
+		'rewrite' => [
+			'slug' => helppress_get_option('knowledge_base_slug'),
 			'with_front' => false,
 		],
 	];
@@ -50,18 +50,18 @@ add_action('init', 'helppress_register_post_types');
 
 function helppress_register_taxonomies() {
 	$labels = [
-		'name'          => esc_html__('Article Categories', 'helppress'),
-		'singular_name' => esc_html__('Article Category',   'helppress'),
+		'name' => esc_html__('Article Categories', 'helppress'),
+		'singular_name' => esc_html__('Article Category', 'helppress'),
 	];
 
 	$args = [
-		'labels'            => $labels,
-		'public'            => true,
-		'show_in_menu'      => 'edit.php?post_type=hp_article',
+		'labels' => $labels,
+		'public' => true,
+		'show_in_menu' => 'edit.php?post_type=hp_article',
 		'show_admin_column' => true,
-		'hierarchical'      => true,
-		'rewrite'           => [
-			'slug'       => helppress_get_option('category_slug'),
+		'hierarchical' => true,
+		'rewrite' => [
+			'slug' => helppress_get_option('category_slug'),
 			'with_front' => false,
 		],
 	];
@@ -71,17 +71,17 @@ function helppress_register_taxonomies() {
 	register_taxonomy('hp_category', 'hp_article', $args);
 
 	$labels = [
-		'name'          => esc_html__('Article Tags', 'helppress'),
-		'singular_name' => esc_html__('Article Tag',  'helppress'),
+		'name' => esc_html__('Article Tags', 'helppress'),
+		'singular_name' => esc_html__('Article Tag', 'helppress'),
 	];
 
 	$args = [
-		'labels'            => $labels,
-		'public'            => true,
-		'show_in_menu'      => 'edit.php?post_type=hp_article',
+		'labels' => $labels,
+		'public' => true,
+		'show_in_menu' => 'edit.php?post_type=hp_article',
 		'show_admin_column' => true,
-		'rewrite'           => [
-			'slug'       => helppress_get_option('tag_slug'),
+		'rewrite' => [
+			'slug' => helppress_get_option('tag_slug'),
 			'with_front' => false,
 		],
 	];
@@ -122,5 +122,5 @@ function helppress_add_article_post_formats_support() {
 		add_theme_support('post-formats', helppress_get_article_post_formats());
 	}
 }
-add_action('load-post.php',     'helppress_add_article_post_formats_support');
+add_action('load-post.php', 'helppress_add_article_post_formats_support');
 add_action('load-post-new.php', 'helppress_add_article_post_formats_support');

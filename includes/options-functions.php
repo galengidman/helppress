@@ -21,36 +21,36 @@ function helppress_get_option_defaults() {
 	$defaults = [
 
 		// Text
-		'title'                     => esc_html__('Knowledge Base', 'helppress'),
+		'title' => esc_html__('Knowledge Base', 'helppress'),
 
 		// Homepage
-		'show_on_front'             => false,
+		'show_on_front' => false,
 
 		// Queries
-		'orderby'                   => 'date',
-		'order'                     => 'ASC',
-		'posts_per_page'            => 5,
+		'orderby' => 'date',
+		'order' => 'ASC',
+		'posts_per_page' => 5,
 
 		// Slugs
-		'knowledge_base_slug'       => 'kb',
-		'category_slug'             => 'kb-category',
-		'tag_slug'                  => 'kb-tag',
+		'knowledge_base_slug' => 'kb',
+		'category_slug' => 'kb-category',
+		'tag_slug' => 'kb-tag',
 
 		// Display
-		'page_template'             => 'default',
-		'columns'                   => 2,
-		'disable_css'               => false,
+		'page_template' => 'default',
+		'columns' => 2,
+		'disable_css' => false,
 
 		// Breadcrumb
-		'breadcrumb'                => true,
-		'breadcrumb_home'           => false,
-		'breadcrumb_sep'            => '/',
+		'breadcrumb' => true,
+		'breadcrumb_home' => false,
+		'breadcrumb_sep' => '/',
 
 		// Search
-		'search'                    => true,
-		'search_placeholder'        => esc_attr__('Search the knowledge base …', 'helppress'),
-		'search_autofocus'          => false,
-		'search_suggestions'        => true,
+		'search' => true,
+		'search_placeholder' => esc_attr__('Search the knowledge base …', 'helppress'),
+		'search_autofocus' => false,
+		'search_suggestions' => true,
 		'search_suggestions_number' => 5,
 
 	];
@@ -68,7 +68,7 @@ function helppress_get_option_defaults() {
  */
 function helppress_get_option_default($key = null) {
 	$defaults = helppress_get_option_defaults();
-	$value    = false;
+	$value = false;
 
 	if (array_key_exists($key, $defaults)) {
 		$value = $defaults[$key];
@@ -87,7 +87,7 @@ function helppress_get_option_default($key = null) {
  */
 function helppress_get_option($key = null) {
 	$options = maybe_unserialize(get_option('helppress_options'));
-	$value   = false;
+	$value = false;
 
 	if ($options && array_key_exists($key, $options)) {
 		$value = $options[$key];

@@ -121,11 +121,11 @@ class HelpPress_Demo_Content {
 		foreach ($structure as $category) {
 			foreach ($category->articles as $article_title) {
 				$post_id = wp_insert_post([
-					'post_title'   => $article_title,
+					'post_title' => $article_title,
 					'post_content' => $article_content,
-					'post_type'    => 'hp_article',
-					'post_status'  => 'publish',
-					'post_date'    => date('Y-m-d H:i:s', time() - ($i * DAY_IN_SECONDS)),
+					'post_type' => 'hp_article',
+					'post_status' => 'publish',
+					'post_date' => date('Y-m-d H:i:s', time() - ($i * DAY_IN_SECONDS)),
 				]);
 
 				set_post_format($post_id, $post_formats[array_rand($post_formats)]);
@@ -206,8 +206,8 @@ class HelpPress_Demo_Content {
 
 		$existing_articles = get_posts([
 			'posts_per_page' => 1,
-			'post_type'      => 'hp_article',
-			'fields'         => 'ids',
+			'post_type' => 'hp_article',
+			'fields' => 'ids',
 		]);
 
 		if ($existing_articles) {

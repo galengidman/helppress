@@ -1,7 +1,7 @@
 <?php
 
 function helppress_assets() {
-	$min = helppress_is_debug() ? ''  : '.min';
+	$min = helppress_is_debug() ? '' : '.min';
 
 	wp_enqueue_script(
 		'jquery-devbridge-autocomplete',
@@ -21,7 +21,7 @@ function helppress_assets() {
 		'adminAjax' => esc_url(admin_url('admin-ajax.php')),
 	]);
 
-	$disable_css        = apply_filters('helppress_disable_css', false);
+	$disable_css = apply_filters('helppress_disable_css', false);
 	$disable_css_option = helppress_get_option('disable_css');
 
 	if (! $disable_css && ! $disable_css_option) {

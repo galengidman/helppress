@@ -121,8 +121,8 @@ class HelpPress_Breadcrumb {
 	 */
 	protected function add_tax_tree($term_id) {
 		if (term_exists($term_id)) {
-			$term      = get_term($term_id);
-			$tree      = [$term->term_id];
+			$term = get_term($term_id);
+			$tree = [$term->term_id];
 			$ancestors = get_ancestors($term->term_id, $term->term_slug, 'taxonomy');
 
 			if ($ancestors) {

@@ -29,7 +29,7 @@ class HelpPress_Search {
 		add_action('query_vars', [$this, 'add_query_var']);
 		add_filter('pre_get_posts', [$this, 'search_query_mods']);
 
-		add_action('wp_ajax_helppress_search_suggestions',        [$this, 'get_suggestions']);
+		add_action('wp_ajax_helppress_search_suggestions', [$this, 'get_suggestions']);
 		add_action('wp_ajax_nopriv_helppress_search_suggestions', [$this, 'get_suggestions']);
 	}
 
@@ -77,7 +77,7 @@ class HelpPress_Search {
 			return $query;
 		}
 
-		$query->set('post_type',      'hp_article');
+		$query->set('post_type', 'hp_article');
 		$query->set('posts_per_page', helppress_get_option('posts_per_page'));
 
 		return $query;
@@ -91,10 +91,10 @@ class HelpPress_Search {
 	 */
 	public function get_suggestions() {
 		$articles = new WP_Query([
-			's'              => $_REQUEST['query'],
-			'post_type'      => 'hp_article',
-			'fields'         => 'ids',
-			'no_found_rows'  => true,
+			's' => $_REQUEST['query'],
+			'post_type' => 'hp_article',
+			'fields' => 'ids',
+			'no_found_rows' => true,
 			'posts_per_page' => helppress_get_option('search_suggestions_number'),
 		]);
 
@@ -103,7 +103,7 @@ class HelpPress_Search {
 		foreach ($articles->posts as $article_id) {
 			$suggestions['suggestions'][] = [
 				'value' => get_the_title($article_id),
-				'data'  => esc_url(get_permalink($article_id)),
+				'data' => esc_url(get_permalink($article_id)),
 			];
 		}
 
