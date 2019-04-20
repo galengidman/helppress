@@ -111,7 +111,7 @@ class HelpPress_Demo_Content {
 
 		$article_content = trim( file_get_contents( $this->article_content ) );
 
-		$post_formats = HelpPress_Plugin::get_article_post_formats();
+		$post_formats = helppress_get_article_post_formats();
 		// Adding 6 `standard` format posts vs 1 of alternate formats
 		$post_formats = array_merge( $post_formats, array_fill( 0, 6, 'standard' ) );
 

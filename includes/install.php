@@ -1,7 +1,7 @@
 <?php
 
 function helppress_install() {
-	$current_version = get_option( 'edd_version' );
+	$current_version = get_option( 'helppress_version' );
 	if ( $current_version ) {
 		update_option( 'helppress_version_upgraded_from', $current_version );
 	}

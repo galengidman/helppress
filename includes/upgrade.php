@@ -6,6 +6,8 @@ function helppress_do_auto_upgrades() {
 	if ( version_compare( $version, '3.0', '<' ) ) {
 		helppress_v3_0_upgrades();
 	}
+
+	update_option( 'helppress_version', HELPPRESS_VERSION );
 }
 add_action( 'admin_init', 'helppress_do_auto_upgrades' );
 
