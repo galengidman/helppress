@@ -1,5 +1,16 @@
 <?php
+/**
+ * Post Types
+ *
+ * @package HelpPress
+ * @since 3.0.0
+ */
 
+/**
+ * Register post types.
+ *
+ * @since 3.0.0
+ */
 function helppress_register_post_types() {
 	$labels = [
 		'name' => esc_html__('Articles', 'helppress'),
@@ -48,6 +59,11 @@ function helppress_register_post_types() {
 }
 add_action('init', 'helppress_register_post_types');
 
+/**
+ * Register taxonomies.
+ *
+ * @version 3.0.0
+ */
 function helppress_register_taxonomies() {
 	$labels = [
 		'name' => esc_html__('Article Categories', 'helppress'),
@@ -95,7 +111,6 @@ add_action('init', 'helppress_register_taxonomies');
 /**
  * Returns allowed `hp_article` post types.
  *
- * @access public
  * @since 2.0.0
  *
  * @return array Allowed post types.

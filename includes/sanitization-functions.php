@@ -78,7 +78,7 @@ function helppress_sanitize_search_suggestions_number($number) {
  *
  * @since 1.0.0
  *
- * @return array WordPress's reserved terms [description]
+ * @return array WordPress's reserved terms.
  */
 function helppress_get_reserved_terms() {
 	$terms = [
