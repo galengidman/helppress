@@ -78,6 +78,19 @@ function helppress_get_option_default($key = null) {
 }
 
 /**
+ * Returns the default `orderby` option value.
+ *
+ * Used to get around CMB2 calling any callable string value in `default` arg.
+ *
+ * @since 3.0.0
+ *
+ * @return string Default `orderby` value.
+ */
+function helppress_get_orderby_option_default() {
+	return helppress_get_option_default('orderby');
+}
+
+/**
  * Returns the value for a value for a given option key.
  *
  * @since 1.0.0

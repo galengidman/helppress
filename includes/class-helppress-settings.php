@@ -141,7 +141,7 @@ class HelpPress_Settings {
 				'rand' => esc_html__('Random', 'helppress'),
 				'comment_count' => esc_html__('Comment count', 'helppress'),
 			],
-			'default' => helppress_get_option_default('orderby'),
+			'default_cb' => 'helppress_get_orderby_option_default',
 		]);
 
 		$this->add_setting($indexes['general'], [
