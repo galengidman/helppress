@@ -47,7 +47,7 @@ class HelpPress_Demo_Content {
 	protected $article_content = HELPPRESS_PATH . '/demo-content/article.html';
 
 	/**
-	 * Admin AJAX action name to trigger demo content install
+	 * Admin AJAX action name to trigger demo content install.
 	 *
 	 * @access protected
 	 * @since 1.1.0
