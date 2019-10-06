@@ -51,6 +51,12 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 3.0.0, October 6, 2019 =
+* New: Rework Settings page to be powered by CMB2 instead of Titan Framework.
+* New: Create `HelpPress_Plugin` class to manage plugin instantiation.
+* Tweak: Minor updates to code styling.
+* Fix: Ensure that rewrite rules are always regenerated after post types have been registered on plugin activation.
+
 = 2.0.1, April 9, 2019 =
 * Tweak: Updated contributors and bump up compatible WP versions.
 
