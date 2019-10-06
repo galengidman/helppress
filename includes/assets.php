@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 function helppress_assets() {
 	$min = helppress_is_debug() ? '' : '.min';
 

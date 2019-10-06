@@ -9,6 +9,10 @@
  * Text Domain: helppress
  */
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 if (! class_exists('HelpPress_Plugin')) :
 
 final class HelpPress_Plugin {

@@ -6,6 +6,10 @@
  * @since 2.0.0
  */
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 /**
  * Aliase of `helppress_is_kb()` for backwards compatibility.
  *
