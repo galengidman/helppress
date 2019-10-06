@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dc6e700b37b1eaafce02a3df6403a5b",
+    "content-hash": "21ba178e8003c8c856f9a595791429cc",
     "packages": [
         {
             "name": "cmb2/cmb2",
@@ -101,49 +101,6 @@
                 "wordpress"
             ],
             "time": "2017-03-24T17:28:34+00:00"
-        },
-        {
-            "name": "gambitph/titan-framework",
-            "version": "1.12.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gambitph/Titan-Framework.git",
-                "reference": "e83f3dd73e914d17ca7ee24dbe0cccc123d482fc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gambitph/Titan-Framework/zipball/e83f3dd73e914d17ca7ee24dbe0cccc123d482fc",
-                "reference": "e83f3dd73e914d17ca7ee24dbe0cccc123d482fc",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "titan-framework.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPLv2+"
-            ],
-            "authors": [
-                {
-                    "name": "Gambit Technologies",
-                    "email": "info@gambit.ph",
-                    "homepage": "http://www.titanframework.net/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Titan Framework allows theme and plugin developers to create admin pages, options, meta boxes, and theme customizer options with just a few simple lines of code.",
-            "homepage": "https://github.com/gambitph/Titan-Framework",
-            "keywords": [
-                "Titan Framework",
-                "framework",
-                "options",
-                "titan",
-                "wordpress"
-            ],
-            "time": "2018-07-03T03:26:39+00:00"
         },
         {
             "name": "yahnis-elsts/admin-notices",

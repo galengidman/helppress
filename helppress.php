@@ -48,7 +48,6 @@ final class HelpPress_Plugin {
 		$includes = apply_filters('helppress_includes', [
 			'includes/vendor/cmb2/cmb2/init.php',
 			'includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
-			'includes/vendor/gambitph/titan-framework/titan-framework.php',
 			'includes/vendor/yahnis-elsts/admin-notices/AdminNotice.php',
 
 			'includes/class-helppress-breadcrumb.php',
