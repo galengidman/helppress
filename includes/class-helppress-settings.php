@@ -29,7 +29,7 @@ class HelpPress_Settings {
 	protected $settings = [];
 
 	/**
-	 * Stores the configuration for the Settings page.
+	 * Stores the settings section indexes.
 	 *
 	 * @access protected
 	 * @since 3.0.0
