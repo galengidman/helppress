@@ -7,9 +7,10 @@ var pkg = JSON.parse(require('fs').readFileSync('package.json'));
 function css() {
 	var perfectionist = require('perfectionist');
 	var postcss = require('gulp-postcss');
+	var sass = require('gulp-sass');
 
 	return gulp.src('assets/scss/*.scss')
-		.pipe(require('gulp-sass')().on('error', sass.logError))
+		.pipe(sass().on('error', sass.logError))
 		.pipe(postcss([
 			require('autoprefixer')(),
 			perfectionist(),
