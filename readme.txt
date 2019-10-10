@@ -51,6 +51,12 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 3.0.1, October 10, 2019 =
+* Tweak: Update compatible WP versions.
+* Tweak: Base asset minification on `SCRIPT_DEBUG` instead of `WP_DEBUG`.
+* Fix: Double slash in asset URLs.
+* Fix: Disable direct access to all PHP includes.
+
 = 3.0.0, October 6, 2019 =
 * New: Rework Settings page to be powered by CMB2 instead of Titan Framework.
 * New: Create `HelpPress_Plugin` class to manage plugin instantiation.
