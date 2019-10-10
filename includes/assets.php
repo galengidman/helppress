@@ -5,7 +5,7 @@ if (! defined('ABSPATH')) {
 }
 
 function helppress_assets() {
-	$min = helppress_is_debug() ? '' : '.min';
+	$min = helppress_is_script_debug() ? '' : '.min';
 
 	wp_enqueue_script(
 		'jquery-devbridge-autocomplete',
