@@ -51,11 +51,15 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
-= 3.0.1, October 10, 2019 =
+= 3.1.0, October 15, 2019 =
 * Tweak: Update compatible WP versions.
 * Tweak: Base asset minification on `SCRIPT_DEBUG` instead of `WP_DEBUG`.
+* Tweak: Enable Block Editor on articles by adding `show_in_rest` to CPT registration.
+* Tweak: Put PHP classes in global `helppress` container.
+* Tweak: Don't run PHP includes through filter — could only lead to trouble.
 * Fix: Double slash in asset URLs.
 * Fix: Disable direct access to all PHP includes.
+* Fix: Improper option default escaping.
 
 = 3.0.0, October 6, 2019 =
 * New: Rework Settings page to be powered by CMB2 instead of Titan Framework.

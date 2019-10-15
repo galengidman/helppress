@@ -289,7 +289,7 @@ function helppress_is_debug() {
  * Returns whether WordPress is script debug mode.
  *
  * @see SCRIPT_DEBUG
- * @since 3.0.1
+ * @since 3.1.0
  *
  * @return boolean WordPress script debug mode.
  */
