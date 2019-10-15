@@ -45,6 +45,12 @@ if (! class_exists('HelpPress_Plugin')) :
  */
 final class HelpPress_Plugin {
 
+	/**
+	 * Constructor.
+	 *
+	 * @access public
+	 * @since 2.0.0
+	 */
 	public function __construct() {
 		$this->constants();
 
@@ -58,6 +64,12 @@ final class HelpPress_Plugin {
 		}
 	}
 
+	/**
+	 * Define constants.
+	 *
+	 * @access protected
+	 * @since 3.0.0
+	 */
 	protected function constants() {
 		define('HELPPRESS_VERSION', '3.0.1');
 		define('HELPPRESS_FILE', __FILE__);
@@ -68,6 +80,12 @@ final class HelpPress_Plugin {
 		define('HELPPRESS_MIN_WP', '4.5');
 	}
 
+	/**
+	 * Define constants.
+	 *
+	 * @access protected
+	 * @since 3.0.0
+	 */
 	protected function includes() {
 		$includes = apply_filters('helppress_includes', [
 			'includes/vendor/cmb2/cmb2/init.php',
@@ -97,10 +115,22 @@ final class HelpPress_Plugin {
 		}
 	}
 
+	/**
+	 * Load textdomain.
+	 *
+	 * @access public
+	 * @since 3.0.0
+	 */
 	public function load_textdomain() {
 		load_plugin_textdomain('helppress');
 	}
 
+	/**
+	 * Check for compatible PHP version.
+	 *
+	 * @access public
+	 * @since 3.0.0
+	 */
 	public function fail_php_version() {
 		$message = sprintf(
 			esc_html__('HelpPress requires PHP version %s+, plugin is currently NOT ACTIVE.', 'helppress'),
@@ -112,6 +142,12 @@ final class HelpPress_Plugin {
 		echo wp_kses_post($message);
 	}
 
+	/**
+	 * Check for compatible WordPress version.
+	 *
+	 * @access public
+	 * @since 3.0.0
+	 */
 	public function fail_wp_version() {
 		$message = sprintf(
 			esc_html__('HelpPress requires WordPress version %s+, plugin is currently NOT ACTIVE.', 'helppress'),
