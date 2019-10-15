@@ -449,4 +449,4 @@ class HelpPress_Theme_Compat {
 
 endif;
 
-new HelpPress_Theme_Compat();
+helppress_set('theme_compat', new HelpPress_Theme_Compat());

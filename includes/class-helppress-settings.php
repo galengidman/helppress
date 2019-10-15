@@ -475,4 +475,4 @@ class HelpPress_Settings {
 
 endif;
 
-new HelpPress_Settings();
+helppress_set('search', new HelpPress_Settings());

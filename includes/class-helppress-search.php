@@ -116,4 +116,4 @@ class HelpPress_Search {
 
 endif;
 
-new HelpPress_Search();
+helppress_set('search', new HelpPress_Search());

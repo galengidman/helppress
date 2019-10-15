@@ -13,29 +13,49 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
+/**
+ * Add item to the container.
+ *
+ * @since 3.1.0
+ * @param string $key Key to access item.
+ * @param mixed $value Value to add to the container.
+ */
+function helppress_set($key, $value) {
+	$GLOBALS['helppress'][$key] = $value;
+}
+
+/**
+ * Get item from the container.
+ *
+ * @since 3.1.0
+ *
+ * @param string $key Key to access item.
+ * @return mixed Item from container.
+ */
+function helppress_get($key) {
+	return $GLOBALS['helppress'][$key];
+}
+
 if (! class_exists('HelpPress_Plugin')) :
 
+/**
+ * Plugin class
+ *
+ * @since 2.0.0
+ */
 final class HelpPress_Plugin {
 
-	protected static $instance;
+	public function __construct() {
+		$this->constants();
 
-	public static function instance() {
-		if (empty(self::$instance)) {
-			self::$instance = new self();
-
-			self::$instance->constants();
-
-			if (! version_compare(PHP_VERSION, HELPPRESS_MIN_PHP, '>=')) {
-				add_action('admin_notices', [self::$instance, 'fail_php_version']);
-			} elseif (! version_compare(get_bloginfo('version'), HELPPRESS_MIN_WP, '>=')) {
-				add_action('admin_notices', [self::$instance, 'fail_wp_version']);
-			} else {
-				self::$instance->includes();
-				add_action('plugins_loaded', [self::$instance, 'load_textdomain']);
-			}
+		if (! version_compare(PHP_VERSION, HELPPRESS_MIN_PHP, '>=')) {
+			add_action('admin_notices', [$this, 'fail_php_version']);
+		} elseif (! version_compare(get_bloginfo('version'), HELPPRESS_MIN_WP, '>=')) {
+			add_action('admin_notices', [$this, 'fail_wp_version']);
+		} else {
+			$this->includes();
+			add_action('plugins_loaded', [$this, 'load_textdomain']);
 		}
-
-		return self::$instance;
 	}
 
 	protected function constants() {
@@ -107,8 +127,4 @@ final class HelpPress_Plugin {
 
 endif;
 
-function helppress() {
-	return HelpPress_Plugin::instance();
-}
-
-helppress();
+helppress_set('plugin', new HelpPress_Plugin());

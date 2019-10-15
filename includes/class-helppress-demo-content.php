@@ -248,4 +248,4 @@ class HelpPress_Demo_Content {
 
 endif;
 
-new HelpPress_Demo_Content();
+helppress_set('demo_content', new HelpPress_Demo_Content());
