@@ -87,32 +87,26 @@ final class HelpPress_Plugin {
 	 * @since 3.0.0
 	 */
 	protected function includes() {
-		$includes = apply_filters('helppress_includes', [
-			'includes/vendor/cmb2/cmb2/init.php',
-			'includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php',
-			'includes/vendor/yahnis-elsts/admin-notices/AdminNotice.php',
+		require_once HELPPRESS_PATH . 'includes/vendor/cmb2/cmb2/init.php';
+		require_once HELPPRESS_PATH . 'includes/vendor/gamajo/template-loader/class-gamajo-template-loader.php';
+		require_once HELPPRESS_PATH . 'includes/vendor/yahnis-elsts/admin-notices/AdminNotice.php';
 
-			'includes/class-helppress-breadcrumb.php',
-			'includes/class-helppress-demo-content.php',
-			'includes/class-helppress-menu-archive-link.php',
-			'includes/class-helppress-search.php',
-			'includes/class-helppress-settings.php',
-			'includes/class-helppress-template-loader.php',
-			'includes/class-helppress-theme-compat.php',
+		require_once HELPPRESS_PATH . 'includes/class-helppress-breadcrumb.php';
+		require_once HELPPRESS_PATH . 'includes/class-helppress-demo-content.php';
+		require_once HELPPRESS_PATH . 'includes/class-helppress-menu-archive-link.php';
+		require_once HELPPRESS_PATH . 'includes/class-helppress-search.php';
+		require_once HELPPRESS_PATH . 'includes/class-helppress-settings.php';
+		require_once HELPPRESS_PATH . 'includes/class-helppress-template-loader.php';
+		require_once HELPPRESS_PATH . 'includes/class-helppress-theme-compat.php';
 
-			'includes/assets.php',
-			'includes/deprecated-functions.php',
-			'includes/options-functions.php',
-			'includes/post-types.php',
-			'includes/install.php',
-			'includes/sanitization-functions.php',
-			'includes/template-functions.php',
-			'includes/upgrade.php',
-		]);
-
-		foreach ($includes as $file) {
-			include HELPPRESS_PATH . $file;
-		}
+		require_once HELPPRESS_PATH . 'includes/assets.php';
+		require_once HELPPRESS_PATH . 'includes/deprecated-functions.php';
+		require_once HELPPRESS_PATH . 'includes/options-functions.php';
+		require_once HELPPRESS_PATH . 'includes/post-types.php';
+		require_once HELPPRESS_PATH . 'includes/install.php';
+		require_once HELPPRESS_PATH . 'includes/sanitization-functions.php';
+		require_once HELPPRESS_PATH . 'includes/template-functions.php';
+		require_once HELPPRESS_PATH . 'includes/upgrade.php';
 	}
 
 	/**
