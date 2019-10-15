@@ -51,6 +51,10 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 3.1.2, October 15, 2019 =
+* Fix: Plugin settings action link.
+* Fix: Orphaned column icon images.
+
 = 3.1.1, October 15, 2019 =
 * Fix: Ensure SVN repo has the correct files.
 
