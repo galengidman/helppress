@@ -48,9 +48,9 @@ final class HelpPress_Plugin {
 	public function __construct() {
 		$this->constants();
 
-		if (! version_compare(PHP_VERSION, HELPPRESS_MIN_PHP, '>=')) {
+		if (version_compare(PHP_VERSION, HELPPRESS_MIN_PHP, '<')) {
 			add_action('admin_notices', [$this, 'fail_php_version']);
-		} elseif (! version_compare(get_bloginfo('version'), HELPPRESS_MIN_WP, '>=')) {
+		} elseif (version_compare(get_bloginfo('version'), HELPPRESS_MIN_WP, '<')) {
 			add_action('admin_notices', [$this, 'fail_wp_version']);
 		} else {
 			$this->includes();
