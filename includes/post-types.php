@@ -6,6 +6,10 @@
  * @since 3.0.0
  */
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 /**
  * Register post types.
  *
@@ -51,6 +55,7 @@ function helppress_register_post_types() {
 			'slug' => helppress_get_option('knowledge_base_slug'),
 			'with_front' => false,
 		],
+		'show_in_rest' => true,
 	];
 
 	$args = apply_filters('helppress_register_articles_args', $args);

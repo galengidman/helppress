@@ -2,7 +2,7 @@
 Contributors:      galengidman
 Tags:              knowledge base, knowledgebase, help desk, helpdesk, wiki
 Requires at least: 4.4
-Tested up to:      5.1
+Tested up to:      5.2.3
 Stable tag:        trunk
 
 A WordPress knowledge base plugin compatible with almost any theme.
@@ -50,6 +50,19 @@ Yes, but the slug settings will have no effect.
 6. Search settings.
 
 == Changelog ==
+
+= 3.1.1, October 15, 2019 =
+* Fix: Ensure SVN repo has the correct files.
+
+= 3.1.0, October 15, 2019 =
+* Tweak: Update compatible WP versions.
+* Tweak: Base asset minification on `SCRIPT_DEBUG` instead of `WP_DEBUG`.
+* Tweak: Enable Block Editor on articles by adding `show_in_rest` to CPT registration.
+* Tweak: Put PHP classes in global `helppress` container.
+* Tweak: Don't run PHP includes through filter — could only lead to trouble.
+* Fix: Double slash in asset URLs.
+* Fix: Disable direct access to all PHP includes.
+* Fix: Improper option default escaping.
 
 = 3.0.0, October 6, 2019 =
 * New: Rework Settings page to be powered by CMB2 instead of Titan Framework.

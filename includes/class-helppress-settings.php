@@ -29,7 +29,7 @@ class HelpPress_Settings {
 	protected $settings = [];
 
 	/**
-	 * Stores the configuration for the Settings page.
+	 * Stores the settings section indexes.
 	 *
 	 * @access protected
 	 * @since 3.0.0
@@ -171,7 +171,6 @@ class HelpPress_Settings {
 			],
 			'default' => helppress_get_option_default('posts_per_page'),
 			'sanitization_cb' => 'helppress_sanitize_posts_per_page',
-			'escape_cb' => 'helppress_sanitize_posts_per_page',
 		]);
 
 		$this->add_setting($indexes['general'], [
@@ -184,7 +183,6 @@ class HelpPress_Settings {
 			),
 			'default' => helppress_get_option_default('knowledge_base_slug'),
 			'sanitization_cb' => 'helppress_sanitize_slug',
-			'escape_cb' => 'helppress_sanitize_slug',
 		]);
 
 		$this->add_setting($indexes['general'], [
@@ -197,7 +195,6 @@ class HelpPress_Settings {
 			),
 			'default' => helppress_get_option_default('category_slug'),
 			'sanitization_cb' => 'helppress_sanitize_slug',
-			'escape_cb' => 'helppress_sanitize_slug',
 		]);
 
 		$this->add_setting($indexes['general'], [
@@ -210,7 +207,6 @@ class HelpPress_Settings {
 			),
 			'default' => helppress_get_option_default('tag_slug'),
 			'sanitization_cb' => 'helppress_sanitize_slug',
-			'escape_cb' => 'helppress_sanitize_slug',
 		]);
 
 		// Display ---------------------------------------------------------------
@@ -302,7 +298,6 @@ class HelpPress_Settings {
 			],
 			'default' => helppress_get_option_default('search_suggestions_number'),
 			'sanitization_cb' => 'helppress_sanitize_search_suggestions_number',
-			'escape_cb' => 'helppress_sanitize_search_suggestions_number',
 		]);
 
 		// Breadcrumb ------------------------------------------------------------
@@ -480,4 +475,4 @@ class HelpPress_Settings {
 
 endif;
 
-new HelpPress_Settings();
+helppress_set('search', new HelpPress_Settings());

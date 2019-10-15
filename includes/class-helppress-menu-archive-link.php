@@ -116,4 +116,4 @@ class HelpPress_Menu_Archive_Link {
 
 endif;
 
-new HelpPress_Menu_Archive_Link();
+helppress_set('menu_archive_link', new HelpPress_Menu_Archive_Link());

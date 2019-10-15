@@ -286,6 +286,18 @@ function helppress_is_debug() {
 }
 
 /**
+ * Returns whether WordPress is script debug mode.
+ *
+ * @see SCRIPT_DEBUG
+ * @since 3.1.0
+ *
+ * @return boolean WordPress script debug mode.
+ */
+function helppress_is_script_debug() {
+	return defined('SCRIPT_DEBUG') && SCRIPT_DEBUG;
+}
+
+/**
  * Outputs a template part similar to `get_template_part()`, but checks the following locations:
  *
  * - `[child-theme]/helppress/$slug-$name.php`
