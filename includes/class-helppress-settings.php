@@ -69,7 +69,7 @@ class HelpPress_Settings {
 	 * @return array Action links.
 	 */
 	public function action_link($links) {
-		$url = esc_url(admin_url('edit.php?post_type=hp_article&page=helppress'));
+		$url = esc_url(admin_url('edit.php?post_type=hp_article&page=helppress_options'));
 		$label = esc_html__('Settings', 'helppress');
 
 		$settings_link = ["<a href='{$url}'>{$label}</a>"];
