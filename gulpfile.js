@@ -43,4 +43,4 @@ exports.default = watch;
 
 // RELEASE ---------------------------------------------------------------------
 
-gulp.task('release', require('gulp-shell').task(`zip -r ${pkg.name}-${pkg.version}.zip ${pkg.name} assets/* includes/* templates/* *.php *.txt && mv ${pkg.name}-${pkg.version}.zip ~/Desktop`))
+gulp.task('release', require('gulp-shell').task(`zip -r ${pkg.name}-${pkg.version}.zip ${pkg.name} assets/* includes/* templates/* demo-content/* *.php *.txt && mv ${pkg.name}-${pkg.version}.zip ~/Desktop`))

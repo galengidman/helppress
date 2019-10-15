@@ -51,6 +51,9 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 3.1.1, October 15, 2019 =
+* Fix: Ensure SVN repo has the correct files.
+
 = 3.1.0, October 15, 2019 =
 * Tweak: Update compatible WP versions.
 * Tweak: Base asset minification on `SCRIPT_DEBUG` instead of `WP_DEBUG`.
