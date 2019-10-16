@@ -51,6 +51,9 @@ Yes, but the slug settings will have no effect.
 
 == Changelog ==
 
+= 3.1.3, October 16, 2019 =
+* Fix: Missing taxonomies on article edit screen by adding `show_in_rest`.
+
 = 3.1.2, October 15, 2019 =
 * Fix: Plugin settings action link.
 * Fix: Orphaned column icon images.
