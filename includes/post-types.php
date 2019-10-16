@@ -77,6 +77,7 @@ function helppress_register_taxonomies() {
 			],
 			'public' => true,
 			'show_in_menu' => 'edit.php?post_type=hp_article',
+			'show_in_rest' => true,
 			'show_admin_column' => true,
 			'hierarchical' => true,
 			'rewrite' => [
@@ -96,6 +97,7 @@ function helppress_register_taxonomies() {
 			],
 			'public' => true,
 			'show_in_menu' => 'edit.php?post_type=hp_article',
+			'show_in_rest' => true,
 			'show_admin_column' => true,
 			'rewrite' => [
 				'slug' => helppress_get_option('tag_slug'),
