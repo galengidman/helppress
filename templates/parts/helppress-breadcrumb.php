@@ -26,9 +26,9 @@ if (! helppress_get_option('breadcrumb')) {
 			<?php do_action('helppress_before_breadcrumb_item_content'); ?>
 
 			<a href="<?php echo esc_url($crumb['url']); ?>" itemprop="item">
-				<span itemprop="name"><?php echo $crumb['label']; ?></span>
-				<meta itemprop="position" content="<?php echo esc_attr($i); ?>">
-			</a>
+				<span itemprop="name"><?php echo $crumb['label']; ?></span><?php
+				?><meta itemprop="position" content="<?php echo esc_attr($i); ?>"><?php
+			?></a>
 
 			<?php do_action('helppress_after_breadcrumb_item_content'); ?>
 
