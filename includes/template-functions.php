@@ -330,3 +330,20 @@ function helppress_buffer_template_part($slug, $name = null) {
 	helppress_get_template_part($slug, $name);
 	return ob_get_clean();
 }
+
+/**
+ * Attempts to format a date string via i18n-ready, customizable format.
+ *
+ * @since 3.2.0
+ *
+ * @param string $str Date string to format.
+ * @param string $format Date string to use. Defaults to date_format option value.
+ * @return string Formatted date.
+ */
+function helppress_format_date($str = '', $format = null) {
+	if (! $format) {
+		$format = get_option('date_format');
+	}
+
+	return date_i18n($format, strtotime($str));
+}
