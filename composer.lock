@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "21ba178e8003c8c856f9a595791429cc",
     "packages": [
         {
             "name": "cmb2/cmb2",
-            "version": "v2.6.0",
+            "version": "v2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CMB2/CMB2.git",
-                "reference": "008d9b83263d971d6bd41c27e31113db852d5ef3"
+                "reference": "438c26dda7ac110d0741448d65614b3ec6379034"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CMB2/CMB2/zipball/008d9b83263d971d6bd41c27e31113db852d5ef3",
-                "reference": "008d9b83263d971d6bd41c27e31113db852d5ef3",
+                "url": "https://api.github.com/repos/CMB2/CMB2/zipball/438c26dda7ac110d0741448d65614b3ec6379034",
+                "reference": "438c26dda7ac110d0741448d65614b3ec6379034",
                 "shasum": ""
             },
             "require": {
@@ -38,15 +38,15 @@
             ],
             "authors": [
                 {
-                    "name": "WebDevStudios",
-                    "email": "contact@webdevstudios.com",
-                    "homepage": "https://github.com/WebDevStudios",
-                    "role": "Developer"
-                },
-                {
                     "name": "Justin Sternberg",
                     "email": "justin@dsgnwrks.pro",
                     "homepage": "https://dsgnwrks.pro",
+                    "role": "Developer"
+                },
+                {
+                    "name": "WebDevStudios",
+                    "email": "contact@webdevstudios.com",
+                    "homepage": "https://github.com/WebDevStudios",
                     "role": "Developer"
                 }
             ],
@@ -57,7 +57,11 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-01-21T04:30:08+00:00"
+            "support": {
+                "issues": "https://github.com/CMB2/CMB2/issues",
+                "source": "http://wordpress.org/support/plugin/cmb2"
+            },
+            "time": "2020-01-21T17:49:50+00:00"
         },
         {
             "name": "gamajo/template-loader",
@@ -110,6 +114,10 @@
                 "templates",
                 "wordpress"
             ],
+            "support": {
+                "issues": "https://github.com/GaryJones/Gamajo-Template-Loader/issues",
+                "source": "https://github.com/GaryJones/Gamajo-Template-Loader/tree/develop"
+            },
             "time": "2018-09-24T10:23:49+00:00"
         },
         {
@@ -146,6 +154,10 @@
                 }
             ],
             "description": "A utility library for WordPress plugins that makes it easier to create admin notices. Supports persistently dismissible notices.",
+            "support": {
+                "issues": "https://github.com/YahnisElsts/admin-notices/issues",
+                "source": "https://github.com/YahnisElsts/admin-notices/tree/v1.1"
+            },
             "time": "2019-02-06T10:22:54+00:00"
         }
     ],
@@ -156,5 +168,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
