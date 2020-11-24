@@ -2,7 +2,7 @@
 Contributors:      galengidman
 Tags:              knowledge base, knowledgebase, help desk, helpdesk, wiki
 Requires at least: 4.4
-Tested up to:      5.3.0
+Tested up to:      5.6
 Stable tag:        trunk
 
 A WordPress knowledge base plugin compatible with almost any theme.
@@ -50,6 +50,9 @@ Yes, but the slug settings will have no effect.
 6. Search settings.
 
 == Changelog ==
+
+= 3.1.4, November 24, 2020 =
+* Tweak: Update compatible WP versions.
 
 = 3.1.3, October 16, 2019 =
 * Fix: Missing taxonomies on article edit screen by adding `show_in_rest`.
